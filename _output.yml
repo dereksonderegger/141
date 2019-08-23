@@ -6,13 +6,10 @@ bookdown::gitbook:
       collapse: section
       scroll_highlight: true
       before: |
-        <li><a href="https://dereksonderegger.github.io/570/Statistical_Methods_I.pdf" target="blank">PDF version</a></li>
+        <br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
       after: |
     edit:
-      link: https://github.com/dereksonderegger/570/raw/master/%s
-    download:
-      - ["Statistical_Methods_I.pdf",  "PDF"]
-      - ["Statistical_Methods_I.epub", "EPUB"]
+      link: https://github.com/dereksonderegger/141/raw/master/%s
     search: yes
     fontsettings:
       theme: white

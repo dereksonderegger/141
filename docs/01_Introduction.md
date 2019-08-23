@@ -1,4 +1,4 @@
-# Introduction
+# Week 1
 
 
 ## Initial thoughts.
@@ -30,3 +30,9 @@
 * An amusing case where a pie chart is [ridiculous](https://flowingdata.com/2017/03/09/pie-charts-are-okay/). This is the result of a survey that asks what pizza toppings are liked. In particular, a person can pick more than one topping and so the percentages don't sum to 100%.
 
 
+## Tableau or ???
+
+* [Tableau](https://www.tableau.com/academic/students#form) is a nice program that reads in data and can produce some very nice graphics and dashboards.  
+    * [Licensing Questions?](https://community.tableau.com/docs/DOC-10249) 
+    * What are dashboards? A series of related graphs, often with controls that allow you to explore the data.
+    * [Britian's Coal Use 2015-2019](https://public.tableau.com/en-us/gallery/britains-coal-free-record)

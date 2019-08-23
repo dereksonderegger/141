@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 1 Week 1 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 1 Week 1 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 1 Week 1 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 1 Week 1 | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="index.html">
 
-<link rel="next" href="1-week-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -90,30 +90,57 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 141 - Exploratory Data Analysis and Visualization</h1>
-<p class="author"><em>Derek L. Sonderegger</em></p>
-<p class="date"><em>August 23, 2019</em></p>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarky that propagandists.</p>
-<p>This course draws information from several websites and books.</p>
+<div id="week-1" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Week 1</h1>
+<div id="initial-thoughts." class="section level2">
+<h2><span class="header-section-number">1.1</span> Initial thoughts.</h2>
 <ul>
-<li><p>Alberto Cairo’s book <a href="https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F">The Truthful Art</a>. Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at <a href="http://www.thefunctionalart.com">thefunctionalart.com</a>. Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here.</p></li>
-<li><p>Claus O. Wilke has a book <a href="https://www.amazon.com/dp/1492031089/ref=cm_sw_em_r_mt_dp_U_DvAxDbV7NFYY6">Fundamentals of Data Visualization</a>. He also has a nice R package called <a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">cowplot</a> that aids in making publication ready graphs using R’s <code>ggplot2</code>.</p></li>
-<li><p><a href="https://callingbullshit.org">Calling Bullshit</a> This is a 3-credit course taught at Univeristy of Washington. Their goal is to teach students to recognize bullshit provide another scientist a reason why a claim is bullshit.</p></li>
-<li><p>Amelia McNamara’s <a href="http://www.amelia.mn/sds136/index.html">SDS 136 course.</a> Amelia is an Assistant Professor at University of St Thomas and I’ve been influenced by her presentations at national conferences. These are her notes from a data visulization course that she teaches. She is also pretty fun to follow on twitter.</p></li>
+<li>What is data?</li>
+<li>Why visualize it?
+<ul>
+<li>See relationships that raw data obscure.</li>
+<li>Cognative work to translate raw numbers into context between other data points are already done for you.</li>
+<li>Good graphics translate particular numerical relationships into physical relationships which our brains are really good at processing.</li>
+</ul></li>
+</ul>
+</div>
+<div id="amazing-graphics" class="section level2">
+<h2><span class="header-section-number">1.2</span> Amazing Graphics</h2>
+<ul>
+<li><p><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/articles/middleagedgenerationmostlikelytodiebysuicideanddrugpoisoning/2019-08-13">UK Drug Poison</a> These are the data from the UK related to drug overdose and misuse. Farther down the page gives a similar graph on suicide.</p></li>
+<li><p><a href="https://www.torre.nl/EUmoves/">Migration Patterns in Europe</a>.</p></li>
+</ul>
+</div>
+<div id="bad-graphs" class="section level2">
+<h2><span class="header-section-number">1.3</span> Bad Graphs</h2>
+<ul>
+<li><p>While the New York Times is generally really quite good, this <a href="https://www.nytimes.com/2016/11/29/world/americas/western-liberal-democracy.html?_r=0">graph</a> is quite misleading. Another view of the data is more fair, although the still
+<a href="https://1.bp.blogspot.com/-RQ66mUnaw9Y/XT2gT0j8-tI/AAAAAAAAKoU/G5eOqwdoXS4aW_n0s5-OPWTwes3rdDS6ACLcBGAs/s1600/democracy2.png">depressing.</a></p></li>
+<li><p>I feel compelled to show a bad <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">3-d Excel graphic</a> as well.</p></li>
+<li><p>Reuter’s infamous <a href="https://callingbullshit.org/tools/img/stand_your_ground.png">gun deaths in Florida</a> chart.</p></li>
+<li><p>An amusing case where a pie chart is <a href="https://flowingdata.com/2017/03/09/pie-charts-are-okay/">ridiculous</a>. This is the result of a survey that asks what pizza toppings are liked. In particular, a person can pick more than one topping and so the percentages don’t sum to 100%.</p></li>
+</ul>
+</div>
+<div id="tableau-or" class="section level2">
+<h2><span class="header-section-number">1.4</span> Tableau or ???</h2>
+<ul>
+<li><a href="https://www.tableau.com/academic/students#form">Tableau</a> is a nice program that reads in data and can produce some very nice graphics and dashboards.
+<ul>
+<li><a href="https://community.tableau.com/docs/DOC-10249">Licensing Questions?</a></li>
+<li>What are dashboards? A series of related graphs, often with controls that allow you to explore the data.</li>
+<li><a href="https://public.tableau.com/en-us/gallery/britains-coal-free-record">Britian’s Coal Use 2015-2019</a></li>
+</ul></li>
 </ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="1-week-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -144,7 +171,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/index.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/01_Introduction.Rmd",
 "text": "Edit"
 },
 "history": {

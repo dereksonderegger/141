@@ -26,7 +26,7 @@ Slides 30-50
 Example: Warpbreaks
 While spinning wool into thread, if the tension on the wool isn't correctly set, the thread can break. Here we compare two different types of wool at three different tensions.
 
-![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-2.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-3.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-4.png)<!-- -->
+![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-2.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-3.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-4.png)<!-- -->![](02_EPT_and_color_files/figure-epub3/unnamed-chunk-1-5.png)<!-- -->
 
 
 ## "Color" Scales
@@ -38,7 +38,7 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 * Saturation: The "colorfulness of a stimulus relative to its own brightness"
 * Value: The "brightness relative to the brightness of a similarly illuminated white"
 
-![HSV Cylinder](./Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png)
+![HSV Cylinder from Wikipedia](./Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png)
 
 * Hue is appropriate for categorical variables.
 * Saturation and/or Value is approriate for a quantitative variable scale.

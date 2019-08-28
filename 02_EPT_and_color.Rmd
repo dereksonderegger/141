@@ -50,6 +50,13 @@ ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
   geom_line(data=means, aes(x=as.numeric(tension), y=breaks)) +
   facet_grid(. ~ wool) +
   ggtitle( "Trend is clear, but magnitude is harder")
+
+ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
+  geom_point(aes(shape=wool)) +
+  geom_line(data=means, aes(x=as.numeric(tension), y=breaks)) +
+  facet_grid(wool ~ .) +
+  ggtitle( "Non-Aligned y-axis is worse")
+
 ```
 
 

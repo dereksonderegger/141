@@ -6,3 +6,18 @@ setwd( '~GitHub/141/data-raw')
 write_csv(iris, 'data-raw/iris.csv')
 write_csv(warpbreaks, 'data-raw/warpbreaks.csv')
 write_csv( Lock5Data::GPAGender, 'Lock5_GPAGender.csv' )
+
+
+GradeBook <- read_csv( file='~/Dropbox/NAU/Teaching/STA 570/2012_Fall/grades3.csv' ) %>%
+  select( -'Last Name', -`First Name`, -Username, -`Student ID`, -X18, -X19 ) %>%
+  select( `Exam 1`, `Exam 2`, `Final Exam` ) %>%
+  drop_na() %>%
+  mutate( StudentID = sample(1:n()) ) %>%
+  arrange( StudentID ) 
+write_csv(GradeBook, 'GradeBook.csv')
+
+GradeBook2 <- GradeBook %>%
+  gather('Assesment', 'Score', `Exam 1`:`Final Exam`) %>%
+  arrange(StudentID)
+write_csv(GradeBook2, 'GradeBook2.csv')
+

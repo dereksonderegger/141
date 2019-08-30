@@ -1,0 +1,34 @@
+# Practicum 1
+
+## How to Store Data
+
+Data is commonly stored in spreadsheets.
+* Columns are variables of interest
+* Rows are observations.
+
+Example: A data set we'll call `iris` which has 150 observations of three species of iris. Each observation measured the length and width of both the petals and sepals.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+head(iris) %>% pander::pander()
+```
+
+
+## Tableau
+
+By dragging variables onto destination
+* Scatterplot of the Iris Data
+    * Making Species Colors 
+    * Making Facets
+
+Modifying how a variable is displayed
+* GPAGender
+    * Make a Barchart with Gender and # Piercings
+    * Turn # of Piercings into a discrete value.
+    * Fix Gender Levels.  IFF( [GenderCode] = 1, 'Male', 'Female' )
+    * Change the colors associated with each gender.
+
+Reorder categorical variables levels
+* Warpbreaks
+    * Do breaks vs Wooltype and Tension
+    * Reorder the Tension levels to make senese.

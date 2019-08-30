@@ -3,10 +3,11 @@
 ## How to Store Data
 
 Data is commonly stored in spreadsheets.
+
 * Columns are variables of interest
 * Rows are observations.
 
-Example: A data set we'll call `iris` which has 150 observations of three species of iris. Each observation measured the length and width of both the petals and sepals.
+Example: A dataset we'll call `iris` which has 150 observations of three species of iris. Each observation measured the length and width of both the petals and sepals.
 
 
 -------------------------------------------------------------------
@@ -25,22 +26,68 @@ Example: A data set we'll call `iris` which has 150 observations of three specie
      5.4            3.9           1.7            0.4       setosa  
 -------------------------------------------------------------------
 
+Example: A dataset we'll call `GradeBook` that has records of how well a student performed on exams. I'll refer to this storage as the *wide* orientation.
+
+------------------------------------------
+ StudentID   Exam 1   Exam 2   Final Exam 
+----------- -------- -------- ------------
+     1         87       87         81     
+
+     2         91       88         85     
+
+     3         88       79         92     
+
+     4         91       97         94     
+
+     5        100       83         90     
+
+     6         85       79         81     
+------------------------------------------
+Or I could have stored the information in the following manner, which I'll refer to as the *long* orientation.
+
+--------------------------------
+ StudentID   Assesment    Score 
+----------- ------------ -------
+     1         Exam 1      91   
+
+     1         Exam 2      90   
+
+     1       Final Exam    87   
+
+     2         Exam 1      73   
+
+     2         Exam 2      76   
+
+     2       Final Exam    53   
+--------------------------------
+
 
 ## Tableau
 
-By dragging variables onto destination
-* Scatterplot of the Iris Data
-    * Making Species Colors 
-    * Making Facets
+### Task 1: Dragging variables onto destination
+First we'll make a scatterplot with some colors.
+
+![](03_Practicum_files/figure-epub3/unnamed-chunk-4-1.png)<!-- -->
+
+The iris data I used for this graph is available here:
+data: https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/iris.csv
+
+
+### Task 2: Modifying how a variable is displayed
+https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Lock5_GPAGender.csv
 
 Modifying how a variable is displayed
+
 * GPAGender
     * Make a Barchart with Gender and # Piercings
     * Turn # of Piercings into a discrete value.
     * Fix Gender Levels.  IFF( [GenderCode] = 1, 'Male', 'Female' )
     * Change the colors associated with each gender.
 
-Reorder categorical variables levels
-* Warpbreaks
-    * Do breaks vs Wooltype and Tension
-    * Reorder the Tension levels to make senese.
+### Task 3: Reorder categorical variable levels
+
+https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/warpbreaks.csv
+
+
+![](03_Practicum_files/figure-epub3/unnamed-chunk-5-1.png)<!-- -->
+

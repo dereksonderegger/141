@@ -3,32 +3,65 @@
 ## How to Store Data
 
 Data is commonly stored in spreadsheets.
+
 * Columns are variables of interest
 * Rows are observations.
 
-Example: A data set we'll call `iris` which has 150 observations of three species of iris. Each observation measured the length and width of both the petals and sepals.
+Example: A dataset we'll call `iris` which has 150 observations of three species of iris. Each observation measured the length and width of both the petals and sepals.
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(tidyverse)
 head(iris) %>% pander::pander()
 ```
 
+Example: A dataset we'll call `GradeBook` that has records of how well a student performed on exams. I'll refer to this storage as the *wide* orientation.
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+readr::read_csv('./data-raw/GradeBook.csv') %>% head() %>% pander::pander()
+```
+Or I could have stored the information in the following manner, which I'll refer to as the *long* orientation.
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+readr::read_csv('./data-raw/GradeBook2.csv') %>% head() %>% pander::pander()
+```
+
 
 ## Tableau
 
-By dragging variables onto destination
-* Scatterplot of the Iris Data
-    * Making Species Colors 
-    * Making Facets
+### Task 1: Dragging variables onto destination
+First we'll make a scatterplot with some colors.
+
+```{r, fig.height=5, echo=FALSE}
+iris %>%
+  ggplot( aes(y=Petal.Length, x=Sepal.Length, color=Species)) +
+  geom_point() +
+  labs(title = 'Sepal Length vs Petal Length by Iris Species',
+       x= 'Sepal Length (cm)', y='Petal Length (cm)')
+```
+
+The iris data I used for this graph is available here:
+data: https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/iris.csv
+
+
+### Task 2: Modifying how a variable is displayed
+https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Lock5_GPAGender.csv
 
 Modifying how a variable is displayed
+
 * GPAGender
     * Make a Barchart with Gender and # Piercings
     * Turn # of Piercings into a discrete value.
     * Fix Gender Levels.  IFF( [GenderCode] = 1, 'Male', 'Female' )
     * Change the colors associated with each gender.
 
-Reorder categorical variables levels
-* Warpbreaks
-    * Do breaks vs Wooltype and Tension
-    * Reorder the Tension levels to make senese.
+### Task 3: Reorder categorical variable levels
+
+https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/warpbreaks.csv
+
+
+```{r, fig.height=5, echo=FALSE}
+warpbreaks %>%
+  ggplot( aes( x=tension, y=breaks, color=wool) ) +
+  geom_point() +
+  facet_grid( . ~ wool) +
+  labs(title='Number of breaks vs tension level (Low, Medium, High)')
+```
+

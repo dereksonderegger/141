@@ -13,11 +13,12 @@ GradeBook <- read_csv( file='~/Dropbox/NAU/Teaching/STA 570/2012_Fall/grades3.cs
   select( `Exam 1`, `Exam 2`, `Final Exam` ) %>%
   drop_na() %>%
   mutate( StudentID = sample(1:n()) ) %>%
+  select( StudentID, `Exam 1`, `Exam 2`, `Final Exam` ) %>%
   arrange( StudentID ) 
-write_csv(GradeBook, 'GradeBook.csv')
+write_csv(GradeBook, 'data-raw/GradeBook.csv')
 
 GradeBook2 <- GradeBook %>%
   gather('Assesment', 'Score', `Exam 1`:`Final Exam`) %>%
   arrange(StudentID)
-write_csv(GradeBook2, 'GradeBook2.csv')
+write_csv(GradeBook2, 'data-raw/GradeBook2.csv')
 

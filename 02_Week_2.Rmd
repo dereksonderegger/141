@@ -1,0 +1,60 @@
+# Week 2
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+```
+
+
+We will now start systematically working through various graph types and design decisions pertainent to each. 
+
+## Visualizing Amounts
+
+Read Chapter 6 from Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/).
+
+The 2020 presidential candidate field has a wide range of ages. 
+The 
+![New York Times](https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html)
+has a nice article showing the candidate ages. I grabbed a few of the most prominent candidates and pulled their birthdays from Wikipedia and then calculated their age on election day.
+
+```{r, echo=FALSE, message=FALSE, fig.height=5}
+birth <- read_csv('data-raw/Prez_Candidate_Birthdays')
+ggplot(birth, aes(x=candidate, y=AgeOnElection)) + 
+  geom_point() +
+  labs(x='Candidate', y='Age on Nov 3,  2020', title='Ages of Presidential Candidates') +
+  coord_flip()
+```
+
+The order of the candidates is useless. Here we have ordered them alphabetically when we should try to think about an ordering that improves clarity. Lets switch to sorting the candidates by age.
+
+```{r, echo=FALSE, message=FALSE, fig.height=5}
+birth <- birth %>%
+  mutate(candidate = fct_reorder(candidate, AgeOnElection))  
+ggplot(birth, aes(x=candidate, y=AgeOnElection, color=Party)) + 
+  geom_point() +
+  scale_color_manual(values=c('Blue','Red')) +
+  labs(x='Candidate', y='Age on Nov 3,  2020', title='Ages of Presidential Candidates') +
+  coord_flip()
+```
+
+This isn't too bad, but it fails to visually impress the differences. A bar chart should visually impress the ages based on the length of the bar so that we con't have to keep looking at the Age axis.
+
+```{r, echo=FALSE, message=FALSE, fig.height=5}
+ggplot(birth, aes(x=candidate, y=AgeOnElection, fill=Party)) + 
+  geom_col() +
+  scale_fill_manual(values=c('Blue','Red')) +
+  labs(x='Candidate', y='Age on Nov 3,  2020', title='Ages of Presidential Candidates') +
+  coord_flip()
+```
+
+What would be *dishonest* is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.
+
+```{r, echo=FALSE, message=FALSE, fig.height=5}
+ggplot(birth, aes(x=candidate, y=AgeOnElection, fill=Party)) + 
+  geom_col() +
+  scale_fill_manual(values=c('Blue','Red')) +
+  labs(x='Candidate', y='Age on Nov 3,  2020', title='Ages of Presidential Candidates - WRONG!') +
+  coord_flip(ylim=c(35,80)) 
+```
+
+
+## Visualizing Distributions

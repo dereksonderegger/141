@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2019-09-02" />
+<meta name="date" content="2019-09-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -84,8 +84,10 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-week-2.html"><a href="2-week-2.html"><i class="fa fa-check"></i><b>2</b> Week 2</a><ul>
+<li class="chapter" data-level="" data-path="2-week-2.html"><a href="2-week-2.html#assignments"><i class="fa fa-check"></i>Assignments</a></li>
 <li class="chapter" data-level="2.1" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-amounts"><i class="fa fa-check"></i><b>2.1</b> Visualizing Amounts</a></li>
 <li class="chapter" data-level="2.2" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-distributions"><i class="fa fa-check"></i><b>2.2</b> Visualizing Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="2-week-2.html"><a href="2-week-2.html#visualization-proportions"><i class="fa fa-check"></i><b>2.3</b> Visualization Proportions</a></li>
 </ul></li>
 </ul>
 
@@ -106,10 +108,16 @@
             <section class="normal" id="section-">
 <div id="week-2" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Week 2</h1>
-<p>We will now start systematically working through various graph types and design decisions pertainent to each.</p>
+<div id="assignments" class="section level3 unnumbered">
+<h3>Assignments</h3>
+<ul>
+<li><p>Read Chapter 6 and 7 from Wilke’s Fundamentals of Data Visualiztion <a href="https://serialmentor.com/dataviz/">book</a>.</p></li>
+<li><p>Watch Hans Roslings <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">TED talk</a>.</p></li>
+<li><p>Make some visualizations in Tableau. I need to figure out the data for you to use…</p></li>
+</ul>
+</div>
 <div id="visualizing-amounts" class="section level2">
 <h2><span class="header-section-number">2.1</span> Visualizing Amounts</h2>
-<p>Read Chapter 6 from Wilke’s Fundamentals of Data Visualiztion <a href="https://serialmentor.com/dataviz/">book</a>.</p>
 <p>The 2020 presidential candidate field has a wide range of ages.
 The
 <a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
@@ -121,9 +129,26 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <p><img src="02_Week_2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>What would be <em>dishonest</em> is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.</p>
 <p><img src="02_Week_2_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Often we need to graph some value and want to know how it varies among <em>two</em> different categories. In these cases, we have to employ some sort of grouping strategy.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries.</p>
+<p>We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="visualizing-distributions" class="section level2">
 <h2><span class="header-section-number">2.2</span> Visualizing Distributions</h2>
+</div>
+<div id="visualization-proportions" class="section level2">
+<h2><span class="header-section-number">2.3</span> Visualization Proportions</h2>
+<p>A good pie chart from <a href="https://www.reddit.com/r/dataisbeautiful/comments/cz58sb/blood_type_distribution_in_the_united_states_oc/">reddit/r/dataisbeautiful</a> member <code>u/foiltape</code>.</p>
+<div class="figure">
+<img src="Resources/Graphs/Pie_Charts/BloodTypes.png" alt="A Good Pie Chart" />
+<p class="caption">A Good Pie Chart</p>
+</div>
 
 </div>
 </div>

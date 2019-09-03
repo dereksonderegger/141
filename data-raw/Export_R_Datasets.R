@@ -8,7 +8,9 @@ write_csv(iris, 'data-raw/iris.csv')
 write_csv(warpbreaks, 'data-raw/warpbreaks.csv')
 write_csv( Lock5Data::GPAGender, 'Lock5_GPAGender.csv' )
 
-
+#############################################
+## Gradebook Example
+#############################################
 GradeBook <- read_csv( file='~/Dropbox/NAU/Teaching/STA 570/2012_Fall/grades3.csv' ) %>%
   select( -'Last Name', -`First Name`, -Username, -`Student ID`, -X18, -X19 ) %>%
   select( `Exam 1`, `Exam 2`, `Final Exam` ) %>%
@@ -24,6 +26,9 @@ GradeBook2 <- GradeBook %>%
 write_csv(GradeBook2, 'data-raw/GradeBook2.csv')
 
 
+#############################################
+## Democratic candidates Ages.
+#############################################
 Prez_Candidate_Birthdays <- tribble(
   ~Candidate,         ~Gender, ~Birthday,   ~Party,
   'Pete Buttigieg',   'M',  'Jan 19, 1982',  'D',
@@ -44,3 +49,16 @@ write_csv(Prez_Candidate_Birthdays, 'data-raw/Prez_Candidate_Birthdays')
 
 
 
+##########################
+## CO2 levels
+##########################
+CO2 <- read_table( 
+  "ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt", 
+  col_names = c('Year', 'Month', 'Time', 'CO2','Fit','Seasonal','num_records'),
+  skip = 72)
+CO2 <- CO2 %>% filter(CO2 > 0) %>%
+  mutate(Date = str_c(Year, '-', Month, '-1'),
+         Date = lubridate::ymd(Date)) %>%
+  rename(Date2 = Time) %>%
+  select(Date, Date2, Year, Month, CO2)
+write_csv(CO2, 'data-raw/CO2.csv')

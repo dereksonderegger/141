@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2019-09-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="1-week-1.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="1-week-1.html"><a href="1-week-1.html"><i class="fa fa-check"></i><b>1</b> Week 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-week-1.html"><a href="1-week-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-week-1.html"><a href="1-week-1.html#initial-thoughts."><i class="fa fa-check"></i><b>1.1.1</b> Initial thoughts.</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-week-1.html"><a href="1-week-1.html#amazing-graphics"><i class="fa fa-check"></i><b>1.1.2</b> Amazing Graphics</a></li>
+<li class="chapter" data-level="1.1.3" data-path="1-week-1.html"><a href="1-week-1.html#bad-graphs"><i class="fa fa-check"></i><b>1.1.3</b> Bad Graphs</a></li>
+<li class="chapter" data-level="1.1.4" data-path="1-week-1.html"><a href="1-week-1.html#tableau-or"><i class="fa fa-check"></i><b>1.1.4</b> Tableau or ???</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-week-1.html"><a href="1-week-1.html#epts-and-gestalt"><i class="fa fa-check"></i><b>1.2</b> EPTs and Gestalt</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-week-1.html"><a href="1-week-1.html#groupings-gestalt"><i class="fa fa-check"></i><b>1.2.1</b> Groupings / Gestalt</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-week-1.html"><a href="1-week-1.html#color-scales"><i class="fa fa-check"></i><b>1.2.2</b> “Color” Scales</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-week-1.html"><a href="1-week-1.html#practicum-1"><i class="fa fa-check"></i><b>1.3</b> Practicum #1</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-week-1.html"><a href="1-week-1.html#how-to-store-data"><i class="fa fa-check"></i><b>1.3.1</b> How to Store Data</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-week-1.html"><a href="1-week-1.html#tableau"><i class="fa fa-check"></i><b>1.3.2</b> Tableau</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-week-2.html"><a href="2-week-2.html"><i class="fa fa-check"></i><b>2</b> Week 2</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-amounts"><i class="fa fa-check"></i><b>2.1</b> Visualizing Amounts</a></li>
+<li class="chapter" data-level="2.2" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-distributions"><i class="fa fa-check"></i><b>2.2</b> Visualizing Distributions</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-2" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Week 2</h1>
+<p>We will now start systematically working through various graph types and design decisions pertainent to each.</p>
+<div id="visualizing-amounts" class="section level2">
+<h2><span class="header-section-number">2.1</span> Visualizing Amounts</h2>
+<p>Read Chapter 6 from Wilke’s Fundamentals of Data Visualiztion <a href="https://serialmentor.com/dataviz/">book</a>.</p>
+<p>The 2020 presidential candidate field has a wide range of ages.
+The
+<a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
+has a nice article showing the candidate ages. I grabbed a few of the most prominent candidates and pulled their birthdays from Wikipedia and then calculated their age on election day.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The order of the candidates is useless. Here we have ordered them alphabetically when we should try to think about an ordering that improves clarity. Lets switch to sorting the candidates by age.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>This isn’t too bad, but it fails to visually impress the differences. A bar chart should visually impress the ages based on the length of the bar so that we con’t have to keep looking at the Age axis.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>What would be <em>dishonest</em> is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="visualizing-distributions" class="section level2">
+<h2><span class="header-section-number">2.2</span> Visualizing Distributions</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-week-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/02_Week_2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

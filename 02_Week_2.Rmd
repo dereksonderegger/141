@@ -11,11 +11,18 @@ knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, fig.height=4)
 
 ### Assignments{-}
 
-* Read Chapter 6 and 7 from Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/).
+1. Read Chapter 6 and 7 from Claus Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/).
 
-* Watch Hans Roslings [TED talk](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen).
+2. Watch Hans Roslings [TED talk](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen). Comment on two aspects of the videa that stand out to you regarding how he presented his data and how he talked through the visualization with the audience.
 
-* Make some visualizations in Tableau.  I need to figure out the data for you to use...
+3. Graph the NOAA CO$_2$ data over time.  The Nationa Oceanic and Atmospheric Adminstration has monthly CO$_2$ atmospheric levels data available to the public at NOAA's [website](ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt). However, this is a little obnoxious to get into Tableau, so I've done some data wrangling for you [already](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/CO2.csv). The `Date2` column has the date information encoded using a continuous decimal scale. CO$_2$ is measured in parts per million.
+
+    a) Plot CO$_2$ over time while showing the monthly trend. Should we use area or lines?  Why?
+    b) Create a graph that shows a single mark per year (so average over all observations in a year). Do you like this better? Explain your reasoning.
+    c) Create a follow-up graphic that shows the monthly trend. Explain what you want to demonstrate and why you chose to display the information as you did.
+    
+
+
 
 
 ## Visualizing Amounts

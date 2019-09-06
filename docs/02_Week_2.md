@@ -126,6 +126,10 @@ Boxplots are a traditional way to display a distribution and the box contains th
 ![](02_Week_2_files/figure-epub3/unnamed-chunk-20-1.png)<!-- -->
 Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. However that detail is lost in the boxplots.
 
+### Violin Plots
+Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-21-1.png)<!-- -->
+Now we can see the two peaks in December, but the three peaks in November have been flattened out because the amount of space necessary to show it would require that the densities overlap.
 
 
 ## Proportions

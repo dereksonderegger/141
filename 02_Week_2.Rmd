@@ -161,7 +161,7 @@ birthwt %>%
   slice(1:10) %>%
   ggplot(., aes(x=bwt)) +
   geom_point(aes(x=bwt), y=0) +
-  labs( x='Birthweight (g)', y='', title='Infant Birthweight') +
+  labs( x='Birthweight (g)', y='', title='Strip plot: Infant Birthweight') +
   scale_y_continuous(breaks=NULL)
 ```
 
@@ -171,7 +171,7 @@ birthwt %>%
   slice(1:10) %>%
   ggplot(., aes(x=bwt)) +
   geom_rug() +
-  labs( x='Birthweight (g)', y='', title='Infant Birthweight')
+  labs( x='Birthweight (g)', y='', title='Rug plot: Infant Birthweight')
 ```
 
 
@@ -182,7 +182,7 @@ When we have a moderate size of data, graphing dots exactly on an axis doesn't w
 birthwt %>%
   ggplot(., aes(x=bwt)) +
   geom_dotplot( dotsize=.7 ) +
-  labs( x='Birthweight (g)', title='Infant Birthweight', y='') +
+  labs( x='Birthweight (g)', title='Dot plot: Infant Birthweight', y='') +
   scale_y_continuous(breaks=NULL)
 ```
 
@@ -191,7 +191,7 @@ Each dot represents an observation, but the x-values have been rounded into grou
 ```{r}
 birthwt %>% ggplot(., aes(x=bwt)) +
   geom_histogram( bins=30, color='black', fill='grey70' ) +
-  labs( x='Birthweight (g)', title='Infant Birthweight')
+  labs( x='Birthweight (g)', title='Histogram: Infant Birthweight')
 ```
 
 The choice of how many bins to include can make a dramatic difference in a graph. In particular, I don't believe that there is any biological reason to think the dip near 2700 grams is real. I believe that is is actually just an artifact of the data I have. Instead we should consider changing the number of bins.
@@ -212,7 +212,7 @@ C <- birthwt %>% ggplot(., aes(x=bwt)) +
 D <- birthwt %>% ggplot(., aes(x=bwt)) +
   geom_histogram( bins=4, color='black', fill='grey70' ) +
   labs( x='Birthweight (g)', title='Infant Birthweight')+
-  geom_label(x=0, y=100, label='bins = 30')
+  geom_label(x=0, y=100, label='bins = 4')
 
 cowplot::plot_grid(A,B,C,D)
 ```
@@ -225,7 +225,7 @@ Histograms suffer from being to angular or pointy. Another solution is call a ke
 birthwt %>% ggplot(., aes(x=bwt, y=..density..)) +
   geom_histogram( bins=30, color='black', fill='grey70',  ) +
   geom_density(fill='cornsilk', alpha=.5) +
-  labs( x='Birthweight (g)', title='Infant Birthweight') 
+  labs( x='Birthweight (g)', title='Histogram + Density plots: Infant Birthweight') 
 ```
 
 
@@ -236,13 +236,13 @@ One of my favorite ways to display multiple distributions is to group each distr
 
 A <- ggplot(birthwt, aes(x=bwt, fill=smoke)) +
   geom_density(position='stack') +
-  labs( x='Birthweight (g)', title='Infant Birthweight', y='') +
+  labs( x='Birthweight (g)', title='Density plot: Infant Birthweight', y='') +
   scale_y_continuous(breaks=NULL) +
   facet_grid( . ~ smoke ) +
   theme( legend.position = 'None')
 B <- ggplot(birthwt, aes(x=bwt, fill=smoke)) +
   geom_density(position='stack') +
-  labs( x='Birthweight (g)', title='Infant Birthweight', y='') +
+  labs( x='Birthweight (g)', title='Density plot: Infant Birthweight', y='') +
   scale_y_continuous(breaks=NULL) +
   facet_grid( smoke ~ . )
 
@@ -259,7 +259,7 @@ Stacking the distribution involes laying each distribution on top of each other,
 ```{r}
 ggplot(birthwt, aes(x=bwt, fill=smoke)) +
   geom_density(position='stack') +
-  labs( x='Birthweight (g)', title='Infant Birthweight', y='') +
+  labs( x='Birthweight (g)', title='Stacked Density plots: Infant Birthweight', y='') +
   scale_y_continuous(breaks=NULL) 
 ```
 I really don't like this graph because it is very hard to see where the peak of the non-smoker curve is. This stacking trick works well enough when we have proportions but isn't good here.
@@ -275,7 +275,7 @@ annotation.data <- data.frame(
   smoke = c('Non-smoker', 'Smoker'))
 ggplot(birthwt, aes(x=bwt, fill=smoke)) +
   geom_density(position='identity', alpha=.5) +
-  labs( x='Birthweight (g)', title='Infant Birthweight', y='') +
+  labs( x='Birthweight (g)', title='Overlaped Density plots: Infant Birthweight', y='') +
   scale_y_continuous(breaks=NULL) +
   geom_label( data=annotation.data, aes(y=y, label=smoke), alpha=.5) +
   theme(legend.position = 'None')
@@ -292,7 +292,7 @@ ggplot(lincoln_weather, aes(x = `Max Temperature [F]`, y = `Month`)) +
   # scale_fill_gradientn(
   #   colours = c("#0D0887FF", "#CC4678FF", "#F0F921FF"),
   #   name = "Temp. [F]")+
-  labs(title = 'Temperatures in Lincoln NE, 2016') 
+  labs(title = 'Ridge plot: Temperatures in Lincoln NE, 2016') 
 ```
 
 
@@ -301,10 +301,22 @@ Boxplots are a traditional way to display a distribution and the box contains th
 ```{r}
 ggplot(lincoln_weather, aes(x=Month, y=`Max Temperature [F]`)) +
   geom_boxplot() +
-  coord_flip()
+  coord_flip() +
+    labs(title = 'Box plots: Temperatures in Lincoln NE, 2016') 
+
 ```
 Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. However that detail is lost in the boxplots.
 
+### Violin Plots
+Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
+```{r, fig.height=4}
+ggplot(lincoln_weather, aes(x=Month, y=`Max Temperature [F]`)) +
+  geom_violin() +
+  coord_flip() +
+    labs(title = 'Violin plots: Temperatures in Lincoln NE, 2016') 
+
+```
+Now we can see the two peaks in December, but the three peaks in November have been flattened out because the amount of space necessary to show it would require that the densities overlap.
 
 
 ## Proportions

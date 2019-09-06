@@ -19,7 +19,7 @@
 
 
 
-## Visualizing Amounts
+## Amounts
 
 The 2020 presidential candidate field has a wide range of ages. 
 The 
@@ -61,10 +61,74 @@ A heat map makes it easier to see which country has the highest life expectancy,
 
 
 
-## Visualizing Distributions
+## Distributions
+
+Given a single variable, I often want to know what values are common and what values are rare. To visualize this, we will primarily compare marks along a common axis (the most accurate EPT!)
+
+### Small samples
+If we only have a few observations, then we can just graph them along an axis.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-10-1.png)<!-- -->
+
+Another trick that works with more data, is to not use dots but rather lines. This is called a rugplot. This is often used in conjunction with another graph such as a scatterplot.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-11-1.png)<!-- -->
 
 
-## Visualization Proportions
+### Histograms
+When we have a moderate size of data, graphing dots exactly on an axis doesn't work and results in overplotting and it is difficult to see where the data cluster. Instead we'll stack the dots in columns along the axis and call this a dotplot.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-12-1.png)<!-- -->
+
+Each dot represents an observation, but the x-values have been rounded into group values. So we have lost some precision. Another common version of this is a histogram, where the y-axis represents how many observations fall into each bin.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-13-1.png)<!-- -->
+
+The choice of how many bins to include can make a dramatic difference in a graph. In particular, I don't believe that there is any biological reason to think the dip near 2700 grams is real. I believe that is is actually just an artifact of the data I have. Instead we should consider changing the number of bins.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-14-1.png)<!-- -->
+
+
+
+### Density plots
+Histograms suffer from being to angular or pointy. Another solution is call a kernel density smoother that mathematically smooths over the heights of the histogram bars.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-15-1.png)<!-- -->
+
+
+### Faceting
+One of my favorite ways to display multiple distributions is to group each distribution into it's own plot in a process often referred to as faceting.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-16-1.png)<!-- -->
+
+By choosing to put the two graphs on top of the other, it becomes clear that the smoker's tend to give birth to smaller infants. This fact isn't clear in the side-by-side graphs.
+
+
+### Stacking
+
+Stacking the distribution involes laying each distribution on top of each other, so that the zero of the top curve follows the curve on the bottom. You can visualize the B chart having the Non-smoker density graph just melt onto the smoker density.
+
+![](02_Week_2_files/figure-epub3/unnamed-chunk-17-1.png)<!-- -->
+I really don't like this graph because it is very hard to see where the peak of the non-smoker curve is. This stacking trick works well enough when we have proportions but isn't good here.
+
+
+
+### Overlapping curves
+Another option is to graph the densities, but allow them to overlap each other and be a bit see-thru.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-18-1.png)<!-- -->
+
+For seeing shifts in the center of the distribution, overlapping curves is quite powerful.
+
+For another nice example, we can look at the density of the daily maximum temperature in Lincoln Nebraska in 2016.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-19-1.png)<!-- -->
+
+
+### Boxplots
+Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
+![](02_Week_2_files/figure-epub3/unnamed-chunk-20-1.png)<!-- -->
+Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. However that detail is lost in the boxplots.
+
+
+
+## Proportions
 
 A good pie chart from [reddit/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/comments/cz58sb/blood_type_distribution_in_the_united_states_oc/) member `u/foiltape`.
 

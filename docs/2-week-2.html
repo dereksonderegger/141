@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2019-09-04" />
+<meta name="date" content="2019-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -85,9 +85,17 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-week-2.html"><a href="2-week-2.html"><i class="fa fa-check"></i><b>2</b> Week 2</a><ul>
 <li class="chapter" data-level="" data-path="2-week-2.html"><a href="2-week-2.html#assignments"><i class="fa fa-check"></i>Assignments</a></li>
-<li class="chapter" data-level="2.1" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-amounts"><i class="fa fa-check"></i><b>2.1</b> Visualizing Amounts</a></li>
-<li class="chapter" data-level="2.2" data-path="2-week-2.html"><a href="2-week-2.html#visualizing-distributions"><i class="fa fa-check"></i><b>2.2</b> Visualizing Distributions</a></li>
-<li class="chapter" data-level="2.3" data-path="2-week-2.html"><a href="2-week-2.html#visualization-proportions"><i class="fa fa-check"></i><b>2.3</b> Visualization Proportions</a></li>
+<li class="chapter" data-level="2.1" data-path="2-week-2.html"><a href="2-week-2.html#amounts"><i class="fa fa-check"></i><b>2.1</b> Amounts</a></li>
+<li class="chapter" data-level="2.2" data-path="2-week-2.html"><a href="2-week-2.html#distributions"><i class="fa fa-check"></i><b>2.2</b> Distributions</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-week-2.html"><a href="2-week-2.html#small-samples"><i class="fa fa-check"></i><b>2.2.1</b> Small samples</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-week-2.html"><a href="2-week-2.html#histograms"><i class="fa fa-check"></i><b>2.2.2</b> Histograms</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-week-2.html"><a href="2-week-2.html#density-plots"><i class="fa fa-check"></i><b>2.2.3</b> Density plots</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-week-2.html"><a href="2-week-2.html#faceting"><i class="fa fa-check"></i><b>2.2.4</b> Faceting</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-week-2.html"><a href="2-week-2.html#stacking"><i class="fa fa-check"></i><b>2.2.5</b> Stacking</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-week-2.html"><a href="2-week-2.html#overlapping-curves"><i class="fa fa-check"></i><b>2.2.6</b> Overlapping curves</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-week-2.html"><a href="2-week-2.html#boxplots"><i class="fa fa-check"></i><b>2.2.7</b> Boxplots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-week-2.html"><a href="2-week-2.html#proportions"><i class="fa fa-check"></i><b>2.3</b> Proportions</a></li>
 </ul></li>
 </ul>
 
@@ -121,8 +129,8 @@
 </ol></li>
 </ol>
 </div>
-<div id="visualizing-amounts" class="section level2">
-<h2><span class="header-section-number">2.1</span> Visualizing Amounts</h2>
+<div id="amounts" class="section level2">
+<h2><span class="header-section-number">2.1</span> Amounts</h2>
 <p>The 2020 presidential candidate field has a wide range of ages.
 The
 <a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
@@ -144,11 +152,59 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
 <img src="02_Week_2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
-<div id="visualizing-distributions" class="section level2">
-<h2><span class="header-section-number">2.2</span> Visualizing Distributions</h2>
+<div id="distributions" class="section level2">
+<h2><span class="header-section-number">2.2</span> Distributions</h2>
+<p>Given a single variable, I often want to know what values are common and what values are rare. To visualize this, we will primarily compare marks along a common axis (the most accurate EPT!)</p>
+<div id="small-samples" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Small samples</h3>
+<p>If we only have a few observations, then we can just graph them along an axis.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Another trick that works with more data, is to not use dots but rather lines. This is called a rugplot. This is often used in conjunction with another graph such as a scatterplot.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
-<div id="visualization-proportions" class="section level2">
-<h2><span class="header-section-number">2.3</span> Visualization Proportions</h2>
+<div id="histograms" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Histograms</h3>
+<p>When we have a moderate size of data, graphing dots exactly on an axis doesn’t work and results in overplotting and it is difficult to see where the data cluster. Instead we’ll stack the dots in columns along the axis and call this a dotplot.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Each dot represents an observation, but the x-values have been rounded into group values. So we have lost some precision. Another common version of this is a histogram, where the y-axis represents how many observations fall into each bin.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>The choice of how many bins to include can make a dramatic difference in a graph. In particular, I don’t believe that there is any biological reason to think the dip near 2700 grams is real. I believe that is is actually just an artifact of the data I have. Instead we should consider changing the number of bins.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="density-plots" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Density plots</h3>
+<p>Histograms suffer from being to angular or pointy. Another solution is call a kernel density smoother that mathematically smooths over the heights of the histogram bars.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="faceting" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Faceting</h3>
+<p>One of my favorite ways to display multiple distributions is to group each distribution into it’s own plot in a process often referred to as faceting.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>By choosing to put the two graphs on top of the other, it becomes clear that the smoker’s tend to give birth to smaller infants. This fact isn’t clear in the side-by-side graphs.</p>
+</div>
+<div id="stacking" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Stacking</h3>
+<p>Stacking the distribution involes laying each distribution on top of each other, so that the zero of the top curve follows the curve on the bottom. You can visualize the B chart having the Non-smoker density graph just melt onto the smoker density.</p>
+<p><img src="02_Week_2_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+I really don’t like this graph because it is very hard to see where the peak of the non-smoker curve is. This stacking trick works well enough when we have proportions but isn’t good here.</p>
+</div>
+<div id="overlapping-curves" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Overlapping curves</h3>
+<p>Another option is to graph the densities, but allow them to overlap each other and be a bit see-thru.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>For seeing shifts in the center of the distribution, overlapping curves is quite powerful.</p>
+<p>For another nice example, we can look at the density of the daily maximum temperature in Lincoln Nebraska in 2016.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="boxplots" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Boxplots</h3>
+<p>Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
+<img src="02_Week_2_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. However that detail is lost in the boxplots.</p>
+</div>
+</div>
+<div id="proportions" class="section level2">
+<h2><span class="header-section-number">2.3</span> Proportions</h2>
 <p>A good pie chart from <a href="https://www.reddit.com/r/dataisbeautiful/comments/cz58sb/blood_type_distribution_in_the_united_states_oc/">reddit/r/dataisbeautiful</a> member <code>u/foiltape</code>.</p>
 <div class="figure">
 <img src="Resources/Graphs/Pie_Charts/BloodTypes.png" alt="A Good Pie Chart" />

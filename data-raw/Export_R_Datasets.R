@@ -62,3 +62,36 @@ CO2 <- CO2 %>% filter(CO2 > 0) %>%
   rename(Date2 = Time) %>%
   select(Date, Date2, Year, Month, CO2)
 write_csv(CO2, 'data-raw/CO2.csv')
+
+
+
+##################################################
+## Faculty breakdown in Math/Stat department
+#################################################
+MathStat_Faculty_Composition <- tribble(
+  ~Type,  ~Number,
+  'Instructor',  8,
+  'Lecturer',  8,
+  'Senior Lecturer', 4,
+  'Principle Lecturer', 4,
+  'Assistant Professor', 3,
+  'Associate Professor', 8,
+  'Full Professor', 8)
+write_csv(MathStat_Faculty_Composition, 
+          'data-raw/MathStat_Faculty_Composition.csv')
+
+
+
+##################################################
+## Titanic Data Set
+#################################################
+data('Titanic')
+Titanic <- 
+  data.frame(Titanic) %>%
+  filter(Freq != 0) %>%
+  group_by(Class, Sex, Age, Survived) %>%
+  do({ data.frame( Class = .$Class, Sex = .$Sex, Age=.$Age, Survived=.$Survived, rep=1:.$Freq) }) %>%
+  ungroup() %>% mutate( PersonID = 1:n() ) %>%
+  select(-rep)
+
+write_csv(Titanic, 'data-raw/Titanic.csv')

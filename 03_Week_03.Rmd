@@ -253,6 +253,29 @@ I find that alluvial plots work better for events that have a definate chronolog
 
 
 ### Tree graphs
+
+In mosaic plots, we had *crossed* variables where every category level of one factor could show up with all levels of another factor. 
+
+```{r}
+Crossed <- data.frame( `Factor 1` = c('A','A', 'B','B'),
+                       `Factor 2` = c('w','x', 'w','x'),
+                       value      = c( 4, 6,    15, 25))
+pander::pander(Crossed)
+```
+Table: Crossed Factors Suitable for a Mosaic Plot. 
+
+
+Another possibility is that the variables are nested such that a category level of the second factor only ever occurs within a single level of the first factor.
+
+```{r}
+Nested <- data.frame( `Factor 1` = c('A','A', 'B','B'),
+                      `Factor 2` = c('w','x', 'y','z'),
+                      value      = c( 4, 6,    15, 25))
+pander::pander(Nested)
+```
+Table: Nested Factors Suitable for a Tree Map. 
+
+
 When we have a hierarchical structure of categories, then mosaic plots aren't quite right. Instead we'll hierarchically subdivide the graph area up.
 ```{r}
 library(gapminder)

@@ -216,8 +216,84 @@
 </div>
 <div id="tree-graphs" class="section level3">
 <h3><span class="header-section-number">3.2.5</span> Tree graphs</h3>
+<p>In mosaic plots, we had <em>crossed</em> variables where every category level of one factor could show up with all levels of another factor.</p>
+<table style="width:42%;">
+<caption>Crossed Factors Suitable for a Mosaic Plot.</caption>
+<colgroup>
+<col width="15%" />
+<col width="15%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Factor.1</th>
+<th align="center">Factor.2</th>
+<th align="center">value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">w</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">A</td>
+<td align="center">x</td>
+<td align="center">6</td>
+</tr>
+<tr class="odd">
+<td align="center">B</td>
+<td align="center">w</td>
+<td align="center">15</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">x</td>
+<td align="center">25</td>
+</tr>
+</tbody>
+</table>
+<p>Another possibility is that the variables are nested such that a category level of the second factor only ever occurs within a single level of the first factor.</p>
+<table style="width:42%;">
+<caption>Nested Factors Suitable for a Tree Map.</caption>
+<colgroup>
+<col width="15%" />
+<col width="15%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Factor.1</th>
+<th align="center">Factor.2</th>
+<th align="center">value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">w</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">A</td>
+<td align="center">x</td>
+<td align="center">6</td>
+</tr>
+<tr class="odd">
+<td align="center">B</td>
+<td align="center">y</td>
+<td align="center">15</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">z</td>
+<td align="center">25</td>
+</tr>
+</tbody>
+</table>
 <p>When we have a hierarchical structure of categories, then mosaic plots aren’t quite right. Instead we’ll hierarchically subdivide the graph area up.
-<img src="03_Week_03_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<img src="03_Week_03_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.</p>
 <p>This differs from a moasic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple “containers”.</p>
 </div>
@@ -298,19 +374,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

@@ -55,23 +55,28 @@ The following are true about Pearson's correlation coefficient:
 
 
 
-```
-## # A tibble: 6 x 3
-##   delay          n proportion
-##   <fct>      <int>      <dbl>
-## 1 (-30,0]   200085     0.609 
-## 2 (0,30]     80141     0.244 
-## 3 (30,60]    21710     0.0661
-## 4 (60,120]   16858     0.0513
-## 5 (120,180]   5830     0.0177
-## 6 (180,Inf]   3893     0.0119
-```
+---------------------------------
+   delay       n      proportion 
+----------- -------- ------------
+  (-30,0]    200085     0.6091   
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-9-1.png)<!-- -->
+  (0,30]     80141      0.2439   
+
+  (30,60]    21710     0.06608   
+
+ (60,120]    16858     0.05132   
+
+ (120,180]    5830     0.01775   
+
+ (180,Inf]    3893     0.01185   
+---------------------------------
+
+
+
 
 ![](04_Week_4_files/figure-epub3/unnamed-chunk-10-1.png)<!-- -->
 
-This graph leads me to think that MOST flights are quite late, when if fact, they aren't.
+This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
 ### Contour Plots
 

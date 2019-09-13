@@ -137,17 +137,20 @@ flights %>%
   pander::pander()
 ```
 
+
 ```{r, cache=TRUE}
-flights <- flights %>%
-  # slice(1:1000) %>%
-  mutate( hour = floor(dep_time / 100) ) %>%
-  mutate( minute = dep_time - hour*100 ) %>%
-  mutate( time = hour + minute/60 )
-  # select( dep_time, hour, minute, time) %>%
-  # View()
-#  mutate(dep_time = hour + minute/60 ) %>%
-ggplot(flights, aes(x=time, y=dep_delay)) +
-  geom_point(alpha=.1)
+# Too many data points and GitHub is refusing to build the web page because this is too big.  
+# I need to figure out how to save it as a png or something similar.
+# flights <- flights %>%
+#   # slice(1:1000) %>%
+#   mutate( hour = floor(dep_time / 100) ) %>%
+#   mutate( minute = dep_time - hour*100 ) %>%
+#   mutate( time = hour + minute/60 )
+#   # select( dep_time, hour, minute, time) %>%
+#   # View()
+# #  mutate(dep_time = hour + minute/60 ) %>%
+# ggplot(flights, aes(x=time, y=dep_delay)) +
+#   geom_point(alpha=.1)
 ```
 
 ```{r, cache=TRUE}

@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2019-09-11" />
+<meta name="date" content="2019-09-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,18 +186,54 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 </div>
 <div id="intensity-maps" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Intensity Maps</h3>
-<pre><code>## # A tibble: 6 x 3
-##   delay          n proportion
-##   &lt;fct&gt;      &lt;int&gt;      &lt;dbl&gt;
-## 1 (-30,0]   200085     0.609 
-## 2 (0,30]     80141     0.244 
-## 3 (30,60]    21710     0.0661
-## 4 (60,120]   16858     0.0513
-## 5 (120,180]   5830     0.0177
-## 6 (180,Inf]   3893     0.0119</code></pre>
-<p><img src="04_Week_4_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<table style="width:47%;">
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">delay</th>
+<th align="center">n</th>
+<th align="center">proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">(-30,0]</td>
+<td align="center">200085</td>
+<td align="center">0.6091</td>
+</tr>
+<tr class="even">
+<td align="center">(0,30]</td>
+<td align="center">80141</td>
+<td align="center">0.2439</td>
+</tr>
+<tr class="odd">
+<td align="center">(30,60]</td>
+<td align="center">21710</td>
+<td align="center">0.06608</td>
+</tr>
+<tr class="even">
+<td align="center">(60,120]</td>
+<td align="center">16858</td>
+<td align="center">0.05132</td>
+</tr>
+<tr class="odd">
+<td align="center">(120,180]</td>
+<td align="center">5830</td>
+<td align="center">0.01775</td>
+</tr>
+<tr class="even">
+<td align="center">(180,Inf]</td>
+<td align="center">3893</td>
+<td align="center">0.01185</td>
+</tr>
+</tbody>
+</table>
 <p><img src="04_Week_4_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t.</p>
+<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t. This is due to the problem of “proportional pixels”. There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can’t help but have that impression.</p>
 </div>
 <div id="contour-plots" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Contour Plots</h3>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Week 4 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 4 Week 4 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Week 4 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Week 4 | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2019-09-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="3-week-3.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="1-week-1.html"><a href="1-week-1.html"><i class="fa fa-check"></i><b>1</b> Week 1</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-week-1.html"><a href="1-week-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-week-1.html"><a href="1-week-1.html#initial-thoughts."><i class="fa fa-check"></i><b>1.1.1</b> Initial thoughts.</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-week-1.html"><a href="1-week-1.html#amazing-graphics"><i class="fa fa-check"></i><b>1.1.2</b> Amazing Graphics</a></li>
+<li class="chapter" data-level="1.1.3" data-path="1-week-1.html"><a href="1-week-1.html#bad-graphs"><i class="fa fa-check"></i><b>1.1.3</b> Bad Graphs</a></li>
+<li class="chapter" data-level="1.1.4" data-path="1-week-1.html"><a href="1-week-1.html#tableau-or"><i class="fa fa-check"></i><b>1.1.4</b> Tableau or ???</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-week-1.html"><a href="1-week-1.html#epts-and-gestalt"><i class="fa fa-check"></i><b>1.2</b> EPTs and Gestalt</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-week-1.html"><a href="1-week-1.html#groupings-gestalt"><i class="fa fa-check"></i><b>1.2.1</b> Groupings / Gestalt</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-week-1.html"><a href="1-week-1.html#color-scales"><i class="fa fa-check"></i><b>1.2.2</b> “Color” Scales</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-week-1.html"><a href="1-week-1.html#practicum-1"><i class="fa fa-check"></i><b>1.3</b> Practicum #1</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-week-1.html"><a href="1-week-1.html#how-to-store-data"><i class="fa fa-check"></i><b>1.3.1</b> How to Store Data</a></li>
+<li class="chapter" data-level="1.3.2" data-path="1-week-1.html"><a href="1-week-1.html#tableau"><i class="fa fa-check"></i><b>1.3.2</b> Tableau</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-week-2.html"><a href="2-week-2.html"><i class="fa fa-check"></i><b>2</b> Week 2</a><ul>
+<li class="chapter" data-level="" data-path="2-week-2.html"><a href="2-week-2.html#assignments"><i class="fa fa-check"></i>Assignments</a></li>
+<li class="chapter" data-level="2.1" data-path="2-week-2.html"><a href="2-week-2.html#amounts"><i class="fa fa-check"></i><b>2.1</b> Amounts</a></li>
+<li class="chapter" data-level="2.2" data-path="2-week-2.html"><a href="2-week-2.html#distributions"><i class="fa fa-check"></i><b>2.2</b> Distributions</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-week-2.html"><a href="2-week-2.html#small-samples"><i class="fa fa-check"></i><b>2.2.1</b> Small samples</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-week-2.html"><a href="2-week-2.html#histograms"><i class="fa fa-check"></i><b>2.2.2</b> Histograms</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-week-2.html"><a href="2-week-2.html#density-plots"><i class="fa fa-check"></i><b>2.2.3</b> Density plots</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-week-2.html"><a href="2-week-2.html#faceting"><i class="fa fa-check"></i><b>2.2.4</b> Faceting</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-week-2.html"><a href="2-week-2.html#stacking"><i class="fa fa-check"></i><b>2.2.5</b> Stacking</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-week-2.html"><a href="2-week-2.html#overlapping-curves"><i class="fa fa-check"></i><b>2.2.6</b> Overlapping curves</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-week-2.html"><a href="2-week-2.html#boxplots"><i class="fa fa-check"></i><b>2.2.7</b> Boxplots</a></li>
+<li class="chapter" data-level="2.2.8" data-path="2-week-2.html"><a href="2-week-2.html#violin-plots"><i class="fa fa-check"></i><b>2.2.8</b> Violin Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-week-2.html"><a href="2-week-2.html#proportions"><i class="fa fa-check"></i><b>2.3</b> Proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-week-3.html"><a href="3-week-3.html"><i class="fa fa-check"></i><b>3</b> Week 3</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-week-3.html"><a href="3-week-3.html#proportions-1"><i class="fa fa-check"></i><b>3.1</b> Proportions</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="3-week-3.html"><a href="3-week-3.html#pie-charts"><i class="fa fa-check"></i><b>3.1.1</b> Pie Charts</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-week-3.html"><a href="3-week-3.html#stacked-bar"><i class="fa fa-check"></i><b>3.1.2</b> Stacked Bar</a></li>
+<li class="chapter" data-level="3.1.3" data-path="3-week-3.html"><a href="3-week-3.html#side-by-side-barchart"><i class="fa fa-check"></i><b>3.1.3</b> Side-by-side Barchart</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="3-week-3.html"><a href="3-week-3.html#multiple-sets-of-proportions"><i class="fa fa-check"></i><b>3.2</b> Multiple Sets of Proportions</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-week-3.html"><a href="3-week-3.html#faceted-bar-charts"><i class="fa fa-check"></i><b>3.2.1</b> Faceted Bar charts</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-week-3.html"><a href="3-week-3.html#side-by-side-stacked-barcharts"><i class="fa fa-check"></i><b>3.2.2</b> Side-by-Side Stacked Barcharts</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-week-3.html"><a href="3-week-3.html#mosiac-plots"><i class="fa fa-check"></i><b>3.2.3</b> Mosiac plots</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-week-3.html"><a href="3-week-3.html#alluvial-plots"><i class="fa fa-check"></i><b>3.2.4</b> Alluvial Plots</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-week-3.html"><a href="3-week-3.html#tree-graphs"><i class="fa fa-check"></i><b>3.2.5</b> Tree graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-week-3.html"><a href="3-week-3.html#exercises"><i class="fa fa-check"></i><b>3.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-week-4.html"><a href="4-week-4.html"><i class="fa fa-check"></i><b>4</b> Week 4</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-week-4.html"><a href="4-week-4.html#visualizing-2-or-more-continuous-variables"><i class="fa fa-check"></i><b>4.1</b> Visualizing 2 or more Continuous variables</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="4-week-4.html"><a href="4-week-4.html#scatter-plots"><i class="fa fa-check"></i><b>4.1.1</b> Scatter plots</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4-week-4.html"><a href="4-week-4.html#pairs-plots-all-vs-all-scatterplots"><i class="fa fa-check"></i><b>4.1.2</b> Pairs plots (All-vs-all scatterplots)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="4-week-4.html"><a href="4-week-4.html#correlation-plots"><i class="fa fa-check"></i><b>4.1.3</b> Correlation Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="4-week-4.html"><a href="4-week-4.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>4.2</b> Pearson’s Correlation Coefficient</a></li>
+<li class="chapter" data-level="4.3" data-path="4-week-4.html"><a href="4-week-4.html#overplotting"><i class="fa fa-check"></i><b>4.3</b> Overplotting</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="4-week-4.html"><a href="4-week-4.html#transparency"><i class="fa fa-check"></i><b>4.3.1</b> Transparency</a></li>
+<li class="chapter" data-level="4.3.2" data-path="4-week-4.html"><a href="4-week-4.html#intensity-maps"><i class="fa fa-check"></i><b>4.3.2</b> Intensity Maps</a></li>
+<li class="chapter" data-level="4.3.3" data-path="4-week-4.html"><a href="4-week-4.html#contour-plots"><i class="fa fa-check"></i><b>4.3.3</b> Contour Plots</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-4" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Week 4</h1>
+<div id="visualizing-2-or-more-continuous-variables" class="section level2">
+<h2><span class="header-section-number">4.1</span> Visualizing 2 or more Continuous variables</h2>
+<div id="scatter-plots" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Scatter plots</h3>
+<p>Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>In a scatter plot we can see the relationship between two variables. We can see the relationship among more variables (either continuous or discrete) by adding Size, Color, and Shape.</p>
+<p>We could also add other categorical variables by adding faceting. With this combination we can visualize the relationship between up to 6 different variables.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="pairs-plots-all-vs-all-scatterplots" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Pairs plots (All-vs-all scatterplots)</h3>
+</div>
+<div id="correlation-plots" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Correlation Plots</h3>
+</div>
+</div>
+<div id="pearsons-correlation-coefficient" class="section level2">
+<h2><span class="header-section-number">4.2</span> Pearson’s Correlation Coefficient</h2>
+<p>We first consider Pearson’s correlation coefficient, which is a statistics that measures the strength of the linear relationship between the predictor and response. Consider the following Pearson’s correlation statistic
+<span class="math display">\[r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)}{n-1}\]</span>
+where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\(y_{i}\)</span> are the x and y coordinate of the <span class="math inline">\(i\)</span>th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than <span class="math inline">\(\bar{x}\)</span>) and the y-value is large (greater than <span class="math inline">\(\bar{y}\)</span>), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>The following are true about Pearson’s correlation coefficient:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(r\)</span> is unit-less because we have standardized the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> values.</li>
+<li><span class="math inline">\(-1\le r\le1\)</span> because of the scaling by <span class="math inline">\(n-1\)</span></li>
+<li>A negative <span class="math inline">\(r\)</span> denotes a negative relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, while a positive value of <span class="math inline">\(r\)</span> represents a positive relationship.</li>
+<li><span class="math inline">\(r\)</span> measures the strength of the <em>linear</em> relationship between the predictor and response.</li>
+</ol>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="overplotting" class="section level2">
+<h2><span class="header-section-number">4.3</span> Overplotting</h2>
+<div id="transparency" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Transparency</h3>
+</div>
+<div id="intensity-maps" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Intensity Maps</h3>
+<pre><code>## # A tibble: 6 x 3
+##   delay          n proportion
+##   &lt;fct&gt;      &lt;int&gt;      &lt;dbl&gt;
+## 1 (-30,0]   200085     0.609 
+## 2 (0,30]     80141     0.244 
+## 3 (30,60]    21710     0.0661
+## 4 (60,120]   16858     0.0513
+## 5 (120,180]   5830     0.0177
+## 6 (180,Inf]   3893     0.0119</code></pre>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t.</p>
+</div>
+<div id="contour-plots" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Contour Plots</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="3-week-3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/04_Week_4.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+# Week 4
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(cowplot)
+
+library(nycflights13)
+
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, fig.height=4)
+```
+
+
+## Visualizing 2 or more Continuous variables
+
+
+### Scatter plots
+Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.
+
+```{r}
+ggplot(iris, aes(x=Sepal.Length, y=Petal.Length)) +
+  geom_point() +
+  labs( x= 'Sepal Length (cm)', y='Petal Length (cm)', 
+        title='Iris Sepal vs Petal Lengths')
+```
+
+
+In a scatter plot we can see the relationship between two variables. We can see the relationship among more variables (either continuous or discrete) by adding Size, Color, and Shape.
+
+We could also add other categorical variables by adding faceting. With this combination we can visualize the relationship between up to 6 different variables.
+
+```{r}
+data(mtcars)
+mtcars <- mtcars %>%
+  mutate( am = factor(am) %>% fct_recode(manual='1', automatic='0') ) %>%
+  rename( Cylinders = cyl, Power=hp, Transmission=am, Weight=wt, Displacement=disp ) 
+ggplot(mtcars, aes(x=Weight, y=mpg, size=Power, color=Displacement)) +
+  geom_point() +
+  facet_grid(Transmission ~ Cylinders, labeller=label_both) +
+  guides(size = guide_legend(reverse = TRUE)) +
+  labs( x='Vehicle Weight (tons)', y='Miles per Gallon', title='Vehicle efficiency vs Size and Power')
+```
+
+
+### Pairs plots (All-vs-all scatterplots)
+
+### Correlation Plots
+## Pearson's Correlation Coefficient
+
+We first consider Pearson's correlation coefficient, which is a statistics that measures the strength of the linear relationship between the predictor and response. Consider the following Pearson's correlation statistic
+$$r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)}{n-1}$$
+where $x_{i}$ and $y_{i}$ are the x and y coordinate of the $i$th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than $\bar{x}$) and the y-value is large (greater than $\bar{y}$), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.
+
+
+```{r}
+set.seed(43456)
+n <- 20
+data <- data.frame( x = runif(n, 0, 1) )
+data <- mutate(data, y= 2 + x + rnorm(n, sd=.2))
+ggplot(data, aes(x=x, y=y)) + geom_point() + geom_smooth(method='lm')
+```
+
+```{r, echo=FALSE}
+xbar <- mean(data$x ) 
+ybar <- mean(data$y )
+tile.data <- data.frame(x=c(xbar-1, xbar-1, xbar+1, xbar+1),
+                        y=c(ybar-1, ybar+1, ybar+1, ybar-1),
+                        sign=c('Positive','Negative','Positive','Negative'))
+
+ggplot(data, aes(x=x, y=y)) +
+  geom_tile(data=tile.data, aes(fill=sign), alpha=.5) +
+  geom_point() +
+  coord_cartesian(xlim=range(data$x), ylim=range(data$y)) +
+  scale_x_continuous(breaks=xbar, label=expression(bar(x))) +
+  scale_y_continuous(breaks=ybar, label=expression(bar(y))) +
+  labs(x=NULL, y=NULL) +
+  guides(fill = guide_legend(reverse = TRUE)) 
+
+```
+
+
+The following are true about Pearson's correlation coefficient:
+
+1. $r$ is unit-less because we have standardized the $x$ and $y$ values.
+2. $-1\le r\le1$ because of the scaling by $n-1$
+3. A negative $r$ denotes a negative relationship between $x$ and $y$, while a positive value of $r$ represents a positive relationship.
+4. $r$ measures the strength of the *linear* relationship between the predictor and response.
+
+```{r, echo=FALSE}
+set.seed(345)
+n <- 100
+x <- seq(0,1, length=n) 
+lots.data <- rbind(
+  data.frame(x=x, y=2 + 2*x + rnorm(n, sd=.5), grp=1),
+  data.frame(x=x, y=2 - 2*x + rnorm(n, sd=.5), grp=2),
+  data.frame(x=x, y=2 + 2*x + rnorm(n, sd=.1), grp=3),
+  data.frame(x=x, y=2 - 2*x + rnorm(n, sd=.1), grp=4),
+  data.frame(x=x, y=2 - 0*x + rnorm(n, sd=2), grp=5),
+  data.frame(x=x, y=2*(2*x-1)^2 + rnorm(n, sd=.1), grp=6))
+
+R.values <-    lots.data %>% dplyr::group_by(grp) %>% dplyr::summarise(R=cor(x,y))
+Plots <- list() 
+for(i in 1:6){
+  Plots[[i]] <- ggplot(lots.data %>% filter(grp==i), aes(x=x, y=y)) +
+     geom_point() +
+    ggtitle(paste('r = ', round(R.values[i,2], digits=3))) +
+    labs(x=NULL, y=NULL) +
+    scale_x_continuous(labels=NULL) +
+    scale_y_continuous(labels=NULL) 
+}  
+cowplot::plot_grid(
+  Plots[[1]], Plots[[2]], Plots[[3]], 
+  Plots[[4]], Plots[[5]], Plots[[6]],
+  ncol=3) 
+```
+
+
+```{r}
+mtcars %>%
+  select( Power, Displacement, Weight, mpg ) %>%
+GGally::ggpairs(.)
+```
+
+
+## Overplotting
+
+### Transparency
+
+### Intensity Maps
+
+
+```{r, cache=TRUE}
+flights %>%
+  mutate(delay = cut(dep_delay, breaks=c(-30,0,30,60,120,180,Inf)) ) %>%
+  select(delay) %>% drop_na() %>% group_by(delay) %>%
+  count() %>% ungroup() %>%
+  mutate( proportion = n/sum(n) ) %>%
+  pander::pander()
+```
+
+```{r, cache=TRUE}
+flights <- flights %>%
+  # slice(1:1000) %>%
+  mutate( hour = floor(dep_time / 100) ) %>%
+  mutate( minute = dep_time - hour*100 ) %>%
+  mutate( time = hour + minute/60 )
+  # select( dep_time, hour, minute, time) %>%
+  # View()
+#  mutate(dep_time = hour + minute/60 ) %>%
+ggplot(flights, aes(x=time, y=dep_delay)) +
+  geom_point(alpha=.1)
+```
+
+```{r, cache=TRUE}
+ggplot(flights, aes(x=time, y=dep_delay)) +
+  geom_hex(bins=80) +
+  scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
+                     labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
+                     minor_breaks = 0:24) +
+  scale_y_continuous( breaks = c(0,30,60,120,180,240),
+                      labels = c('0','30 min', '1 hour', '2 hours', '3 hours', '4 hours') )+
+  labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
+```
+
+This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
+
+### Contour Plots
+
+
+
+
+
+

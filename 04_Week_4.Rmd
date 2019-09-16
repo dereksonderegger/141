@@ -1,5 +1,6 @@
 # Week 4
 
+
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(tidyverse)
 library(cowplot)
@@ -171,5 +172,19 @@ This graph leads me to think that MOST flights are quite late, when if fact, the
 
 
 
+## Exercises
 
+1. Read Chapters 12 and 18 from Wilke's book. Feel free to skip section 12.3.
+
+2. We will use a smaller version of the diamonds dataset that Wilke uses in his Chapter 18. You can download it from my GitHub site in a [.csv file](). We will examine price, carats, cut (Fair, Good, Very Good, Premium, and Ideal), color (J - D), and clarity (I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF), where the category labels I've given are from worst to best. 
+    a) Had I not told you that clarity level IF is the best clarity, what graphs could you make to figure that out? Create and show a graph that demonstrates this and explain your graph. 
+    b) If the diamond clarity isn't good, the dimond cutter won't worry too much about the quality of cut. Make a graph that demonstrates that and explain your reasoning.
+    c) While in principle it is possible for the dimond carats to be any number, they are often cut to be some common carat size. Create a visualization that shows this and discuss how the carat size changes as the cut and clarity improve.
+    
+3. From the [Gapminder.com](www.gapminder.com/data) website, I've downloaded a bunch of interesting covariates about countries. You can find my dataset at my GitHub site in a [.csv file](). The variables I've included include the country region, year, population size, population growth, percent of population with basic sanitation, GDP per capita, Total GDP, life expectancy, adult male and female labor force participation rates. *Fertility is the number of children per woman, so a fertility rate of 2 children per woman is a stable population.* 
+    a) For all the following questions, only consider the year 2015. 
+    b) Investigate the relationship between GDP and GDP_per_capita. Why should we prefer to work with GDP_per_capita when comparing standards of living between, say, the United States and Canada.
+    c) Investigate the relationship between life expectancy, fertility, and GDP_per_capita. Do these relationships seem to vary by region?  
+    d) Investigate the relationship relationship between life expectancy, adult female labor force participation and fertility. Does this vary by region? 
+    
 

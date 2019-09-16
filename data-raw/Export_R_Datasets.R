@@ -95,3 +95,73 @@ Titanic <-
   select(-rep)
 
 write_csv(Titanic, 'data-raw/Titanic.csv')
+
+
+
+##################################################
+## Small Diamonds Dataset
+#################################################
+data('diamonds', package='ggplot2')
+set.seed( 654989 )
+Small_Diamonds <- diamonds %>%
+  group_by(clarity, cut, color) %>%
+  sample_frac( .05 ) 
+write_csv(Small_Diamonds, 'data-raw/Small_Diamonds.csv')
+
+# ggplot(Small_Diamonds, aes(x=carat, y=price)) +
+#   geom_point() +
+#   facet_wrap( cut ~ clarity )
+
+
+
+##################################################
+## Data From GapMinder
+#################################################
+basic_sanitation <- 
+  readr::read_csv('data-raw/Gapminder_data/at_least_basic_sanitation_overall_access_percent.csv') %>%
+  tidyr::gather('year', 'Basic_Sanitation_percent', -country)
+gdp_total <- 
+  readr::read_csv('data-raw/Gapminder_data/total_gdp_us_inflation_adjusted.csv') %>%
+  tidyr::gather('year', 'GDP', -country)
+gdp_per_capita <- 
+  readr::read_csv('data-raw/Gapminder_data/gnipercapita_atlasmethod_current_us.csv') %>%
+  tidyr::gather('year', 'GDP_per_capita', -country)
+life_expectancy <-
+  readr::read_csv('data-raw/Gapminder_data/life_expectancy_years.csv') %>%
+  tidyr::gather('year', 'life_expectancy', -country)
+adult_male_labor_participation <-
+  readr::read_csv('data-raw/Gapminder_data/males_aged_15_64_labour_force_participation_rate_percent.csv') %>%
+  tidyr::gather('year', 'adult_male_labor_participation', -country)
+adult_female_labor_participation <-
+  readr::read_csv('data-raw/Gapminder_data/females_aged_25_54_labour_force_participation_rate_percent.csv') %>%
+  tidyr::gather('year', 'adult_female_labor_participation', -country)
+population_size <- 
+  readr::read_csv('data-raw/Gapminder_data/population_total.csv') %>%
+  tidyr::gather('year', 'population', -country)
+population_growth <- 
+  readr::read_csv('data-raw/Gapminder_data/population_growth_annual_percent.csv') %>%
+  tidyr::gather('year', 'population_growth', -country)
+fertility <- 
+  readr::read_csv('data-raw/Gapminder_data/children_per_woman_total_fertility.csv') %>%
+  tidyr::gather('year', 'fertility', -country)
+# countries <- gapminder::gapminder_unfiltered %>%
+#   select(country, continent) %>% group_by(country, continent) %>% distinct()
+countries <- readxl::read_excel('data-raw/Gapminder_data/Data Geographies - v1 - by Gapminder.xlsx', sheet=2) %>%
+  rename(country = name, region4 = four_regions, region6=six_regions, region8=eight_regions) %>%
+  select(country, region4, region6, region8, Latitude, Longitude)
+  
+
+my_by = c('country', 'year')
+Gapminder <- countries %>%
+  full_join(population_size, by='country') %>%
+  full_join(population_growth, by=my_by) %>%
+  full_join(fertility, by=my_by) %>%
+  full_join(basic_sanitation, gdp_total, by=my_by) %>%
+  full_join(gdp_per_capita, by=my_by) %>%
+  full_join(gdp_total, by=my_by) %>%
+  full_join(life_expectancy, by=my_by) %>%
+  full_join(adult_male_labor_participation, by=my_by) %>%
+  full_join(adult_female_labor_participation, by=my_by) 
+Gapminder <- Gapminder %>%
+  filter(year <= 2019)
+write_csv(Gapminder, 'data-raw/Gapminder.csv')

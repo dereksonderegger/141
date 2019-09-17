@@ -71,7 +71,7 @@ Slides 30-50
 Example: Warpbreaks
 While spinning wool into thread, if the tension on the wool isn't correctly set, the thread can break. Here we compare two different types of wool at three different tensions.
 
-<img src="01_Week_1_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="01_Week_1_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="01_Week_1_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="01_Week_1_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="01_Week_1_files/figure-html/unnamed-chunk-1-5.png" width="672" />
+![](01_Week_1_files/figure-epub3/unnamed-chunk-1-1.png)<!-- -->![](01_Week_1_files/figure-epub3/unnamed-chunk-1-2.png)<!-- -->![](01_Week_1_files/figure-epub3/unnamed-chunk-1-3.png)<!-- -->![](01_Week_1_files/figure-epub3/unnamed-chunk-1-4.png)<!-- -->![](01_Week_1_files/figure-epub3/unnamed-chunk-1-5.png)<!-- -->
 
 
 ### "Color" Scales
@@ -161,7 +161,7 @@ Or I could have stored the information in the following manner, which I'll refer
 #### Task 1: Dragging variables onto destination
 First we'll make a scatterplot with some colors.
 
-<img src="01_Week_1_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+![](01_Week_1_files/figure-epub3/unnamed-chunk-5-1.png)<!-- -->
 
 The iris data I used for this graph is available here:
 data: https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/iris.csv
@@ -171,13 +171,13 @@ data: https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/iri
 https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Lock5_GPAGender.csv
 
 
-<img src="01_Week_1_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+![](01_Week_1_files/figure-epub3/unnamed-chunk-6-1.png)<!-- -->
 
 
 #### Task 3: Reorder categorical variable levels
 
 https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/warpbreaks.csv
 
-<img src="01_Week_1_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+![](01_Week_1_files/figure-epub3/unnamed-chunk-7-1.png)<!-- -->
 
 

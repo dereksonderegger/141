@@ -24,10 +24,3 @@ bookdown::gitbook:
       vk: no
       all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper']      
 
-bookdown::pdf_book:
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-
-bookdown::epub_book: default

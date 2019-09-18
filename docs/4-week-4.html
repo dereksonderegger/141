@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2019-09-16" />
+<meta name="date" content="2019-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,9 +184,14 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 <h2><span class="header-section-number">4.3</span> Overplotting</h2>
 <div id="transparency" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Transparency</h3>
+<p>Wilke’s book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="intensity-maps" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Intensity Maps</h3>
+<p>No matter how much we adjust the transparency, we can’t really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t. This is due to the problem of “proportional pixels”. There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can’t help but have that impression.</p>
 <table style="width:47%;">
 <colgroup>
 <col width="16%" />
@@ -202,14 +207,24 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">(-30,0]</td>
-<td align="center">200085</td>
-<td align="center">0.6091</td>
+<td align="center">(-30,-10]</td>
+<td align="center">12465</td>
+<td align="center">0.03794</td>
 </tr>
 <tr class="even">
-<td align="center">(0,30]</td>
-<td align="center">80141</td>
-<td align="center">0.2439</td>
+<td align="center">(-10,0]</td>
+<td align="center">187620</td>
+<td align="center">0.5711</td>
+</tr>
+<tr class="odd">
+<td align="center">(0,10]</td>
+<td align="center">45598</td>
+<td align="center">0.1388</td>
+</tr>
+<tr class="even">
+<td align="center">(10,30]</td>
+<td align="center">34543</td>
+<td align="center">0.1051</td>
 </tr>
 <tr class="odd">
 <td align="center">(30,60]</td>
@@ -233,11 +248,12 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 </tr>
 </tbody>
 </table>
-<p><img src="04_Week_4_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t. This is due to the problem of “proportional pixels”. There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can’t help but have that impression.</p>
+<p>Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we’ll we’ll take a log<span class="math inline">\(_{10}\)</span> transformation of all the delays greater than 10 minutes.</p>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="contour-plots" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Contour Plots</h3>
+<p><img src="04_Week_4_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 </div>
 <div id="exercises-1" class="section level2">

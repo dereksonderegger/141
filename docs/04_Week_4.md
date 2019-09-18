@@ -10,14 +10,14 @@
 ### Scatter plots
 Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-2-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 
 In a scatter plot we can see the relationship between two variables. We can see the relationship among more variables (either continuous or discrete) by adding Size, Color, and Shape.
 
 We could also add other categorical variables by adding faceting. With this combination we can visualize the relationship between up to 6 different variables.
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-3-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 
 
 ### Pairs plots (All-vs-all scatterplots)
@@ -30,9 +30,9 @@ $$r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i
 where $x_{i}$ and $y_{i}$ are the x and y coordinate of the $i$th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than $\bar{x}$) and the y-value is large (greater than $\bar{y}$), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.
 
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-4-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-5-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
 
 The following are true about Pearson's correlation coefficient:
@@ -42,26 +42,39 @@ The following are true about Pearson's correlation coefficient:
 3. A negative $r$ denotes a negative relationship between $x$ and $y$, while a positive value of $r$ represents a positive relationship.
 4. $r$ measures the strength of the *linear* relationship between the predictor and response.
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-6-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
 
-![](04_Week_4_files/figure-epub3/unnamed-chunk-7-1.png)<!-- -->
+<img src="04_Week_4_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
 
 ## Overplotting
 
 ### Transparency
 
-### Intensity Maps
+Wilke's book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.
 
+<img src="04_Week_4_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+
+
+### Intensity Maps
+No matter how much we adjust the transparency, we can't really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.
+
+<img src="04_Week_4_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+
+This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
 
 ---------------------------------
    delay       n      proportion 
 ----------- -------- ------------
-  (-30,0]    200085     0.6091   
+ (-30,-10]   12465     0.03794   
 
-  (0,30]     80141      0.2439   
+  (-10,0]    187620     0.5711   
+
+  (0,10]     45598      0.1388   
+
+  (10,30]    34543      0.1051   
 
   (30,60]    21710     0.06608   
 
@@ -72,16 +85,14 @@ The following are true about Pearson's correlation coefficient:
  (180,Inf]    3893     0.01185   
 ---------------------------------
 
+Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes.
 
+<img src="04_Week_4_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 
-
-![](04_Week_4_files/figure-epub3/unnamed-chunk-10-1.png)<!-- -->
-
-This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
 ### Contour Plots
 
-
+<img src="04_Week_4_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
 
 ## Exercises

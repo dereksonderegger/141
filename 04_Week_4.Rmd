@@ -126,50 +126,81 @@ GGally::ggpairs(.)
 
 ### Transparency
 
-### Intensity Maps
+Wilke's book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.
 
+```{r, cache=TRUE}
+# Too many data points and GitHub is refusing to build the web page because this is too big.  
+# I need to figure out how to save it as a png or something similar.
+data('flights', package='nycflights13')
+flights <- flights %>%
+  # slice(1:1000) %>%
+  mutate( hour = floor(dep_time / 100) ) %>%
+  mutate( minute = dep_time - hour*100 ) %>%
+  mutate( time = hour + minute/60 ) 
+#  mutate(dep_time = hour + minute/60 ) %>%
+ggplot(flights, aes(x=time, y=dep_delay)) +
+  scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
+                     labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
+                     minor_breaks = 0:24) +
+  geom_point(alpha=.1)
+```
+
+
+### Intensity Maps
+No matter how much we adjust the transparency, we can't really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.
+
+```{r, cache=TRUE}
+ggplot(flights, aes(x=time, y=dep_delay)) +
+  scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
+                     labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
+                     minor_breaks = 0:24) +
+  geom_hex(bins=80) +
+  labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
+```
+
+This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
 ```{r, cache=TRUE}
 flights %>%
-  mutate(delay = cut(dep_delay, breaks=c(-30,0,30,60,120,180,Inf)) ) %>%
+  mutate(delay = cut(dep_delay, breaks=c(-30,-10,0,10,30,60,120,180,Inf)) ) %>%
   select(delay) %>% drop_na() %>% group_by(delay) %>%
   count() %>% ungroup() %>%
   mutate( proportion = n/sum(n) ) %>%
   pander::pander()
 ```
 
+Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes.
 
 ```{r, cache=TRUE}
-# Too many data points and GitHub is refusing to build the web page because this is too big.  
-# I need to figure out how to save it as a png or something similar.
-# flights <- flights %>%
-#   # slice(1:1000) %>%
-#   mutate( hour = floor(dep_time / 100) ) %>%
-#   mutate( minute = dep_time - hour*100 ) %>%
-#   mutate( time = hour + minute/60 )
-#   # select( dep_time, hour, minute, time) %>%
-#   # View()
-# #  mutate(dep_time = hour + minute/60 ) %>%
-# ggplot(flights, aes(x=time, y=dep_delay)) +
-#   geom_point(alpha=.1)
-```
-
-```{r, cache=TRUE}
-ggplot(flights, aes(x=time, y=dep_delay)) +
-  geom_hex(bins=80) +
+flights %>%
+  filter( dep_delay > 10 )%>%
+  ggplot(., aes(x=time, y=dep_delay)) +
   scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
                      labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
                      minor_breaks = 0:24) +
-  scale_y_continuous( breaks = c(0,30,60,120,180,240),
-                      labels = c('0','30 min', '1 hour', '2 hours', '3 hours', '4 hours') )+
-  labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
+  scale_y_log10(  ) +
+  scale_fill_gradient(low='white', high='blue') +
+  geom_hex(bins=80) +
+  labs( x='Time of Day', y='Departure Delay', 
+        title='2013 Airline Departure Delays longer than 10 minutes')
 ```
 
-This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
 ### Contour Plots
 
-
+```{r, cache=TRUE}
+flights %>%
+  filter( dep_delay > 10 )%>%
+  ggplot(., aes(x=time, y=dep_delay)) +
+  scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
+                     labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
+                     minor_breaks = 0:24) +
+  scale_y_log10(  ) +
+  scale_fill_gradient(low='white', high='blue') +
+  geom_density_2d() +
+  labs( x='Time of Day', y='Departure Delay', 
+        title='2013 Airline Departure Delays longer than 10 minutes')
+```
 
 
 ## Exercises

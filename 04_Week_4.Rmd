@@ -137,12 +137,15 @@ flights <- flights %>%
   mutate( hour = floor(dep_time / 100) ) %>%
   mutate( minute = dep_time - hour*100 ) %>%
   mutate( time = hour + minute/60 ) 
-#  mutate(dep_time = hour + minute/60 ) %>%
+
 ggplot(flights, aes(x=time, y=dep_delay)) +
+  # scale_y_log10( minor=c( seq(10,100,by=10), seq(100,1000,by=100) ) ) +
   scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
                      labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
                      minor_breaks = 0:24) +
-  geom_point(alpha=.1)
+  geom_point(alpha=.1) +
+  labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
+
 ```
 
 
@@ -154,6 +157,7 @@ ggplot(flights, aes(x=time, y=dep_delay)) +
   scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
                      labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
                      minor_breaks = 0:24) +
+  # scale_y_log10( minor=c( seq(10,100,by=10), seq(100,1000,by=100) ) ) +
   geom_hex(bins=80) +
   labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
 ```
@@ -178,7 +182,7 @@ flights %>%
   scale_x_continuous(breaks=c(0, 6, 12, 18, 24),
                      labels=c('0:00', '6 am', 'noon', '6 pm', 'midnight'),
                      minor_breaks = 0:24) +
-  scale_y_log10(  ) +
+  scale_y_log10( minor=c( seq(10,100,by=10), seq(100,1000,by=100) ) ) +
   scale_fill_gradient(low='white', high='blue') +
   geom_hex(bins=80) +
   labs( x='Time of Day', y='Departure Delay', 

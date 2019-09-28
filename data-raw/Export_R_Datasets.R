@@ -3,6 +3,7 @@
 
 library(tidyverse)
 library(lubridate)
+library(rvest)
 
 write_csv(iris, 'data-raw/iris.csv')
 write_csv(warpbreaks, 'data-raw/warpbreaks.csv')
@@ -165,3 +166,99 @@ Gapminder <- countries %>%
 Gapminder <- Gapminder %>%
   filter(year <= 2019)
 write_csv(Gapminder, 'data-raw/Gapminder.csv')
+
+
+
+##################################################
+## US State Populations in 2010 and 2018
+#################################################
+library(tidyverse)
+library(rvest)
+
+url = 'https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population'
+page <- read_html(url)
+
+State_Pop <- page %>%
+  html_nodes('table') %>% .[[1]] %>%
+  html_table()
+
+NonVoting <- c('District of Columbia', 'Guam', 'U.S. Virgin Islands', 'American Samoa', 'Northern Mariana Islands')
+
+State_Pop <- 
+  State_Pop %>% 
+  rename(Population2018 = `Population estimate, July 1, 2018[5]`,
+         Population2010 = `Census population, April 1, 2010[6]`,
+         Representatives = `Total seats in the U.S. House of Representatives, 2013–2023`) %>%
+  mutate(Representatives = Representatives %>% str_split_fixed( fixed(' '), 2) %>% .[, 1] ) %>%
+  mutate(VotingRepresentatives = Representatives) %>%
+  mutate(VotingRepresentatives = ifelse( Name %in% NonVoting, 0, VotingRepresentatives)) %>%
+  select(Name, Population2018, Population2010, Representatives, VotingRepresentatives) %>%
+  mutate_at( vars(matches('Pop')), str_remove_all, fixed(',')) %>%
+  mutate_at( vars(matches('Pop')), str_remove, '\\[[0-9]+\\]') %>%
+  mutate_at( vars( matches('Pop')), as.numeric) %>%
+  mutate_at( vars( matches('Rep')), as.numeric) %>%
+  filter( !(Name %in% c('Contiguous United States', 'The fifty states','Fifty states + D.C.','Total U.S. (including D.C. and territories)') ) )  %>%
+  rename( State = 'Name' )
+
+write_csv(State_Pop, 'data-raw/State_Pop.csv')
+  
+
+url <- 'https://en.wikipedia.org/wiki/Firearm_death_rates_in_the_United_States_by_state'
+page <- read_html(url)
+State_Gun_Deaths <- 
+  page %>%
+  html_nodes('table') %>% .[[6]] %>%
+  html_table()
+
+State_Gun_Deaths_2010 <- 
+  State_Gun_Deaths %>%
+  rename(Gun_Murders = 'Gun\nmurders\n(total deaths)(2010)',
+         All_Murders = 'Murders\n(total deaths)\n(2010)',
+         Gun_Ownership = 'Gun\nownership\n(%)(2013)') %>%
+  select( State, All_Murders, Gun_Murders, Gun_Ownership ) %>%
+  mutate(Gun_Ownership = str_remove(Gun_Ownership, '%'),
+         Gun_Ownership = as.numeric(Gun_Ownership) / 100)
+
+write_csv(State_Gun_Deaths_2010, 'data-raw/Guns_State_Deaths_2010.csv')
+
+
+
+url <- 'https://en.wikipedia.org/wiki/Suicide_in_the_United_States'
+page <- read_html(url)
+State_Suicides_2016 <- 
+  page %>%
+  html_nodes('table') %>% .[[2]] %>%
+  html_table()
+
+colnames(State_Suicides_2016) <- State_Suicides_2016[1,]
+State_Suicides_2016 <- State_Suicides_2016[-1, ] %>% select(-Rank) %>%
+  rename(Suicide_Rate_per_100000 = `Suicide rate per 100,000 people`) %>%
+  mutate(Suicide_Rate_per_100000 = as.numeric(Suicide_Rate_per_100000))
+
+write_csv(State_Suicides_2016, 'data-raw/State_Suicides_2016.csv')
+
+##############################################
+##   State Automobile Deaths
+##############################################
+url <- 'https://www.iihs.org/topics/fatality-statistics/detail/state-by-state'
+page <- read_html(url)
+
+Vehicle_Deaths <- 
+  page %>%
+  html_nodes('table') %>% .[[1]] %>%
+  html_table()
+
+colnames(Vehicle_Deaths) <- Vehicle_Deaths[1,]
+Vehicle_Deaths <- Vehicle_Deaths[-1,]
+
+Vehicle_Deaths <- 
+  Vehicle_Deaths %>%
+  select(State, Population, `Vehicle miles traveled (millions)`, 'Fatal crashes', Deaths) %>%
+  rename(Vehicle_Miles = `Vehicle miles traveled (millions)`) %>%
+  mutate_at( vars( -State), str_remove_all, fixed(',')) %>%
+  filter(!(State == 'U.S. total'))
+
+write_csv(Vehicle_Deaths, 'data-raw/Vehicle_Deaths_2017.csv')
+
+
+  

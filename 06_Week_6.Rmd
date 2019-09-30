@@ -27,6 +27,9 @@ and it isn't clear if gun ownership rate is the percent of residents that owns o
 2. Download from the STA 141 GitHub raw data directory files for the 
 [suicide rates](https://github.com/dereksonderegger/141/raw/master/data-raw/State_Suicides_2016.csv) 
 per state. Join this data to data you used in problem 1. Create a scatterplot graph of suicide rate vs gun ownership rates.
+  
+3. Given the context of the problems (1) and (2), what follow-up questions come to mind? Given at least two follow-up questions and the graphs you would create to address those questions. Identify the data you would need to create such a graph. *Context: At this point, you are not expected to find the data, but identify what variables of interest you would need.*
 
+4. Propose a topic of interest to you and consider what variables you would need to obtain to explain it to your fellow classmates in a series of one or more graphics. In particular, discuss how the variables you chose needed (or will need) to be transformed to provide useful comparisons.
 
 

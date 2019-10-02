@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2019-09-30" />
+<meta name="date" content="2019-10-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -49,6 +49,68 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -66,7 +128,10 @@
 <br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructional-material"><i class="fa fa-check"></i><b>0.1</b> Instructional Material</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data-sources"><i class="fa fa-check"></i><b>0.2</b> Data Sources</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="1-week-1.html"><a href="1-week-1.html"><i class="fa fa-check"></i><b>1</b> Week 1</a><ul>
 <li class="chapter" data-level="1.1" data-path="1-week-1.html"><a href="1-week-1.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1.1" data-path="1-week-1.html"><a href="1-week-1.html#initial-thoughts."><i class="fa fa-check"></i><b>1.1.1</b> Initial thoughts.</a></li>
@@ -155,6 +220,121 @@
 <a href="https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/">total iPhone sales</a>
 instead of quarterly sales.</p>
 <p>Example: Rates of vehicle fires for Tesla vs Internal Combustion Vehicles.</p>
+<p>Example: Age Standardization
+Suppose we have two populations with the following age structures and proportion that believe that vaping is “very harmful”.</p>
+<p>Suppose that in each population we’ve asked if individuals believe that vaping is “very harmful”.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Population) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Agree =</span> <span class="st">`</span><span class="dt">Population Size</span><span class="st">`</span> <span class="op">*</span><span class="st"> `</span><span class="dt">Vape Harms</span><span class="st">`</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Agree =</span> <span class="kw">sum</span>(Agree)<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="st">  </span>pander<span class="op">::</span><span class="kw">pander</span>()</a></code></pre></div>
+<table style="width:31%;">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Population</th>
+<th align="center">Agree</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">0.336</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">0.3675</td>
+</tr>
+</tbody>
+</table>
+<p>However It turns out that Population B has a much older population…</p>
+<p>Population Sizes</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="st">  </span><span class="kw">select</span>(Age, Population, <span class="st">`</span><span class="dt">Population Size</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="st">  </span><span class="kw">spread</span>(Population, <span class="st">`</span><span class="dt">Population Size</span><span class="st">`</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="st">  </span>pander<span class="op">::</span><span class="kw">pander</span>()</a></code></pre></div>
+<table style="width:25%;">
+<colgroup>
+<col width="11%" />
+<col width="6%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age</th>
+<th align="center">A</th>
+<th align="center">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">18-29</td>
+<td align="center">40</td>
+<td align="center">25</td>
+</tr>
+<tr class="even">
+<td align="center">30-49</td>
+<td align="center">30</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td align="center">50-64</td>
+<td align="center">20</td>
+<td align="center">25</td>
+</tr>
+<tr class="even">
+<td align="center">65+</td>
+<td align="center">10</td>
+<td align="center">25</td>
+</tr>
+</tbody>
+</table>
+<p>Is Vaping Harmful? (By age group and population)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">data <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span><span class="kw">select</span>(Age, Population, <span class="st">`</span><span class="dt">Vape Harms</span><span class="st">`</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="st">  </span><span class="kw">spread</span>(Population, <span class="st">`</span><span class="dt">Vape Harms</span><span class="st">`</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="st">  </span>pander<span class="op">::</span><span class="kw">pander</span>()</a></code></pre></div>
+<table style="width:31%;">
+<colgroup>
+<col width="11%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age</th>
+<th align="center">A</th>
+<th align="center">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">18-29</td>
+<td align="center">0.22</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">30-49</td>
+<td align="center">0.4</td>
+<td align="center">0.38</td>
+</tr>
+<tr class="odd">
+<td align="center">50-64</td>
+<td align="center">0.4</td>
+<td align="center">0.39</td>
+</tr>
+<tr class="even">
+<td align="center">65+</td>
+<td align="center">0.48</td>
+<td align="center">0.5</td>
+</tr>
+</tbody>
+</table>
+<p>What if Population A had the same demographics as Population B? LEt <span class="math inline">\(V_{A,i}\)</span> be the proportion of age group <span class="math inline">\(i\)</span> that believe vaping is harmful, and <span class="math inline">\(S_i\)</span> be the Standardized population size of age group <span class="math inline">\(i\)</span>.
+<span class="math display">\[\textrm{Adjusted Population Proportion}_A = \sum_{i=1}^4 V_{A,i} S_i\]</span></p>
+<p>Next we consider an example of where this might be helpful. Our example comes from a <a href="https://ourworldindata.org">website</a> “Our World in Data” which tries to provide useful data sets and analysis to address major societal issues. Here we will consider <a href="https://ourworldindata.org/suicide">suicide</a> rates in different countries around the world.</p>
 <div id="exercises-2" class="section level2">
 <h2><span class="header-section-number">6.1</span> Exercises</h2>
 <ol style="list-style-type: decimal">

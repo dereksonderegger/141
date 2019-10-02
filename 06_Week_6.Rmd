@@ -22,7 +22,7 @@ data <- data.frame(
 
 Suppose that in each population we've asked if individuals believe that vaping is "very harmful".
 
-```{r}
+```{r, echo=FALSE}
 data %>% group_by(Population) %>%
   mutate(Agree = `Population Size` * `Vape Harms`) %>%
   summarise(Agree = sum(Agree)/100) %>%
@@ -32,7 +32,7 @@ data %>% group_by(Population) %>%
 However It turns out that Population B has a much older population...
 
 Population Sizes
-```{r}
+```{r, echo=FALSE}
 data %>% 
   select(Age, Population, `Population Size`) %>% 
   spread(Population, `Population Size`) %>%
@@ -40,7 +40,7 @@ data %>%
 ```
 
 Is Vaping Harmful? (By age group and population)
-```{r}
+```{r, echo=FALSE}
 data %>% 
   select(Age, Population, `Vape Harms`) %>% 
   spread(Population, `Vape Harms`) %>%

@@ -15,14 +15,6 @@ Suppose we have two populations with the following age structures and proportion
 Suppose that in each population we've asked if individuals believe that vaping is "very harmful".
 
 
-```r
-data %>% group_by(Population) %>%
-  mutate(Agree = `Population Size` * `Vape Harms`) %>%
-  summarise(Agree = sum(Agree)/100) %>%
-  pander::pander()
-```
-
-
 ---------------------
  Population   Agree  
 ------------ --------
@@ -34,14 +26,6 @@ data %>% group_by(Population) %>%
 However It turns out that Population B has a much older population...
 
 Population Sizes
-
-```r
-data %>% 
-  select(Age, Population, `Population Size`) %>% 
-  spread(Population, `Population Size`) %>%
-  pander::pander()
-```
-
 
 -----------------
   Age    A    B  
@@ -56,14 +40,6 @@ data %>%
 -----------------
 
 Is Vaping Harmful? (By age group and population)
-
-```r
-data %>% 
-  select(Age, Population, `Vape Harms`) %>% 
-  spread(Population, `Vape Harms`) %>%
-  pander::pander()
-```
-
 
 ---------------------
   Age     A      B   

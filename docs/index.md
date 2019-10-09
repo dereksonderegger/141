@@ -1,7 +1,7 @@
 --- 
 title: "STA 141 - Exploratory Data Analysis and Visualization"
 author: "Derek L. Sonderegger"
-date: "October 02, 2019"
+date: "October 09, 2019"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -45,4 +45,6 @@ He also has a nice R package called [cowplot](https://cran.r-project.org/web/pac
 
 * The [Gapminder](https://www.gapminder.org) website has health and socioeconomic data for counties going back in time.
 
+* Access data from the US Government from [Data.gov](http://www.data.gov)
 
+* The Centers for Disease Control [Vital Stats](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) allows for direct download of commonly used downloads. The CDC's [Wonder](https://wonder.cdc.gov) on-line access allows you to format data requests for a wide variety of scenarios.

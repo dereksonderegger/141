@@ -18,47 +18,96 @@ Suppose that in each population we've asked if individuals believe that vaping i
 ---------------------
  Population   Agree  
 ------------ --------
-     A        0.336  
+     A         0.35  
 
-     B        0.3675 
+     B        0.3798 
 ---------------------
 
-However It turns out that Population B has a much older population...
+However It turns out that Population B has a much older population. Here I am considering population sizes of 100 individuals just to make the math convenient, but these could be arbitrary population sizes.
 
 Population Sizes
 
 -----------------
   Age    A    B  
 ------- ---- ----
- 18-29   40   25 
+ 18-29   40   10 
 
- 30-49   30   25 
+ 30-49   30   20 
 
- 50-64   20   25 
+ 50-64   20   30 
 
-  65+    10   25 
+  65+    10   40 
 -----------------
 
-Is Vaping Harmful? (By age group and population)
-
----------------------
-  Age     A      B   
-------- ------ ------
- 18-29   0.22   0.2  
-
- 30-49   0.4    0.38 
-
- 50-64   0.4    0.39 
-
-  65+    0.48   0.5  
----------------------
+Is Vaping Harmful? (By age group and population). 
+Here we see that, by age group, people in population B tend to be *more* permissive opinion about vaping than population A.
 
 
-What if Population A had the same demographics as Population B? LEt $V_{A,i}$ be the proportion of age group $i$ that believe vaping is harmful, and $S_i$ be the Standardized population size of age group $i$.
-$$\textrm{Adjusted Population Proportion}_A = \sum_{i=1}^4 V_{A,i} S_i$$
+----------------------------------
+  Age          A           B      
+-------   ----------- ------------
+ 18-29     40 (0.25)    10 (0.2)  
+
+ 30-49     30 (0.4)    20 (0.35)  
+
+ 50-64     20 (0.4)    30 (0.366) 
+
+  65+      10 (0.5)    40 (0.45)  
+
+**Total**  **0.35%**     **0.38**  
+---------------------------------
+
+
+What if Population A had the same demographics as Population B? Lets calculate the "Average Demographic Distribution" and then do the multiplication.
+
+
+----------------------------------------------------------------
+  Age        A           B            A.Std         B.Std     
+------- ----------- ------------ -------------- ----------------
+ 18-29   40 (0.25)    10 (0.2)      25 (0.25)      25 (0.2)
+
+ 30-49   30 (0.4)    20 (0.35)      25 (0.4)       25 (0.35)
+
+ 50-64   20 (0.4)    30 (0.366)     25 (0.4)       25 (0.366)
+
+  65+    10 (0.5)    40 (0.45)      25 (0.5)       25 (0.45)
+---------------------------------------------------------------
+Total      35%         38%           38.75%         34.4%
+---------------------------------------------------------------
 
 Next we consider an example of where this might be helpful. Our example comes from a [website](https://ourworldindata.org) "Our World in Data" which tries to provide useful data sets and analysis to address major societal issues. Here we will consider [suicide](https://ourworldindata.org/suicide) rates in different countries around the world.
 
+ 
+## Maternity Deaths
+
+Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.
+
+Step One: Variable of interest
+Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn't just consider all women. Instead we'll consider this maternal deaths per 100,000 live births. 
+
+Step Two: Context
+Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births. 
+
+Step Three: Conditional Statistics
+  - How does this vary between countries?
+  - How does this vary between states?
+  - How does this vary between socio-economic or ethic groups?
+  
+
+Step Four: Finding Data
+  - Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.
+  - I found data from the Centers for Disease Control. The CDC's [Wonder](https://wonder.cdc.gov) on-line access allows you to format data requests for a wide variety of scenarios.
+
+Now we find some data from the CDC...
+  - Problem: Can't get State by Year data due to confidentiality...
+  - Year by race?
+
+```r
+MMR <- read_csv('data-raw/PregnancyDeaths_By_Race_by_Time.csv')
+MMR <- read_csv('data-raw/PregnancyDeaths_By_Race_by_Time.csv')
+ggplot(MMR, aes(x=Year, y=Rate, color=Race) ) +
+  geom_line()
+```
 
 
 ## Exercises

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="6-week-6.html">
 
-<link rel="next" href="1-week-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -221,43 +221,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 141 - Exploratory Data Analysis and Visualization</h1>
-<p class="author"><em>Derek L. Sonderegger</em></p>
-<p class="date"><em>October 09, 2019</em></p>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarky that propagandists.</p>
-<p>The source code for my notes, homework assignments, and other information is available on my on <a href="https://github.com/dereksonderegger/141">GitHub</a>. In particular, there is a directory <code>data-raw</code> that contains all of the datasets that we’ll use in these notes and homeworks.</p>
-<div id="instructional-material" class="section level2">
-<h2><span class="header-section-number">0.1</span> Instructional Material</h2>
-<p>This course draws information from several websites and books.</p>
+<div id="week-7" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Week 7</h1>
+<div id="maternity-deaths-1" class="section level2">
+<h2><span class="header-section-number">7.1</span> Maternity Deaths</h2>
+<p>Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.</p>
+<p>Step One: Variable of interest
+Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
+<p>Step Two: Context
+Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
+<p>Step Three: Conditional Statistics
+- How does this vary between countries?
+- How does this vary between states?
+- How does this vary between socio-economic or ethic groups?</p>
+<div id="step-four-finding-data" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Step Four: Finding Data</h3>
 <ul>
-<li><p>Alberto Cairo’s book <a href="https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F">The Truthful Art</a>. Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at <a href="http://www.thefunctionalart.com">thefunctionalart.com</a>. Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here.</p></li>
-<li><p>Claus O. Wilke has a book
-<a href="https://www.amazon.com/dp/1492031089/ref=cm_sw_em_r_mt_dp_U_DvAxDbV7NFYY6">Fundamentals of Data Visualization</a>.
-There is an online pre-print version of the book available
-<a href="https://serialmentor.com/dataviz/">here</a>
-as well as GitHub repositories for the book
-<a href="https://github.com/clauswilke/dataviz">source</a>
-and
-<a href="https://github.com/clauswilke/dviz.supp">data</a> used in the book.<br />
-He also has a nice R package called <a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">cowplot</a> that aids in making publication ready graphs using R’s <code>ggplot2</code>.</p></li>
-<li><p><a href="https://callingbullshit.org">Calling Bullshit</a> This is a 3-credit course taught at University of Washington. Their goal is to teach students to recognize bullshit provide another scientist a reason why a claim is bullshit.</p></li>
-<li><p>Amelia McNamara’s <a href="http://www.amelia.mn/sds136/index.html">SDS 136 course.</a> Amelia is an Assistant Professor at University of St Thomas and I’ve been influenced by her presentations at national conferences. These are her notes from a data visualization course that she teaches. She is also pretty fun to follow on twitter.</p></li>
+<li>Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.</li>
+<li>I found data from the Centers for Disease Control.</li>
 </ul>
-</div>
-<div id="data-sources" class="section level2">
-<h2><span class="header-section-number">0.2</span> Data Sources</h2>
+<p>Maternal Deaths: The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.
+- Tried to get Maternal Deaths by State by Year. However, the CDC won’t release that. The reason is that from an ethical standpoint, government cannot risk exposing information for any individual. So all government agencies will only release data that has been aggregated to a point where they are certain that individuals cannot be identified.
+- Year by race? That was successful.</p>
+<pre><code>## # A tibble: 6 x 6
+##   Race    Year Deaths Population `Crude Rate` Hispanic
+##   &lt;fct&gt;  &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;fct&gt;   
+## 1 Native  1999      1     564085 Unreliable   Hispanic
+## 2 Native  2001      1     736712 Unreliable   Hispanic
+## 3 Native  2005      1    1101386 Unreliable   Hispanic
+## 4 Native  2007      1    1327365 Unreliable   Hispanic
+## 5 Native  2010      1    1693971 Unreliable   Hispanic
+## 6 Native  2011      1    1748621 Unreliable   Hispanic</code></pre>
 <ul>
-<li><p>The website <a href="https://ourworldindata.org">Our World in Data</a> has tried to bring together huge amounts of information about a variety of topics and presents the data in context. It typically addresses socioeconomic issues.</p></li>
-<li><p>The website <a href="https://www.kaggle.com">Kaggle</a> started out as a repository for data sets in which data scientists would have host informal competitions. It has grown to host thousands of data sets covering a wide variety of issues.</p></li>
-<li><p>The <a href="https://www.gapminder.org">Gapminder</a> website has health and socioeconomic data for counties going back in time.</p></li>
-<li><p>Access data from the US Government from <a href="http://www.data.gov">Data.gov</a></p></li>
-<li><p>The Centers for Disease Control <a href="https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm">Vital Stats</a> allows for direct download of commonly used downloads. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p></li>
+<li>How do we get number of births? Again we get information from the CDC. Unfortunately, I wasn’t able to get race</li>
 </ul>
+<pre><code>## # A tibble: 6 x 6
+##    Year Births `Average Birth Weig… `Average Age of Moth… Race   Hispanic  
+##   &lt;dbl&gt;  &lt;dbl&gt;                &lt;dbl&gt;                 &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     
+## 1  2007   5819                3282.                  25.0 Native Hispanic  
+## 2  2007  42890                3320.                  25.1 Native Not Hispa…
+## 3  2007    734                3294.                  25.4 Native Unknown   
+## 4  2007   9188                3241.                  26.5 Asian  Hispanic  
+## 5  2007 242046                3187.                  30.3 Asian  Not Hispa…
+## 6  2007   3254                3198.                  30.1 Asian  Unknown</code></pre>
+</div>
+<div id="univariate-exploratory-graphing" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> Univariate Exploratory Graphing</h3>
+<p>I can’t help but look at how the birth numbers in the US have changed over time.
+<img src="07_Week_7_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<p>Finally we can calculate Deaths per 100,000 births.</p>
+<p><img src="07_Week_7_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="07_Week_7_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Finally we’ll look at US vs rest of the world.</p>
+<p><img src="07_Week_7_files/figure-html/unnamed-chunk-8-1.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-8-2.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
 
+</div>
 </div>
 </div>
             </section>
@@ -265,8 +283,8 @@ He also has a nice R package called <a href="https://cran.r-project.org/web/pack
           </div>
         </div>
       </div>
+<a href="6-week-6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="1-week-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -297,7 +315,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/index.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/07_Week_7.Rmd",
 "text": "Edit"
 },
 "history": {

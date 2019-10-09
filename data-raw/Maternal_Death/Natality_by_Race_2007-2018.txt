@@ -1,0 +1,232 @@
+"Notes"	"Year"	"Year Code"	"Mother's Bridged Race"	"Mother's Bridged Race Code"	"Mother's Hispanic Origin"	"Mother's Hispanic Origin Code"	Births	Average Birth Weight	Average Age of Mother
+	"2007"	"2007"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	5819	3282.37	24.95
+	"2007"	"2007"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	42890	3320.33	25.10
+	"2007"	"2007"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	734	3293.97	25.39
+"Total"	"2007"	"2007"	"American Indian or Alaska Native"	"1002-5"			49443	3315.47	25.09
+	"2007"	"2007"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	9188	3241.29	26.47
+	"2007"	"2007"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	242046	3187.31	30.31
+	"2007"	"2007"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3254	3198.20	30.14
+"Total"	"2007"	"2007"	"Asian or Pacific Islander"	"A-PI"			254488	3189.39	30.17
+	"2007"	"2007"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	43631	3227.23	25.80
+	"2007"	"2007"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	627191	3064.28	25.57
+	"2007"	"2007"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4854	3099.83	26.59
+"Total"	"2007"	"2007"	"Black or African American"	"2054-5"			675676	3075.06	25.59
+	"2007"	"2007"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	1004141	3281.02	26.32
+	"2007"	"2007"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2310333	3316.39	28.07
+	"2007"	"2007"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	22152	3276.38	28.19
+"Total"	"2007"	"2007"	"White"	"2106-3"			3336626	3305.48	27.55
+"Total"	"2007"	"2007"					4316233	3262.70	27.37
+	"2008"	"2008"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6201	3276.29	25.02
+	"2008"	"2008"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	42466	3318.90	25.12
+	"2008"	"2008"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	870	3327.44	25.33
+"Total"	"2008"	"2008"	"American Indian or Alaska Native"	"1002-5"			49537	3313.71	25.11
+	"2008"	"2008"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	9324	3245.30	26.65
+	"2008"	"2008"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	240317	3183.11	30.41
+	"2008"	"2008"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3544	3219.60	30.13
+"Total"	"2008"	"2008"	"Asian or Pacific Islander"	"A-PI"			253185	3185.91	30.27
+	"2008"	"2008"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	40746	3222.09	25.78
+	"2008"	"2008"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	623029	3066.22	25.61
+	"2008"	"2008"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	7034	3093.75	26.94
+"Total"	"2008"	"2008"	"Black or African American"	"2054-5"			670809	3075.98	25.64
+	"2008"	"2008"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	984968	3277.31	26.42
+	"2008"	"2008"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2267817	3318.02	28.08
+	"2008"	"2008"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	21378	3259.57	28.97
+"Total"	"2008"	"2008"	"White"	"2106-3"			3274163	3305.39	27.59
+"Total"	"2008"	"2008"					4247694	3262.17	27.41
+	"2009"	"2009"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6346	3277.69	25.16
+	"2009"	"2009"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	41531	3322.24	25.25
+	"2009"	"2009"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	788	3321.38	26.06
+"Total"	"2009"	"2009"	"American Indian or Alaska Native"	"1002-5"			48665	3316.41	25.25
+	"2009"	"2009"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	9671	3233.52	26.81
+	"2009"	"2009"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	237663	3181.90	30.54
+	"2009"	"2009"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3755	3218.19	29.89
+"Total"	"2009"	"2009"	"Asian or Pacific Islander"	"A-PI"			251089	3184.43	30.39
+	"2009"	"2009"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	42167	3215.90	25.88
+	"2009"	"2009"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	609584	3065.76	25.72
+	"2009"	"2009"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	5867	3101.01	26.62
+"Total"	"2009"	"2009"	"Black or African American"	"2054-5"			657618	3075.70	25.74
+	"2009"	"2009"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	941364	3275.99	26.58
+	"2009"	"2009"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2212552	3318.88	28.14
+	"2009"	"2009"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	19377	3247.61	29.00
+"Total"	"2009"	"2009"	"White"	"2106-3"			3173293	3305.73	27.68
+"Total"	"2009"	"2009"					4130665	3261.88	27.51
+	"2010"	"2010"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6165	3268.68	25.41
+	"2010"	"2010"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	39928	3314.11	25.42
+	"2010"	"2010"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	667	3279.83	26.00
+"Total"	"2010"	"2010"	"American Indian or Alaska Native"	"1002-5"			46760	3307.64	25.42
+	"2010"	"2010"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	9049	3236.56	26.99
+	"2010"	"2010"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	234472	3177.97	30.69
+	"2010"	"2010"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3365	3216.20	30.16
+"Total"	"2010"	"2010"	"Asian or Pacific Islander"	"A-PI"			246886	3180.64	30.54
+	"2010"	"2010"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	40785	3220.52	26.06
+	"2010"	"2010"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	589808	3068.62	25.92
+	"2010"	"2010"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	5832	3076.27	26.96
+"Total"	"2010"	"2010"	"Black or African American"	"2054-5"			636425	3078.43	25.94
+	"2010"	"2010"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	889181	3273.69	26.80
+	"2010"	"2010"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2162406	3319.26	28.27
+	"2010"	"2010"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	17728	3246.85	29.42
+"Total"	"2010"	"2010"	"White"	"2106-3"			3069315	3305.64	27.85
+"Total"	"2010"	"2010"					3999386	3261.82	27.68
+	"2011"	"2011"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6755	3273.93	25.97
+	"2011"	"2011"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	39187	3319.79	25.54
+	"2011"	"2011"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	477	3236.67	26.53
+"Total"	"2011"	"2011"	"American Indian or Alaska Native"	"1002-5"			46419	3312.27	25.61
+	"2011"	"2011"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10218	3246.77	27.30
+	"2011"	"2011"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	240102	3180.16	30.77
+	"2011"	"2011"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3595	3211.71	30.60
+"Total"	"2011"	"2011"	"Asian or Pacific Islander"	"A-PI"			253915	3183.29	30.63
+	"2011"	"2011"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	45217	3220.13	26.30
+	"2011"	"2011"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	582345	3073.15	26.14
+	"2011"	"2011"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	5339	3116.92	27.13
+"Total"	"2011"	"2011"	"Black or African American"	"2054-5"			632901	3084.02	26.16
+	"2011"	"2011"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	855939	3277.02	27.01
+	"2011"	"2011"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2146566	3323.98	28.39
+	"2011"	"2011"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	17850	3262.20	29.55
+"Total"	"2011"	"2011"	"White"	"2106-3"			3020355	3310.31	28.01
+"Total"	"2011"	"2011"					3953590	3265.96	27.85
+	"2012"	"2012"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6670	3285.62	25.93
+	"2012"	"2012"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	38959	3325.12	25.75
+	"2012"	"2012"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	464	3251.35	27.19
+"Total"	"2012"	"2012"	"American Indian or Alaska Native"	"1002-5"			46093	3318.67	25.79
+	"2012"	"2012"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10347	3246.16	27.49
+	"2012"	"2012"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	257822	3185.98	30.89
+	"2012"	"2012"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	4633	3217.13	30.79
+"Total"	"2012"	"2012"	"Asian or Pacific Islander"	"A-PI"			272802	3188.79	30.76
+	"2012"	"2012"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	45744	3229.18	26.48
+	"2012"	"2012"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	583489	3080.65	26.32
+	"2012"	"2012"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4893	3127.94	27.65
+"Total"	"2012"	"2012"	"Black or African American"	"2054-5"			634126	3091.73	26.34
+	"2012"	"2012"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	844916	3280.13	27.14
+	"2012"	"2012"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2134044	3330.04	28.48
+	"2012"	"2012"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	20860	3256.81	29.77
+"Total"	"2012"	"2012"	"White"	"2106-3"			2999820	3315.47	28.11
+"Total"	"2012"	"2012"					3952841	3270.90	27.98
+	"2013"	"2013"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	7050	3280.76	26.08
+	"2013"	"2013"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	38478	3322.55	26.02
+	"2013"	"2013"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	463	3167.71	27.18
+"Total"	"2013"	"2013"	"American Indian or Alaska Native"	"1002-5"			45991	3314.59	26.04
+	"2013"	"2013"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10145	3228.95	27.76
+	"2013"	"2013"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	252048	3182.67	30.99
+	"2013"	"2013"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	3480	3198.25	31.34
+"Total"	"2013"	"2013"	"Asian or Pacific Islander"	"A-PI"			265673	3184.64	30.87
+	"2013"	"2013"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	46230	3224.26	26.72
+	"2013"	"2013"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	583834	3084.61	26.59
+	"2013"	"2013"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4696	3081.67	27.90
+"Total"	"2013"	"2013"	"Black or African American"	"2054-5"			634760	3094.77	26.61
+	"2013"	"2013"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	837608	3276.56	27.33
+	"2013"	"2013"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2129196	3332.52	28.64
+	"2013"	"2013"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	18953	3248.51	30.01
+"Total"	"2013"	"2013"	"White"	"2106-3"			2985757	3316.30	28.28
+"Total"	"2013"	"2013"					3932181	3271.65	28.16
+	"2014"	"2014"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6976	3275.05	26.35
+	"2014"	"2014"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	37472	3325.52	26.31
+	"2014"	"2014"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	480	3233.27	27.92
+"Total"	"2014"	"2014"	"American Indian or Alaska Native"	"1002-5"			44928	3316.69	26.33
+	"2014"	"2014"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10302	3250.94	27.84
+	"2014"	"2014"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	267854	3188.52	31.10
+	"2014"	"2014"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	4567	3188.20	31.22
+"Total"	"2014"	"2014"	"Asian or Pacific Islander"	"A-PI"			282723	3190.79	30.99
+	"2014"	"2014"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	46616	3224.09	26.93
+	"2014"	"2014"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	588891	3085.45	26.86
+	"2014"	"2014"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	5055	3122.63	28.57
+"Total"	"2014"	"2014"	"Black or African American"	"2054-5"			640562	3095.84	26.88
+	"2014"	"2014"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	850171	3277.76	27.52
+	"2014"	"2014"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2149302	3333.59	28.79
+	"2014"	"2014"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	20390	3248.94	30.24
+"Total"	"2014"	"2014"	"White"	"2106-3"			3019863	3317.31	28.44
+"Total"	"2014"	"2014"					3988076	3272.77	28.35
+	"2015"	"2015"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	7047	3287.27	26.67
+	"2015"	"2015"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	36825	3327.43	26.49
+	"2015"	"2015"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	427	3292.93	27.87
+"Total"	"2015"	"2015"	"American Indian or Alaska Native"	"1002-5"			44299	3320.71	26.53
+	"2015"	"2015"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10612	3234.43	28.05
+	"2015"	"2015"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	265848	3177.82	31.20
+	"2015"	"2015"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	4804	3225.63	31.46
+"Total"	"2015"	"2015"	"Asian or Pacific Islander"	"A-PI"			281264	3180.77	31.09
+	"2015"	"2015"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	46011	3214.87	26.98
+	"2015"	"2015"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	589047	3081.04	27.09
+	"2015"	"2015"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	5021	3123.93	29.21
+"Total"	"2015"	"2015"	"Black or African American"	"2054-5"			640079	3091.00	27.10
+	"2015"	"2015"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	860378	3271.70	27.70
+	"2015"	"2015"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2130279	3334.30	28.95
+	"2015"	"2015"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	22198	3254.19	30.46
+"Total"	"2015"	"2015"	"White"	"2106-3"			3012855	3315.84	28.60
+"Total"	"2015"	"2015"					3978497	3270.18	28.51
+	"2016"	"2016"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	6944	3285.44	26.72
+	"2016"	"2016"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	36213	3317.43	26.73
+	"2016"	"2016"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	398	3239.17	27.80
+"Total"	"2016"	"2016"	"American Indian or Alaska Native"	"1002-5"			43555	3311.62	26.74
+	"2016"	"2016"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	20578	3246.25	28.26
+	"2016"	"2016"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	277083	3180.42	31.28
+	"2016"	"2016"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	4622	3201.21	31.81
+"Total"	"2016"	"2016"	"Asian or Pacific Islander"	"A-PI"			302283	3185.22	31.08
+	"2016"	"2016"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	65431	3225.56	27.50
+	"2016"	"2016"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	583786	3075.56	27.37
+	"2016"	"2016"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4850	3133.15	29.29
+"Total"	"2016"	"2016"	"Black or African American"	"2054-5"			654067	3091.00	27.40
+	"2016"	"2016"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	825494	3268.61	27.86
+	"2016"	"2016"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2094054	3332.00	29.13
+	"2016"	"2016"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	26422	3261.17	30.61
+"Total"	"2016"	"2016"	"White"	"2106-3"			2945970	3313.60	28.78
+"Total"	"2016"	"2016"					3945875	3266.86	28.71
+	"2017"	"2017"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	7049	3267.91	26.99
+	"2017"	"2017"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	34503	3307.12	26.84
+	"2017"	"2017"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	364	3229.20	27.87
+"Total"	"2017"	"2017"	"American Indian or Alaska Native"	"1002-5"			41916	3299.86	26.87
+	"2017"	"2017"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	20821	3244.60	28.32
+	"2017"	"2017"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	271875	3175.44	31.43
+	"2017"	"2017"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	4928	3195.30	32.13
+"Total"	"2017"	"2017"	"Asian or Pacific Islander"	"A-PI"			297624	3180.60	31.23
+	"2017"	"2017"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	66160	3217.17	27.64
+	"2017"	"2017"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	587357	3073.08	27.58
+	"2017"	"2017"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4598	3143.21	29.69
+"Total"	"2017"	"2017"	"Black or African American"	"2054-5"			658115	3088.05	27.60
+	"2017"	"2017"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	804734	3265.72	27.99
+	"2017"	"2017"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	2030493	3328.40	29.26
+	"2017"	"2017"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	22618	3250.40	30.77
+"Total"	"2017"	"2017"	"White"	"2106-3"			2857845	3310.14	28.91
+"Total"	"2017"	"2017"					3855500	3262.13	28.84
+	"2018"	"2018"	"American Indian or Alaska Native"	"1002-5"	"Hispanic or Latino"	"2135-2"	8049	3271.30	27.21
+	"2018"	"2018"	"American Indian or Alaska Native"	"1002-5"	"Not Hispanic or Latino"	"2186-5"	33686	3308.82	27.09
+	"2018"	"2018"	"American Indian or Alaska Native"	"1002-5"	"Unknown or Not Stated"	"9"	410	3167.41	28.29
+"Total"	"2018"	"2018"	"American Indian or Alaska Native"	"1002-5"			42145	3300.28	27.12
+	"2018"	"2018"	"Asian or Pacific Islander"	"A-PI"	"Hispanic or Latino"	"2135-2"	10914	3231.68	28.37
+	"2018"	"2018"	"Asian or Pacific Islander"	"A-PI"	"Not Hispanic or Latino"	"2186-5"	263816	3174.27	31.60
+	"2018"	"2018"	"Asian or Pacific Islander"	"A-PI"	"Unknown or Not Stated"	"9"	6572	3196.30	31.86
+"Total"	"2018"	"2018"	"Asian or Pacific Islander"	"A-PI"			281302	3177.01	31.48
+	"2018"	"2018"	"Black or African American"	"2054-5"	"Hispanic or Latino"	"2135-2"	49568	3203.63	27.55
+	"2018"	"2018"	"Black or African American"	"2054-5"	"Not Hispanic or Latino"	"2186-5"	579174	3070.42	27.80
+	"2018"	"2018"	"Black or African American"	"2054-5"	"Unknown or Not Stated"	"9"	4810	3155.83	29.85
+"Total"	"2018"	"2018"	"Black or African American"	"2054-5"			633552	3081.49	27.80
+	"2018"	"2018"	"White"	"2106-3"	"Hispanic or Latino"	"2135-2"	817679	3263.44	28.14
+	"2018"	"2018"	"White"	"2106-3"	"Not Hispanic or Latino"	"2186-5"	1994985	3329.32	29.42
+	"2018"	"2018"	"White"	"2106-3"	"Unknown or Not Stated"	"9"	22049	3251.55	30.81
+"Total"	"2018"	"2018"	"White"	"2106-3"			2834713	3309.72	29.06
+"Total"	"2018"	"2018"					3791712	3261.64	29.01
+"Total"							48092250	3265.85	28.10
+"---"
+"Dataset: Natality, 2007-2018"
+"Query Parameters:"
+"Group By: Year; Mother's Bridged Race; Mother's Hispanic Origin"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 1,000"
+"Population Option: No populations shown because rates were not selected."
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/Natality.html for more information."
+"---"
+"Query Date: Oct 5, 2019 11:57:23 PM"
+"---"
+"Suggested Citation: United States Department of Health and Human Services (US DHHS), Centers for Disease Control and Prevention"
+"(CDC), National Center for Health Statistics (NCHS), Division of Vital Statistics, Natality public-use data 2007-2018, on CDC"
+"WONDER Online Database, September 2019. Accessed at http://wonder.cdc.gov/natality-current.html on Oct 5, 2019 11:57:23 PM"
+"---"
+Caveats:
+"1. Each birth record represents one living baby."
+"2. Caution should be used when interpreting the Average Age of Mother measure. All ages 12 years and less are coded to 12 years."
+"All ages 50 years and over are coded to 50 years. The number of counts in those two age goups are small and should not have a"
+"great effect on the average age. Consider doing queries with and without these two age groups and compare the effect on Average"
+"Age of Mother measure."
+"3. Records where the ""Birth Weight"" is ""Unknown or Not Stated"" are not included in the calculation of the ""Average Birth"
+"Weight"" measure."

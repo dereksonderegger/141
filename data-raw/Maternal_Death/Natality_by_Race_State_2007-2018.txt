@@ -1,0 +1,1811 @@
+"Notes"	"State"	"State Code"	"Mother's Single Race"	"Mother's Single Race Code"	"Year"	"Year Code"	Births	Average Birth Weight	Average Age of Mother
+	"Alabama"	"01"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	133	3187.50	26.00
+	"Alabama"	"01"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	150	3219.79	26.99
+	"Alabama"	"01"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	175	3118.93	26.65
+"Total"	"Alabama"	"01"	"American Indian or Alaska Native"	"1002-5"			458	3171.88	26.57
+	"Alabama"	"01"	"Asian"	"A"	"2016"	"2016"	1041	3135.10	31.02
+	"Alabama"	"01"	"Asian"	"A"	"2017"	"2017"	1005	3140.51	31.17
+	"Alabama"	"01"	"Asian"	"A"	"2018"	"2018"	946	3171.01	31.12
+"Total"	"Alabama"	"01"	"Asian"	"A"			2992	3148.28	31.10
+	"Alabama"	"01"	"Black or African American"	"2054-5"	"2016"	"2016"	18181	3008.74	26.20
+	"Alabama"	"01"	"Black or African American"	"2054-5"	"2017"	"2017"	18467	3003.06	26.43
+	"Alabama"	"01"	"Black or African American"	"2054-5"	"2018"	"2018"	17738	2991.39	26.64
+"Total"	"Alabama"	"01"	"Black or African American"	"2054-5"			54386	3001.15	26.42
+	"Alabama"	"01"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	143	3260.45	26.87
+	"Alabama"	"01"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	76	3313.92	26.37
+	"Alabama"	"01"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	122	3160.85	26.38
+"Total"	"Alabama"	"01"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			341	3236.51	26.58
+	"Alabama"	"01"	"White"	"2106-3"	"2016"	"2016"	38778	3279.70	27.57
+	"Alabama"	"01"	"White"	"2106-3"	"2017"	"2017"	38285	3280.24	27.65
+	"Alabama"	"01"	"White"	"2106-3"	"2018"	"2018"	37865	3276.46	27.73
+"Total"	"Alabama"	"01"	"White"	"2106-3"			114928	3278.81	27.65
+	"Alabama"	"01"	"More than one race"	"M"	"2016"	"2016"	875	3212.59	25.62
+	"Alabama"	"01"	"More than one race"	"M"	"2017"	"2017"	958	3169.61	25.80
+	"Alabama"	"01"	"More than one race"	"M"	"2018"	"2018"	915	3144.00	26.21
+"Total"	"Alabama"	"01"	"More than one race"	"M"			2748	3174.77	25.88
+	"Alabama"	"01"	"Not Available"	"NA"	"2007"	"2007"	64804	3176.27	25.94
+	"Alabama"	"01"	"Not Available"	"NA"	"2008"	"2008"	64546	3168.20	25.97
+	"Alabama"	"01"	"Not Available"	"NA"	"2009"	"2009"	62475	3175.46	26.03
+	"Alabama"	"01"	"Not Available"	"NA"	"2010"	"2010"	60050	3176.94	26.25
+	"Alabama"	"01"	"Not Available"	"NA"	"2011"	"2011"	59354	3191.14	26.42
+	"Alabama"	"01"	"Not Available"	"NA"	"2012"	"2012"	58448	3194.35	26.51
+	"Alabama"	"01"	"Not Available"	"NA"	"2013"	"2013"	58167	3198.20	26.67
+	"Alabama"	"01"	"Not Available"	"NA"	"2014"	"2014"	59422	3201.96	26.89
+	"Alabama"	"01"	"Not Available"	"NA"	"2015"	"2015"	59657	3197.72	27.03
+"Total"	"Alabama"	"01"	"Not Available"	"NA"			546923	3186.31	26.40
+"Total"	"Alabama"	"01"					722776	3186.90	26.62
+	"Alaska"	"02"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	2195	3431.36	26.62
+	"Alaska"	"02"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1985	3391.43	26.87
+	"Alaska"	"02"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1956	3422.33	27.13
+"Total"	"Alaska"	"02"	"American Indian or Alaska Native"	"1002-5"			6136	3415.55	26.86
+	"Alaska"	"02"	"Asian"	"A"	"2016"	"2016"	729	3198.61	28.92
+	"Alaska"	"02"	"Asian"	"A"	"2017"	"2017"	720	3197.14	29.74
+	"Alaska"	"02"	"Asian"	"A"	"2018"	"2018"	659	3182.13	29.59
+"Total"	"Alaska"	"02"	"Asian"	"A"			2108	3192.95	29.41
+	"Alaska"	"02"	"Black or African American"	"2054-5"	"2016"	"2016"	356	3076.98	27.73
+	"Alaska"	"02"	"Black or African American"	"2054-5"	"2017"	"2017"	377	3136.43	27.95
+	"Alaska"	"02"	"Black or African American"	"2054-5"	"2018"	"2018"	330	3134.66	27.81
+"Total"	"Alaska"	"02"	"Black or African American"	"2054-5"			1063	3116.03	27.83
+	"Alaska"	"02"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	298	3454.87	26.64
+	"Alaska"	"02"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	326	3458.29	27.54
+	"Alaska"	"02"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	312	3499.20	27.30
+"Total"	"Alaska"	"02"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			936	3470.84	27.17
+	"Alaska"	"02"	"White"	"2106-3"	"2016"	"2016"	6467	3427.75	28.80
+	"Alaska"	"02"	"White"	"2106-3"	"2017"	"2017"	5930	3429.41	29.07
+	"Alaska"	"02"	"White"	"2106-3"	"2018"	"2018"	5723	3427.97	29.31
+"Total"	"Alaska"	"02"	"White"	"2106-3"			18120	3428.36	29.05
+	"Alaska"	"02"	"More than one race"	"M"	"2016"	"2016"	1164	3391.20	27.28
+	"Alaska"	"02"	"More than one race"	"M"	"2017"	"2017"	1107	3408.85	27.27
+	"Alaska"	"02"	"More than one race"	"M"	"2018"	"2018"	1106	3398.32	27.17
+"Total"	"Alaska"	"02"	"More than one race"	"M"			3377	3399.32	27.24
+	"Alaska"	"02"	"Not Available"	"NA"	"2007"	"2007"	11052	3415.34	26.81
+	"Alaska"	"02"	"Not Available"	"NA"	"2008"	"2008"	11442	3409.41	26.81
+	"Alaska"	"02"	"Not Available"	"NA"	"2009"	"2009"	11324	3400.88	26.99
+	"Alaska"	"02"	"Not Available"	"NA"	"2010"	"2010"	11471	3413.86	27.05
+	"Alaska"	"02"	"Not Available"	"NA"	"2011"	"2011"	11456	3401.01	27.21
+	"Alaska"	"02"	"Not Available"	"NA"	"2012"	"2012"	11187	3405.21	27.52
+	"Alaska"	"02"	"Not Available"	"NA"	"2013"	"2013"	11446	3409.09	27.65
+	"Alaska"	"02"	"Not Available"	"NA"	"2014"	"2014"	11392	3405.08	27.72
+	"Alaska"	"02"	"Not Available"	"NA"	"2015"	"2015"	11282	3401.84	27.94
+"Total"	"Alaska"	"02"	"Not Available"	"NA"			102052	3406.84	27.30
+"Total"	"Alaska"	"02"					133792	3404.74	27.55
+	"Arizona"	"04"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	5075	3315.40	26.88
+	"Arizona"	"04"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	4868	3306.96	26.85
+	"Arizona"	"04"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	4667	3297.51	27.23
+"Total"	"Arizona"	"04"	"American Indian or Alaska Native"	"1002-5"			14610	3306.87	26.98
+	"Arizona"	"04"	"Asian"	"A"	"2016"	"2016"	3163	3145.69	30.97
+	"Arizona"	"04"	"Asian"	"A"	"2017"	"2017"	3124	3140.25	31.25
+	"Arizona"	"04"	"Asian"	"A"	"2018"	"2018"	3016	3127.73	31.59
+"Total"	"Arizona"	"04"	"Asian"	"A"			9303	3138.04	31.26
+	"Arizona"	"04"	"Black or African American"	"2054-5"	"2016"	"2016"	4568	3114.73	27.50
+	"Arizona"	"04"	"Black or African American"	"2054-5"	"2017"	"2017"	4747	3110.07	27.81
+	"Arizona"	"04"	"Black or African American"	"2054-5"	"2018"	"2018"	4793	3117.82	28.05
+"Total"	"Arizona"	"04"	"Black or African American"	"2054-5"			14108	3114.21	27.79
+	"Arizona"	"04"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	244	3256.93	28.03
+	"Arizona"	"04"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	244	3248.78	27.76
+	"Arizona"	"04"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	288	3263.73	27.51
+"Total"	"Arizona"	"04"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			776	3256.90	27.75
+	"Arizona"	"04"	"White"	"2106-3"	"2016"	"2016"	69241	3299.69	28.08
+	"Arizona"	"04"	"White"	"2106-3"	"2017"	"2017"	66790	3298.19	28.23
+	"Arizona"	"04"	"White"	"2106-3"	"2018"	"2018"	65606	3294.57	28.37
+"Total"	"Arizona"	"04"	"White"	"2106-3"			201637	3297.53	28.23
+	"Arizona"	"04"	"More than one race"	"M"	"2016"	"2016"	2229	3257.62	26.98
+	"Arizona"	"04"	"More than one race"	"M"	"2017"	"2017"	2099	3248.70	27.18
+	"Arizona"	"04"	"More than one race"	"M"	"2018"	"2018"	2353	3241.01	27.25
+"Total"	"Arizona"	"04"	"More than one race"	"M"			6681	3248.97	27.14
+	"Arizona"	"04"	"Not Available"	"NA"	"2007"	"2007"	102981	3285.32	26.69
+	"Arizona"	"04"	"Not Available"	"NA"	"2008"	"2008"	99442	3280.89	26.82
+	"Arizona"	"04"	"Not Available"	"NA"	"2009"	"2009"	92798	3277.17	26.96
+	"Arizona"	"04"	"Not Available"	"NA"	"2010"	"2010"	87477	3277.64	27.15
+	"Arizona"	"04"	"Not Available"	"NA"	"2011"	"2011"	85543	3285.78	27.33
+	"Arizona"	"04"	"Not Available"	"NA"	"2012"	"2012"	86441	3292.47	27.42
+	"Arizona"	"04"	"Not Available"	"NA"	"2013"	"2013"	85600	3293.42	27.56
+	"Arizona"	"04"	"Not Available"	"NA"	"2014"	"2014"	86887	3291.31	27.78
+	"Arizona"	"04"	"Not Available"	"NA"	"2015"	"2015"	85351	3289.47	27.92
+"Total"	"Arizona"	"04"	"Not Available"	"NA"			812520	3285.76	27.27
+"Total"	"Arizona"	"04"					1059635	3284.46	27.49
+	"Arkansas"	"05"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	270	3362.46	26.53
+	"Arkansas"	"05"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	290	3351.13	26.64
+	"Arkansas"	"05"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	264	3352.86	26.39
+"Total"	"Arkansas"	"05"	"American Indian or Alaska Native"	"1002-5"			824	3355.39	26.52
+	"Arkansas"	"05"	"Asian"	"A"	"2016"	"2016"	866	3196.15	30.09
+	"Arkansas"	"05"	"Asian"	"A"	"2017"	"2017"	870	3160.26	30.26
+	"Arkansas"	"05"	"Asian"	"A"	"2018"	"2018"	825	3196.95	30.04
+"Total"	"Arkansas"	"05"	"Asian"	"A"			2561	3184.21	30.13
+	"Arkansas"	"05"	"Black or African American"	"2054-5"	"2016"	"2016"	7462	3028.54	25.73
+	"Arkansas"	"05"	"Black or African American"	"2054-5"	"2017"	"2017"	7536	3034.11	25.86
+	"Arkansas"	"05"	"Black or African American"	"2054-5"	"2018"	"2018"	7271	3002.95	25.99
+"Total"	"Arkansas"	"05"	"Black or African American"	"2054-5"			22269	3022.07	25.86
+	"Arkansas"	"05"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	469	3168.44	26.71
+	"Arkansas"	"05"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	538	3118.61	26.89
+	"Arkansas"	"05"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	556	3112.30	27.61
+"Total"	"Arkansas"	"05"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1563	3131.33	27.09
+	"Arkansas"	"05"	"White"	"2106-3"	"2016"	"2016"	28583	3305.09	26.97
+	"Arkansas"	"05"	"White"	"2106-3"	"2017"	"2017"	27581	3285.27	27.07
+	"Arkansas"	"05"	"White"	"2106-3"	"2018"	"2018"	27419	3290.68	27.25
+"Total"	"Arkansas"	"05"	"White"	"2106-3"			83583	3293.82	27.10
+	"Arkansas"	"05"	"More than one race"	"M"	"2016"	"2016"	624	3227.48	25.15
+	"Arkansas"	"05"	"More than one race"	"M"	"2017"	"2017"	705	3195.24	25.35
+	"Arkansas"	"05"	"More than one race"	"M"	"2018"	"2018"	683	3212.15	25.42
+"Total"	"Arkansas"	"05"	"More than one race"	"M"			2012	3210.97	25.31
+	"Arkansas"	"05"	"Not Available"	"NA"	"2007"	"2007"	41378	3219.23	25.47
+	"Arkansas"	"05"	"Not Available"	"NA"	"2008"	"2008"	40669	3215.04	25.54
+	"Arkansas"	"05"	"Not Available"	"NA"	"2009"	"2009"	39808	3217.27	25.55
+	"Arkansas"	"05"	"Not Available"	"NA"	"2010"	"2010"	38540	3222.66	25.78
+	"Arkansas"	"05"	"Not Available"	"NA"	"2011"	"2011"	38715	3222.80	25.96
+	"Arkansas"	"05"	"Not Available"	"NA"	"2012"	"2012"	38347	3236.33	26.16
+	"Arkansas"	"05"	"Not Available"	"NA"	"2013"	"2013"	37832	3239.16	26.28
+	"Arkansas"	"05"	"Not Available"	"NA"	"2014"	"2014"	38511	3236.66	26.51
+	"Arkansas"	"05"	"Not Available"	"NA"	"2015"	"2015"	38886	3233.52	26.64
+"Total"	"Arkansas"	"05"	"Not Available"	"NA"			352686	3226.77	25.98
+"Total"	"Arkansas"	"05"					465498	3228.63	26.20
+	"California"	"06"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	2336	3315.49	27.84
+	"California"	"06"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	2261	3310.11	27.94
+	"California"	"06"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	2272	3317.86	28.19
+"Total"	"California"	"06"	"American Indian or Alaska Native"	"1002-5"			6869	3314.50	27.99
+	"California"	"06"	"Asian"	"A"	"2016"	"2016"	78683	3189.40	32.15
+	"California"	"06"	"Asian"	"A"	"2017"	"2017"	77274	3190.84	32.35
+	"California"	"06"	"Asian"	"A"	"2018"	"2018"	73760	3187.50	32.55
+"Total"	"California"	"06"	"Asian"	"A"			229717	3189.28	32.35
+	"California"	"06"	"Black or African American"	"2054-5"	"2016"	"2016"	26466	3141.51	28.42
+	"California"	"06"	"Black or African American"	"2054-5"	"2017"	"2017"	26013	3138.01	28.57
+	"California"	"06"	"Black or African American"	"2054-5"	"2018"	"2018"	24665	3136.86	28.98
+"Total"	"California"	"06"	"Black or African American"	"2054-5"			77144	3138.84	28.65
+	"California"	"06"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	2101	3399.41	29.04
+	"California"	"06"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	2019	3384.09	29.42
+	"California"	"06"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	1963	3372.40	29.15
+"Total"	"California"	"06"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			6083	3385.61	29.20
+	"California"	"06"	"White"	"2106-3"	"2016"	"2016"	362021	3324.81	29.22
+	"California"	"06"	"White"	"2106-3"	"2017"	"2017"	347129	3321.91	29.41
+	"California"	"06"	"White"	"2106-3"	"2018"	"2018"	335226	3321.16	29.62
+"Total"	"California"	"06"	"White"	"2106-3"			1044376	3322.67	29.41
+	"California"	"06"	"More than one race"	"M"	"2016"	"2016"	17220	3278.58	28.67
+	"California"	"06"	"More than one race"	"M"	"2017"	"2017"	16962	3279.13	28.98
+	"California"	"06"	"More than one race"	"M"	"2018"	"2018"	17034	3278.30	29.27
+"Total"	"California"	"06"	"More than one race"	"M"			51216	3278.67	28.97
+	"California"	"06"	"Not Available"	"NA"	"2007"	"2007"	566414	3301.84	28.02
+	"California"	"06"	"Not Available"	"NA"	"2008"	"2008"	551779	3300.90	28.10
+	"California"	"06"	"Not Available"	"NA"	"2009"	"2009"	527020	3297.31	28.23
+	"California"	"06"	"Not Available"	"NA"	"2010"	"2010"	510198	3298.27	28.39
+	"California"	"06"	"Not Available"	"NA"	"2011"	"2011"	502120	3299.16	28.60
+	"California"	"06"	"Not Available"	"NA"	"2012"	"2012"	503755	3301.04	28.79
+	"California"	"06"	"Not Available"	"NA"	"2013"	"2013"	494705	3296.30	29.01
+	"California"	"06"	"Not Available"	"NA"	"2014"	"2014"	502879	3296.47	29.24
+	"California"	"06"	"Not Available"	"NA"	"2015"	"2015"	491748	3290.40	29.43
+"Total"	"California"	"06"	"Not Available"	"NA"			4650618	3298.07	28.63
+"Total"	"California"	"06"					6066023	3296.10	28.91
+	"Colorado"	"08"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	705	3213.56	27.17
+	"Colorado"	"08"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	749	3198.13	26.99
+	"Colorado"	"08"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	733	3159.93	27.03
+"Total"	"Colorado"	"08"	"American Indian or Alaska Native"	"1002-5"			2187	3190.28	27.06
+	"Colorado"	"08"	"Asian"	"A"	"2016"	"2016"	2880	3080.60	31.10
+	"Colorado"	"08"	"Asian"	"A"	"2017"	"2017"	2887	3078.30	30.84
+	"Colorado"	"08"	"Asian"	"A"	"2018"	"2018"	2704	3076.20	31.25
+"Total"	"Colorado"	"08"	"Asian"	"A"			8471	3078.41	31.06
+	"Colorado"	"08"	"Black or African American"	"2054-5"	"2016"	"2016"	3638	3060.73	28.15
+	"Colorado"	"08"	"Black or African American"	"2054-5"	"2017"	"2017"	3742	3058.13	28.31
+	"Colorado"	"08"	"Black or African American"	"2054-5"	"2018"	"2018"	3696	3071.20	28.46
+"Total"	"Colorado"	"08"	"Black or African American"	"2054-5"			11076	3063.35	28.31
+	"Colorado"	"08"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	189	3118.09	27.62
+	"Colorado"	"08"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	192	3179.41	27.27
+	"Colorado"	"08"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	210	3172.67	27.10
+"Total"	"Colorado"	"08"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			591	3157.41	27.32
+	"Colorado"	"08"	"White"	"2106-3"	"2016"	"2016"	57367	3214.40	29.28
+	"Colorado"	"08"	"White"	"2106-3"	"2017"	"2017"	54932	3208.73	29.46
+	"Colorado"	"08"	"White"	"2106-3"	"2018"	"2018"	53602	3201.16	29.59
+"Total"	"Colorado"	"08"	"White"	"2106-3"			165901	3208.25	29.44
+	"Colorado"	"08"	"More than one race"	"M"	"2016"	"2016"	1834	3140.62	27.90
+	"Colorado"	"08"	"More than one race"	"M"	"2017"	"2017"	1880	3120.42	27.77
+	"Colorado"	"08"	"More than one race"	"M"	"2018"	"2018"	1940	3131.72	28.19
+"Total"	"Colorado"	"08"	"More than one race"	"M"			5654	3130.85	27.95
+	"Colorado"	"08"	"Not Available"	"NA"	"2007"	"2007"	70809	3186.11	27.78
+	"Colorado"	"08"	"Not Available"	"NA"	"2008"	"2008"	70031	3192.05	27.81
+	"Colorado"	"08"	"Not Available"	"NA"	"2009"	"2009"	68628	3196.51	27.97
+	"Colorado"	"08"	"Not Available"	"NA"	"2010"	"2010"	66355	3194.39	28.15
+	"Colorado"	"08"	"Not Available"	"NA"	"2011"	"2011"	65055	3199.63	28.39
+	"Colorado"	"08"	"Not Available"	"NA"	"2012"	"2012"	65187	3199.59	28.56
+	"Colorado"	"08"	"Not Available"	"NA"	"2013"	"2013"	65007	3199.58	28.72
+	"Colorado"	"08"	"Not Available"	"NA"	"2014"	"2014"	65830	3202.80	28.88
+	"Colorado"	"08"	"Not Available"	"NA"	"2015"	"2015"	66581	3202.46	29.03
+"Total"	"Colorado"	"08"	"Not Available"	"NA"			603483	3196.88	28.36
+"Total"	"Colorado"	"08"					797363	3195.62	28.60
+	"Connecticut"	"09"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	142	3222.97	28.04
+	"Connecticut"	"09"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	165	3307.58	28.44
+	"Connecticut"	"09"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	210	3358.84	28.67
+"Total"	"Connecticut"	"09"	"American Indian or Alaska Native"	"1002-5"			517	3305.16	28.42
+	"Connecticut"	"09"	"Asian"	"A"	"2016"	"2016"	2758	3171.81	31.37
+	"Connecticut"	"09"	"Asian"	"A"	"2017"	"2017"	2648	3174.11	31.55
+	"Connecticut"	"09"	"Asian"	"A"	"2018"	"2018"	2280	3176.78	31.86
+"Total"	"Connecticut"	"09"	"Asian"	"A"			7686	3174.08	31.57
+	"Connecticut"	"09"	"Black or African American"	"2054-5"	"2016"	"2016"	5355	3144.87	28.87
+	"Connecticut"	"09"	"Black or African American"	"2054-5"	"2017"	"2017"	5236	3133.87	29.00
+	"Connecticut"	"09"	"Black or African American"	"2054-5"	"2018"	"2018"	5291	3131.10	29.24
+"Total"	"Connecticut"	"09"	"Black or African American"	"2054-5"			15882	3136.66	29.04
+	"Connecticut"	"09"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	22	3392.77	28.41
+	"Connecticut"	"09"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	19	3211.00	26.53
+	"Connecticut"	"09"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	16	3192.75	29.81
+"Total"	"Connecticut"	"09"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			57	3276.04	28.18
+	"Connecticut"	"09"	"White"	"2106-3"	"2016"	"2016"	26897	3329.08	30.49
+	"Connecticut"	"09"	"White"	"2106-3"	"2017"	"2017"	26292	3321.40	30.61
+	"Connecticut"	"09"	"White"	"2106-3"	"2018"	"2018"	26017	3337.11	30.71
+"Total"	"Connecticut"	"09"	"White"	"2106-3"			79206	3329.17	30.60
+	"Connecticut"	"09"	"More than one race"	"M"	"2016"	"2016"	841	3263.24	28.31
+	"Connecticut"	"09"	"More than one race"	"M"	"2017"	"2017"	861	3229.02	28.13
+	"Connecticut"	"09"	"More than one race"	"M"	"2018"	"2018"	911	3253.37	28.70
+"Total"	"Connecticut"	"09"	"More than one race"	"M"			2613	3248.53	28.39
+	"Connecticut"	"09"	"Not Available"	"NA"	"2007"	"2007"	41660	3285.41	29.30
+	"Connecticut"	"09"	"Not Available"	"NA"	"2008"	"2008"	40399	3292.93	29.22
+	"Connecticut"	"09"	"Not Available"	"NA"	"2009"	"2009"	38896	3289.78	29.29
+	"Connecticut"	"09"	"Not Available"	"NA"	"2010"	"2010"	37708	3280.03	29.41
+	"Connecticut"	"09"	"Not Available"	"NA"	"2011"	"2011"	37281	3288.42	29.42
+	"Connecticut"	"09"	"Not Available"	"NA"	"2012"	"2012"	36539	3293.37	29.51
+	"Connecticut"	"09"	"Not Available"	"NA"	"2013"	"2013"	36085	3290.63	29.67
+	"Connecticut"	"09"	"Not Available"	"NA"	"2014"	"2014"	36285	3296.68	29.84
+	"Connecticut"	"09"	"Not Available"	"NA"	"2015"	"2015"	35746	3286.41	30.02
+"Total"	"Connecticut"	"09"	"Not Available"	"NA"			340599	3289.25	29.51
+"Total"	"Connecticut"	"09"					446560	3288.70	29.71
+	"Delaware"	"10"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	19	3343.11	27.53
+	"Delaware"	"10"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	33	3022.70	26.73
+	"Delaware"	"10"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	19	3000.21	30.00
+"Total"	"Delaware"	"10"	"American Indian or Alaska Native"	"1002-5"			71	3102.42	27.82
+	"Delaware"	"10"	"Asian"	"A"	"2016"	"2016"	663	3199.79	30.88
+	"Delaware"	"10"	"Asian"	"A"	"2017"	"2017"	695	3158.52	30.86
+	"Delaware"	"10"	"Asian"	"A"	"2018"	"2018"	651	3218.94	31.37
+"Total"	"Delaware"	"10"	"Asian"	"A"			2009	3191.72	31.03
+	"Delaware"	"10"	"Black or African American"	"2054-5"	"2016"	"2016"	3075	3103.38	27.66
+	"Delaware"	"10"	"Black or African American"	"2054-5"	"2017"	"2017"	3117	3097.82	27.88
+	"Delaware"	"10"	"Black or African American"	"2054-5"	"2018"	"2018"	3033	3084.53	28.01
+"Total"	"Delaware"	"10"	"Black or African American"	"2054-5"			9225	3095.30	27.85
+	"Delaware"	"10"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	12	3316.67	30.42
+"Total"	"Delaware"	"10"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			27	3258.07	29.78
+	"Delaware"	"10"	"White"	"2106-3"	"2016"	"2016"	6942	3343.06	29.07
+	"Delaware"	"10"	"White"	"2106-3"	"2017"	"2017"	6669	3349.57	29.18
+	"Delaware"	"10"	"White"	"2106-3"	"2018"	"2018"	6597	3332.69	29.30
+"Total"	"Delaware"	"10"	"White"	"2106-3"			20208	3341.82	29.18
+	"Delaware"	"10"	"More than one race"	"M"	"2016"	"2016"	281	3193.62	26.26
+	"Delaware"	"10"	"More than one race"	"M"	"2017"	"2017"	333	3217.68	25.85
+	"Delaware"	"10"	"More than one race"	"M"	"2018"	"2018"	314	3204.22	27.06
+"Total"	"Delaware"	"10"	"More than one race"	"M"			928	3205.84	26.38
+	"Delaware"	"10"	"Not Available"	"NA"	"2007"	"2007"	12170	3242.23	27.31
+	"Delaware"	"10"	"Not Available"	"NA"	"2008"	"2008"	12090	3256.28	27.31
+	"Delaware"	"10"	"Not Available"	"NA"	"2009"	"2009"	11559	3252.41	27.49
+	"Delaware"	"10"	"Not Available"	"NA"	"2010"	"2010"	11364	3255.78	27.67
+	"Delaware"	"10"	"Not Available"	"NA"	"2011"	"2011"	11257	3265.94	27.79
+	"Delaware"	"10"	"Not Available"	"NA"	"2012"	"2012"	11023	3285.67	28.05
+	"Delaware"	"10"	"Not Available"	"NA"	"2013"	"2013"	10831	3278.93	28.14
+	"Delaware"	"10"	"Not Available"	"NA"	"2014"	"2014"	10972	3265.74	28.43
+	"Delaware"	"10"	"Not Available"	"NA"	"2015"	"2015"	11166	3248.45	28.67
+"Total"	"Delaware"	"10"	"Not Available"	"NA"			102432	3260.90	27.86
+"Total"	"Delaware"	"10"					134900	3260.21	28.09
+	"District of Columbia"	"11"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	16	3303.94	28.56
+	"District of Columbia"	"11"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	15	3381.73	31.33
+	"District of Columbia"	"11"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	25	3272.40	27.84
+"Total"	"District of Columbia"	"11"	"American Indian or Alaska Native"	"1002-5"			56	3310.70	28.98
+	"District of Columbia"	"11"	"Asian"	"A"	"2016"	"2016"	497	3198.45	33.58
+	"District of Columbia"	"11"	"Asian"	"A"	"2017"	"2017"	473	3223.53	33.57
+	"District of Columbia"	"11"	"Asian"	"A"	"2018"	"2018"	476	3227.59	34.23
+"Total"	"District of Columbia"	"11"	"Asian"	"A"			1446	3216.25	33.79
+	"District of Columbia"	"11"	"Black or African American"	"2054-5"	"2016"	"2016"	5480	3116.89	27.77
+	"District of Columbia"	"11"	"Black or African American"	"2054-5"	"2017"	"2017"	5202	3093.75	28.01
+	"District of Columbia"	"11"	"Black or African American"	"2054-5"	"2018"	"2018"	4509	3084.55	28.35
+"Total"	"District of Columbia"	"11"	"Black or African American"	"2054-5"			15191	3099.37	28.03
+	"District of Columbia"	"11"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	19	3449.00	31.05
+	"District of Columbia"	"11"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	26	3304.96	28.23
+	"District of Columbia"	"11"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	49	3263.78	28.20
+"Total"	"District of Columbia"	"11"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			94	3312.61	28.79
+	"District of Columbia"	"11"	"White"	"2106-3"	"2016"	"2016"	3657	3340.46	33.43
+	"District of Columbia"	"11"	"White"	"2106-3"	"2017"	"2017"	3637	3352.76	33.43
+	"District of Columbia"	"11"	"White"	"2106-3"	"2018"	"2018"	3971	3339.96	33.32
+"Total"	"District of Columbia"	"11"	"White"	"2106-3"			11265	3344.25	33.39
+	"District of Columbia"	"11"	"More than one race"	"M"	"2016"	"2016"	189	3249.23	31.72
+	"District of Columbia"	"11"	"More than one race"	"M"	"2017"	"2017"	207	3210.23	30.53
+	"District of Columbia"	"11"	"More than one race"	"M"	"2018"	"2018"	182	3181.07	30.88
+"Total"	"District of Columbia"	"11"	"More than one race"	"M"			578	3213.86	31.03
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2007"	"2007"	8864	3177.21	28.16
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2008"	"2008"	9130	3189.53	28.16
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2009"	"2009"	9040	3200.91	28.32
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2010"	"2010"	9165	3201.14	28.56
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2011"	"2011"	9295	3203.28	28.84
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2012"	"2012"	9399	3219.47	29.19
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2013"	"2013"	9288	3224.54	29.54
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2014"	"2014"	9509	3220.80	29.73
+	"District of Columbia"	"11"	"Not Available"	"NA"	"2015"	"2015"	9578	3208.47	30.02
+"Total"	"District of Columbia"	"11"	"Not Available"	"NA"			83268	3205.30	28.96
+"Total"	"District of Columbia"	"11"					111898	3205.24	29.35
+	"Florida"	"12"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	318	3306.99	27.55
+	"Florida"	"12"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	393	3289.93	27.48
+	"Florida"	"12"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	472	3306.14	27.56
+"Total"	"Florida"	"12"	"American Indian or Alaska Native"	"1002-5"			1183	3300.98	27.53
+	"Florida"	"12"	"Asian"	"A"	"2016"	"2016"	8086	3185.08	31.13
+	"Florida"	"12"	"Asian"	"A"	"2017"	"2017"	7915	3168.04	31.17
+	"Florida"	"12"	"Asian"	"A"	"2018"	"2018"	7394	3164.42	31.43
+"Total"	"Florida"	"12"	"Asian"	"A"			23395	3172.78	31.24
+	"Florida"	"12"	"Black or African American"	"2054-5"	"2016"	"2016"	56594	3084.29	27.85
+	"Florida"	"12"	"Black or African American"	"2054-5"	"2017"	"2017"	57319	3084.92	28.06
+	"Florida"	"12"	"Black or African American"	"2054-5"	"2018"	"2018"	52349	3076.81	28.32
+"Total"	"Florida"	"12"	"Black or African American"	"2054-5"			166262	3082.15	28.07
+	"Florida"	"12"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	190	3280.48	29.47
+	"Florida"	"12"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	223	3286.25	27.87
+	"Florida"	"12"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	208	3232.46	28.52
+"Total"	"Florida"	"12"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			621	3266.50	28.58
+	"Florida"	"12"	"White"	"2106-3"	"2016"	"2016"	157006	3299.40	29.03
+	"Florida"	"12"	"White"	"2106-3"	"2017"	"2017"	154504	3291.43	29.16
+	"Florida"	"12"	"White"	"2106-3"	"2018"	"2018"	157945	3296.64	29.35
+"Total"	"Florida"	"12"	"White"	"2106-3"			469455	3295.85	29.18
+	"Florida"	"12"	"More than one race"	"M"	"2016"	"2016"	2828	3235.26	27.07
+	"Florida"	"12"	"More than one race"	"M"	"2017"	"2017"	3276	3216.28	27.12
+	"Florida"	"12"	"More than one race"	"M"	"2018"	"2018"	3174	3228.10	27.16
+"Total"	"Florida"	"12"	"More than one race"	"M"			9278	3226.11	27.12
+	"Florida"	"12"	"Not Available"	"NA"	"2007"	"2007"	239165	3232.64	27.25
+	"Florida"	"12"	"Not Available"	"NA"	"2008"	"2008"	231445	3227.43	27.34
+	"Florida"	"12"	"Not Available"	"NA"	"2009"	"2009"	221394	3228.90	27.44
+	"Florida"	"12"	"Not Available"	"NA"	"2010"	"2010"	214590	3229.88	27.66
+	"Florida"	"12"	"Not Available"	"NA"	"2011"	"2011"	213414	3233.13	27.85
+	"Florida"	"12"	"Not Available"	"NA"	"2012"	"2012"	213148	3241.15	27.96
+	"Florida"	"12"	"Not Available"	"NA"	"2013"	"2013"	215407	3243.87	28.19
+	"Florida"	"12"	"Not Available"	"NA"	"2014"	"2014"	219991	3243.77	28.37
+	"Florida"	"12"	"Not Available"	"NA"	"2015"	"2015"	224269	3244.02	28.57
+"Total"	"Florida"	"12"	"Not Available"	"NA"			1992823	3236.01	27.84
+"Total"	"Florida"	"12"					2663017	3236.40	28.12
+	"Georgia"	"13"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	213	3362.35	27.81
+	"Georgia"	"13"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	199	3326.84	27.35
+	"Georgia"	"13"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	177	3269.51	28.04
+"Total"	"Georgia"	"13"	"American Indian or Alaska Native"	"1002-5"			589	3322.39	27.72
+	"Georgia"	"13"	"Asian"	"A"	"2016"	"2016"	6434	3175.45	31.00
+	"Georgia"	"13"	"Asian"	"A"	"2017"	"2017"	6533	3147.83	31.13
+	"Georgia"	"13"	"Asian"	"A"	"2018"	"2018"	6114	3140.11	31.30
+"Total"	"Georgia"	"13"	"Asian"	"A"			19081	3154.65	31.14
+	"Georgia"	"13"	"Black or African American"	"2054-5"	"2016"	"2016"	47765	3055.68	27.43
+	"Georgia"	"13"	"Black or African American"	"2054-5"	"2017"	"2017"	47309	3052.96	27.61
+	"Georgia"	"13"	"Black or African American"	"2054-5"	"2018"	"2018"	45257	3039.71	27.74
+"Total"	"Georgia"	"13"	"Black or African American"	"2054-5"			140331	3049.61	27.59
+	"Georgia"	"13"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	178	3219.87	27.87
+	"Georgia"	"13"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	178	3208.85	28.83
+	"Georgia"	"13"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	205	3272.49	27.58
+"Total"	"Georgia"	"13"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			561	3235.60	28.07
+	"Georgia"	"13"	"White"	"2106-3"	"2016"	"2016"	73014	3308.04	28.44
+	"Georgia"	"13"	"White"	"2106-3"	"2017"	"2017"	72415	3304.31	28.56
+	"Georgia"	"13"	"White"	"2106-3"	"2018"	"2018"	71810	3303.76	28.66
+"Total"	"Georgia"	"13"	"White"	"2106-3"			217239	3305.38	28.55
+	"Georgia"	"13"	"More than one race"	"M"	"2016"	"2016"	2438	3188.97	26.79
+	"Georgia"	"13"	"More than one race"	"M"	"2017"	"2017"	2609	3193.77	26.54
+	"Georgia"	"13"	"More than one race"	"M"	"2018"	"2018"	2609	3202.24	26.94
+"Total"	"Georgia"	"13"	"More than one race"	"M"			7656	3195.13	26.76
+	"Georgia"	"13"	"Not Available"	"NA"	"2007"	"2007"	151137	3210.58	26.83
+	"Georgia"	"13"	"Not Available"	"NA"	"2008"	"2008"	146603	3204.58	26.90
+	"Georgia"	"13"	"Not Available"	"NA"	"2009"	"2009"	141377	3207.54	26.99
+	"Georgia"	"13"	"Not Available"	"NA"	"2010"	"2010"	133947	3203.51	27.20
+	"Georgia"	"13"	"Not Available"	"NA"	"2011"	"2011"	132409	3212.93	27.34
+	"Georgia"	"13"	"Not Available"	"NA"	"2012"	"2012"	130280	3216.86	27.48
+	"Georgia"	"13"	"Not Available"	"NA"	"2013"	"2013"	128748	3219.42	27.66
+	"Georgia"	"13"	"Not Available"	"NA"	"2014"	"2014"	130946	3219.59	27.87
+	"Georgia"	"13"	"Not Available"	"NA"	"2015"	"2015"	131404	3216.01	28.01
+"Total"	"Georgia"	"13"	"Not Available"	"NA"			1226851	3212.14	27.35
+"Total"	"Georgia"	"13"					1612308	3209.85	27.57
+	"Hawaii"	"15"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	31	3414.97	29.06
+	"Hawaii"	"15"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	41	3275.93	28.93
+	"Hawaii"	"15"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	37	3108.57	28.68
+"Total"	"Hawaii"	"15"	"American Indian or Alaska Native"	"1002-5"			109	3258.66	28.88
+	"Hawaii"	"15"	"Asian"	"A"	"2016"	"2016"	4652	3095.96	31.43
+	"Hawaii"	"15"	"Asian"	"A"	"2017"	"2017"	4689	3111.49	31.53
+	"Hawaii"	"15"	"Asian"	"A"	"2018"	"2018"	4407	3094.77	31.76
+"Total"	"Hawaii"	"15"	"Asian"	"A"			13748	3100.87	31.57
+	"Hawaii"	"15"	"Black or African American"	"2054-5"	"2016"	"2016"	472	3114.52	27.92
+	"Hawaii"	"15"	"Black or African American"	"2054-5"	"2017"	"2017"	409	3144.34	28.27
+	"Hawaii"	"15"	"Black or African American"	"2054-5"	"2018"	"2018"	432	3072.88	28.21
+"Total"	"Hawaii"	"15"	"Black or African American"	"2054-5"			1313	3110.11	28.12
+	"Hawaii"	"15"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	1767	3249.58	27.23
+	"Hawaii"	"15"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	1706	3248.40	27.39
+	"Hawaii"	"15"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	1713	3210.90	27.34
+"Total"	"Hawaii"	"15"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			5186	3236.42	27.32
+	"Hawaii"	"15"	"White"	"2106-3"	"2016"	"2016"	4706	3353.40	29.53
+	"Hawaii"	"15"	"White"	"2106-3"	"2017"	"2017"	4398	3347.38	29.70
+	"Hawaii"	"15"	"White"	"2106-3"	"2018"	"2018"	4265	3352.53	30.01
+"Total"	"Hawaii"	"15"	"White"	"2106-3"			13369	3351.14	29.74
+	"Hawaii"	"15"	"More than one race"	"M"	"2016"	"2016"	6431	3232.59	28.09
+	"Hawaii"	"15"	"More than one race"	"M"	"2017"	"2017"	6274	3233.17	28.08
+	"Hawaii"	"15"	"More than one race"	"M"	"2018"	"2018"	6118	3244.95	28.41
+"Total"	"Hawaii"	"15"	"More than one race"	"M"			18823	3236.80	28.19
+	"Hawaii"	"15"	"Not Available"	"NA"	"2007"	"2007"	19134	3248.59	28.01
+	"Hawaii"	"15"	"Not Available"	"NA"	"2008"	"2008"	19484	3246.75	28.10
+	"Hawaii"	"15"	"Not Available"	"NA"	"2009"	"2009"	18887	3232.91	28.08
+	"Hawaii"	"15"	"Not Available"	"NA"	"2010"	"2010"	18988	3233.11	28.24
+	"Hawaii"	"15"	"Not Available"	"NA"	"2011"	"2011"	18956	3243.05	28.37
+	"Hawaii"	"15"	"Not Available"	"NA"	"2012"	"2012"	18980	3242.52	28.60
+	"Hawaii"	"15"	"Not Available"	"NA"	"2013"	"2013"	18987	3240.63	28.73
+	"Hawaii"	"15"	"Not Available"	"NA"	"2014"	"2014"	18550	3237.37	28.95
+	"Hawaii"	"15"	"Not Available"	"NA"	"2015"	"2015"	18420	3235.19	29.12
+"Total"	"Hawaii"	"15"	"Not Available"	"NA"			170386	3240.07	28.46
+"Total"	"Hawaii"	"15"					222934	3237.03	28.68
+	"Idaho"	"16"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	366	3337.13	26.63
+	"Idaho"	"16"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	367	3272.47	26.70
+	"Idaho"	"16"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	313	3331.06	25.77
+"Total"	"Idaho"	"16"	"American Indian or Alaska Native"	"1002-5"			1046	3312.60	26.40
+	"Idaho"	"16"	"Asian"	"A"	"2016"	"2016"	393	3203.24	30.16
+	"Idaho"	"16"	"Asian"	"A"	"2017"	"2017"	411	3137.76	30.41
+	"Idaho"	"16"	"Asian"	"A"	"2018"	"2018"	389	3143.38	30.60
+"Total"	"Idaho"	"16"	"Asian"	"A"			1193	3161.16	30.39
+	"Idaho"	"16"	"Black or African American"	"2054-5"	"2016"	"2016"	244	3258.58	28.18
+	"Idaho"	"16"	"Black or African American"	"2054-5"	"2017"	"2017"	286	3236.60	27.86
+	"Idaho"	"16"	"Black or African American"	"2054-5"	"2018"	"2018"	286	3133.07	28.38
+"Total"	"Idaho"	"16"	"Black or African American"	"2054-5"			816	3206.89	28.14
+	"Idaho"	"16"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	65	3317.65	27.38
+	"Idaho"	"16"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	62	3391.52	27.13
+	"Idaho"	"16"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	81	3236.09	27.01
+"Total"	"Idaho"	"16"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			208	3307.90	27.16
+	"Idaho"	"16"	"White"	"2106-3"	"2016"	"2016"	21013	3305.32	27.90
+	"Idaho"	"16"	"White"	"2106-3"	"2017"	"2017"	20590	3310.59	27.99
+	"Idaho"	"16"	"White"	"2106-3"	"2018"	"2018"	19917	3293.65	28.13
+"Total"	"Idaho"	"16"	"White"	"2106-3"			61520	3303.30	28.00
+	"Idaho"	"16"	"More than one race"	"M"	"2016"	"2016"	401	3246.41	26.60
+	"Idaho"	"16"	"More than one race"	"M"	"2017"	"2017"	465	3249.71	26.38
+	"Idaho"	"16"	"More than one race"	"M"	"2018"	"2018"	417	3263.00	27.06
+"Total"	"Idaho"	"16"	"More than one race"	"M"			1283	3252.99	26.67
+	"Idaho"	"16"	"Not Available"	"NA"	"2007"	"2007"	25019	3299.51	26.64
+	"Idaho"	"16"	"Not Available"	"NA"	"2008"	"2008"	25149	3304.87	26.72
+	"Idaho"	"16"	"Not Available"	"NA"	"2009"	"2009"	23737	3310.04	26.87
+	"Idaho"	"16"	"Not Available"	"NA"	"2010"	"2010"	23198	3301.62	27.03
+	"Idaho"	"16"	"Not Available"	"NA"	"2011"	"2011"	22305	3319.97	27.21
+	"Idaho"	"16"	"Not Available"	"NA"	"2012"	"2012"	22963	3311.32	27.27
+	"Idaho"	"16"	"Not Available"	"NA"	"2013"	"2013"	22383	3306.44	27.47
+	"Idaho"	"16"	"Not Available"	"NA"	"2014"	"2014"	22876	3313.90	27.59
+	"Idaho"	"16"	"Not Available"	"NA"	"2015"	"2015"	22827	3307.13	27.78
+"Total"	"Idaho"	"16"	"Not Available"	"NA"			210457	3308.16	27.16
+"Total"	"Idaho"	"16"					276523	3305.90	27.36
+	"Illinois"	"17"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	150	3350.37	28.50
+	"Illinois"	"17"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	145	3284.03	28.19
+	"Illinois"	"17"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	150	3303.12	28.83
+"Total"	"Illinois"	"17"	"American Indian or Alaska Native"	"1002-5"			445	3312.82	28.51
+	"Illinois"	"17"	"Asian"	"A"	"2016"	"2016"	10403	3162.24	31.40
+	"Illinois"	"17"	"Asian"	"A"	"2017"	"2017"	9980	3158.14	31.68
+	"Illinois"	"17"	"Asian"	"A"	"2018"	"2018"	9628	3154.40	31.80
+"Total"	"Illinois"	"17"	"Asian"	"A"			30011	3158.36	31.62
+	"Illinois"	"17"	"Black or African American"	"2054-5"	"2016"	"2016"	27008	3057.03	26.84
+	"Illinois"	"17"	"Black or African American"	"2054-5"	"2017"	"2017"	26874	3058.44	27.06
+	"Illinois"	"17"	"Black or African American"	"2054-5"	"2018"	"2018"	25202	3049.98	27.32
+"Total"	"Illinois"	"17"	"Black or African American"	"2054-5"			79084	3055.26	27.07
+	"Illinois"	"17"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	56	3346.32	30.32
+	"Illinois"	"17"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	64	3369.88	28.39
+	"Illinois"	"17"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	54	3415.41	29.74
+"Total"	"Illinois"	"17"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			174	3376.43	29.43
+	"Illinois"	"17"	"White"	"2106-3"	"2016"	"2016"	114710	3325.74	29.52
+	"Illinois"	"17"	"White"	"2106-3"	"2017"	"2017"	110092	3325.28	29.64
+	"Illinois"	"17"	"White"	"2106-3"	"2018"	"2018"	107541	3319.74	29.79
+"Total"	"Illinois"	"17"	"White"	"2106-3"			332343	3323.64	29.65
+	"Illinois"	"17"	"More than one race"	"M"	"2016"	"2016"	2118	3219.04	27.48
+	"Illinois"	"17"	"More than one race"	"M"	"2017"	"2017"	2235	3232.57	27.41
+	"Illinois"	"17"	"More than one race"	"M"	"2018"	"2018"	2240	3214.39	27.41
+"Total"	"Illinois"	"17"	"More than one race"	"M"			6593	3222.05	27.43
+	"Illinois"	"17"	"Not Available"	"NA"	"2007"	"2007"	180836	3262.89	27.77
+	"Illinois"	"17"	"Not Available"	"NA"	"2008"	"2008"	176795	3265.75	27.86
+	"Illinois"	"17"	"Not Available"	"NA"	"2009"	"2009"	171163	3269.15	28.00
+	"Illinois"	"17"	"Not Available"	"NA"	"2010"	"2010"	165200	3267.07	28.14
+	"Illinois"	"17"	"Not Available"	"NA"	"2011"	"2011"	161312	3273.20	28.34
+	"Illinois"	"17"	"Not Available"	"NA"	"2012"	"2012"	159160	3276.76	28.44
+	"Illinois"	"17"	"Not Available"	"NA"	"2013"	"2013"	156931	3278.23	28.65
+	"Illinois"	"17"	"Not Available"	"NA"	"2014"	"2014"	158556	3276.35	28.80
+	"Illinois"	"17"	"Not Available"	"NA"	"2015"	"2015"	158116	3274.21	28.93
+"Total"	"Illinois"	"17"	"Not Available"	"NA"			1488069	3271.27	28.31
+"Total"	"Illinois"	"17"					1936719	3269.54	28.53
+	"Indiana"	"18"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	106	3327.88	27.53
+	"Indiana"	"18"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	93	3278.28	28.13
+	"Indiana"	"18"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	101	3401.67	29.17
+"Total"	"Indiana"	"18"	"American Indian or Alaska Native"	"1002-5"			300	3337.35	28.27
+	"Indiana"	"18"	"Asian"	"A"	"2016"	"2016"	2504	3214.55	30.43
+	"Indiana"	"18"	"Asian"	"A"	"2017"	"2017"	2591	3191.31	30.35
+	"Indiana"	"18"	"Asian"	"A"	"2018"	"2018"	2405	3188.16	30.71
+"Total"	"Indiana"	"18"	"Asian"	"A"			7500	3198.06	30.49
+	"Indiana"	"18"	"Black or African American"	"2054-5"	"2016"	"2016"	10202	3085.42	26.51
+	"Indiana"	"18"	"Black or African American"	"2054-5"	"2017"	"2017"	10428	3077.51	26.75
+	"Indiana"	"18"	"Black or African American"	"2054-5"	"2018"	"2018"	10619	3067.73	26.90
+"Total"	"Indiana"	"18"	"Black or African American"	"2054-5"			31249	3076.77	26.72
+	"Indiana"	"18"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	67	3313.30	27.40
+	"Indiana"	"18"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	68	3268.78	29.12
+	"Indiana"	"18"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	82	3238.41	27.99
+"Total"	"Indiana"	"18"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			217	3271.05	28.16
+	"Indiana"	"18"	"White"	"2106-3"	"2016"	"2016"	68888	3314.08	27.87
+	"Indiana"	"18"	"White"	"2106-3"	"2017"	"2017"	67573	3317.52	27.93
+	"Indiana"	"18"	"White"	"2106-3"	"2018"	"2018"	66870	3322.18	28.01
+"Total"	"Indiana"	"18"	"White"	"2106-3"			203331	3317.89	27.93
+	"Indiana"	"18"	"More than one race"	"M"	"2016"	"2016"	1324	3177.61	25.06
+	"Indiana"	"18"	"More than one race"	"M"	"2017"	"2017"	1417	3174.27	25.12
+	"Indiana"	"18"	"More than one race"	"M"	"2018"	"2018"	1569	3200.58	25.34
+"Total"	"Indiana"	"18"	"More than one race"	"M"			4310	3184.86	25.18
+	"Indiana"	"18"	"Not Available"	"NA"	"2007"	"2007"	89864	3263.58	26.54
+	"Indiana"	"18"	"Not Available"	"NA"	"2008"	"2008"	88742	3266.35	26.63
+	"Indiana"	"18"	"Not Available"	"NA"	"2009"	"2009"	86673	3268.36	26.66
+	"Indiana"	"18"	"Not Available"	"NA"	"2010"	"2010"	83940	3272.95	26.86
+	"Indiana"	"18"	"Not Available"	"NA"	"2011"	"2011"	83701	3274.67	26.99
+	"Indiana"	"18"	"Not Available"	"NA"	"2012"	"2012"	83227	3281.29	27.03
+	"Indiana"	"18"	"Not Available"	"NA"	"2013"	"2013"	83102	3282.29	27.20
+	"Indiana"	"18"	"Not Available"	"NA"	"2014"	"2014"	84080	3287.02	27.39
+	"Indiana"	"18"	"Not Available"	"NA"	"2015"	"2015"	84040	3287.23	27.50
+"Total"	"Indiana"	"18"	"Not Available"	"NA"			767369	3275.78	26.97
+"Total"	"Indiana"	"18"					1014276	3277.15	27.18
+	"Iowa"	"19"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	204	3357.93	26.44
+	"Iowa"	"19"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	250	3388.23	26.25
+	"Iowa"	"19"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	243	3343.93	27.07
+"Total"	"Iowa"	"19"	"American Indian or Alaska Native"	"1002-5"			697	3363.91	26.59
+	"Iowa"	"19"	"Asian"	"A"	"2016"	"2016"	1319	3228.59	29.85
+	"Iowa"	"19"	"Asian"	"A"	"2017"	"2017"	1383	3199.25	30.22
+	"Iowa"	"19"	"Asian"	"A"	"2018"	"2018"	1215	3177.55	30.27
+"Total"	"Iowa"	"19"	"Asian"	"A"			3917	3202.40	30.11
+	"Iowa"	"19"	"Black or African American"	"2054-5"	"2016"	"2016"	2585	3134.46	26.98
+	"Iowa"	"19"	"Black or African American"	"2054-5"	"2017"	"2017"	2797	3152.02	27.27
+	"Iowa"	"19"	"Black or African American"	"2054-5"	"2018"	"2018"	2737	3152.85	27.62
+"Total"	"Iowa"	"19"	"Black or African American"	"2054-5"			8119	3146.70	27.29
+	"Iowa"	"19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	124	3161.03	27.48
+	"Iowa"	"19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	148	3134.40	27.98
+	"Iowa"	"19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	175	3139.09	26.63
+"Total"	"Iowa"	"19"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			447	3143.62	27.32
+	"Iowa"	"19"	"White"	"2106-3"	"2016"	"2016"	34576	3376.86	28.39
+	"Iowa"	"19"	"White"	"2106-3"	"2017"	"2017"	33197	3378.43	28.57
+	"Iowa"	"19"	"White"	"2106-3"	"2018"	"2018"	32695	3363.12	28.61
+"Total"	"Iowa"	"19"	"White"	"2106-3"			100468	3372.91	28.52
+	"Iowa"	"19"	"More than one race"	"M"	"2016"	"2016"	595	3249.41	25.42
+	"Iowa"	"19"	"More than one race"	"M"	"2017"	"2017"	655	3228.36	25.78
+	"Iowa"	"19"	"More than one race"	"M"	"2018"	"2018"	720	3190.05	25.25
+"Total"	"Iowa"	"19"	"More than one race"	"M"			1970	3220.71	25.48
+	"Iowa"	"19"	"Not Available"	"NA"	"2007"	"2007"	40886	3342.72	27.08
+	"Iowa"	"19"	"Not Available"	"NA"	"2008"	"2008"	40224	3349.40	27.10
+	"Iowa"	"19"	"Not Available"	"NA"	"2009"	"2009"	39701	3350.84	27.21
+	"Iowa"	"19"	"Not Available"	"NA"	"2010"	"2010"	38719	3338.02	27.38
+	"Iowa"	"19"	"Not Available"	"NA"	"2011"	"2011"	38214	3351.40	27.52
+	"Iowa"	"19"	"Not Available"	"NA"	"2012"	"2012"	38702	3349.08	27.65
+	"Iowa"	"19"	"Not Available"	"NA"	"2013"	"2013"	39094	3353.47	27.80
+	"Iowa"	"19"	"Not Available"	"NA"	"2014"	"2014"	39687	3355.05	27.98
+	"Iowa"	"19"	"Not Available"	"NA"	"2015"	"2015"	39482	3358.59	28.18
+"Total"	"Iowa"	"19"	"Not Available"	"NA"			354709	3349.83	27.54
+"Total"	"Iowa"	"19"					470327	3349.32	27.76
+	"Kansas"	"20"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	209	3365.57	27.04
+	"Kansas"	"20"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	211	3353.13	26.68
+	"Kansas"	"20"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	199	3380.24	27.28
+"Total"	"Kansas"	"20"	"American Indian or Alaska Native"	"1002-5"			619	3366.05	27.00
+	"Kansas"	"20"	"Asian"	"A"	"2016"	"2016"	1381	3191.94	30.36
+	"Kansas"	"20"	"Asian"	"A"	"2017"	"2017"	1332	3197.20	30.69
+	"Kansas"	"20"	"Asian"	"A"	"2018"	"2018"	1268	3179.00	30.90
+"Total"	"Kansas"	"20"	"Asian"	"A"			3981	3189.58	30.64
+	"Kansas"	"20"	"Black or African American"	"2054-5"	"2016"	"2016"	2790	3088.76	26.62
+	"Kansas"	"20"	"Black or African American"	"2054-5"	"2017"	"2017"	2825	3072.77	26.94
+	"Kansas"	"20"	"Black or African American"	"2054-5"	"2018"	"2018"	2783	3090.40	26.90
+"Total"	"Kansas"	"20"	"Black or African American"	"2054-5"			8398	3083.92	26.82
+	"Kansas"	"20"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	67	3326.92	28.09
+	"Kansas"	"20"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	99	3285.89	27.74
+	"Kansas"	"20"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	87	3202.46	28.08
+"Total"	"Kansas"	"20"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			253	3267.83	27.95
+	"Kansas"	"20"	"White"	"2106-3"	"2016"	"2016"	32816	3338.76	28.15
+	"Kansas"	"20"	"White"	"2106-3"	"2017"	"2017"	31094	3329.01	28.26
+	"Kansas"	"20"	"White"	"2106-3"	"2018"	"2018"	30945	3325.67	28.37
+"Total"	"Kansas"	"20"	"White"	"2106-3"			94855	3331.29	28.26
+	"Kansas"	"20"	"More than one race"	"M"	"2016"	"2016"	790	3257.04	25.58
+	"Kansas"	"20"	"More than one race"	"M"	"2017"	"2017"	958	3188.07	25.71
+	"Kansas"	"20"	"More than one race"	"M"	"2018"	"2018"	979	3241.44	25.81
+"Total"	"Kansas"	"20"	"More than one race"	"M"			2727	3227.20	25.71
+	"Kansas"	"20"	"Not Available"	"NA"	"2007"	"2007"	42004	3296.10	26.80
+	"Kansas"	"20"	"Not Available"	"NA"	"2008"	"2008"	41833	3291.43	26.74
+	"Kansas"	"20"	"Not Available"	"NA"	"2009"	"2009"	41396	3294.07	26.82
+	"Kansas"	"20"	"Not Available"	"NA"	"2010"	"2010"	40649	3296.40	27.00
+	"Kansas"	"20"	"Not Available"	"NA"	"2011"	"2011"	39642	3288.98	27.10
+	"Kansas"	"20"	"Not Available"	"NA"	"2012"	"2012"	40341	3297.70	27.30
+	"Kansas"	"20"	"Not Available"	"NA"	"2013"	"2013"	38839	3307.25	27.52
+	"Kansas"	"20"	"Not Available"	"NA"	"2014"	"2014"	39223	3311.27	27.70
+	"Kansas"	"20"	"Not Available"	"NA"	"2015"	"2015"	39154	3311.49	27.82
+"Total"	"Kansas"	"20"	"Not Available"	"NA"			363081	3299.26	27.19
+"Total"	"Kansas"	"20"					473914	3300.59	27.42
+	"Kentucky"	"21"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	77	3283.44	27.60
+	"Kentucky"	"21"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	67	3400.42	27.33
+	"Kentucky"	"21"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	84	3276.52	28.13
+"Total"	"Kentucky"	"21"	"American Indian or Alaska Native"	"1002-5"			228	3315.27	27.71
+	"Kentucky"	"21"	"Asian"	"A"	"2016"	"2016"	1250	3169.13	30.48
+	"Kentucky"	"21"	"Asian"	"A"	"2017"	"2017"	1241	3178.48	30.35
+	"Kentucky"	"21"	"Asian"	"A"	"2018"	"2018"	1178	3194.29	30.73
+"Total"	"Kentucky"	"21"	"Asian"	"A"			3669	3180.37	30.51
+	"Kentucky"	"21"	"Black or African American"	"2054-5"	"2016"	"2016"	5228	3050.98	26.59
+	"Kentucky"	"21"	"Black or African American"	"2054-5"	"2017"	"2017"	5322	3065.30	26.86
+	"Kentucky"	"21"	"Black or African American"	"2054-5"	"2018"	"2018"	5219	3070.54	26.86
+"Total"	"Kentucky"	"21"	"Black or African American"	"2054-5"			15769	3062.29	26.77
+	"Kentucky"	"21"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	90	3270.40	27.42
+	"Kentucky"	"21"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	102	3304.90	26.98
+	"Kentucky"	"21"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	107	3161.73	26.84
+"Total"	"Kentucky"	"21"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			299	3243.28	27.06
+	"Kentucky"	"21"	"White"	"2106-3"	"2016"	"2016"	47892	3285.61	27.27
+	"Kentucky"	"21"	"White"	"2106-3"	"2017"	"2017"	47098	3285.23	27.35
+	"Kentucky"	"21"	"White"	"2106-3"	"2018"	"2018"	46289	3285.04	27.48
+"Total"	"Kentucky"	"21"	"White"	"2106-3"			141279	3285.30	27.37
+	"Kentucky"	"21"	"More than one race"	"M"	"2016"	"2016"	912	3185.55	24.99
+	"Kentucky"	"21"	"More than one race"	"M"	"2017"	"2017"	922	3206.42	24.97
+	"Kentucky"	"21"	"More than one race"	"M"	"2018"	"2018"	1045	3194.32	25.33
+"Total"	"Kentucky"	"21"	"More than one race"	"M"			2879	3195.42	25.10
+	"Kentucky"	"21"	"Not Available"	"NA"	"2007"	"2007"	59368	3238.53	26.12
+	"Kentucky"	"21"	"Not Available"	"NA"	"2008"	"2008"	58375	3240.72	26.14
+	"Kentucky"	"21"	"Not Available"	"NA"	"2009"	"2009"	57551	3241.94	26.21
+	"Kentucky"	"21"	"Not Available"	"NA"	"2010"	"2010"	55784	3240.98	26.34
+	"Kentucky"	"21"	"Not Available"	"NA"	"2011"	"2011"	55370	3247.27	26.51
+	"Kentucky"	"21"	"Not Available"	"NA"	"2012"	"2012"	55758	3260.48	26.60
+	"Kentucky"	"21"	"Not Available"	"NA"	"2013"	"2013"	55686	3262.58	26.75
+	"Kentucky"	"21"	"Not Available"	"NA"	"2014"	"2014"	56170	3264.97	26.91
+	"Kentucky"	"21"	"Not Available"	"NA"	"2015"	"2015"	55971	3266.79	27.05
+"Total"	"Kentucky"	"21"	"Not Available"	"NA"			510033	3251.42	26.51
+"Total"	"Kentucky"	"21"					674156	3253.49	26.71
+	"Louisiana"	"22"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	374	3213.07	26.73
+	"Louisiana"	"22"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	326	3174.84	26.31
+	"Louisiana"	"22"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	347	3219.05	26.76
+"Total"	"Louisiana"	"22"	"American Indian or Alaska Native"	"1002-5"			1047	3203.15	26.61
+	"Louisiana"	"22"	"Asian"	"A"	"2016"	"2016"	1471	3144.77	30.72
+	"Louisiana"	"22"	"Asian"	"A"	"2017"	"2017"	1330	3158.92	30.86
+	"Louisiana"	"22"	"Asian"	"A"	"2018"	"2018"	1279	3146.62	30.90
+"Total"	"Louisiana"	"22"	"Asian"	"A"			4080	3149.96	30.82
+	"Louisiana"	"22"	"Black or African American"	"2054-5"	"2016"	"2016"	24726	3024.69	26.27
+	"Louisiana"	"22"	"Black or African American"	"2054-5"	"2017"	"2017"	24215	3018.48	26.48
+	"Louisiana"	"22"	"Black or African American"	"2054-5"	"2018"	"2018"	23078	3001.06	26.60
+"Total"	"Louisiana"	"22"	"Black or African American"	"2054-5"			72019	3015.03	26.45
+	"Louisiana"	"22"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	46	3259.80	28.91
+	"Louisiana"	"22"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	45	3304.71	27.38
+	"Louisiana"	"22"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	156	3307.87	28.58
+"Total"	"Louisiana"	"22"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			247	3298.34	28.42
+	"Louisiana"	"22"	"White"	"2106-3"	"2016"	"2016"	35872	3280.60	27.93
+	"Louisiana"	"22"	"White"	"2106-3"	"2017"	"2017"	34308	3275.55	28.04
+	"Louisiana"	"22"	"White"	"2106-3"	"2018"	"2018"	33922	3278.06	28.22
+"Total"	"Louisiana"	"22"	"White"	"2106-3"			104102	3278.11	28.06
+	"Louisiana"	"22"	"More than one race"	"M"	"2016"	"2016"	689	3232.62	25.99
+	"Louisiana"	"22"	"More than one race"	"M"	"2017"	"2017"	794	3204.44	26.00
+	"Louisiana"	"22"	"More than one race"	"M"	"2018"	"2018"	833	3206.57	25.54
+"Total"	"Louisiana"	"22"	"More than one race"	"M"			2316	3213.59	25.83
+	"Louisiana"	"22"	"Not Available"	"NA"	"2007"	"2007"	66301	3135.49	25.74
+	"Louisiana"	"22"	"Not Available"	"NA"	"2008"	"2008"	65268	3150.21	25.80
+	"Louisiana"	"22"	"Not Available"	"NA"	"2009"	"2009"	64973	3151.16	25.94
+	"Louisiana"	"22"	"Not Available"	"NA"	"2010"	"2010"	62379	3148.59	26.08
+	"Louisiana"	"22"	"Not Available"	"NA"	"2011"	"2011"	61888	3153.11	26.28
+	"Louisiana"	"22"	"Not Available"	"NA"	"2012"	"2012"	62642	3163.54	26.45
+	"Louisiana"	"22"	"Not Available"	"NA"	"2013"	"2013"	63201	3162.11	26.67
+	"Louisiana"	"22"	"Not Available"	"NA"	"2014"	"2014"	64497	3177.15	26.89
+	"Louisiana"	"22"	"Not Available"	"NA"	"2015"	"2015"	64692	3176.38	27.06
+"Total"	"Louisiana"	"22"	"Not Available"	"NA"			575841	3157.47	26.32
+"Total"	"Louisiana"	"22"					759652	3160.75	26.59
+	"Maine"	"23"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	97	3339.68	26.78
+	"Maine"	"23"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	88	3448.70	26.72
+	"Maine"	"23"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	96	3329.58	27.00
+"Total"	"Maine"	"23"	"American Indian or Alaska Native"	"1002-5"			281	3370.37	26.84
+	"Maine"	"23"	"Asian"	"A"	"2016"	"2016"	195	3226.34	30.68
+	"Maine"	"23"	"Asian"	"A"	"2017"	"2017"	221	3256.11	31.73
+	"Maine"	"23"	"Asian"	"A"	"2018"	"2018"	202	3210.50	31.82
+"Total"	"Maine"	"23"	"Asian"	"A"			618	3231.81	31.43
+	"Maine"	"23"	"Black or African American"	"2054-5"	"2016"	"2016"	419	3227.97	30.17
+	"Maine"	"23"	"Black or African American"	"2054-5"	"2017"	"2017"	547	3235.62	30.32
+	"Maine"	"23"	"Black or African American"	"2054-5"	"2018"	"2018"	553	3241.06	30.34
+"Total"	"Maine"	"23"	"Black or African American"	"2054-5"			1519	3235.49	30.28
+"Total"	"Maine"	"23"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			10	3537.10	26.30
+	"Maine"	"23"	"White"	"2106-3"	"2016"	"2016"	11705	3370.29	28.66
+	"Maine"	"23"	"White"	"2106-3"	"2017"	"2017"	11177	3347.33	28.83
+	"Maine"	"23"	"White"	"2106-3"	"2018"	"2018"	11237	3347.05	29.05
+"Total"	"Maine"	"23"	"White"	"2106-3"			34119	3355.12	28.85
+	"Maine"	"23"	"More than one race"	"M"	"2016"	"2016"	286	3330.67	26.84
+	"Maine"	"23"	"More than one race"	"M"	"2017"	"2017"	261	3327.41	27.02
+	"Maine"	"23"	"More than one race"	"M"	"2018"	"2018"	220	3262.50	27.11
+"Total"	"Maine"	"23"	"More than one race"	"M"			767	3310.07	26.98
+	"Maine"	"23"	"Not Available"	"NA"	"2007"	"2007"	14120	3366.06	27.54
+	"Maine"	"23"	"Not Available"	"NA"	"2008"	"2008"	13609	3364.85	27.51
+	"Maine"	"23"	"Not Available"	"NA"	"2009"	"2009"	13470	3373.90	27.61
+	"Maine"	"23"	"Not Available"	"NA"	"2010"	"2010"	12970	3369.20	27.72
+	"Maine"	"23"	"Not Available"	"NA"	"2011"	"2011"	12704	3368.89	27.81
+	"Maine"	"23"	"Not Available"	"NA"	"2012"	"2012"	12798	3369.66	27.98
+	"Maine"	"23"	"Not Available"	"NA"	"2013"	"2013"	12776	3358.01	28.17
+	"Maine"	"23"	"Not Available"	"NA"	"2014"	"2014"	12698	3347.45	28.37
+	"Maine"	"23"	"Not Available"	"NA"	"2015"	"2015"	12607	3361.47	28.47
+"Total"	"Maine"	"23"	"Not Available"	"NA"			117752	3364.49	27.90
+"Total"	"Maine"	"23"					155066	3360.38	28.14
+	"Maryland"	"24"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	201	3261.64	28.73
+	"Maryland"	"24"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	179	3304.91	29.74
+	"Maryland"	"24"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	278	3279.65	28.62
+"Total"	"Maryland"	"24"	"American Indian or Alaska Native"	"1002-5"			658	3281.02	28.96
+	"Maryland"	"24"	"Asian"	"A"	"2016"	"2016"	5880	3196.02	31.69
+	"Maryland"	"24"	"Asian"	"A"	"2017"	"2017"	5898	3173.65	31.74
+	"Maryland"	"24"	"Asian"	"A"	"2018"	"2018"	5237	3174.58	32.06
+"Total"	"Maryland"	"24"	"Asian"	"A"			17015	3181.67	31.82
+	"Maryland"	"24"	"Black or African American"	"2054-5"	"2016"	"2016"	25641	3144.07	28.81
+	"Maryland"	"24"	"Black or African American"	"2054-5"	"2017"	"2017"	25252	3135.51	29.10
+	"Maryland"	"24"	"Black or African American"	"2054-5"	"2018"	"2018"	23466	3132.37	29.31
+"Total"	"Maryland"	"24"	"Black or African American"	"2054-5"			74359	3137.47	29.06
+	"Maryland"	"24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	107	3286.61	29.55
+	"Maryland"	"24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	116	3312.75	28.11
+	"Maryland"	"24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	133	3201.68	28.71
+"Total"	"Maryland"	"24"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			356	3263.40	28.77
+	"Maryland"	"24"	"White"	"2106-3"	"2016"	"2016"	39640	3345.17	30.07
+	"Maryland"	"24"	"White"	"2106-3"	"2017"	"2017"	38318	3341.26	30.20
+	"Maryland"	"24"	"White"	"2106-3"	"2018"	"2018"	40025	3342.70	30.27
+"Total"	"Maryland"	"24"	"White"	"2106-3"			117983	3343.06	30.18
+	"Maryland"	"24"	"More than one race"	"M"	"2016"	"2016"	1667	3255.53	27.62
+	"Maryland"	"24"	"More than one race"	"M"	"2017"	"2017"	1878	3231.47	28.18
+	"Maryland"	"24"	"More than one race"	"M"	"2018"	"2018"	1941	3226.85	28.26
+"Total"	"Maryland"	"24"	"More than one race"	"M"			5486	3237.15	28.04
+	"Maryland"	"24"	"Not Available"	"NA"	"2007"	"2007"	78095	3241.87	28.35
+	"Maryland"	"24"	"Not Available"	"NA"	"2008"	"2008"	77289	3240.28	28.36
+	"Maryland"	"24"	"Not Available"	"NA"	"2009"	"2009"	75059	3241.20	28.44
+	"Maryland"	"24"	"Not Available"	"NA"	"2010"	"2010"	73801	3248.54	28.65
+	"Maryland"	"24"	"Not Available"	"NA"	"2011"	"2011"	73093	3250.65	28.80
+	"Maryland"	"24"	"Not Available"	"NA"	"2012"	"2012"	72883	3258.70	28.99
+	"Maryland"	"24"	"Not Available"	"NA"	"2013"	"2013"	71953	3264.36	29.14
+	"Maryland"	"24"	"Not Available"	"NA"	"2014"	"2014"	73921	3263.49	29.38
+	"Maryland"	"24"	"Not Available"	"NA"	"2015"	"2015"	73616	3263.60	29.49
+"Total"	"Maryland"	"24"	"Not Available"	"NA"			669710	3252.33	28.84
+"Total"	"Maryland"	"24"					885567	3253.35	29.09
+	"Massachusetts"	"25"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	93	3375.32	28.81
+	"Massachusetts"	"25"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	77	3340.23	28.26
+	"Massachusetts"	"25"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	68	3165.32	29.32
+"Total"	"Massachusetts"	"25"	"American Indian or Alaska Native"	"1002-5"			238	3303.97	28.78
+	"Massachusetts"	"25"	"Asian"	"A"	"2016"	"2016"	6685	3200.09	31.69
+	"Massachusetts"	"25"	"Asian"	"A"	"2017"	"2017"	6398	3185.77	31.80
+	"Massachusetts"	"25"	"Asian"	"A"	"2018"	"2018"	6324	3177.10	32.03
+"Total"	"Massachusetts"	"25"	"Asian"	"A"			19407	3187.87	31.84
+	"Massachusetts"	"25"	"Black or African American"	"2054-5"	"2016"	"2016"	9078	3199.95	29.74
+	"Massachusetts"	"25"	"Black or African American"	"2054-5"	"2017"	"2017"	9479	3194.10	29.93
+	"Massachusetts"	"25"	"Black or African American"	"2054-5"	"2018"	"2018"	9457	3189.33	30.08
+"Total"	"Massachusetts"	"25"	"Black or African American"	"2054-5"			28014	3194.39	29.92
+	"Massachusetts"	"25"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	43	3328.16	28.95
+	"Massachusetts"	"25"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	37	3371.76	31.22
+	"Massachusetts"	"25"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	30	3204.37	30.47
+"Total"	"Massachusetts"	"25"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			110	3309.06	30.13
+	"Massachusetts"	"25"	"White"	"2106-3"	"2016"	"2016"	53762	3340.91	30.71
+	"Massachusetts"	"25"	"White"	"2106-3"	"2017"	"2017"	52941	3337.14	30.83
+	"Massachusetts"	"25"	"White"	"2106-3"	"2018"	"2018"	51390	3332.95	31.03
+"Total"	"Massachusetts"	"25"	"White"	"2106-3"			158093	3337.06	30.85
+	"Massachusetts"	"25"	"More than one race"	"M"	"2016"	"2016"	1656	3293.69	29.33
+	"Massachusetts"	"25"	"More than one race"	"M"	"2017"	"2017"	1770	3274.56	29.59
+	"Massachusetts"	"25"	"More than one race"	"M"	"2018"	"2018"	1840	3287.73	29.80
+"Total"	"Massachusetts"	"25"	"More than one race"	"M"			5266	3285.18	29.58
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2007"	"2007"	77967	3310.49	29.55
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2008"	"2008"	77022	3311.87	29.63
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2009"	"2009"	75016	3311.66	29.61
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2010"	"2010"	72865	3307.13	29.76
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2011"	"2011"	73166	3312.13	29.85
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2012"	"2012"	72439	3319.75	29.95
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2013"	"2013"	71788	3313.65	30.21
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2014"	"2014"	71908	3316.76	30.31
+	"Massachusetts"	"25"	"Not Available"	"NA"	"2015"	"2015"	71492	3315.04	30.47
+"Total"	"Massachusetts"	"25"	"Not Available"	"NA"			663663	3313.12	29.92
+"Total"	"Massachusetts"	"25"					874791	3310.69	30.13
+	"Michigan"	"26"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	464	3317.29	27.08
+	"Michigan"	"26"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	438	3330.51	27.01
+	"Michigan"	"26"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	461	3380.88	27.26
+"Total"	"Michigan"	"26"	"American Indian or Alaska Native"	"1002-5"			1363	3343.05	27.12
+	"Michigan"	"26"	"Asian"	"A"	"2016"	"2016"	4441	3154.64	30.86
+	"Michigan"	"26"	"Asian"	"A"	"2017"	"2017"	4602	3173.18	30.91
+	"Michigan"	"26"	"Asian"	"A"	"2018"	"2018"	4464	3170.89	31.15
+"Total"	"Michigan"	"26"	"Asian"	"A"			13507	3166.33	30.97
+	"Michigan"	"26"	"Black or African American"	"2054-5"	"2016"	"2016"	21327	3053.44	26.44
+	"Michigan"	"26"	"Black or African American"	"2054-5"	"2017"	"2017"	21623	3050.56	26.67
+	"Michigan"	"26"	"Black or African American"	"2054-5"	"2018"	"2018"	21083	3054.55	26.85
+"Total"	"Michigan"	"26"	"Black or African American"	"2054-5"			64033	3052.83	26.65
+	"Michigan"	"26"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	43	3226.42	28.23
+	"Michigan"	"26"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	46	3320.48	29.48
+	"Michigan"	"26"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	49	3293.12	29.35
+"Total"	"Michigan"	"26"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			138	3281.46	29.04
+	"Michigan"	"26"	"White"	"2106-3"	"2016"	"2016"	84197	3343.48	28.77
+	"Michigan"	"26"	"White"	"2106-3"	"2017"	"2017"	81953	3336.61	28.94
+	"Michigan"	"26"	"White"	"2106-3"	"2018"	"2018"	81349	3340.62	29.05
+"Total"	"Michigan"	"26"	"White"	"2106-3"			247499	3340.27	28.92
+	"Michigan"	"26"	"More than one race"	"M"	"2016"	"2016"	2843	3253.67	26.43
+	"Michigan"	"26"	"More than one race"	"M"	"2017"	"2017"	2764	3233.50	26.37
+	"Michigan"	"26"	"More than one race"	"M"	"2018"	"2018"	2626	3230.87	26.54
+"Total"	"Michigan"	"26"	"More than one race"	"M"			8233	3239.63	26.44
+	"Michigan"	"26"	"Not Available"	"NA"	"2007"	"2007"	125261	3284.89	27.38
+	"Michigan"	"26"	"Not Available"	"NA"	"2008"	"2008"	121127	3279.47	27.40
+	"Michigan"	"26"	"Not Available"	"NA"	"2009"	"2009"	117294	3281.98	27.36
+	"Michigan"	"26"	"Not Available"	"NA"	"2010"	"2010"	114531	3279.42	27.44
+	"Michigan"	"26"	"Not Available"	"NA"	"2011"	"2011"	114008	3281.91	27.56
+	"Michigan"	"26"	"Not Available"	"NA"	"2012"	"2012"	113091	3283.99	27.64
+	"Michigan"	"26"	"Not Available"	"NA"	"2013"	"2013"	113489	3284.80	27.80
+	"Michigan"	"26"	"Not Available"	"NA"	"2014"	"2014"	114375	3284.78	27.99
+	"Michigan"	"26"	"Not Available"	"NA"	"2015"	"2015"	113312	3281.74	28.14
+"Total"	"Michigan"	"26"	"Not Available"	"NA"			1046488	3282.55	27.63
+"Total"	"Michigan"	"26"					1381261	3280.92	27.84
+	"Minnesota"	"27"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1205	3342.93	26.31
+	"Minnesota"	"27"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1179	3337.25	26.63
+	"Minnesota"	"27"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1115	3335.37	26.91
+"Total"	"Minnesota"	"27"	"American Indian or Alaska Native"	"1002-5"			3499	3338.60	26.61
+	"Minnesota"	"27"	"Asian"	"A"	"2016"	"2016"	5617	3199.59	29.52
+	"Minnesota"	"27"	"Asian"	"A"	"2017"	"2017"	5559	3185.65	29.74
+	"Minnesota"	"27"	"Asian"	"A"	"2018"	"2018"	5371	3179.82	29.96
+"Total"	"Minnesota"	"27"	"Asian"	"A"			16547	3188.48	29.74
+	"Minnesota"	"27"	"Black or African American"	"2054-5"	"2016"	"2016"	8249	3242.62	29.04
+	"Minnesota"	"27"	"Black or African American"	"2054-5"	"2017"	"2017"	8621	3225.36	29.11
+	"Minnesota"	"27"	"Black or African American"	"2054-5"	"2018"	"2018"	8433	3226.93	29.41
+"Total"	"Minnesota"	"27"	"Black or African American"	"2054-5"			25303	3231.51	29.19
+	"Minnesota"	"27"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	71	3124.75	27.38
+	"Minnesota"	"27"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	63	3193.05	26.10
+	"Minnesota"	"27"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	88	3114.98	26.93
+"Total"	"Minnesota"	"27"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			222	3140.26	26.84
+	"Minnesota"	"27"	"White"	"2106-3"	"2016"	"2016"	52823	3392.56	29.78
+	"Minnesota"	"27"	"White"	"2106-3"	"2017"	"2017"	51529	3391.89	29.95
+	"Minnesota"	"27"	"White"	"2106-3"	"2018"	"2018"	50630	3387.10	30.06
+"Total"	"Minnesota"	"27"	"White"	"2106-3"			154982	3390.55	29.93
+	"Minnesota"	"27"	"More than one race"	"M"	"2016"	"2016"	1784	3300.82	26.98
+	"Minnesota"	"27"	"More than one race"	"M"	"2017"	"2017"	1644	3314.72	26.59
+	"Minnesota"	"27"	"More than one race"	"M"	"2018"	"2018"	1707	3291.83	27.47
+"Total"	"Minnesota"	"27"	"More than one race"	"M"			5135	3302.29	27.02
+	"Minnesota"	"27"	"Not Available"	"NA"	"2007"	"2007"	73735	3352.08	28.09
+	"Minnesota"	"27"	"Not Available"	"NA"	"2008"	"2008"	72421	3357.21	28.17
+	"Minnesota"	"27"	"Not Available"	"NA"	"2009"	"2009"	70646	3357.21	28.32
+	"Minnesota"	"27"	"Not Available"	"NA"	"2010"	"2010"	68610	3360.97	28.48
+	"Minnesota"	"27"	"Not Available"	"NA"	"2011"	"2011"	68409	3361.25	28.71
+	"Minnesota"	"27"	"Not Available"	"NA"	"2012"	"2012"	68772	3355.78	28.81
+	"Minnesota"	"27"	"Not Available"	"NA"	"2013"	"2013"	69159	3364.55	28.98
+	"Minnesota"	"27"	"Not Available"	"NA"	"2014"	"2014"	69904	3357.51	29.15
+	"Minnesota"	"27"	"Not Available"	"NA"	"2015"	"2015"	69834	3365.94	29.36
+"Total"	"Minnesota"	"27"	"Not Available"	"NA"			631490	3359.10	28.67
+"Total"	"Minnesota"	"27"					837178	3357.21	28.92
+	"Mississippi"	"28"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	229	3350.82	26.10
+	"Mississippi"	"28"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	223	3359.52	25.91
+	"Mississippi"	"28"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	243	3466.82	26.17
+"Total"	"Mississippi"	"28"	"American Indian or Alaska Native"	"1002-5"			695	3394.17	26.06
+	"Mississippi"	"28"	"Asian"	"A"	"2016"	"2016"	509	3145.71	30.33
+	"Mississippi"	"28"	"Asian"	"A"	"2017"	"2017"	538	3148.01	30.97
+	"Mississippi"	"28"	"Asian"	"A"	"2018"	"2018"	443	3174.40	30.65
+"Total"	"Mississippi"	"28"	"Asian"	"A"			1490	3155.07	30.66
+	"Mississippi"	"28"	"Black or African American"	"2054-5"	"2016"	"2016"	16567	2993.50	25.86
+	"Mississippi"	"28"	"Black or African American"	"2054-5"	"2017"	"2017"	16738	2996.45	25.96
+	"Mississippi"	"28"	"Black or African American"	"2054-5"	"2018"	"2018"	16252	2980.45	26.23
+"Total"	"Mississippi"	"28"	"Black or African American"	"2054-5"			49557	2990.22	26.02
+	"Mississippi"	"28"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	21	3087.24	26.76
+	"Mississippi"	"28"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	13	3268.23	27.77
+	"Mississippi"	"28"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	22	3293.77	27.00
+"Total"	"Mississippi"	"28"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			56	3210.39	27.09
+	"Mississippi"	"28"	"White"	"2106-3"	"2016"	"2016"	20335	3268.16	27.20
+	"Mississippi"	"28"	"White"	"2106-3"	"2017"	"2017"	19569	3268.45	27.36
+	"Mississippi"	"28"	"White"	"2106-3"	"2018"	"2018"	19760	3262.21	27.41
+"Total"	"Mississippi"	"28"	"White"	"2106-3"			59664	3266.28	27.32
+	"Mississippi"	"28"	"More than one race"	"M"	"2016"	"2016"	267	3217.02	25.24
+	"Mississippi"	"28"	"More than one race"	"M"	"2017"	"2017"	276	3222.09	25.18
+	"Mississippi"	"28"	"More than one race"	"M"	"2018"	"2018"	280	3226.22	25.94
+"Total"	"Mississippi"	"28"	"More than one race"	"M"			823	3221.85	25.46
+	"Mississippi"	"28"	"Not Available"	"NA"	"2007"	"2007"	46491	3115.72	25.16
+	"Mississippi"	"28"	"Not Available"	"NA"	"2008"	"2008"	44947	3123.03	25.29
+	"Mississippi"	"28"	"Not Available"	"NA"	"2009"	"2009"	42901	3116.20	25.31
+	"Mississippi"	"28"	"Not Available"	"NA"	"2010"	"2010"	40036	3111.14	25.49
+	"Mississippi"	"28"	"Not Available"	"NA"	"2011"	"2011"	39860	3115.94	25.66
+	"Mississippi"	"28"	"Not Available"	"NA"	"2012"	"2012"	38669	3129.18	25.90
+	"Mississippi"	"28"	"Not Available"	"NA"	"2013"	"2013"	38634	3140.25	26.07
+	"Mississippi"	"28"	"Not Available"	"NA"	"2014"	"2014"	38736	3149.78	26.25
+	"Mississippi"	"28"	"Not Available"	"NA"	"2015"	"2015"	38394	3149.22	26.44
+"Total"	"Mississippi"	"28"	"Not Available"	"NA"			368668	3127.24	25.70
+"Total"	"Mississippi"	"28"					480953	3131.02	25.95
+	"Missouri"	"29"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	195	3187.90	26.48
+	"Missouri"	"29"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	227	3272.55	26.77
+	"Missouri"	"29"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	247	3271.09	27.26
+"Total"	"Missouri"	"29"	"American Indian or Alaska Native"	"1002-5"			669	3247.30	26.86
+	"Missouri"	"29"	"Asian"	"A"	"2016"	"2016"	1942	3175.07	30.81
+	"Missouri"	"29"	"Asian"	"A"	"2017"	"2017"	1853	3172.94	31.24
+	"Missouri"	"29"	"Asian"	"A"	"2018"	"2018"	1778	3175.12	31.13
+"Total"	"Missouri"	"29"	"Asian"	"A"			5573	3174.38	31.05
+	"Missouri"	"29"	"Black or African American"	"2054-5"	"2016"	"2016"	10959	3042.17	26.64
+	"Missouri"	"29"	"Black or African American"	"2054-5"	"2017"	"2017"	11080	3038.99	26.96
+	"Missouri"	"29"	"Black or African American"	"2054-5"	"2018"	"2018"	11046	3019.09	27.03
+"Total"	"Missouri"	"29"	"Black or African American"	"2054-5"			33085	3033.40	26.88
+	"Missouri"	"29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	236	3268.74	27.89
+	"Missouri"	"29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	220	3234.98	26.88
+	"Missouri"	"29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	253	3132.45	27.49
+"Total"	"Missouri"	"29"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			709	3209.63	27.43
+	"Missouri"	"29"	"White"	"2106-3"	"2016"	"2016"	59062	3327.91	28.13
+	"Missouri"	"29"	"White"	"2106-3"	"2017"	"2017"	57341	3319.25	28.21
+	"Missouri"	"29"	"White"	"2106-3"	"2018"	"2018"	57522	3319.88	28.32
+"Total"	"Missouri"	"29"	"White"	"2106-3"			173925	3322.40	28.22
+	"Missouri"	"29"	"More than one race"	"M"	"2016"	"2016"	2311	3191.96	26.13
+	"Missouri"	"29"	"More than one race"	"M"	"2017"	"2017"	2313	3228.61	26.25
+	"Missouri"	"29"	"More than one race"	"M"	"2018"	"2018"	2423	3192.53	26.50
+"Total"	"Missouri"	"29"	"More than one race"	"M"			7047	3204.19	26.30
+	"Missouri"	"29"	"Not Available"	"NA"	"2007"	"2007"	81930	3276.77	26.52
+	"Missouri"	"29"	"Not Available"	"NA"	"2008"	"2008"	80963	3273.24	26.59
+	"Missouri"	"29"	"Not Available"	"NA"	"2009"	"2009"	78905	3275.28	26.70
+	"Missouri"	"29"	"Not Available"	"NA"	"2010"	"2010"	76759	3270.81	26.91
+	"Missouri"	"29"	"Not Available"	"NA"	"2011"	"2011"	76117	3280.25	27.07
+	"Missouri"	"29"	"Not Available"	"NA"	"2012"	"2012"	75446	3282.88	27.21
+	"Missouri"	"29"	"Not Available"	"NA"	"2013"	"2013"	75296	3284.08	27.37
+	"Missouri"	"29"	"Not Available"	"NA"	"2014"	"2014"	75360	3289.49	27.55
+	"Missouri"	"29"	"Not Available"	"NA"	"2015"	"2015"	75061	3281.48	27.70
+"Total"	"Missouri"	"29"	"Not Available"	"NA"			695837	3279.25	27.06
+"Total"	"Missouri"	"29"					916845	3277.27	27.29
+	"Montana"	"30"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1422	3324.47	25.86
+	"Montana"	"30"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1304	3275.85	26.17
+	"Montana"	"30"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1223	3297.45	26.32
+"Total"	"Montana"	"30"	"American Indian or Alaska Native"	"1002-5"			3949	3300.04	26.10
+	"Montana"	"30"	"Asian"	"A"	"2016"	"2016"	136	3163.27	31.19
+	"Montana"	"30"	"Asian"	"A"	"2017"	"2017"	133	3150.78	31.38
+	"Montana"	"30"	"Asian"	"A"	"2018"	"2018"	118	3137.92	31.25
+"Total"	"Montana"	"30"	"Asian"	"A"			387	3151.22	31.27
+	"Montana"	"30"	"Black or African American"	"2054-5"	"2016"	"2016"	76	3038.38	26.33
+	"Montana"	"30"	"Black or African American"	"2054-5"	"2017"	"2017"	76	3260.84	26.88
+	"Montana"	"30"	"Black or African American"	"2054-5"	"2018"	"2018"	82	3138.55	28.85
+"Total"	"Montana"	"30"	"Black or African American"	"2054-5"			234	3145.74	27.39
+	"Montana"	"30"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	23	3167.35	25.09
+	"Montana"	"30"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	21	3542.33	28.86
+	"Montana"	"30"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	21	2902.57	27.10
+"Total"	"Montana"	"30"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			65	3202.95	26.95
+	"Montana"	"30"	"White"	"2106-3"	"2016"	"2016"	10220	3284.41	28.53
+	"Montana"	"30"	"White"	"2106-3"	"2017"	"2017"	9861	3278.43	28.69
+	"Montana"	"30"	"White"	"2106-3"	"2018"	"2018"	9684	3292.66	28.82
+"Total"	"Montana"	"30"	"White"	"2106-3"			29765	3285.11	28.68
+	"Montana"	"30"	"More than one race"	"M"	"2016"	"2016"	405	3255.65	26.42
+	"Montana"	"30"	"More than one race"	"M"	"2017"	"2017"	404	3250.14	26.48
+	"Montana"	"30"	"More than one race"	"M"	"2018"	"2018"	385	3220.92	26.79
+"Total"	"Montana"	"30"	"More than one race"	"M"			1194	3242.61	26.56
+	"Montana"	"30"	"Not Available"	"NA"	"2007"	"2007"	12439	3300.36	26.93
+	"Montana"	"30"	"Not Available"	"NA"	"2008"	"2008"	12594	3289.69	26.78
+	"Montana"	"30"	"Not Available"	"NA"	"2009"	"2009"	12257	3300.33	26.89
+	"Montana"	"30"	"Not Available"	"NA"	"2010"	"2010"	12060	3276.87	27.15
+	"Montana"	"30"	"Not Available"	"NA"	"2011"	"2011"	12069	3293.51	27.28
+	"Montana"	"30"	"Not Available"	"NA"	"2012"	"2012"	12118	3289.83	27.45
+	"Montana"	"30"	"Not Available"	"NA"	"2013"	"2013"	12377	3298.19	27.53
+	"Montana"	"30"	"Not Available"	"NA"	"2014"	"2014"	12432	3286.78	27.83
+	"Montana"	"30"	"Not Available"	"NA"	"2015"	"2015"	12583	3302.30	27.99
+"Total"	"Montana"	"30"	"Not Available"	"NA"			110929	3293.15	27.32
+"Total"	"Montana"	"30"					146523	3290.64	27.56
+	"Nebraska"	"31"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	465	3396.17	26.31
+	"Nebraska"	"31"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	485	3360.95	26.17
+	"Nebraska"	"31"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	516	3336.20	26.83
+"Total"	"Nebraska"	"31"	"American Indian or Alaska Native"	"1002-5"			1466	3363.42	26.45
+	"Nebraska"	"31"	"Asian"	"A"	"2016"	"2016"	992	3231.71	29.62
+	"Nebraska"	"31"	"Asian"	"A"	"2017"	"2017"	958	3204.28	29.55
+	"Nebraska"	"31"	"Asian"	"A"	"2018"	"2018"	939	3187.22	30.22
+"Total"	"Nebraska"	"31"	"Asian"	"A"			2889	3208.15	29.79
+	"Nebraska"	"31"	"Black or African American"	"2054-5"	"2016"	"2016"	1949	3093.22	27.41
+	"Nebraska"	"31"	"Black or African American"	"2054-5"	"2017"	"2017"	1956	3127.46	27.76
+	"Nebraska"	"31"	"Black or African American"	"2054-5"	"2018"	"2018"	1920	3095.24	28.02
+"Total"	"Nebraska"	"31"	"Black or African American"	"2054-5"			5825	3105.38	27.73
+	"Nebraska"	"31"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	40	3267.10	27.60
+	"Nebraska"	"31"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	41	3201.12	26.80
+	"Nebraska"	"31"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	36	3194.69	28.25
+"Total"	"Nebraska"	"31"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			117	3221.70	27.52
+	"Nebraska"	"31"	"White"	"2106-3"	"2016"	"2016"	22466	3344.57	28.81
+	"Nebraska"	"31"	"White"	"2106-3"	"2017"	"2017"	21661	3337.26	28.79
+	"Nebraska"	"31"	"White"	"2106-3"	"2018"	"2018"	21351	3338.16	28.97
+"Total"	"Nebraska"	"31"	"White"	"2106-3"			65478	3340.06	28.86
+	"Nebraska"	"31"	"More than one race"	"M"	"2016"	"2016"	677	3243.19	25.76
+	"Nebraska"	"31"	"More than one race"	"M"	"2017"	"2017"	720	3187.50	26.31
+	"Nebraska"	"31"	"More than one race"	"M"	"2018"	"2018"	726	3220.60	26.22
+"Total"	"Nebraska"	"31"	"More than one race"	"M"			2123	3216.58	26.11
+	"Nebraska"	"31"	"Not Available"	"NA"	"2007"	"2007"	26934	3312.92	27.21
+	"Nebraska"	"31"	"Not Available"	"NA"	"2008"	"2008"	26989	3311.12	27.28
+	"Nebraska"	"31"	"Not Available"	"NA"	"2009"	"2009"	26936	3315.16	27.40
+	"Nebraska"	"31"	"Not Available"	"NA"	"2010"	"2010"	25918	3309.26	27.49
+	"Nebraska"	"31"	"Not Available"	"NA"	"2011"	"2011"	25720	3320.35	27.75
+	"Nebraska"	"31"	"Not Available"	"NA"	"2012"	"2012"	25942	3325.38	27.90
+	"Nebraska"	"31"	"Not Available"	"NA"	"2013"	"2013"	26095	3332.52	27.99
+	"Nebraska"	"31"	"Not Available"	"NA"	"2014"	"2014"	26794	3331.59	28.25
+	"Nebraska"	"31"	"Not Available"	"NA"	"2015"	"2015"	26679	3321.51	28.39
+"Total"	"Nebraska"	"31"	"Not Available"	"NA"			238007	3319.95	27.74
+"Total"	"Nebraska"	"31"					315905	3318.61	27.97
+	"Nevada"	"32"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	380	3318.25	27.09
+	"Nevada"	"32"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	405	3291.23	27.57
+	"Nevada"	"32"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	387	3246.23	27.40
+"Total"	"Nevada"	"32"	"American Indian or Alaska Native"	"1002-5"			1172	3285.13	27.36
+	"Nevada"	"32"	"Asian"	"A"	"2016"	"2016"	2860	3138.20	31.11
+	"Nevada"	"32"	"Asian"	"A"	"2017"	"2017"	2901	3123.19	31.19
+	"Nevada"	"32"	"Asian"	"A"	"2018"	"2018"	2752	3117.12	31.44
+"Total"	"Nevada"	"32"	"Asian"	"A"			8513	3126.27	31.25
+	"Nevada"	"32"	"Black or African American"	"2054-5"	"2016"	"2016"	4594	3050.16	27.15
+	"Nevada"	"32"	"Black or African American"	"2054-5"	"2017"	"2017"	4902	3040.16	27.46
+	"Nevada"	"32"	"Black or African American"	"2054-5"	"2018"	"2018"	4974	3074.43	27.80
+"Total"	"Nevada"	"32"	"Black or African American"	"2054-5"			14470	3055.11	27.48
+	"Nevada"	"32"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	349	3171.97	27.86
+	"Nevada"	"32"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	367	3319.12	28.13
+	"Nevada"	"32"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	386	3285.63	27.80
+"Total"	"Nevada"	"32"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1102	3260.84	27.93
+	"Nevada"	"32"	"White"	"2106-3"	"2016"	"2016"	26430	3264.34	28.46
+	"Nevada"	"32"	"White"	"2106-3"	"2017"	"2017"	25474	3252.85	28.52
+	"Nevada"	"32"	"White"	"2106-3"	"2018"	"2018"	25491	3262.25	28.73
+"Total"	"Nevada"	"32"	"White"	"2106-3"			77395	3259.87	28.57
+	"Nevada"	"32"	"More than one race"	"M"	"2016"	"2016"	1647	3192.94	26.84
+	"Nevada"	"32"	"More than one race"	"M"	"2017"	"2017"	1707	3165.61	27.33
+	"Nevada"	"32"	"More than one race"	"M"	"2018"	"2018"	1692	3193.40	27.42
+"Total"	"Nevada"	"32"	"More than one race"	"M"			5046	3183.85	27.20
+	"Nevada"	"32"	"Not Available"	"NA"	"2007"	"2007"	41181	3237.25	27.11
+	"Nevada"	"32"	"Not Available"	"NA"	"2008"	"2008"	39506	3236.92	27.20
+	"Nevada"	"32"	"Not Available"	"NA"	"2009"	"2009"	37612	3233.07	27.37
+	"Nevada"	"32"	"Not Available"	"NA"	"2010"	"2010"	35934	3230.45	27.54
+	"Nevada"	"32"	"Not Available"	"NA"	"2011"	"2011"	35296	3234.59	27.70
+	"Nevada"	"32"	"Not Available"	"NA"	"2012"	"2012"	34911	3245.58	27.79
+	"Nevada"	"32"	"Not Available"	"NA"	"2013"	"2013"	35030	3244.12	27.96
+	"Nevada"	"32"	"Not Available"	"NA"	"2014"	"2014"	35861	3233.51	28.10
+	"Nevada"	"32"	"Not Available"	"NA"	"2015"	"2015"	36298	3226.03	28.21
+"Total"	"Nevada"	"32"	"Not Available"	"NA"			331629	3235.69	27.65
+"Total"	"Nevada"	"32"					439327	3231.48	27.87
+	"New Hampshire"	"33"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	11	3565.55	26.27
+	"New Hampshire"	"33"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	21	3227.38	27.95
+	"New Hampshire"	"33"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	13	3277.85	22.69
+"Total"	"New Hampshire"	"33"	"American Indian or Alaska Native"	"1002-5"			45	3324.62	26.02
+	"New Hampshire"	"33"	"Asian"	"A"	"2016"	"2016"	513	3183.96	31.10
+	"New Hampshire"	"33"	"Asian"	"A"	"2017"	"2017"	496	3205.57	30.98
+	"New Hampshire"	"33"	"Asian"	"A"	"2018"	"2018"	482	3203.89	31.37
+"Total"	"New Hampshire"	"33"	"Asian"	"A"			1491	3197.60	31.15
+	"New Hampshire"	"33"	"Black or African American"	"2054-5"	"2016"	"2016"	307	3246.18	29.50
+	"New Hampshire"	"33"	"Black or African American"	"2054-5"	"2017"	"2017"	296	3246.47	29.09
+	"New Hampshire"	"33"	"Black or African American"	"2054-5"	"2018"	"2018"	328	3234.64	30.04
+"Total"	"New Hampshire"	"33"	"Black or African American"	"2054-5"			931	3242.20	29.56
+	"New Hampshire"	"33"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	10	3316.40	30.30
+"Total"	"New Hampshire"	"33"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			21	3177.43	32.76
+	"New Hampshire"	"33"	"White"	"2106-3"	"2016"	"2016"	11288	3373.26	29.50
+	"New Hampshire"	"33"	"White"	"2106-3"	"2017"	"2017"	11154	3350.66	29.59
+	"New Hampshire"	"33"	"White"	"2106-3"	"2018"	"2018"	10997	3362.93	29.82
+"Total"	"New Hampshire"	"33"	"White"	"2106-3"			33439	3362.32	29.64
+	"New Hampshire"	"33"	"More than one race"	"M"	"2016"	"2016"	143	3433.54	28.14
+	"New Hampshire"	"33"	"More than one race"	"M"	"2017"	"2017"	143	3328.99	28.41
+	"New Hampshire"	"33"	"More than one race"	"M"	"2018"	"2018"	165	3181.15	28.59
+"Total"	"New Hampshire"	"33"	"More than one race"	"M"			451	3307.77	28.39
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2007"	"2007"	14168	3373.19	28.68
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2008"	"2008"	13683	3374.43	28.61
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2009"	"2009"	13377	3359.56	28.64
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2010"	"2010"	12874	3358.16	28.70
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2011"	"2011"	12851	3351.73	28.80
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2012"	"2012"	12352	3356.07	28.84
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2013"	"2013"	12396	3354.01	29.09
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2014"	"2014"	12302	3357.68	29.12
+	"New Hampshire"	"33"	"Not Available"	"NA"	"2015"	"2015"	12433	3356.99	29.39
+"Total"	"New Hampshire"	"33"	"Not Available"	"NA"			116436	3360.51	28.87
+"Total"	"New Hampshire"	"33"					152814	3358.41	29.06
+	"New Jersey"	"34"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	155	3339.55	29.62
+	"New Jersey"	"34"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	152	3182.54	30.52
+	"New Jersey"	"34"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	200	3280.05	29.67
+"Total"	"New Jersey"	"34"	"American Indian or Alaska Native"	"1002-5"			507	3269.01	29.91
+	"New Jersey"	"34"	"Asian"	"A"	"2016"	"2016"	13342	3151.15	31.67
+	"New Jersey"	"34"	"Asian"	"A"	"2017"	"2017"	13144	3151.02	31.81
+	"New Jersey"	"34"	"Asian"	"A"	"2018"	"2018"	11887	3140.33	32.33
+"Total"	"New Jersey"	"34"	"Asian"	"A"			38373	3147.75	31.92
+	"New Jersey"	"34"	"Black or African American"	"2054-5"	"2016"	"2016"	17255	3126.59	28.63
+	"New Jersey"	"34"	"Black or African American"	"2054-5"	"2017"	"2017"	17153	3132.44	28.88
+	"New Jersey"	"34"	"Black or African American"	"2054-5"	"2018"	"2018"	16951	3125.95	29.05
+"Total"	"New Jersey"	"34"	"Black or African American"	"2054-5"			51359	3128.33	28.85
+	"New Jersey"	"34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	159	3311.58	29.42
+	"New Jersey"	"34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	102	3352.43	28.01
+	"New Jersey"	"34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	183	3244.96	28.52
+"Total"	"New Jersey"	"34"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			444	3293.51	28.73
+	"New Jersey"	"34"	"White"	"2106-3"	"2016"	"2016"	70504	3312.76	30.54
+	"New Jersey"	"34"	"White"	"2106-3"	"2017"	"2017"	69260	3311.66	30.66
+	"New Jersey"	"34"	"White"	"2106-3"	"2018"	"2018"	70632	3311.54	30.75
+"Total"	"New Jersey"	"34"	"White"	"2106-3"			210396	3311.99	30.65
+	"New Jersey"	"34"	"More than one race"	"M"	"2016"	"2016"	1232	3240.95	28.09
+	"New Jersey"	"34"	"More than one race"	"M"	"2017"	"2017"	1439	3214.44	28.42
+	"New Jersey"	"34"	"More than one race"	"M"	"2018"	"2018"	1370	3226.78	28.80
+"Total"	"New Jersey"	"34"	"More than one race"	"M"			4041	3226.71	28.45
+	"New Jersey"	"34"	"Not Available"	"NA"	"2007"	"2007"	116063	3256.48	29.34
+	"New Jersey"	"34"	"Not Available"	"NA"	"2008"	"2008"	112710	3257.53	29.36
+	"New Jersey"	"34"	"Not Available"	"NA"	"2009"	"2009"	110331	3260.21	29.42
+	"New Jersey"	"34"	"Not Available"	"NA"	"2010"	"2010"	106922	3258.99	29.53
+	"New Jersey"	"34"	"Not Available"	"NA"	"2011"	"2011"	105883	3255.14	29.61
+	"New Jersey"	"34"	"Not Available"	"NA"	"2012"	"2012"	104230	3262.98	29.73
+	"New Jersey"	"34"	"Not Available"	"NA"	"2013"	"2013"	102575	3263.35	29.88
+	"New Jersey"	"34"	"Not Available"	"NA"	"2014"	"2014"	103305	3266.78	30.05
+	"New Jersey"	"34"	"Not Available"	"NA"	"2015"	"2015"	103127	3263.67	30.19
+"Total"	"New Jersey"	"34"	"Not Available"	"NA"			965146	3260.46	29.67
+"Total"	"New Jersey"	"34"					1270266	3260.16	29.86
+	"New Mexico"	"35"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	3119	3219.66	27.13
+	"New Mexico"	"35"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	2931	3232.60	27.43
+	"New Mexico"	"35"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	2834	3221.00	27.79
+"Total"	"New Mexico"	"35"	"American Indian or Alaska Native"	"1002-5"			8884	3224.35	27.44
+	"New Mexico"	"35"	"Asian"	"A"	"2016"	"2016"	457	3112.67	31.47
+	"New Mexico"	"35"	"Asian"	"A"	"2017"	"2017"	452	3037.77	31.17
+	"New Mexico"	"35"	"Asian"	"A"	"2018"	"2018"	433	3052.55	31.75
+"Total"	"New Mexico"	"35"	"Asian"	"A"			1342	3068.09	31.46
+	"New Mexico"	"35"	"Black or African American"	"2054-5"	"2016"	"2016"	487	3060.39	26.93
+	"New Mexico"	"35"	"Black or African American"	"2054-5"	"2017"	"2017"	533	3035.65	27.47
+	"New Mexico"	"35"	"Black or African American"	"2054-5"	"2018"	"2018"	528	3067.95	27.53
+"Total"	"New Mexico"	"35"	"Black or African American"	"2054-5"			1548	3054.47	27.32
+	"New Mexico"	"35"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	25	3176.52	29.44
+	"New Mexico"	"35"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	21	3225.81	27.57
+	"New Mexico"	"35"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	21	3364.14	27.62
+"Total"	"New Mexico"	"35"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			67	3250.78	28.28
+	"New Mexico"	"35"	"White"	"2106-3"	"2016"	"2016"	20126	3189.98	27.33
+	"New Mexico"	"35"	"White"	"2106-3"	"2017"	"2017"	19371	3181.16	27.46
+	"New Mexico"	"35"	"White"	"2106-3"	"2018"	"2018"	18737	3182.92	27.61
+"Total"	"New Mexico"	"35"	"White"	"2106-3"			58234	3184.77	27.46
+	"New Mexico"	"35"	"More than one race"	"M"	"2016"	"2016"	478	3149.51	26.78
+	"New Mexico"	"35"	"More than one race"	"M"	"2017"	"2017"	459	3134.44	27.12
+	"New Mexico"	"35"	"More than one race"	"M"	"2018"	"2018"	486	3198.06	27.52
+"Total"	"New Mexico"	"35"	"More than one race"	"M"			1423	3161.23	27.14
+	"New Mexico"	"35"	"Not Available"	"NA"	"2007"	"2007"	30616	3192.36	25.89
+	"New Mexico"	"35"	"Not Available"	"NA"	"2008"	"2008"	30173	3197.67	25.90
+	"New Mexico"	"35"	"Not Available"	"NA"	"2009"	"2009"	29000	3197.08	25.93
+	"New Mexico"	"35"	"Not Available"	"NA"	"2010"	"2010"	27850	3192.66	26.25
+	"New Mexico"	"35"	"Not Available"	"NA"	"2011"	"2011"	27289	3193.08	26.40
+	"New Mexico"	"35"	"Not Available"	"NA"	"2012"	"2012"	27068	3192.31	26.51
+	"New Mexico"	"35"	"Not Available"	"NA"	"2013"	"2013"	26354	3183.03	26.61
+	"New Mexico"	"35"	"Not Available"	"NA"	"2014"	"2014"	26052	3194.57	26.89
+	"New Mexico"	"35"	"Not Available"	"NA"	"2015"	"2015"	25816	3199.27	27.09
+"Total"	"New Mexico"	"35"	"Not Available"	"NA"			250218	3193.62	26.36
+"Total"	"New Mexico"	"35"					321716	3191.54	26.62
+	"New York"	"36"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	588	3335.29	27.71
+	"New York"	"36"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	550	3286.85	28.23
+	"New York"	"36"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	718	3317.15	28.37
+"Total"	"New York"	"36"	"American Indian or Alaska Native"	"1002-5"			1856	3313.91	28.12
+	"New York"	"36"	"Asian"	"A"	"2016"	"2016"	29651	3175.49	30.84
+	"New York"	"36"	"Asian"	"A"	"2017"	"2017"	28284	3170.26	31.05
+	"New York"	"36"	"Asian"	"A"	"2018"	"2018"	24993	3156.95	31.49
+"Total"	"New York"	"36"	"Asian"	"A"			82928	3168.12	31.11
+	"New York"	"36"	"Black or African American"	"2054-5"	"2016"	"2016"	43757	3141.72	29.07
+	"New York"	"36"	"Black or African American"	"2054-5"	"2017"	"2017"	42812	3129.59	29.29
+	"New York"	"36"	"Black or African American"	"2054-5"	"2018"	"2018"	41495	3125.62	29.43
+"Total"	"New York"	"36"	"Black or African American"	"2054-5"			128064	3132.45	29.26
+	"New York"	"36"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	109	3272.73	28.42
+	"New York"	"36"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	115	3155.75	27.48
+	"New York"	"36"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	138	3237.72	29.11
+"Total"	"New York"	"36"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			362	3222.41	28.38
+	"New York"	"36"	"White"	"2106-3"	"2016"	"2016"	155451	3319.28	30.05
+	"New York"	"36"	"White"	"2106-3"	"2017"	"2017"	153329	3314.47	30.21
+	"New York"	"36"	"White"	"2106-3"	"2018"	"2018"	154234	3315.38	30.34
+"Total"	"New York"	"36"	"White"	"2106-3"			463014	3316.39	30.20
+	"New York"	"36"	"More than one race"	"M"	"2016"	"2016"	4727	3224.33	28.59
+	"New York"	"36"	"More than one race"	"M"	"2017"	"2017"	4647	3230.00	28.83
+	"New York"	"36"	"More than one race"	"M"	"2018"	"2018"	4660	3223.17	29.12
+"Total"	"New York"	"36"	"More than one race"	"M"			14034	3225.82	28.84
+	"New York"	"36"	"Not Available"	"NA"	"2007"	"2007"	253451	3267.10	28.78
+	"New York"	"36"	"Not Available"	"NA"	"2008"	"2008"	250383	3263.94	28.80
+	"New York"	"36"	"Not Available"	"NA"	"2009"	"2009"	248110	3261.22	28.88
+	"New York"	"36"	"Not Available"	"NA"	"2010"	"2010"	244375	3260.75	29.00
+	"New York"	"36"	"Not Available"	"NA"	"2011"	"2011"	241312	3263.00	29.12
+	"New York"	"36"	"Not Available"	"NA"	"2012"	"2012"	240916	3266.95	29.25
+	"New York"	"36"	"Not Available"	"NA"	"2013"	"2013"	236980	3271.28	29.42
+	"New York"	"36"	"Not Available"	"NA"	"2014"	"2014"	238773	3273.03	29.58
+	"New York"	"36"	"Not Available"	"NA"	"2015"	"2015"	237274	3271.04	29.75
+"Total"	"New York"	"36"	"Not Available"	"NA"			2191574	3266.42	29.17
+"Total"	"New York"	"36"					2881832	3265.49	29.39
+	"North Carolina"	"37"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1759	3195.39	26.26
+	"North Carolina"	"37"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1758	3176.97	26.39
+	"North Carolina"	"37"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1792	3196.98	26.35
+"Total"	"North Carolina"	"37"	"American Indian or Alaska Native"	"1002-5"			5309	3189.83	26.33
+	"North Carolina"	"37"	"Asian"	"A"	"2016"	"2016"	5647	3180.42	30.32
+	"North Carolina"	"37"	"Asian"	"A"	"2017"	"2017"	5745	3177.37	30.58
+	"North Carolina"	"37"	"Asian"	"A"	"2018"	"2018"	5089	3174.30	30.98
+"Total"	"North Carolina"	"37"	"Asian"	"A"			16481	3177.47	30.61
+	"North Carolina"	"37"	"Black or African American"	"2054-5"	"2016"	"2016"	31773	3085.31	27.11
+	"North Carolina"	"37"	"Black or African American"	"2054-5"	"2017"	"2017"	32351	3081.49	27.27
+	"North Carolina"	"37"	"Black or African American"	"2054-5"	"2018"	"2018"	30746	3072.74	27.47
+"Total"	"North Carolina"	"37"	"Black or African American"	"2054-5"			94870	3079.94	27.28
+	"North Carolina"	"37"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	259	3265.10	28.27
+	"North Carolina"	"37"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	297	3273.22	28.22
+	"North Carolina"	"37"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	500	3265.75	27.94
+"Total"	"North Carolina"	"37"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1056	3267.69	28.10
+	"North Carolina"	"37"	"White"	"2106-3"	"2016"	"2016"	78467	3326.44	28.72
+	"North Carolina"	"37"	"White"	"2106-3"	"2017"	"2017"	76900	3319.84	28.79
+	"North Carolina"	"37"	"White"	"2106-3"	"2018"	"2018"	77635	3324.81	28.94
+"Total"	"North Carolina"	"37"	"White"	"2106-3"			233002	3323.72	28.81
+	"North Carolina"	"37"	"More than one race"	"M"	"2016"	"2016"	2874	3249.63	26.38
+	"North Carolina"	"37"	"More than one race"	"M"	"2017"	"2017"	3074	3233.59	26.27
+	"North Carolina"	"37"	"More than one race"	"M"	"2018"	"2018"	3192	3211.22	26.56
+"Total"	"North Carolina"	"37"	"More than one race"	"M"			9140	3230.82	26.41
+	"North Carolina"	"37"	"Not Available"	"NA"	"2007"	"2007"	131037	3250.84	26.95
+	"North Carolina"	"37"	"Not Available"	"NA"	"2008"	"2008"	130839	3253.38	26.97
+	"North Carolina"	"37"	"Not Available"	"NA"	"2009"	"2009"	126845	3253.03	27.04
+	"North Carolina"	"37"	"Not Available"	"NA"	"2010"	"2010"	122350	3253.19	27.21
+	"North Carolina"	"37"	"Not Available"	"NA"	"2011"	"2011"	120389	3258.93	27.38
+	"North Carolina"	"37"	"Not Available"	"NA"	"2012"	"2012"	119831	3262.24	27.53
+	"North Carolina"	"37"	"Not Available"	"NA"	"2013"	"2013"	119002	3263.91	27.71
+	"North Carolina"	"37"	"Not Available"	"NA"	"2014"	"2014"	120975	3261.52	27.91
+	"North Carolina"	"37"	"Not Available"	"NA"	"2015"	"2015"	120843	3252.77	28.06
+"Total"	"North Carolina"	"37"	"Not Available"	"NA"			1112111	3256.52	27.41
+"Total"	"North Carolina"	"37"					1471969	3254.51	27.65
+	"North Dakota"	"38"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	947	3375.19	26.07
+	"North Dakota"	"38"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	884	3360.21	26.11
+	"North Dakota"	"38"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	890	3341.74	26.25
+"Total"	"North Dakota"	"38"	"American Indian or Alaska Native"	"1002-5"			2721	3359.38	26.14
+	"North Dakota"	"38"	"Asian"	"A"	"2016"	"2016"	329	3203.31	30.35
+	"North Dakota"	"38"	"Asian"	"A"	"2017"	"2017"	309	3143.72	30.38
+	"North Dakota"	"38"	"Asian"	"A"	"2018"	"2018"	260	3228.49	30.48
+"Total"	"North Dakota"	"38"	"Asian"	"A"			898	3190.08	30.40
+	"North Dakota"	"38"	"Black or African American"	"2054-5"	"2016"	"2016"	690	3218.54	28.19
+	"North Dakota"	"38"	"Black or African American"	"2054-5"	"2017"	"2017"	688	3209.23	28.51
+	"North Dakota"	"38"	"Black or African American"	"2054-5"	"2018"	"2018"	692	3195.73	28.77
+"Total"	"North Dakota"	"38"	"Black or African American"	"2054-5"			2070	3207.80	28.49
+	"North Dakota"	"38"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	32	3472.84	25.31
+	"North Dakota"	"38"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	42	3385.12	26.64
+	"North Dakota"	"38"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	53	3362.49	27.75
+"Total"	"North Dakota"	"38"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			127	3397.78	26.77
+	"North Dakota"	"38"	"White"	"2106-3"	"2016"	"2016"	9048	3364.43	28.56
+	"North Dakota"	"38"	"White"	"2106-3"	"2017"	"2017"	8458	3367.84	28.78
+	"North Dakota"	"38"	"White"	"2106-3"	"2018"	"2018"	8386	3365.15	28.81
+"Total"	"North Dakota"	"38"	"White"	"2106-3"			25892	3365.78	28.71
+	"North Dakota"	"38"	"More than one race"	"M"	"2016"	"2016"	337	3389.24	25.99
+	"North Dakota"	"38"	"More than one race"	"M"	"2017"	"2017"	356	3292.76	26.32
+	"North Dakota"	"38"	"More than one race"	"M"	"2018"	"2018"	355	3313.70	26.46
+"Total"	"North Dakota"	"38"	"More than one race"	"M"			1048	3330.91	26.26
+	"North Dakota"	"38"	"Not Available"	"NA"	"2007"	"2007"	8840	3347.88	26.98
+	"North Dakota"	"38"	"Not Available"	"NA"	"2008"	"2008"	8938	3337.80	27.07
+	"North Dakota"	"38"	"Not Available"	"NA"	"2009"	"2009"	9001	3345.42	27.26
+	"North Dakota"	"38"	"Not Available"	"NA"	"2010"	"2010"	9104	3337.74	27.27
+	"North Dakota"	"38"	"Not Available"	"NA"	"2011"	"2011"	9527	3360.03	27.40
+	"North Dakota"	"38"	"Not Available"	"NA"	"2012"	"2012"	10106	3359.04	27.46
+	"North Dakota"	"38"	"Not Available"	"NA"	"2013"	"2013"	10599	3361.44	27.65
+	"North Dakota"	"38"	"Not Available"	"NA"	"2014"	"2014"	11359	3355.76	27.81
+	"North Dakota"	"38"	"Not Available"	"NA"	"2015"	"2015"	11314	3351.91	27.95
+"Total"	"North Dakota"	"38"	"Not Available"	"NA"			88788	3351.29	27.46
+"Total"	"North Dakota"	"38"					121544	3350.80	27.72
+	"Ohio"	"39"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	166	3369.52	28.31
+	"Ohio"	"39"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	153	3239.81	27.54
+	"Ohio"	"39"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	156	3284.59	28.02
+"Total"	"Ohio"	"39"	"American Indian or Alaska Native"	"1002-5"			475	3299.85	27.97
+	"Ohio"	"39"	"Asian"	"A"	"2016"	"2016"	4500	3168.43	30.72
+	"Ohio"	"39"	"Asian"	"A"	"2017"	"2017"	4552	3148.33	30.71
+	"Ohio"	"39"	"Asian"	"A"	"2018"	"2018"	4420	3147.33	30.87
+"Total"	"Ohio"	"39"	"Asian"	"A"			13472	3154.71	30.77
+	"Ohio"	"39"	"Black or African American"	"2054-5"	"2016"	"2016"	23520	3052.64	26.69
+	"Ohio"	"39"	"Black or African American"	"2054-5"	"2017"	"2017"	23468	3052.17	26.90
+	"Ohio"	"39"	"Black or African American"	"2054-5"	"2018"	"2018"	23086	3062.63	27.18
+"Total"	"Ohio"	"39"	"Black or African American"	"2054-5"			70074	3055.78	26.92
+	"Ohio"	"39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	80	3294.74	28.21
+	"Ohio"	"39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	84	3256.75	26.73
+	"Ohio"	"39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	104	3174.37	27.21
+"Total"	"Ohio"	"39"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			268	3235.68	27.36
+	"Ohio"	"39"	"White"	"2106-3"	"2016"	"2016"	106381	3313.15	28.34
+	"Ohio"	"39"	"White"	"2106-3"	"2017"	"2017"	104917	3313.82	28.43
+	"Ohio"	"39"	"White"	"2106-3"	"2018"	"2018"	103675	3314.79	28.57
+"Total"	"Ohio"	"39"	"White"	"2106-3"			314973	3313.92	28.45
+	"Ohio"	"39"	"More than one race"	"M"	"2016"	"2016"	3438	3193.22	25.43
+	"Ohio"	"39"	"More than one race"	"M"	"2017"	"2017"	3658	3186.27	25.62
+	"Ohio"	"39"	"More than one race"	"M"	"2018"	"2018"	3693	3211.36	25.93
+"Total"	"Ohio"	"39"	"More than one race"	"M"			10789	3197.07	25.67
+	"Ohio"	"39"	"Not Available"	"NA"	"2007"	"2007"	150879	3252.42	26.95
+	"Ohio"	"39"	"Not Available"	"NA"	"2008"	"2008"	148821	3255.15	26.92
+	"Ohio"	"39"	"Not Available"	"NA"	"2009"	"2009"	144841	3259.22	26.99
+	"Ohio"	"39"	"Not Available"	"NA"	"2010"	"2010"	139128	3257.94	27.15
+	"Ohio"	"39"	"Not Available"	"NA"	"2011"	"2011"	137918	3259.45	27.32
+	"Ohio"	"39"	"Not Available"	"NA"	"2012"	"2012"	138483	3261.67	27.38
+	"Ohio"	"39"	"Not Available"	"NA"	"2013"	"2013"	138936	3266.24	27.58
+	"Ohio"	"39"	"Not Available"	"NA"	"2014"	"2014"	139467	3266.98	27.76
+	"Ohio"	"39"	"Not Available"	"NA"	"2015"	"2015"	139264	3270.45	27.90
+"Total"	"Ohio"	"39"	"Not Available"	"NA"			1277737	3260.93	27.32
+"Total"	"Ohio"	"39"					1687788	3261.06	27.53
+	"Oklahoma"	"40"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	5346	3330.15	25.90
+	"Oklahoma"	"40"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	5092	3332.25	25.94
+	"Oklahoma"	"40"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	4926	3318.02	26.19
+"Total"	"Oklahoma"	"40"	"American Indian or Alaska Native"	"1002-5"			15364	3326.96	26.01
+	"Oklahoma"	"40"	"Asian"	"A"	"2016"	"2016"	1488	3195.64	30.28
+	"Oklahoma"	"40"	"Asian"	"A"	"2017"	"2017"	1441	3172.30	30.51
+	"Oklahoma"	"40"	"Asian"	"A"	"2018"	"2018"	1365	3167.00	30.72
+"Total"	"Oklahoma"	"40"	"Asian"	"A"			4294	3178.71	30.50
+	"Oklahoma"	"40"	"Black or African American"	"2054-5"	"2016"	"2016"	4780	3046.41	26.58
+	"Oklahoma"	"40"	"Black or African American"	"2054-5"	"2017"	"2017"	4537	3068.40	26.68
+	"Oklahoma"	"40"	"Black or African American"	"2054-5"	"2018"	"2018"	4501	3041.69	26.92
+"Total"	"Oklahoma"	"40"	"Black or African American"	"2054-5"			13818	3052.09	26.72
+	"Oklahoma"	"40"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	233	3255.55	26.63
+	"Oklahoma"	"40"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	250	3165.03	27.43
+	"Oklahoma"	"40"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	223	3169.70	26.45
+"Total"	"Oklahoma"	"40"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			706	3196.38	26.86
+	"Oklahoma"	"40"	"White"	"2106-3"	"2016"	"2016"	37028	3301.17	27.41
+	"Oklahoma"	"40"	"White"	"2106-3"	"2017"	"2017"	35258	3291.90	27.57
+	"Oklahoma"	"40"	"White"	"2106-3"	"2018"	"2018"	35101	3284.85	27.67
+"Total"	"Oklahoma"	"40"	"White"	"2106-3"			107387	3292.79	27.54
+	"Oklahoma"	"40"	"More than one race"	"M"	"2016"	"2016"	3717	3247.87	25.59
+	"Oklahoma"	"40"	"More than one race"	"M"	"2017"	"2017"	3636	3220.18	25.72
+	"Oklahoma"	"40"	"More than one race"	"M"	"2018"	"2018"	3684	3227.18	25.96
+"Total"	"Oklahoma"	"40"	"More than one race"	"M"			11037	3231.84	25.76
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2007"	"2007"	55065	3248.73	25.70
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2008"	"2008"	54781	3243.08	25.71
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2009"	"2009"	54553	3244.78	25.82
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2010"	"2010"	53238	3245.19	26.07
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2011"	"2011"	52272	3252.74	26.22
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2012"	"2012"	52751	3266.41	26.33
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2013"	"2013"	53369	3270.07	26.56
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2014"	"2014"	53339	3273.97	26.77
+	"Oklahoma"	"40"	"Not Available"	"NA"	"2015"	"2015"	53122	3276.84	26.99
+"Total"	"Oklahoma"	"40"	"Not Available"	"NA"			482490	3257.86	26.24
+"Total"	"Oklahoma"	"40"					635096	3259.91	26.48
+	"Oregon"	"41"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	584	3355.83	26.94
+	"Oregon"	"41"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	600	3300.61	27.41
+	"Oregon"	"41"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	571	3319.80	27.70
+"Total"	"Oregon"	"41"	"American Indian or Alaska Native"	"1002-5"			1755	3325.23	27.35
+	"Oregon"	"41"	"Asian"	"A"	"2016"	"2016"	2494	3204.77	31.65
+	"Oregon"	"41"	"Asian"	"A"	"2017"	"2017"	2519	3204.24	31.80
+	"Oregon"	"41"	"Asian"	"A"	"2018"	"2018"	2344	3200.60	31.86
+"Total"	"Oregon"	"41"	"Asian"	"A"			7357	3203.26	31.77
+	"Oregon"	"41"	"Black or African American"	"2054-5"	"2016"	"2016"	1063	3243.25	28.56
+	"Oregon"	"41"	"Black or African American"	"2054-5"	"2017"	"2017"	1143	3215.02	28.95
+	"Oregon"	"41"	"Black or African American"	"2054-5"	"2018"	"2018"	1093	3187.56	28.63
+"Total"	"Oregon"	"41"	"Black or African American"	"2054-5"			3299	3215.02	28.72
+	"Oregon"	"41"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	364	3305.85	27.48
+	"Oregon"	"41"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	335	3289.97	27.73
+	"Oregon"	"41"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	344	3282.24	27.51
+"Total"	"Oregon"	"41"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1043	3292.97	27.57
+	"Oregon"	"41"	"White"	"2106-3"	"2016"	"2016"	39074	3364.79	29.10
+	"Oregon"	"41"	"White"	"2106-3"	"2017"	"2017"	37084	3355.83	29.27
+	"Oregon"	"41"	"White"	"2106-3"	"2018"	"2018"	35930	3358.19	29.43
+"Total"	"Oregon"	"41"	"White"	"2106-3"			112088	3359.71	29.26
+	"Oregon"	"41"	"More than one race"	"M"	"2016"	"2016"	1956	3319.61	27.90
+	"Oregon"	"41"	"More than one race"	"M"	"2017"	"2017"	1950	3285.97	28.14
+	"Oregon"	"41"	"More than one race"	"M"	"2018"	"2018"	1906	3295.72	28.24
+"Total"	"Oregon"	"41"	"More than one race"	"M"			5812	3300.49	28.09
+	"Oregon"	"41"	"Not Available"	"NA"	"2007"	"2007"	49378	3364.66	27.57
+	"Oregon"	"41"	"Not Available"	"NA"	"2008"	"2008"	49096	3368.45	27.56
+	"Oregon"	"41"	"Not Available"	"NA"	"2009"	"2009"	47132	3363.00	27.79
+	"Oregon"	"41"	"Not Available"	"NA"	"2010"	"2010"	45540	3355.75	28.01
+	"Oregon"	"41"	"Not Available"	"NA"	"2011"	"2011"	45155	3366.63	28.22
+	"Oregon"	"41"	"Not Available"	"NA"	"2012"	"2012"	45067	3366.56	28.41
+	"Oregon"	"41"	"Not Available"	"NA"	"2013"	"2013"	45155	3364.03	28.56
+	"Oregon"	"41"	"Not Available"	"NA"	"2014"	"2014"	45556	3362.00	28.75
+	"Oregon"	"41"	"Not Available"	"NA"	"2015"	"2015"	45655	3356.81	28.90
+"Total"	"Oregon"	"41"	"Not Available"	"NA"			417734	3363.15	28.18
+"Total"	"Oregon"	"41"					549088	3358.50	28.45
+	"Pennsylvania"	"42"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	208	3221.34	27.48
+	"Pennsylvania"	"42"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	212	3195.26	28.01
+	"Pennsylvania"	"42"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	322	3237.89	27.73
+"Total"	"Pennsylvania"	"42"	"American Indian or Alaska Native"	"1002-5"			742	3221.05	27.74
+	"Pennsylvania"	"42"	"Asian"	"A"	"2016"	"2016"	7151	3177.02	30.67
+	"Pennsylvania"	"42"	"Asian"	"A"	"2017"	"2017"	7092	3171.78	30.96
+	"Pennsylvania"	"42"	"Asian"	"A"	"2018"	"2018"	6644	3174.34	31.25
+"Total"	"Pennsylvania"	"42"	"Asian"	"A"			20887	3174.38	30.95
+	"Pennsylvania"	"42"	"Black or African American"	"2054-5"	"2016"	"2016"	21571	3091.73	27.14
+	"Pennsylvania"	"42"	"Black or African American"	"2054-5"	"2017"	"2017"	21805	3087.10	27.44
+	"Pennsylvania"	"42"	"Black or African American"	"2054-5"	"2018"	"2018"	21865	3098.44	27.60
+"Total"	"Pennsylvania"	"42"	"Black or African American"	"2054-5"			65241	3092.43	27.39
+	"Pennsylvania"	"42"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	158	3224.13	26.91
+	"Pennsylvania"	"42"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	176	3201.27	27.07
+	"Pennsylvania"	"42"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	296	3229.13	27.01
+"Total"	"Pennsylvania"	"42"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			630	3220.06	27.00
+	"Pennsylvania"	"42"	"White"	"2106-3"	"2016"	"2016"	106685	3331.04	29.19
+	"Pennsylvania"	"42"	"White"	"2106-3"	"2017"	"2017"	104695	3327.12	29.33
+	"Pennsylvania"	"42"	"White"	"2106-3"	"2018"	"2018"	102857	3329.11	29.48
+"Total"	"Pennsylvania"	"42"	"White"	"2106-3"			314237	3329.10	29.33
+	"Pennsylvania"	"42"	"More than one race"	"M"	"2016"	"2016"	3636	3195.76	26.52
+	"Pennsylvania"	"42"	"More than one race"	"M"	"2017"	"2017"	3765	3198.97	26.37
+	"Pennsylvania"	"42"	"More than one race"	"M"	"2018"	"2018"	3689	3198.26	26.84
+"Total"	"Pennsylvania"	"42"	"More than one race"	"M"			11090	3197.68	26.58
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2007"	"2007"	150713	3279.79	27.83
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2008"	"2008"	149273	3279.33	27.81
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2009"	"2009"	146434	3277.78	27.88
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2010"	"2010"	143321	3275.49	27.95
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2011"	"2011"	143178	3281.33	28.07
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2012"	"2012"	142514	3286.38	28.18
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2013"	"2013"	140921	3286.64	28.38
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2014"	"2014"	142268	3286.35	28.55
+	"Pennsylvania"	"42"	"Not Available"	"NA"	"2015"	"2015"	141047	3284.27	28.70
+"Total"	"Pennsylvania"	"42"	"Not Available"	"NA"			1299669	3281.87	28.14
+"Total"	"Pennsylvania"	"42"					1712496	3281.43	28.36
+	"Rhode Island"	"44"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	96	3193.86	26.95
+	"Rhode Island"	"44"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	94	3070.56	26.99
+	"Rhode Island"	"44"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	95	3199.02	27.13
+"Total"	"Rhode Island"	"44"	"American Indian or Alaska Native"	"1002-5"			285	3155.21	27.02
+	"Rhode Island"	"44"	"Asian"	"A"	"2016"	"2016"	688	3178.44	30.11
+	"Rhode Island"	"44"	"Asian"	"A"	"2017"	"2017"	660	3210.48	30.39
+	"Rhode Island"	"44"	"Asian"	"A"	"2018"	"2018"	572	3174.32	31.07
+"Total"	"Rhode Island"	"44"	"Asian"	"A"			1920	3188.23	30.49
+	"Rhode Island"	"44"	"Black or African American"	"2054-5"	"2016"	"2016"	1195	3167.96	28.36
+	"Rhode Island"	"44"	"Black or African American"	"2054-5"	"2017"	"2017"	1165	3166.58	28.56
+	"Rhode Island"	"44"	"Black or African American"	"2054-5"	"2018"	"2018"	1356	3187.37	28.70
+"Total"	"Rhode Island"	"44"	"Black or African American"	"2054-5"			3716	3174.62	28.54
+	"Rhode Island"	"44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	10	3205.90	31.00
+	"Rhode Island"	"44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	18	3238.94	27.00
+	"Rhode Island"	"44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	40	3240.22	27.82
+"Total"	"Rhode Island"	"44"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			68	3234.84	28.07
+	"Rhode Island"	"44"	"White"	"2106-3"	"2016"	"2016"	8466	3310.91	29.52
+	"Rhode Island"	"44"	"White"	"2106-3"	"2017"	"2017"	8364	3326.72	29.71
+	"Rhode Island"	"44"	"White"	"2106-3"	"2018"	"2018"	8066	3327.71	29.95
+"Total"	"Rhode Island"	"44"	"White"	"2106-3"			24896	3321.66	29.72
+	"Rhode Island"	"44"	"More than one race"	"M"	"2016"	"2016"	343	3190.03	27.09
+	"Rhode Island"	"44"	"More than one race"	"M"	"2017"	"2017"	337	3236.65	27.26
+	"Rhode Island"	"44"	"More than one race"	"M"	"2018"	"2018"	377	3248.29	27.41
+"Total"	"Rhode Island"	"44"	"More than one race"	"M"			1057	3225.67	27.26
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2007"	"2007"	12376	3287.16	28.08
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2008"	"2008"	12048	3299.46	28.12
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2009"	"2009"	11442	3296.44	28.20
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2010"	"2010"	11177	3299.56	28.38
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2011"	"2011"	10960	3296.71	28.49
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2012"	"2012"	10926	3292.63	28.53
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2013"	"2013"	10809	3306.33	28.87
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2014"	"2014"	10823	3303.31	28.90
+	"Rhode Island"	"44"	"Not Available"	"NA"	"2015"	"2015"	10993	3297.66	29.22
+"Total"	"Rhode Island"	"44"	"Not Available"	"NA"			101554	3297.55	28.52
+"Total"	"Rhode Island"	"44"					133496	3296.15	28.76
+	"South Carolina"	"45"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	188	3226.34	27.74
+	"South Carolina"	"45"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	174	3202.05	27.10
+	"South Carolina"	"45"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	154	3247.78	27.54
+"Total"	"South Carolina"	"45"	"American Indian or Alaska Native"	"1002-5"			516	3224.55	27.47
+	"South Carolina"	"45"	"Asian"	"A"	"2016"	"2016"	1239	3162.96	30.87
+	"South Carolina"	"45"	"Asian"	"A"	"2017"	"2017"	1220	3154.37	31.05
+	"South Carolina"	"45"	"Asian"	"A"	"2018"	"2018"	1251	3145.74	31.31
+"Total"	"South Carolina"	"45"	"Asian"	"A"			3710	3154.33	31.08
+	"South Carolina"	"45"	"Black or African American"	"2054-5"	"2016"	"2016"	17759	3045.64	26.81
+	"South Carolina"	"45"	"Black or African American"	"2054-5"	"2017"	"2017"	18155	3029.34	26.94
+	"South Carolina"	"45"	"Black or African American"	"2054-5"	"2018"	"2018"	17452	3022.43	27.13
+"Total"	"South Carolina"	"45"	"Black or African American"	"2054-5"			53366	3032.51	26.96
+	"South Carolina"	"45"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	68	3318.72	27.59
+	"South Carolina"	"45"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	67	3341.57	27.55
+	"South Carolina"	"45"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	73	3121.64	27.34
+"Total"	"South Carolina"	"45"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			208	3256.91	27.49
+	"South Carolina"	"45"	"White"	"2106-3"	"2016"	"2016"	36759	3321.06	28.42
+	"South Carolina"	"45"	"White"	"2106-3"	"2017"	"2017"	36081	3323.24	28.48
+	"South Carolina"	"45"	"White"	"2106-3"	"2018"	"2018"	36258	3320.93	28.56
+"Total"	"South Carolina"	"45"	"White"	"2106-3"			109098	3321.74	28.49
+	"South Carolina"	"45"	"More than one race"	"M"	"2016"	"2016"	1329	3217.55	25.91
+	"South Carolina"	"45"	"More than one race"	"M"	"2017"	"2017"	1332	3217.56	25.67
+	"South Carolina"	"45"	"More than one race"	"M"	"2018"	"2018"	1481	3217.33	26.26
+"Total"	"South Carolina"	"45"	"More than one race"	"M"			4142	3217.47	25.96
+	"South Carolina"	"45"	"Not Available"	"NA"	"2007"	"2007"	62875	3195.79	26.29
+	"South Carolina"	"45"	"Not Available"	"NA"	"2008"	"2008"	63071	3205.18	26.32
+	"South Carolina"	"45"	"Not Available"	"NA"	"2009"	"2009"	60620	3199.12	26.46
+	"South Carolina"	"45"	"Not Available"	"NA"	"2010"	"2010"	58342	3199.69	26.61
+	"South Carolina"	"45"	"Not Available"	"NA"	"2011"	"2011"	57393	3207.54	26.81
+	"South Carolina"	"45"	"Not Available"	"NA"	"2012"	"2012"	57155	3218.84	26.95
+	"South Carolina"	"45"	"Not Available"	"NA"	"2013"	"2013"	56795	3223.71	27.22
+	"South Carolina"	"45"	"Not Available"	"NA"	"2014"	"2014"	57627	3230.65	27.43
+	"South Carolina"	"45"	"Not Available"	"NA"	"2015"	"2015"	58139	3227.00	27.66
+"Total"	"South Carolina"	"45"	"Not Available"	"NA"			532017	3211.62	26.85
+"Total"	"South Carolina"	"45"					703057	3214.87	27.13
+	"South Dakota"	"46"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1867	3346.74	25.59
+	"South Dakota"	"46"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1880	3367.92	25.86
+	"South Dakota"	"46"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1746	3363.56	26.13
+"Total"	"South Dakota"	"46"	"American Indian or Alaska Native"	"1002-5"			5493	3359.33	25.85
+	"South Dakota"	"46"	"Asian"	"A"	"2016"	"2016"	274	3151.85	28.00
+	"South Dakota"	"46"	"Asian"	"A"	"2017"	"2017"	255	3101.25	28.85
+	"South Dakota"	"46"	"Asian"	"A"	"2018"	"2018"	229	3114.54	28.62
+"Total"	"South Dakota"	"46"	"Asian"	"A"			758	3123.55	28.47
+	"South Dakota"	"46"	"Black or African American"	"2054-5"	"2016"	"2016"	376	3217.07	28.66
+	"South Dakota"	"46"	"Black or African American"	"2054-5"	"2017"	"2017"	416	3202.82	28.89
+	"South Dakota"	"46"	"Black or African American"	"2054-5"	"2018"	"2018"	427	3219.78	28.85
+"Total"	"South Dakota"	"46"	"Black or African American"	"2054-5"			1219	3213.17	28.80
+	"South Dakota"	"46"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	13	3075.15	27.85
+	"South Dakota"	"46"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	12	3337.00	29.92
+	"South Dakota"	"46"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	20	3212.25	26.55
+"Total"	"South Dakota"	"46"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			45	3205.91	27.82
+	"South Dakota"	"46"	"White"	"2106-3"	"2016"	"2016"	9344	3348.16	28.60
+	"South Dakota"	"46"	"White"	"2106-3"	"2017"	"2017"	9126	3340.62	28.82
+	"South Dakota"	"46"	"White"	"2106-3"	"2018"	"2018"	8996	3341.35	28.93
+"Total"	"South Dakota"	"46"	"White"	"2106-3"			27466	3343.43	28.78
+	"South Dakota"	"46"	"More than one race"	"M"	"2016"	"2016"	401	3273.10	25.95
+	"South Dakota"	"46"	"More than one race"	"M"	"2017"	"2017"	445	3338.35	25.95
+	"South Dakota"	"46"	"More than one race"	"M"	"2018"	"2018"	475	3270.38	25.93
+"Total"	"South Dakota"	"46"	"More than one race"	"M"			1321	3294.10	25.94
+	"South Dakota"	"46"	"Not Available"	"NA"	"2007"	"2007"	12261	3313.67	26.70
+	"South Dakota"	"46"	"Not Available"	"NA"	"2008"	"2008"	12071	3324.94	26.81
+	"South Dakota"	"46"	"Not Available"	"NA"	"2009"	"2009"	11934	3336.37	26.93
+	"South Dakota"	"46"	"Not Available"	"NA"	"2010"	"2010"	11811	3319.06	27.10
+	"South Dakota"	"46"	"Not Available"	"NA"	"2011"	"2011"	11846	3338.17	27.24
+	"South Dakota"	"46"	"Not Available"	"NA"	"2012"	"2012"	12104	3352.21	27.28
+	"South Dakota"	"46"	"Not Available"	"NA"	"2013"	"2013"	12248	3356.94	27.54
+	"South Dakota"	"46"	"Not Available"	"NA"	"2014"	"2014"	12283	3343.32	27.78
+	"South Dakota"	"46"	"Not Available"	"NA"	"2015"	"2015"	12336	3358.43	27.83
+"Total"	"South Dakota"	"46"	"Not Available"	"NA"			108894	3338.22	27.25
+"Total"	"South Dakota"	"46"					145196	3337.39	27.49
+	"Tennessee"	"47"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	123	3258.22	26.42
+	"Tennessee"	"47"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	137	3299.67	27.39
+	"Tennessee"	"47"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	231	3317.39	28.28
+"Total"	"Tennessee"	"47"	"American Indian or Alaska Native"	"1002-5"			491	3297.57	27.56
+	"Tennessee"	"47"	"Asian"	"A"	"2016"	"2016"	2081	3188.77	30.56
+	"Tennessee"	"47"	"Asian"	"A"	"2017"	"2017"	2078	3172.88	30.60
+	"Tennessee"	"47"	"Asian"	"A"	"2018"	"2018"	1991	3156.19	30.94
+"Total"	"Tennessee"	"47"	"Asian"	"A"			6150	3172.79	30.69
+	"Tennessee"	"47"	"Black or African American"	"2054-5"	"2016"	"2016"	17400	3050.92	26.55
+	"Tennessee"	"47"	"Black or African American"	"2054-5"	"2017"	"2017"	17537	3051.91	26.64
+	"Tennessee"	"47"	"Black or African American"	"2054-5"	"2018"	"2018"	16724	3039.75	26.75
+"Total"	"Tennessee"	"47"	"Black or African American"	"2054-5"			51661	3047.63	26.65
+	"Tennessee"	"47"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	125	3327.37	28.34
+	"Tennessee"	"47"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	111	3276.35	28.41
+	"Tennessee"	"47"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	143	3250.47	27.80
+"Total"	"Tennessee"	"47"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			379	3283.29	28.16
+	"Tennessee"	"47"	"White"	"2106-3"	"2016"	"2016"	59722	3292.19	27.82
+	"Tennessee"	"47"	"White"	"2106-3"	"2017"	"2017"	59663	3299.38	27.91
+	"Tennessee"	"47"	"White"	"2106-3"	"2018"	"2018"	60073	3297.11	28.07
+"Total"	"Tennessee"	"47"	"White"	"2106-3"			179458	3296.24	27.93
+	"Tennessee"	"47"	"More than one race"	"M"	"2016"	"2016"	1356	3213.30	25.75
+	"Tennessee"	"47"	"More than one race"	"M"	"2017"	"2017"	1490	3186.60	25.58
+	"Tennessee"	"47"	"More than one race"	"M"	"2018"	"2018"	1589	3232.95	25.79
+"Total"	"Tennessee"	"47"	"More than one race"	"M"			4435	3211.37	25.71
+	"Tennessee"	"47"	"Not Available"	"NA"	"2007"	"2007"	86711	3219.10	26.20
+	"Tennessee"	"47"	"Not Available"	"NA"	"2008"	"2008"	85560	3220.48	26.22
+	"Tennessee"	"47"	"Not Available"	"NA"	"2009"	"2009"	82211	3222.68	26.36
+	"Tennessee"	"47"	"Not Available"	"NA"	"2010"	"2010"	79495	3229.36	26.55
+	"Tennessee"	"47"	"Not Available"	"NA"	"2011"	"2011"	79588	3228.98	26.68
+	"Tennessee"	"47"	"Not Available"	"NA"	"2012"	"2012"	80371	3233.46	26.79
+	"Tennessee"	"47"	"Not Available"	"NA"	"2013"	"2013"	79992	3236.96	27.01
+	"Tennessee"	"47"	"Not Available"	"NA"	"2014"	"2014"	81602	3241.50	27.19
+	"Tennessee"	"47"	"Not Available"	"NA"	"2015"	"2015"	81685	3241.66	27.34
+"Total"	"Tennessee"	"47"	"Not Available"	"NA"			737215	3230.31	26.70
+"Total"	"Tennessee"	"47"					979789	3232.36	26.94
+	"Texas"	"48"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1173	3300.00	27.42
+	"Texas"	"48"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1010	3315.32	27.72
+	"Texas"	"48"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1118	3287.92	27.75
+"Total"	"Texas"	"48"	"American Indian or Alaska Native"	"1002-5"			3301	3300.60	27.62
+	"Texas"	"48"	"Asian"	"A"	"2016"	"2016"	22647	3146.15	31.17
+	"Texas"	"48"	"Asian"	"A"	"2017"	"2017"	22323	3143.15	31.18
+	"Texas"	"48"	"Asian"	"A"	"2018"	"2018"	20433	3133.48	31.65
+"Total"	"Texas"	"48"	"Asian"	"A"			65403	3141.17	31.32
+	"Texas"	"48"	"Black or African American"	"2054-5"	"2016"	"2016"	55001	3091.44	27.46
+	"Texas"	"48"	"Black or African American"	"2054-5"	"2017"	"2017"	54754	3093.06	27.75
+	"Texas"	"48"	"Black or African American"	"2054-5"	"2018"	"2018"	51556	3073.72	27.95
+"Total"	"Texas"	"48"	"Black or African American"	"2054-5"			161311	3086.33	27.72
+	"Texas"	"48"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	621	3292.31	27.31
+	"Texas"	"48"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	666	3262.00	27.46
+	"Texas"	"48"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	625	3268.08	27.60
+"Total"	"Texas"	"48"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1912	3273.84	27.46
+	"Texas"	"48"	"White"	"2106-3"	"2016"	"2016"	313694	3270.83	27.84
+	"Texas"	"48"	"White"	"2106-3"	"2017"	"2017"	298596	3269.92	27.97
+	"Texas"	"48"	"White"	"2106-3"	"2018"	"2018"	299958	3268.26	28.13
+"Total"	"Texas"	"48"	"White"	"2106-3"			912248	3269.69	27.98
+	"Texas"	"48"	"More than one race"	"M"	"2016"	"2016"	4911	3217.50	26.93
+	"Texas"	"48"	"More than one race"	"M"	"2017"	"2017"	4701	3216.85	26.99
+	"Texas"	"48"	"More than one race"	"M"	"2018"	"2018"	4934	3216.18	27.28
+"Total"	"Texas"	"48"	"More than one race"	"M"			14546	3216.84	27.07
+	"Texas"	"48"	"Not Available"	"NA"	"2007"	"2007"	407625	3231.72	26.50
+	"Texas"	"48"	"Not Available"	"NA"	"2008"	"2008"	405554	3226.44	26.56
+	"Texas"	"48"	"Not Available"	"NA"	"2009"	"2009"	401977	3223.56	26.68
+	"Texas"	"48"	"Not Available"	"NA"	"2010"	"2010"	386118	3226.85	26.86
+	"Texas"	"48"	"Not Available"	"NA"	"2011"	"2011"	377445	3231.45	27.08
+	"Texas"	"48"	"Not Available"	"NA"	"2012"	"2012"	382727	3242.10	27.22
+	"Texas"	"48"	"Not Available"	"NA"	"2013"	"2013"	387340	3241.03	27.37
+	"Texas"	"48"	"Not Available"	"NA"	"2014"	"2014"	399766	3244.30	27.57
+	"Texas"	"48"	"Not Available"	"NA"	"2015"	"2015"	403618	3241.00	27.75
+"Total"	"Texas"	"48"	"Not Available"	"NA"			3552170	3234.24	27.06
+"Total"	"Texas"	"48"					4710891	3234.76	27.32
+	"Utah"	"49"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	557	3292.11	26.94
+	"Utah"	"49"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	535	3297.52	26.91
+	"Utah"	"49"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	526	3289.59	26.94
+"Total"	"Utah"	"49"	"American Indian or Alaska Native"	"1002-5"			1618	3293.08	26.93
+	"Utah"	"49"	"Asian"	"A"	"2016"	"2016"	1330	3121.72	30.37
+	"Utah"	"49"	"Asian"	"A"	"2017"	"2017"	1316	3074.83	30.42
+	"Utah"	"49"	"Asian"	"A"	"2018"	"2018"	1224	3127.09	30.57
+"Total"	"Utah"	"49"	"Asian"	"A"			3870	3107.46	30.45
+	"Utah"	"49"	"Black or African American"	"2054-5"	"2016"	"2016"	662	3156.69	28.03
+	"Utah"	"49"	"Black or African American"	"2054-5"	"2017"	"2017"	677	3153.18	27.99
+	"Utah"	"49"	"Black or African American"	"2054-5"	"2018"	"2018"	647	3108.92	28.60
+"Total"	"Utah"	"49"	"Black or African American"	"2054-5"			1986	3139.98	28.21
+	"Utah"	"49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	469	3299.86	27.47
+	"Utah"	"49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	524	3262.14	27.68
+	"Utah"	"49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	511	3257.94	27.59
+"Total"	"Utah"	"49"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			1504	3272.48	27.59
+	"Utah"	"49"	"White"	"2106-3"	"2016"	"2016"	46335	3275.40	28.55
+	"Utah"	"49"	"White"	"2106-3"	"2017"	"2017"	44305	3274.39	28.55
+	"Utah"	"49"	"White"	"2106-3"	"2018"	"2018"	42994	3274.05	28.60
+"Total"	"Utah"	"49"	"White"	"2106-3"			133634	3274.63	28.57
+	"Utah"	"49"	"More than one race"	"M"	"2016"	"2016"	1111	3233.51	27.08
+	"Utah"	"49"	"More than one race"	"M"	"2017"	"2017"	1228	3215.45	27.31
+	"Utah"	"49"	"More than one race"	"M"	"2018"	"2018"	1307	3218.14	27.48
+"Total"	"Utah"	"49"	"More than one race"	"M"			3646	3221.92	27.30
+	"Utah"	"49"	"Not Available"	"NA"	"2007"	"2007"	55130	3265.98	27.04
+	"Utah"	"49"	"Not Available"	"NA"	"2008"	"2008"	55634	3269.62	27.15
+	"Utah"	"49"	"Not Available"	"NA"	"2009"	"2009"	53887	3267.77	27.40
+	"Utah"	"49"	"Not Available"	"NA"	"2010"	"2010"	52258	3260.35	27.60
+	"Utah"	"49"	"Not Available"	"NA"	"2011"	"2011"	51223	3267.86	27.84
+	"Utah"	"49"	"Not Available"	"NA"	"2012"	"2012"	51465	3274.05	27.96
+	"Utah"	"49"	"Not Available"	"NA"	"2013"	"2013"	50957	3275.87	28.12
+	"Utah"	"49"	"Not Available"	"NA"	"2014"	"2014"	51154	3275.07	28.25
+	"Utah"	"49"	"Not Available"	"NA"	"2015"	"2015"	50778	3274.37	28.38
+"Total"	"Utah"	"49"	"Not Available"	"NA"			472486	3270.02	27.73
+"Total"	"Utah"	"49"					618744	3269.37	27.93
+	"Vermont"	"50"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	13	3322.15	27.62
+	"Vermont"	"50"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	17	3400.29	29.71
+	"Vermont"	"50"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	14	3368.29	27.43
+"Total"	"Vermont"	"50"	"American Indian or Alaska Native"	"1002-5"			44	3367.02	28.36
+	"Vermont"	"50"	"Asian"	"A"	"2016"	"2016"	171	3221.52	30.26
+	"Vermont"	"50"	"Asian"	"A"	"2017"	"2017"	169	3217.51	30.80
+	"Vermont"	"50"	"Asian"	"A"	"2018"	"2018"	156	3229.26	31.02
+"Total"	"Vermont"	"50"	"Asian"	"A"			496	3222.59	30.69
+	"Vermont"	"50"	"Black or African American"	"2054-5"	"2016"	"2016"	93	3278.30	28.18
+	"Vermont"	"50"	"Black or African American"	"2054-5"	"2017"	"2017"	127	3261.06	30.00
+	"Vermont"	"50"	"Black or African American"	"2054-5"	"2018"	"2018"	126	3221.31	29.92
+"Total"	"Vermont"	"50"	"Black or African American"	"2054-5"			346	3251.22	29.48
+	"Vermont"	"50"	"White"	"2106-3"	"2016"	"2016"	5404	3362.69	29.37
+	"Vermont"	"50"	"White"	"2106-3"	"2017"	"2017"	5274	3360.75	29.48
+	"Vermont"	"50"	"White"	"2106-3"	"2018"	"2018"	5072	3352.78	29.66
+"Total"	"Vermont"	"50"	"White"	"2106-3"			15750	3358.85	29.50
+	"Vermont"	"50"	"More than one race"	"M"	"2016"	"2016"	73	3289.33	28.19
+	"Vermont"	"50"	"More than one race"	"M"	"2017"	"2017"	65	3283.55	28.80
+	"Vermont"	"50"	"More than one race"	"M"	"2018"	"2018"	63	3150.44	28.46
+"Total"	"Vermont"	"50"	"More than one race"	"M"			201	3243.70	28.47
+	"Vermont"	"50"	"Not Available"	"NA"	"2007"	"2007"	6513	3382.24	28.09
+	"Vermont"	"50"	"Not Available"	"NA"	"2008"	"2008"	6339	3367.37	28.07
+	"Vermont"	"50"	"Not Available"	"NA"	"2009"	"2009"	6110	3375.00	28.28
+	"Vermont"	"50"	"Not Available"	"NA"	"2010"	"2010"	6223	3382.96	28.43
+	"Vermont"	"50"	"Not Available"	"NA"	"2011"	"2011"	6078	3371.58	28.40
+	"Vermont"	"50"	"Not Available"	"NA"	"2012"	"2012"	6009	3374.14	28.43
+	"Vermont"	"50"	"Not Available"	"NA"	"2013"	"2013"	5975	3376.92	28.76
+	"Vermont"	"50"	"Not Available"	"NA"	"2014"	"2014"	6130	3343.13	28.88
+	"Vermont"	"50"	"Not Available"	"NA"	"2015"	"2015"	5903	3361.88	29.13
+"Total"	"Vermont"	"50"	"Not Available"	"NA"			55280	3370.68	28.49
+"Total"	"Vermont"	"50"					72123	3366.15	28.73
+	"Virginia"	"51"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	194	3357.94	28.51
+	"Virginia"	"51"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	195	3292.11	28.51
+	"Virginia"	"51"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	236	3323.56	28.99
+"Total"	"Virginia"	"51"	"American Indian or Alaska Native"	"1002-5"			625	3324.37	28.69
+	"Virginia"	"51"	"Asian"	"A"	"2016"	"2016"	9002	3195.47	31.39
+	"Virginia"	"51"	"Asian"	"A"	"2017"	"2017"	8695	3180.56	31.49
+	"Virginia"	"51"	"Asian"	"A"	"2018"	"2018"	8060	3200.68	31.88
+"Total"	"Virginia"	"51"	"Asian"	"A"			25757	3192.07	31.58
+	"Virginia"	"51"	"Black or African American"	"2054-5"	"2016"	"2016"	22790	3107.40	27.82
+	"Virginia"	"51"	"Black or African American"	"2054-5"	"2017"	"2017"	23055	3100.05	28.02
+	"Virginia"	"51"	"Black or African American"	"2054-5"	"2018"	"2018"	22312	3103.08	28.30
+"Total"	"Virginia"	"51"	"Black or African American"	"2054-5"			68157	3103.50	28.04
+	"Virginia"	"51"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	204	3254.14	28.94
+	"Virginia"	"51"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	227	3319.31	28.81
+	"Virginia"	"51"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	288	3282.91	28.53
+"Total"	"Virginia"	"51"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			719	3286.24	28.73
+	"Virginia"	"51"	"White"	"2106-3"	"2016"	"2016"	68701	3346.40	29.54
+	"Virginia"	"51"	"White"	"2106-3"	"2017"	"2017"	66479	3342.67	29.60
+	"Virginia"	"51"	"White"	"2106-3"	"2018"	"2018"	67014	3341.95	29.73
+"Total"	"Virginia"	"51"	"White"	"2106-3"			202194	3343.70	29.62
+	"Virginia"	"51"	"More than one race"	"M"	"2016"	"2016"	1569	3263.37	27.63
+	"Virginia"	"51"	"More than one race"	"M"	"2017"	"2017"	1740	3252.57	27.65
+	"Virginia"	"51"	"More than one race"	"M"	"2018"	"2018"	1933	3267.63	27.52
+"Total"	"Virginia"	"51"	"More than one race"	"M"			5242	3261.36	27.59
+	"Virginia"	"51"	"Not Available"	"NA"	"2007"	"2007"	108884	3261.75	27.92
+	"Virginia"	"51"	"Not Available"	"NA"	"2008"	"2008"	106686	3264.37	28.01
+	"Virginia"	"51"	"Not Available"	"NA"	"2009"	"2009"	105059	3266.87	28.11
+	"Virginia"	"51"	"Not Available"	"NA"	"2010"	"2010"	103002	3272.20	28.28
+	"Virginia"	"51"	"Not Available"	"NA"	"2011"	"2011"	102652	3278.40	28.48
+	"Virginia"	"51"	"Not Available"	"NA"	"2012"	"2012"	103013	3279.37	28.59
+	"Virginia"	"51"	"Not Available"	"NA"	"2013"	"2013"	102147	3284.32	28.77
+	"Virginia"	"51"	"Not Available"	"NA"	"2014"	"2014"	103300	3286.50	28.99
+	"Virginia"	"51"	"Not Available"	"NA"	"2015"	"2015"	103303	3286.11	29.10
+"Total"	"Virginia"	"51"	"Not Available"	"NA"			938046	3275.39	28.47
+"Total"	"Virginia"	"51"					1240740	3275.32	28.69
+	"Washington"	"53"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	1870	3348.81	27.19
+	"Washington"	"53"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	1660	3338.88	27.16
+	"Washington"	"53"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	1775	3344.92	27.49
+"Total"	"Washington"	"53"	"American Indian or Alaska Native"	"1002-5"			5305	3344.40	27.28
+	"Washington"	"53"	"Asian"	"A"	"2016"	"2016"	9889	3198.86	31.39
+	"Washington"	"53"	"Asian"	"A"	"2017"	"2017"	9869	3196.68	31.58
+	"Washington"	"53"	"Asian"	"A"	"2018"	"2018"	9351	3187.51	32.04
+"Total"	"Washington"	"53"	"Asian"	"A"			29109	3194.48	31.67
+	"Washington"	"53"	"Black or African American"	"2054-5"	"2016"	"2016"	4784	3227.87	28.92
+	"Washington"	"53"	"Black or African American"	"2054-5"	"2017"	"2017"	4980	3231.45	29.47
+	"Washington"	"53"	"Black or African American"	"2054-5"	"2018"	"2018"	4888	3223.96	29.65
+"Total"	"Washington"	"53"	"Black or African American"	"2054-5"			14652	3227.78	29.35
+	"Washington"	"53"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	1370	3338.60	27.44
+	"Washington"	"53"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	1395	3348.35	27.69
+	"Washington"	"53"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	1358	3301.29	27.65
+"Total"	"Washington"	"53"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			4123	3329.62	27.59
+	"Washington"	"53"	"White"	"2106-3"	"2016"	"2016"	68579	3384.46	29.21
+	"Washington"	"53"	"White"	"2106-3"	"2017"	"2017"	65615	3376.58	29.38
+	"Washington"	"53"	"White"	"2106-3"	"2018"	"2018"	64527	3374.03	29.53
+"Total"	"Washington"	"53"	"White"	"2106-3"			198721	3378.47	29.37
+	"Washington"	"53"	"More than one race"	"M"	"2016"	"2016"	4013	3312.62	27.95
+	"Washington"	"53"	"More than one race"	"M"	"2017"	"2017"	4043	3316.47	27.91
+	"Washington"	"53"	"More than one race"	"M"	"2018"	"2018"	4186	3299.04	28.25
+"Total"	"Washington"	"53"	"More than one race"	"M"			12242	3309.25	28.04
+	"Washington"	"53"	"Not Available"	"NA"	"2007"	"2007"	88978	3364.24	27.86
+	"Washington"	"53"	"Not Available"	"NA"	"2008"	"2008"	90321	3362.93	27.86
+	"Washington"	"53"	"Not Available"	"NA"	"2009"	"2009"	89313	3360.06	28.02
+	"Washington"	"53"	"Not Available"	"NA"	"2010"	"2010"	86539	3360.81	28.28
+	"Washington"	"53"	"Not Available"	"NA"	"2011"	"2011"	86976	3367.29	28.38
+	"Washington"	"53"	"Not Available"	"NA"	"2012"	"2012"	87463	3363.93	28.56
+	"Washington"	"53"	"Not Available"	"NA"	"2013"	"2013"	86577	3357.44	28.76
+	"Washington"	"53"	"Not Available"	"NA"	"2014"	"2014"	88585	3360.78	28.92
+	"Washington"	"53"	"Not Available"	"NA"	"2015"	"2015"	88990	3353.27	29.15
+"Total"	"Washington"	"53"	"Not Available"	"NA"			793742	3361.19	28.42
+"Total"	"Washington"	"53"					1057894	3357.19	28.69
+	"West Virginia"	"54"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	22	3613.59	29.14
+	"West Virginia"	"54"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	20	3101.40	26.85
+	"West Virginia"	"54"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	19	3231.79	28.68
+"Total"	"West Virginia"	"54"	"American Indian or Alaska Native"	"1002-5"			61	3326.74	28.25
+	"West Virginia"	"54"	"Asian"	"A"	"2016"	"2016"	190	3261.97	31.57
+	"West Virginia"	"54"	"Asian"	"A"	"2017"	"2017"	216	3157.66	30.94
+	"West Virginia"	"54"	"Asian"	"A"	"2018"	"2018"	179	3230.60	31.41
+"Total"	"West Virginia"	"54"	"Asian"	"A"			585	3213.86	31.29
+	"West Virginia"	"54"	"Black or African American"	"2054-5"	"2016"	"2016"	628	3084.68	27.13
+	"West Virginia"	"54"	"Black or African American"	"2054-5"	"2017"	"2017"	661	3043.68	27.07
+	"West Virginia"	"54"	"Black or African American"	"2054-5"	"2018"	"2018"	664	3067.42	27.62
+"Total"	"West Virginia"	"54"	"Black or African American"	"2054-5"			1953	3064.91	27.28
+	"West Virginia"	"54"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	14	3160.57	30.50
+"Total"	"West Virginia"	"54"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			28	3188.11	29.54
+	"West Virginia"	"54"	"White"	"2106-3"	"2016"	"2016"	17906	3244.48	26.87
+	"West Virginia"	"54"	"White"	"2106-3"	"2017"	"2017"	17378	3247.97	27.00
+	"West Virginia"	"54"	"White"	"2106-3"	"2018"	"2018"	17024	3249.84	27.11
+"Total"	"West Virginia"	"54"	"White"	"2106-3"			52308	3247.38	26.99
+	"West Virginia"	"54"	"More than one race"	"M"	"2016"	"2016"	326	3195.95	25.22
+	"West Virginia"	"54"	"More than one race"	"M"	"2017"	"2017"	386	3166.59	25.89
+	"West Virginia"	"54"	"More than one race"	"M"	"2018"	"2018"	355	3153.29	25.15
+"Total"	"West Virginia"	"54"	"More than one race"	"M"			1067	3171.11	25.44
+	"West Virginia"	"54"	"Not Available"	"NA"	"2007"	"2007"	21994	3217.43	26.10
+	"West Virginia"	"54"	"Not Available"	"NA"	"2008"	"2008"	21501	3217.08	26.02
+	"West Virginia"	"54"	"Not Available"	"NA"	"2009"	"2009"	21268	3228.51	25.96
+	"West Virginia"	"54"	"Not Available"	"NA"	"2010"	"2010"	20470	3236.55	26.13
+	"West Virginia"	"54"	"Not Available"	"NA"	"2011"	"2011"	20717	3228.90	26.19
+	"West Virginia"	"54"	"Not Available"	"NA"	"2012"	"2012"	20827	3239.63	26.24
+	"West Virginia"	"54"	"Not Available"	"NA"	"2013"	"2013"	20825	3242.21	26.33
+	"West Virginia"	"54"	"Not Available"	"NA"	"2014"	"2014"	20301	3250.18	26.55
+	"West Virginia"	"54"	"Not Available"	"NA"	"2015"	"2015"	19805	3245.58	26.75
+"Total"	"West Virginia"	"54"	"Not Available"	"NA"			187708	3233.72	26.25
+"Total"	"West Virginia"	"54"					243710	3235.00	26.43
+	"Wisconsin"	"55"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	821	3376.93	26.75
+	"Wisconsin"	"55"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	845	3348.94	26.93
+	"Wisconsin"	"55"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	823	3383.67	27.00
+"Total"	"Wisconsin"	"55"	"American Indian or Alaska Native"	"1002-5"			2489	3369.66	26.89
+	"Wisconsin"	"55"	"Asian"	"A"	"2016"	"2016"	3324	3179.83	29.23
+	"Wisconsin"	"55"	"Asian"	"A"	"2017"	"2017"	3114	3179.50	29.53
+	"Wisconsin"	"55"	"Asian"	"A"	"2018"	"2018"	3218	3179.15	29.83
+"Total"	"Wisconsin"	"55"	"Asian"	"A"			9656	3179.50	29.53
+	"Wisconsin"	"55"	"Black or African American"	"2054-5"	"2016"	"2016"	6848	3041.42	26.22
+	"Wisconsin"	"55"	"Black or African American"	"2054-5"	"2017"	"2017"	7148	3034.68	26.37
+	"Wisconsin"	"55"	"Black or African American"	"2054-5"	"2018"	"2018"	6867	3007.66	26.69
+"Total"	"Wisconsin"	"55"	"Black or African American"	"2054-5"			20863	3027.99	26.43
+	"Wisconsin"	"55"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2016"	"2016"	30	3318.40	29.27
+	"Wisconsin"	"55"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2017"	"2017"	35	3220.76	28.37
+	"Wisconsin"	"55"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	35	3173.86	29.40
+"Total"	"Wisconsin"	"55"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			100	3233.77	29.00
+	"Wisconsin"	"55"	"White"	"2106-3"	"2016"	"2016"	54116	3370.73	29.27
+	"Wisconsin"	"55"	"White"	"2106-3"	"2017"	"2017"	52316	3364.45	29.37
+	"Wisconsin"	"55"	"White"	"2106-3"	"2018"	"2018"	51636	3364.13	29.53
+"Total"	"Wisconsin"	"55"	"White"	"2106-3"			158068	3366.50	29.39
+	"Wisconsin"	"55"	"More than one race"	"M"	"2016"	"2016"	1476	3257.17	26.35
+	"Wisconsin"	"55"	"More than one race"	"M"	"2017"	"2017"	1517	3226.87	26.52
+	"Wisconsin"	"55"	"More than one race"	"M"	"2018"	"2018"	1519	3231.78	26.66
+"Total"	"Wisconsin"	"55"	"More than one race"	"M"			4512	3238.43	26.51
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2007"	"2007"	72784	3335.75	27.59
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2008"	"2008"	72261	3330.97	27.61
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2009"	"2009"	70843	3329.05	27.70
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2010"	"2010"	68487	3325.05	27.87
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2011"	"2011"	67810	3324.60	28.01
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2012"	"2012"	67295	3322.96	28.15
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2013"	"2013"	66649	3326.71	28.34
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2014"	"2014"	67161	3326.83	28.47
+	"Wisconsin"	"55"	"Not Available"	"NA"	"2015"	"2015"	67041	3323.72	28.66
+"Total"	"Wisconsin"	"55"	"Not Available"	"NA"			620331	3327.40	28.03
+"Total"	"Wisconsin"	"55"					816019	3325.20	28.26
+	"Wyoming"	"56"	"American Indian or Alaska Native"	"1002-5"	"2016"	"2016"	245	3183.25	25.88
+	"Wyoming"	"56"	"American Indian or Alaska Native"	"1002-5"	"2017"	"2017"	249	3242.20	25.73
+	"Wyoming"	"56"	"American Indian or Alaska Native"	"1002-5"	"2018"	"2018"	247	3283.99	26.94
+"Total"	"Wyoming"	"56"	"American Indian or Alaska Native"	"1002-5"			741	3236.58	26.18
+	"Wyoming"	"56"	"Asian"	"A"	"2016"	"2016"	112	3097.22	30.41
+	"Wyoming"	"56"	"Asian"	"A"	"2017"	"2017"	97	3065.47	30.26
+	"Wyoming"	"56"	"Asian"	"A"	"2018"	"2018"	82	3098.17	31.02
+"Total"	"Wyoming"	"56"	"Asian"	"A"			291	3086.91	30.53
+	"Wyoming"	"56"	"Black or African American"	"2054-5"	"2016"	"2016"	93	2991.97	26.90
+	"Wyoming"	"56"	"Black or African American"	"2054-5"	"2017"	"2017"	71	2964.39	26.68
+	"Wyoming"	"56"	"Black or African American"	"2054-5"	"2018"	"2018"	75	2993.91	27.53
+"Total"	"Wyoming"	"56"	"Black or African American"	"2054-5"			239	2984.38	27.03
+	"Wyoming"	"56"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"	"2018"	"2018"	16	2955.31	27.06
+"Total"	"Wyoming"	"56"	"Native Hawaiian or Other Pacific Islander"	"NHOPI"			32	3135.69	28.09
+	"Wyoming"	"56"	"White"	"2106-3"	"2016"	"2016"	6769	3211.13	27.82
+	"Wyoming"	"56"	"White"	"2106-3"	"2017"	"2017"	6306	3197.34	28.00
+	"Wyoming"	"56"	"White"	"2106-3"	"2018"	"2018"	5973	3172.88	28.12
+"Total"	"Wyoming"	"56"	"White"	"2106-3"			19048	3194.57	27.98
+	"Wyoming"	"56"	"More than one race"	"M"	"2016"	"2016"	160	3147.86	26.14
+	"Wyoming"	"56"	"More than one race"	"M"	"2017"	"2017"	171	3146.62	25.00
+	"Wyoming"	"56"	"More than one race"	"M"	"2018"	"2018"	169	3158.63	26.53
+"Total"	"Wyoming"	"56"	"More than one race"	"M"			500	3151.08	25.88
+	"Wyoming"	"56"	"Not Available"	"NA"	"2007"	"2007"	7893	3184.78	26.04
+	"Wyoming"	"56"	"Not Available"	"NA"	"2008"	"2008"	8038	3194.57	26.19
+	"Wyoming"	"56"	"Not Available"	"NA"	"2009"	"2009"	7881	3200.11	26.42
+	"Wyoming"	"56"	"Not Available"	"NA"	"2010"	"2010"	7556	3185.47	26.58
+	"Wyoming"	"56"	"Not Available"	"NA"	"2011"	"2011"	7399	3199.06	26.75
+	"Wyoming"	"56"	"Not Available"	"NA"	"2012"	"2012"	7572	3208.11	26.97
+	"Wyoming"	"56"	"Not Available"	"NA"	"2013"	"2013"	7644	3197.37	27.09
+	"Wyoming"	"56"	"Not Available"	"NA"	"2014"	"2014"	7696	3193.01	27.19
+	"Wyoming"	"56"	"Not Available"	"NA"	"2015"	"2015"	7765	3202.06	27.47
+"Total"	"Wyoming"	"56"	"Not Available"	"NA"			69444	3196.02	26.74
+"Total"	"Wyoming"	"56"					90295	3194.87	27.00
+"Total"							48092250	3265.85	28.10
+"---"
+"Dataset: Natality, 2007-2018"
+"Query Parameters:"
+"Group By: State; Mother's Single Race; Year"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 1,000"
+"Population Option: No populations shown because rates were not selected."
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/Natality.html for more information."
+"---"
+"Query Date: Oct 5, 2019 11:09:36 PM"
+"---"
+"Suggested Citation: United States Department of Health and Human Services (US DHHS), Centers for Disease Control and Prevention"
+"(CDC), National Center for Health Statistics (NCHS), Division of Vital Statistics, Natality public-use data 2007-2018, on CDC"
+"WONDER Online Database, September 2019. Accessed at http://wonder.cdc.gov/natality-current.html on Oct 5, 2019 11:09:36 PM"
+"---"
+Messages:
+"1. Rows with zero Births are hidden. Use Quick Options above to show zero rows."
+"2. Rows with suppressed Births are hidden, but the Births values in those rows are included in the totals. Use Quick Options"
+"above to show suppressed rows."
+"---"
+Caveats:
+"1. 'Missing Race' appears when Single Race categories are not available for births before year 2016. Maternal race data for"
+"years before 2016 are recoded to the Single Race category ""Not Available"". More information:"
+"http://wonder.cdc.gov/wonder/help/Natality.html#About-Single-Race."
+"2. 'Suppressed' appears when the data do not meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/Natality.html#Assurance of Confidentiality."
+"3. Each birth record represents one living baby."
+"4. Caution should be used when interpreting the Average Age of Mother measure. All ages 12 years and less are coded to 12 years."
+"All ages 50 years and over are coded to 50 years. The number of counts in those two age goups are small and should not have a"
+"great effect on the average age. Consider doing queries with and without these two age groups and compare the effect on Average"
+"Age of Mother measure."
+"5. Single Race categories are not available for births before year 2016. Maternal single race data for years before 2016 are"
+"recoded to the Single Race category ""Not Available"". More information:"
+"http://wonder.cdc.gov/wonder/help/Natality.html#About-Single-Race."
+"6. Records where the ""Birth Weight"" is ""Unknown or Not Stated"" are not included in the calculation of the ""Average Birth"
+"Weight"" measure."

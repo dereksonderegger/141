@@ -262,3 +262,19 @@ write_csv(Vehicle_Deaths, 'data-raw/Vehicle_Deaths_2017.csv')
 
 
   
+
+###########################################
+##  Deal with the Pregnancy stuff
+###########################################
+MaternityDeaths <- 
+  read_tsv('data-raw/PregnancyDeaths_By_Race_by_Time.txt') %>%
+  select(-Notes, -`Race Code`, -`Year Code`) %>%
+  drop_na() %>%
+  mutate(Rate = Deaths / Population * 100000) 
+write_csv(MaternityDeaths, 'data-raw/PregnancyDeaths_By_Race_by_Time.csv')
+
+# US_Births <- read.csv('~/Downloads/Nat2018PublicUS.c20190509.r20190717.txt')
+# Small_US_Births <- US_Births %>% sample_n(20000)
+# write_csv(Small_US_Births, 'data-raw/Sampled_US_Births_2019.csv')
+Small_US_Births <- read_csv('data-raw/Sampled_US_Births_2019.csv')
+foo <- Small_US_Births[1,1]

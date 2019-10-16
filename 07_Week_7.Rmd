@@ -44,7 +44,7 @@ MM <- read_csv('data-raw/Maternal_Death/PregnancyDeaths_By_Race_by_Time.csv') %>
 MM %>% head()
 ```
   
-  - How do we get number of births? Again we get information from the CDC. Unfortunately, I wasn't able to get race 
+How do we get number of births? Again we get information from the CDC *Wonder* data base access. 
 ```{r}
 Births <- read_csv('data-raw/Maternal_Death/Natality_by_Race_2007-2018.csv') %>%
   mutate(Race = fct_recode(`Mother's Bridged Race`, 

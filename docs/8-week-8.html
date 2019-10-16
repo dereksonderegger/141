@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 8 Week 8 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 8 Week 8 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 8 Week 8 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Week 2 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 8 Week 8 | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="1-week-1.html">
-<link rel="next" href="3-week-3.html">
+<link rel="prev" href="7-week-7.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -232,108 +232,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-2" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Week 2</h1>
-<div id="assignments" class="section level3 unnumbered">
-<h3>Assignments</h3>
+<div id="week-8" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Week 8</h1>
+<div id="project-goal" class="section level2">
+<h2><span class="header-section-number">8.1</span> Project Goal</h2>
+<p>This class project is intended to have students experience the process of:</p>
 <ol style="list-style-type: decimal">
-<li><p>Read Chapter 6 and 7 from Claus Wilke’s Fundamentals of Data Visualiztion <a href="https://serialmentor.com/dataviz/">book</a>.</p></li>
-<li><p>Watch Hans Roslings <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">TED talk</a>. Comment on two aspects of the videa that stand out to you regarding how he presented his data and how he talked through the visualization with the audience.</p></li>
-<li><p>Graph the NOAA CO<span class="math inline">\(_2\)</span> data over time. The Nationa Oceanic and Atmospheric Adminstration has monthly CO<span class="math inline">\(_2\)</span> atmospheric levels data available to the public at NOAA’s <a href="ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_mm_mlo.txt">website</a>. However, this is a little obnoxious to get into Tableau, so I’ve done some data wrangling for you <a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/CO2.csv">already</a>. The <code>Date2</code> column has the date information encoded using a continuous decimal scale. CO<span class="math inline">\(_2\)</span> is measured in parts per million.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Plot CO<span class="math inline">\(_2\)</span> over time while showing the monthly trend. Should we use area or lines? Why?</li>
-<li>Create a graph that shows a single mark per year (so average over all observations in a year). Do you like this better? Explain your reasoning.</li>
-<li>Create a follow-up graphic that shows the monthly trend. Explain what you want to demonstrate and why you chose to display the information as you did.</li>
-</ol></li>
+<li>Asking questions that interest them.</li>
+<li>Search for available data sets that are pertinent to the question.</li>
+<li>Wrangle the data into a usable format.</li>
+<li>Create graphic(s) that address the question of interest.</li>
+<li>Using those graphics, ask follow-up questions and what data you would need to next get.</li>
 </ol>
 </div>
-<div id="amounts" class="section level2">
-<h2><span class="header-section-number">2.1</span> Amounts</h2>
-<p>The 2020 presidential candidate field has a wide range of ages.
-The
-<a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
-has a nice article showing the candidate ages. I grabbed a few of the most prominent candidates and pulled their birthdays from Wikipedia and then calculated their age on election day.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>The order of the candidates is useless. Here we have ordered them alphabetically when we should try to think about an ordering that improves clarity. Lets switch to sorting the candidates by age.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>This isn’t too bad, but it fails to visually impress the differences. A bar chart should visually impress the ages based on the length of the bar so that we con’t have to keep looking at the Age axis.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>What would be <em>dishonest</em> is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>Often we need to graph some value and want to know how it varies among <em>two</em> different categories. In these cases, we have to employ some sort of grouping strategy.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries.</p>
-<p>We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<div id="overview-of-story" class="section level2">
+<h2><span class="header-section-number">8.2</span> Overview of Story</h2>
+<div id="introduction-1" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Introduction</h3>
+<p>Because student projects will cover a wide variety of topics, we can’t assume that the audience knows the necessary background information. Therefore, the introduction will introduce the audience to the topic and relevant concepts and terminology.</p>
 </div>
-<div id="distributions" class="section level2">
-<h2><span class="header-section-number">2.2</span> Distributions</h2>
-<p>Given a single variable, I often want to know what values are common and what values are rare. To visualize this, we will primarily compare marks along a common axis (the most accurate EPT!)</p>
-<div id="small-samples" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Small samples</h3>
-<p>If we only have a few observations, then we can just graph them along an axis.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>Another trick that works with more data, is to not use dots but rather lines. This is called a rugplot. This is often used in conjunction with another graph such as a scatterplot.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<div id="methods" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Methods</h3>
+<p>The purpose of this section is to give other researchers information about where the data was acquired, what transformations or modifications you made. Essentially this where we put the annoying details about how we did what we did. In the written presentation, you can be verbose enough that somebody could re-create the analysis you did. In the presentation, the amount of detail can be toned down.</p>
 </div>
-<div id="histograms" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Histograms</h3>
-<p>When we have a moderate size of data, graphing dots exactly on an axis doesn’t work and results in overplotting and it is difficult to see where the data cluster. Instead we’ll stack the dots in columns along the axis and call this a dotplot.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>Each dot represents an observation, but the x-values have been rounded into group values. So we have lost some precision. Another common version of this is a histogram, where the y-axis represents how many observations fall into each bin.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<p>The choice of how many bins to include can make a dramatic difference in a graph. In particular, I don’t believe that there is any biological reason to think the dip near 2700 grams is real. I believe that is is actually just an artifact of the data I have. Instead we should consider changing the number of bins.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div id="results" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> Results</h3>
+<p>In the results section, you present the graphs and analyses that have been created and major take-away points are clearly emphasized. In this section, only results that our data support should be brought up.</p>
 </div>
-<div id="density-plots" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Density plots</h3>
-<p>Histograms suffer from being to angular or pointy. Another solution is call a kernel density smoother that mathematically smooths over the heights of the histogram bars.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div id="discussion" class="section level3">
+<h3><span class="header-section-number">8.2.4</span> Discussion</h3>
+<p>In the discussion section, open-ended questions that the current data does not address can be brought up and the author/presenter should feel free to offer speculation.</p>
 </div>
-<div id="faceting" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Faceting</h3>
-<p>One of my favorite ways to display multiple distributions is to group each distribution into it’s own plot in a process often referred to as faceting.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
-<p>By choosing to put the two graphs on top of the other, it becomes clear that the smoker’s tend to give birth to smaller infants. This fact isn’t clear in the side-by-side graphs.</p>
-</div>
-<div id="stacking" class="section level3">
-<h3><span class="header-section-number">2.2.5</span> Stacking</h3>
-<p>Stacking the distribution involes laying each distribution on top of each other, so that the zero of the top curve follows the curve on the bottom. You can visualize the B chart having the Non-smoker density graph just melt onto the smoker density.</p>
-<p><img src="02_Week_2_files/figure-html/unnamed-chunk-17-1.png" width="672" />
-I really don’t like this graph because it is very hard to see where the peak of the non-smoker curve is. This stacking trick works well enough when we have proportions but isn’t good here.</p>
-</div>
-<div id="overlapping-curves" class="section level3">
-<h3><span class="header-section-number">2.2.6</span> Overlapping curves</h3>
-<p>Another option is to graph the densities, but allow them to overlap each other and be a bit see-thru.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<p>For seeing shifts in the center of the distribution, overlapping curves is quite powerful.</p>
-<p>For another nice example, we can look at the density of the daily maximum temperature in Lincoln Nebraska in 2016.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
-</div>
-<div id="boxplots" class="section level3">
-<h3><span class="header-section-number">2.2.7</span> Boxplots</h3>
-<p>Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-20-1.png" width="672" />
-Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. However that detail is lost in the boxplots.</p>
-</div>
-<div id="violin-plots" class="section level3">
-<h3><span class="header-section-number">2.2.8</span> Violin Plots</h3>
-<p>Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
-<img src="02_Week_2_files/figure-html/unnamed-chunk-21-1.png" width="672" />
-Now we can see the two peaks in December, but the three peaks in November have been flattened out because the amount of space necessary to show it would require that the densities overlap.</p>
+<div id="references" class="section level3">
+<h3><span class="header-section-number">8.2.5</span> References</h3>
+<p>This section documents any articles and/or database locations and access dates.</p>
 </div>
 </div>
-<div id="proportions" class="section level2">
-<h2><span class="header-section-number">2.3</span> Proportions</h2>
-<p>A good pie chart from <a href="https://www.reddit.com/r/dataisbeautiful/comments/cz58sb/blood_type_distribution_in_the_united_states_oc/">reddit/r/dataisbeautiful</a> member <code>u/foiltape</code>.</p>
-<div class="figure">
-<img src="Resources/Graphs/Pie_Charts/BloodTypes.png" alt="A Good Pie Chart" />
-<p class="caption">A Good Pie Chart</p>
-</div>
+<div id="expectations" class="section level2">
+<h2><span class="header-section-number">8.3</span> Expectations</h2>
+<p>For this project, I expect that the presentation will be about 10 minutes and that the Introduction takes about 2 minutes, perhaps another 2 minutes for the methods, 5 minutes for the results, and a minute or 2 for the discussion and references.</p>
+<p>For the paper aspect of the project, I expect projects to be a bit over 1000 words plus 3-5 appropriate graphs.</p>
 
 </div>
 </div>
@@ -342,8 +280,8 @@ Now we can see the two peaks in December, but the three peaks in November have b
           </div>
         </div>
       </div>
-<a href="1-week-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="3-week-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="7-week-7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -374,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/02_Week_2.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/08_Week_8.Rmd",
 "text": "Edit"
 },
 "history": {

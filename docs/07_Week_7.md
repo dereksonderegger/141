@@ -39,7 +39,7 @@ Maternal Deaths: The CDC's [Wonder](https://wonder.cdc.gov) on-line access allow
 ## 6 Native  2011      1    1748621 Unreliable   Hispanic
 ```
   
-  - How do we get number of births? Again we get information from the CDC. Unfortunately, I wasn't able to get race 
+How do we get number of births? Again we get information from the CDC *Wonder* data base access. 
 
 ```
 ## # A tibble: 6 x 6

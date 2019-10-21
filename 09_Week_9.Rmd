@@ -1,0 +1,83 @@
+# Week 9
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+```{r, echo=FALSE}
+library(tidyverse)
+library(lubridate)
+library(censusapi)
+
+# I got a Census API key from https://api.census.gov/data/key_signup.html 
+Census_Key = '2b7acec9009601032e6605909c4901d632f541d6'
+
+```
+
+## Dashboards
+
+The goal with dashboards is to create a sequence of visualizations that work together to tell a story. 
+
+Example: Over the last few years, news articles have been talking about the change in demographics in regards the proportion on Hispanic citizens. Given that demographics are highly related to voting preferences, understanding these demographic shifts seems interesting.
+
+Before we consider the voting issue, we'll first try to address the changing demographics. As we consider how to build an interactive graphic, we should keep in mind the following:
+
+1. Demographic changes are highly spatially variable. We have to have maps on a county-level scale in the graphics.
+2. Time Matters. Somehow we need to be able to step through time and see what happens.
+3. Because we are dealing with Hispanic/non-Hispanic, we have some flexibility in color choices. We could fill the county or state color based on the proportion of the region that is Hispanic.
+4. It would be cool have a map where you could select a state or county and then see how the proportion changes over time.
+5. I still have a question about if we need to visualize the proportion or the raw numbers of people. Eventually I want to think about voting and relative population sizes matter, so maybe we want to be able to switch between proportions and counts.
+6. I'm not sure about the scale of the data we need. Are counties small enough or do we need to go onto finer scale information? I worry that going too small might be tough to visualize.
+
+
+```{r, echo=FALSE, eval=FALSE}
+CensusFactorLevels <- function(name, vintage, variable){
+  file <- str_c('https://api.census.gov/data/',vintage,'/',name,
+                '/variables/',variable,'.json')
+  Meta <- jsonlite::read_json(file) %>% 
+    .[['values']] %>% .[['item']] %>% 
+    unlist() %>% tibble::enframe() 
+  colnames(Meta) <- c(variable, str_c(variable,'_DESC'))
+  return(Meta)
+}
+
+
+data <- 
+  getCensus(name = "pep/charagegroups",
+  vars = c('GEONAME','DATE_CODE','HISP','DATE_DESC','POP'),
+  vintage = '2018',
+  region = 'county:*', # States are in alphabetical order...
+  #region = 'county:*&in=state:04', # Having trouble with this
+	key = Census_Key)
+
+County_Populations_by_Hisp <- 
+  data %>%
+  mutate( Date = str_extract(DATE_DESC, '\\d+/\\d+/\\d+')) %>%
+  mutate( Date = mdy(Date) ) %>%
+#  head(5) %>%
+  cbind( ., str_split_fixed(.$GEONAME, ',', n=2) ) %>%
+  rename(COUNTY=`1`, STATE=`2`) 
+
+HispDictionary <- CensusFactorLevels('pep/charagegroups', 2018, 'HISP')
+RaceDictionary <- CensusFactorLevels('pep/charagegroups', 2018, 'RACE')
+SexDictionary <- CensusFactorLevels('pep/charagegroups', 2018, 'SEX')
+
+County_Populations_by_Race <- County_Populations_by_Race %>%
+  left_join(RaceDictionary) %>%
+  left_join(SexDictionary)
+
+County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
+  left_join(HispDictionary) 
+
+County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
+  select(-state, -county, -DATE_CODE, -HISP, -DATE_DESC) %>%
+  rename(Hisp = HISP_DESC)
+
+AZ_County_Populations_by_Hisp <- 
+  County_Populations_by_Hisp %>%
+  mutate( STATE = str_trim(STATE)) %>%
+  filter(STATE == 'Arizona')
+
+write_csv( AZ_County_Populations_by_Hisp, 'data-raw/AZ_County_Populations_by_Hisp.csv' )
+```
+
+

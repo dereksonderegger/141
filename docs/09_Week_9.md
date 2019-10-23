@@ -1,17 +1,7 @@
 # Week 9
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
-```
-```{r, echo=FALSE}
-library(tidyverse)
-library(lubridate)
-library(censusapi)
 
-# I got a Census API key from https://api.census.gov/data/key_signup.html 
-Census_Key = '2b7acec9009601032e6605909c4901d632f541d6'
 
-```
 
 ## Dashboards
 
@@ -38,66 +28,7 @@ Before we consider the voting issue, we'll first try to address the changing dem
 6. I'm not sure about the scale of the data we need. Are counties small enough or do we need to go onto finer scale information? I worry that going too small might be tough to visualize.
 
 
-```{r, echo=FALSE, eval=FALSE}
-CensusFactorLevels <- function(name, vintage, variable){
-  file <- str_c('https://api.census.gov/data/',vintage,'/',name,
-                '/variables/',variable,'.json')
-  Meta <- jsonlite::read_json(file) %>% 
-    .[['values']] %>% .[['item']] %>% 
-    unlist() %>% tibble::enframe() 
-  colnames(Meta) <- c(variable, str_c(variable,'_DESC'))
-  return(Meta)
-}
 
-# Download the data
-HispDictionary <- CensusFactorLevels('pep/charagegroups', 2018, 'HISP')
-data <- getCensus(name = "pep/charagegroups",
-  vars = c('GEONAME','DATE_CODE','HISP','DATE_DESC','POP'),
-  vintage = '2018',
-  region = 'county:*', # States are in alphabetical order...
-  regionin = 'state:04', # Having trouble with this
-	key = Census_Key) %>%
-  as_tibble()
-
-# Pull the Date out of the DATE_DESC 
-County_Populations_by_Hisp <- data %>%
-  mutate( Date = str_extract(DATE_DESC, '\\d+/\\d+/\\d+')) %>%
-  mutate( Date = mdy(Date) ) # %>%
-  # cbind( ., str_split_fixed(.$GEONAME, ',', n=2) ) %>%
-  # rename(COUNTY=`1`, STATE=`2`) 
-
-# Get the Hispanic Codes
-County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
-  left_join(HispDictionary) %>%
-  rename(Hisp = HISP_DESC) 
-
-# Remove useless columns and the Both Hispanic Group.
-County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
-  select(-state, -county, -DATE_CODE, -HISP) %>%
-  filter( str_trim(Hisp) != 'Both Hispanic origins' )
-
-# Calculate proportions
-County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
-  mutate( POP = as.numeric(POP) ) %>%
-  group_by(GEONAME, DATE_DESC) %>%
-  mutate( prop = POP / sum(POP) )
-
-# Remove the Duplicate Census values that are nearly identical
-County_Populations_by_Hisp <- County_Populations_by_Hisp %>%
-  filter( !str_detect( DATE_DESC, 'Census' ) )
-
-# Pull the County State information out
-County_Populations_by_Hisp <- County_Populations_by_Hisp %>% 
-  tidyr::separate(col=GEONAME, c('COUNTY','STATE'), sep=',\\s') %>%
-  mutate(COUNTY = str_remove(COUNTY, 'County'))
-
-write_csv( County_Populations_by_Hisp, 'data-raw/AZ_County_Populations_by_Hisp.csv' )
-
-
-# ggplot( County_Populations_by_Hisp, aes(x=Date,  y=prop, color=Hisp)) +
-#   geom_line() +
-#   facet_wrap( ~ GEONAME )
-```
 
 
 ## Data Gathering

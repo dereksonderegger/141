@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 9 Week 9 | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 9 Week 9 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 9 Week 9 | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Week 7 | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 9 Week 9 | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="6-week-6.html"/>
-<link rel="next" href="8-week-8.html"/>
+<link rel="prev" href="8-week-8.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -244,59 +244,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-7" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Week 7</h1>
-<div id="maternity-deaths-1" class="section level2">
-<h2><span class="header-section-number">7.1</span> Maternity Deaths</h2>
-<p>Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.</p>
-<p>Step One: Variable of interest
-Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
-<p>Step Two: Context
-Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
-<p>Step Three: Conditional Statistics
-- How does this vary between countries?
-- How does this vary between states?
-- How does this vary between socio-economic or ethic groups?</p>
-<div id="step-four-finding-data" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Step Four: Finding Data</h3>
-<ul>
-<li>Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.</li>
-<li>I found data from the Centers for Disease Control.</li>
-</ul>
-<p>Maternal Deaths: The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.
-- Tried to get Maternal Deaths by State by Year. However, the CDC won’t release that. The reason is that from an ethical standpoint, government cannot risk exposing information for any individual. So all government agencies will only release data that has been aggregated to a point where they are certain that individuals cannot be identified.
-- Year by race? That was successful.</p>
-<pre><code>## # A tibble: 6 x 6
-##   Race    Year Deaths Population `Crude Rate` Hispanic
-##   &lt;fct&gt;  &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;fct&gt;   
-## 1 Native  1999      1     564085 Unreliable   Hispanic
-## 2 Native  2001      1     736712 Unreliable   Hispanic
-## 3 Native  2005      1    1101386 Unreliable   Hispanic
-## 4 Native  2007      1    1327365 Unreliable   Hispanic
-## 5 Native  2010      1    1693971 Unreliable   Hispanic
-## 6 Native  2011      1    1748621 Unreliable   Hispanic</code></pre>
-<p>How do we get number of births? Again we get information from the CDC <em>Wonder</em> data base access.</p>
-<pre><code>## # A tibble: 6 x 6
-##    Year Births `Average Birth Weig… `Average Age of Moth… Race   Hispanic  
-##   &lt;dbl&gt;  &lt;dbl&gt;                &lt;dbl&gt;                 &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;     
-## 1  2007   5819                3282.                  25.0 Native Hispanic  
-## 2  2007  42890                3320.                  25.1 Native Not Hispa…
-## 3  2007    734                3294.                  25.4 Native Unknown   
-## 4  2007   9188                3241.                  26.5 Asian  Hispanic  
-## 5  2007 242046                3187.                  30.3 Asian  Not Hispa…
-## 6  2007   3254                3198.                  30.1 Asian  Unknown</code></pre>
+<div id="week-9" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Week 9</h1>
+<div id="dashboards" class="section level2">
+<h2><span class="header-section-number">9.1</span> Dashboards</h2>
+<p>The goal with dashboards is to create a sequence of visualizations that work together to tell a story.</p>
+<p>Tableau Examples:
+<a href="https://public.tableau.com/en-us/gallery/history-world?tab=featured&amp;topic=greatest-hits">History of World Civilizations</a>
+<a href="https://public.tableau.com/en-us/gallery/tale-rainforest?tab=featured&amp;topic=greatest-hits">Rainforest Biodiversity</a>
+<a href="https://public.tableau.com/en-us/gallery/texan-oil-rigs?tab=featured&amp;topic=greatest-hits">Oil Rigs in Texas 2011-2016</a>
+<a href="https://public.tableau.com/en-us/gallery/women-politics-0?tab=featured&amp;topic=greatest-hits">Women In Politics Around the World</a>
+<a href="https://public.tableau.com/en-us/gallery/new-york-taxis?tab=featured&amp;topic=greatest-hits">Taxi Rides in NYC</a></p>
+<p>Our Example:
+Example: Over the last few years, news articles have been talking about the change in demographics in regards the proportion on Hispanic citizens. Given that demographics are highly related to voting preferences, understanding these demographic shifts seems interesting.</p>
+<p>Before we consider the voting issue, we’ll first try to address the changing demographics. As we consider how to build an interactive graphic, we should keep in mind the following:</p>
+<ol style="list-style-type: decimal">
+<li>Demographic changes are highly spatially variable. We have to have maps on a county-level scale in the graphics.</li>
+<li>Time Matters. Somehow we need to be able to step through time and see what happens.</li>
+<li>Because we are dealing with Hispanic/non-Hispanic, we have some flexibility in color choices. We could fill the county or state color based on the proportion of the region that is Hispanic.</li>
+<li>It would be cool have a map where you could select a state or county and then see how the proportion changes over time.</li>
+<li>I still have a question about if we need to visualize the proportion or the raw numbers of people. Eventually I want to think about voting and relative population sizes matter, so maybe we want to be able to switch between proportions and counts.</li>
+<li>I’m not sure about the scale of the data we need. Are counties small enough or do we need to go onto finer scale information? I worry that going too small might be tough to visualize.</li>
+</ol>
 </div>
-<div id="univariate-exploratory-graphing" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> Univariate Exploratory Graphing</h3>
-<p>I can’t help but look at how the birth numbers in the US have changed over time.
-<img src="07_Week_7_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
-<p>Finally we can calculate Deaths per 100,000 births.</p>
-<p><img src="07_Week_7_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p><img src="07_Week_7_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>Finally we’ll look at US vs rest of the world.</p>
-<p><img src="07_Week_7_files/figure-html/unnamed-chunk-8-1.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-8-2.png" width="672" /><img src="07_Week_7_files/figure-html/unnamed-chunk-8-3.png" width="672" /></p>
+<div id="data-gathering" class="section level2">
+<h2><span class="header-section-number">9.2</span> Data Gathering</h2>
+<p>The following web links will cause a query on the Census web site, and then result in some data. Go ahead and click on these!</p>
+<p><a href="http://api.census.gov/data/2018/pep/population?get=DATE_CODE,DATE_DESC,DENSITY,POP,GEONAME,STATE&amp;for=state" class="uri">http://api.census.gov/data/2018/pep/population?get=DATE_CODE,DATE_DESC,DENSITY,POP,GEONAME,STATE&amp;for=state</a>:*</p>
+<p><a href="http://api.census.gov/data/2018/pep/population?get=DATE_CODE,DATE_DESC,DENSITY,POP,GEONAME,STATE&amp;in=state:01&amp;for=county" class="uri">http://api.census.gov/data/2018/pep/population?get=DATE_CODE,DATE_DESC,DENSITY,POP,GEONAME,STATE&amp;in=state:01&amp;for=county</a>:*</p>
+<ol style="list-style-type: decimal">
+<li>The base website is <a href="http://api.census.gov/data/2018/pep/population" class="uri">http://api.census.gov/data/2018/pep/population</a>. This is effectively specifying which table we want to query from. The <code>pep</code> part stands for the <em>Population Estimation Program</em>, which is one division of the Census Bureau. The 2018 part of the base address defines the <em>vintage</em> of the estimate. This page will produce estimates for the years 2010-2018, but the Census Bureau is constantly updating those estimates based on new information. So the this is specifying that we are to use the Census’ 2018 estimate of the population.</li>
+<li>Modifiers are included after the <code>?</code> and different modifiers are separated by <code>&amp;</code></li>
+<li><code>get=</code> section defines the variables that you want</li>
+<li>The <code>for=state:*</code> denotes that we want all of the states. <code>for=state:01</code> would have been just Alabama. If we want all the county populations we can use <code>for=county:*</code>. If we just want county populations within a particular state, we would use <code>in=state:01&amp;for=county:*</code></li>
+<li>The <code>DATE_CODE=1</code> indicates that I just want the first estimate in the decadal time series of estimates. If I didn’t include this, we’d end up with estimates for each year between 2010 and 2018.</li>
+</ol>
+<p>When you go to this website, the database will read the modifier list, do the appropriate database query, and return the result via a webpage that has a very simple structure that is easy to parse into a table.</p>
+<p>The hard part about Web APIs is understanding which tables are available and what each covariate means. For the US Census Bureau, the <a href="https://www.census.gov/data/developers/">developers</a> page is a great place to start.</p>
+</div>
+<div id="data-preparation" class="section level2">
+<h2><span class="header-section-number">9.3</span> Data Preparation</h2>
+<ol style="list-style-type: decimal">
+<li>Remove all the rows for “Both Hispanic Origins”</li>
+<li>Remove the Census derived estimates because they double up the dates. Make sure there is just one set of estimates per date/county.</li>
+<li>Make sure all the County names don’t end in “County” because Tableau prefers just the base name.</li>
+<li>Within each county/date combination, calculate the Proportion Hispanic.</li>
+</ol>
+</div>
+<div id="base-graphic-components" class="section level2">
+<h2><span class="header-section-number">9.4</span> Base Graphic Components</h2>
+<ol style="list-style-type: decimal">
+<li>Load the Arizona County Hispanic Population data that we downloaded. Notice we have a column for County and another for State as well as a column for Population Number and Hispanic Origin (Yes/No).</li>
+<li>Open a new graph sheet and name the sheet <code>Population Bar</code>.
+<ol style="list-style-type: lower-alpha">
+<li>Drop Date onto the x-axis, Population onto the y-axis, and Hispanic onto the color.</li>
+<li>For the Date, change the aggregation from <code>Year</code> to <code>Exact</code>. For Population, make sure the aggregation is <code>Sum</code>.</li>
+</ol></li>
+<li>Open a new graph sheet and name the sheet <code>Map</code>.
+<ol style="list-style-type: lower-alpha">
+<li>Drag <code>County</code> onto the plot and change the mark type to <code>Map</code>.</li>
+<li>Drag <code>Proportion Hispanic</code> onto the color.</li>
+<li>Drag <code>Date</code> into the tool tips. Notice that when you hover over a county, you’ll get the 2010 estimate.</li>
+</ol></li>
+</ol>
+</div>
+<div id="dashboard" class="section level2">
+<h2><span class="header-section-number">9.5</span> Dashboard</h2>
+<ol style="list-style-type: decimal">
+<li>Open a new dashboard.</li>
+<li>Drag the map graphic to the palette area. Drag the population bar to the palette area underneath the map.</li>
+<li>To add the interactivity, we’ll force the map to do some filtering. So clicking on a county results in us making the population bar for just that particular county.
+<ol style="list-style-type: lower-alpha">
+<li>To do this, click the main menu <code>Dashboard</code> -&gt; <code>Actions</code> -&gt; <code>Add Action</code> -&gt; <code>Filter</code>.</li>
+<li>In the source pane, select only the map. In the target section, select only the Population Bar.</li>
+<li>In the Target Filters, change it to be only the <code>County</code></li>
+</ol></li>
+</ol>
+</div>
+<div id="next-step" class="section level2">
+<h2><span class="header-section-number">9.6</span> Next Step</h2>
+<ol style="list-style-type: decimal">
+<li>Election Data. <a href="https://libguides.princeton.edu/elections#s-lg-box-1612379" class="uri">https://libguides.princeton.edu/elections#s-lg-box-1612379</a></li>
+<li>Can I do this by state? Definitely. I just need to download the data by all states.</li>
+<li>Can I make the Year selector a bit nicer?</li>
+</ol>
 
-</div>
 </div>
 </div>
             </section>
@@ -304,8 +336,8 @@ Approximately 700 women per year die due to complications of pregnancy or child 
           </div>
         </div>
       </div>
-<a href="6-week-6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="8-week-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="8-week-8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -338,7 +370,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/07_Week_7.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/09_Week_9.Rmd",
 "text": "Edit"
 },
 "history": {

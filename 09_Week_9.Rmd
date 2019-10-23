@@ -118,6 +118,10 @@ When you go to this website, the database will read the modifier list, do the ap
 
 The hard part about Web APIs is understanding which tables are available and what each covariate means. For the US Census Bureau, the [developers](https://www.census.gov/developers/) page is a great place to start. For the Population Estimation Program, there is a specific developers [page](https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html)
 
+This is the call that I ended up using:
+http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,POP,GEONAME,STATE&in=state:04&for=county:*
+
+
 ## Data Preparation
 
 1. Remove all the rows for "Both Hispanic Origins"

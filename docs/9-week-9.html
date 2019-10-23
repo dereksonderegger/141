@@ -218,6 +218,8 @@ Example: Over the last few years, news articles have been talking about the chan
 </ol>
 <p>When you go to this website, the database will read the modifier list, do the appropriate database query, and return the result via a webpage that has a very simple structure that is easy to parse into a table.</p>
 <p>The hard part about Web APIs is understanding which tables are available and what each covariate means. For the US Census Bureau, the <a href="https://www.census.gov/developers/">developers</a> page is a great place to start. For the Population Estimation Program, there is a specific developers <a href="https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html">page</a></p>
+<p>This is the call that I ended up using:
+<a href="http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,POP,GEONAME,STATE&amp;in=state:04&amp;for=county" class="uri">http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,POP,GEONAME,STATE&amp;in=state:04&amp;for=county</a>:*</p>
 </div>
 <div id="data-preparation" class="section level2">
 <h2><span class="header-section-number">9.3</span> Data Preparation</h2>

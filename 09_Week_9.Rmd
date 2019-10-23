@@ -116,7 +116,7 @@ http://api.census.gov/data/2018/pep/population?get=DATE_CODE,DATE_DESC,DENSITY,P
 
 When you go to this website, the database will read the modifier list, do the appropriate database query, and return the result via a webpage that has a very simple structure that is easy to parse into a table.
 
-The hard part about Web APIs is understanding which tables are available and what each covariate means. For the US Census Bureau, the [developers](https://www.census.gov/data/developers/) page is a great place to start. 
+The hard part about Web APIs is understanding which tables are available and what each covariate means. For the US Census Bureau, the [developers](https://www.census.gov/developers/) page is a great place to start. For the Population Estimation Program, there is a specific developers [page](https://www.census.gov/data/developers/data-sets/popest-popproj/popest.html)
 
 ## Data Preparation
 
@@ -149,6 +149,6 @@ The hard part about Web APIs is understanding which tables are available and wha
 
 
 ## Next Step
-1. Election Data. https://libguides.princeton.edu/elections#s-lg-box-1612379
+1. Election Data. https://libguides.princeton.edu/elections#s-lg-box-1612379. I downloaded it from the MIT Data Lab: https://electionlab.mit.edu/data
 2. Can I do this by state?  Definitely. I just need to download the data by all states.
 3. Can I make the Year selector a bit nicer?

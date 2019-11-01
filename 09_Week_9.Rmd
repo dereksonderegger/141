@@ -121,7 +121,6 @@ The hard part about Web APIs is understanding which tables are available and wha
 This is the call that I ended up using:
 http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,POP,GEONAME,STATE&in=state:04&for=county:*
 
-
 ## Data Preparation
 
 1. Remove all the rows for "Both Hispanic Origins"

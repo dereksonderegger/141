@@ -123,7 +123,7 @@ http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,P
 
 ## Data Preparation
 
-1. Remove all the rows for "Both Hispanic Origins"
+1. Remove all the rows for "Both Hispanic Origins". The `HISP` codes are 0 = Both Hispanic Origins, 1 = Non-Hispanic, 2 = Hispanic. I found this following the developers page into the [variable information](https://api.census.gov/data/2018/pep/charagegroups/variables/HISP.json).
 2. Remove the Census derived estimates because they double up the dates. Make sure there is just one set of estimates per date/county.
 3. Make sure all the County names don't end in "County" because Tableau prefers just the base name.
 4. Within each county/date combination, calculate the Proportion Hispanic.

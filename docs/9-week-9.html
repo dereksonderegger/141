@@ -162,7 +162,8 @@
 <li class="chapter" data-level="9.3" data-path="9-week-9.html"><a href="9-week-9.html#data-preparation"><i class="fa fa-check"></i><b>9.3</b> Data Preparation</a></li>
 <li class="chapter" data-level="9.4" data-path="9-week-9.html"><a href="9-week-9.html#base-graphic-components"><i class="fa fa-check"></i><b>9.4</b> Base Graphic Components</a></li>
 <li class="chapter" data-level="9.5" data-path="9-week-9.html"><a href="9-week-9.html#dashboard"><i class="fa fa-check"></i><b>9.5</b> Dashboard</a></li>
-<li class="chapter" data-level="9.6" data-path="9-week-9.html"><a href="9-week-9.html#next-step"><i class="fa fa-check"></i><b>9.6</b> Next Step</a></li>
+<li class="chapter" data-level="9.6" data-path="9-week-9.html"><a href="9-week-9.html#upload-it-to-tableau-public"><i class="fa fa-check"></i><b>9.6</b> Upload it to Tableau Public</a></li>
+<li class="chapter" data-level="9.7" data-path="9-week-9.html"><a href="9-week-9.html#next-step"><i class="fa fa-check"></i><b>9.7</b> Next Step</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="10-week-10.html"><a href="10-week-10.html"><i class="fa fa-check"></i><b>10</b> Week 10</a><ul>
 <li class="chapter" data-level="10.1" data-path="10-week-10.html"><a href="10-week-10.html#presentation-thoughts"><i class="fa fa-check"></i><b>10.1</b> Presentation Thoughts</a></li>
@@ -234,7 +235,7 @@ Example: Over the last few years, news articles have been talking about the chan
 <ol style="list-style-type: decimal">
 <li>Remove all the rows for “Both Hispanic Origins”. The <code>HISP</code> codes are 0 = Both Hispanic Origins, 1 = Non-Hispanic, 2 = Hispanic. I found this following the developers page into the <a href="https://api.census.gov/data/2018/pep/charagegroups/variables/HISP.json">variable information</a>.</li>
 <li>Remove the Census derived estimates because they double up the dates. Make sure there is just one set of estimates per date/county.</li>
-<li>Make sure all the County names don’t end in “County” because Tableau prefers just the base name.</li>
+<li>Make sure all the County names don’t end in “County” because Tableau prefers just the base name. Also make sure you have a column for the State name as well because some county names occur in more than one state and Tableau will get confused.</li>
 <li>Within each county/date combination, calculate the Proportion Hispanic.</li>
 </ol>
 </div>
@@ -249,9 +250,10 @@ Example: Over the last few years, news articles have been talking about the chan
 </ol></li>
 <li>Open a new graph sheet and name the sheet <code>Map</code>.
 <ol style="list-style-type: lower-alpha">
-<li>Drag <code>County</code> onto the plot and change the mark type to <code>Map</code>.</li>
+<li>Drag <code>County</code> onto the plot and change the mark type to <code>Map</code>. You might need to also drag <code>State</code> onto the marks section as well so that Tableau recognizes which state the county belongs to. This is a good habit to get into.</li>
 <li>Drag <code>Proportion Hispanic</code> onto the color.</li>
 <li>Drag <code>Date</code> into the tool tips. Notice that when you hover over a county, you’ll get the 2010 estimate.</li>
+<li>For the map, you only want to color the proportion Hispanic, so add a filter to keep only the Hispanic proportion.</li>
 </ol></li>
 </ol>
 </div>
@@ -266,10 +268,19 @@ Example: Over the last few years, news articles have been talking about the chan
 <li>In the source pane, select only the map. In the target section, select only the Population Bar.</li>
 <li>In the Target Filters, change it to be only the <code>County</code></li>
 </ol></li>
+<li>Add a text box that allows you to enter some text. In the Dashboard tab, there is an <code>Objects</code> section where you can grab a text box and drop it on the dashboard in a location you like.</li>
+<li>Update titles, etc.</li>
 </ol>
 </div>
+<div id="upload-it-to-tableau-public" class="section level2">
+<h2><span class="header-section-number">9.6</span> Upload it to Tableau Public</h2>
+<ol style="list-style-type: decimal">
+<li>Try to Save it to the Tableau Public using <code>Server</code> -&gt; <code>Tableau Public</code> -&gt; <code>Save to Tableau Public</code>. This will first prompt you to create a user profile. After creating your profile, upload the graph.</li>
+</ol>
+<p><a href="https://public.tableau.com/profile/derek.sonderegger#!/vizhome/Texas_15731955825850/Dashboard1" class="uri">https://public.tableau.com/profile/derek.sonderegger#!/vizhome/Texas_15731955825850/Dashboard1</a></p>
+</div>
 <div id="next-step" class="section level2">
-<h2><span class="header-section-number">9.6</span> Next Step</h2>
+<h2><span class="header-section-number">9.7</span> Next Step</h2>
 <ol style="list-style-type: decimal">
 <li>Election Data. <a href="https://libguides.princeton.edu/elections#s-lg-box-1612379" class="uri">https://libguides.princeton.edu/elections#s-lg-box-1612379</a>. I downloaded it from the MIT Data Lab: <a href="https://electionlab.mit.edu/data" class="uri">https://electionlab.mit.edu/data</a></li>
 <li>Can I do this by state? Definitely. I just need to download the data by all states.</li>

@@ -121,11 +121,13 @@ The hard part about Web APIs is understanding which tables are available and wha
 This is the call that I ended up using:
 http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,POP,GEONAME,STATE&in=state:04&for=county:*
 
+
+
 ## Data Preparation
 
 1. Remove all the rows for "Both Hispanic Origins". The `HISP` codes are 0 = Both Hispanic Origins, 1 = Non-Hispanic, 2 = Hispanic. I found this following the developers page into the [variable information](https://api.census.gov/data/2018/pep/charagegroups/variables/HISP.json).
 2. Remove the Census derived estimates because they double up the dates. Make sure there is just one set of estimates per date/county.
-3. Make sure all the County names don't end in "County" because Tableau prefers just the base name.
+3. Make sure all the County names don't end in "County" because Tableau prefers just the base name. Also make sure you have a column for the State name as well because some county names occur in more than one state and Tableau will get confused.
 4. Within each county/date combination, calculate the Proportion Hispanic.
 
 ## Base Graphic Components
@@ -135,9 +137,10 @@ http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,P
     a) Drop Date onto the x-axis, Population onto the y-axis, and Hispanic onto the color.
     b) For the Date, change the aggregation from `Year` to `Exact`. For Population, make sure the aggregation is `Sum`. 
 3. Open a new graph sheet and name the sheet `Map`.
-    a) Drag `County` onto the plot and change the mark type to `Map`.
+    a) Drag `County` onto the plot and change the mark type to `Map`. You might need to also drag `State` onto the marks section as well so that Tableau recognizes which state the county belongs to.  This is a good habit to get into.
     b) Drag `Proportion Hispanic` onto the color. 
     c) Drag `Date` into the tool tips. Notice that when you hover over a county, you'll get the 2010 estimate.
+    d) For the map, you only want to color the proportion Hispanic, so add a filter to keep only the Hispanic proportion.
     
 ## Dashboard
 
@@ -147,7 +150,14 @@ http://api.census.gov/data/2018/pep/charagegroups?get=DATE_CODE,DATE_DESC,HISP,P
     a) To do this, click the main menu `Dashboard` -> `Actions` -> `Add Action` -> `Filter`.
     b) In the source pane, select only the map. In the target section, select only the Population Bar.
     c) In the Target Filters, change it to be only the `County`
+4. Add a text box that allows you to enter some text. In the Dashboard tab, there is an `Objects` section where you can grab a text box and drop it on the dashboard in a location you like.
+5. Update titles, etc.
 
+## Upload it to Tableau Public
+
+1. Try to Save it to the Tableau Public using `Server` -> `Tableau Public` -> `Save to Tableau Public`. This will first prompt you to create a user profile. After creating your profile, upload the graph. 
+
+https://public.tableau.com/profile/derek.sonderegger#!/vizhome/Texas_15731955825850/Dashboard1
 
 
 

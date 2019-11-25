@@ -1,0 +1,29 @@
+# Week 13
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
+```
+```{r, echo=FALSE}
+library(tidyverse)
+```
+
+## Critiques!
+
+
+1. Narrative structure vs toy to play with
+    a) https://projects.fivethirtyeight.com/mortality-rates-united-states/cardiovascular2/#2014
+    b) https://flowingdata.com/2019/11/18/salary-and-occupation/
+    
+
+## Software
+
+What software gets used in creating these graphics?
+
+1. Data Wrangling
+    a) R
+    b) Python
+    
+2. Graphing
+    a) Tableau
+    b) D3 (sometimes via plotly) 
+    c) R (ggplot, shiny, etc)

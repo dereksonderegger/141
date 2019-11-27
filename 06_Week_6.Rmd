@@ -2,6 +2,9 @@
 
 This week we start asking "What" to graph instead of just "How" to graph.
 
+Example: Should we be using [GDP to measure economic "success"?](https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress)
+
+
 Example: Tim Cook displaying 
 [total iPhone sales](https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/) 
 instead of quarterly sales.

@@ -1,7 +1,7 @@
 --- 
 title: "STA 141 - Exploratory Data Analysis and Visualization"
 author: "Derek L. Sonderegger"
-date: "November 25, 2019"
+date: "December 02, 2019"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

@@ -39,11 +39,19 @@ For an example of all of these, check out [this](https://via.hypothes.is/https:/
 
 1. Climate change can't be true because: 
     a) In 2019, Ted Cruz claims there hasn't [been any global warming since 1998](https://www.youtube.com/watch?v=Z0JWONI-d9w&t=2m47s)    
-    b) This claim is based on Satellite data from 1997-2014. Those years are [chosen](https://www.climate.gov/news-features/climate-qa/did-global-warming-stop-1998) very [carefully](https://en.wikipedia.org/wiki/Global_warming_hiatus#/media/File:Temperaturanstieg-vergleich-zwischen-ausschnitt-und-gesamtverlauf.gif). He further considers only Satellite data, which is widely considered less accurate than ground station data.
+    b) This claim is based on Satellite data from 1997-2014. Those [years](https://www.sfgate.com/technology/dotcommentary/article/How-climate-deniers-abuse-statistics-to-mislead-4677033.php) are [chosen](https://www.climate.gov/news-features/climate-qa/did-global-warming-stop-1998) very [carefully](https://en.wikipedia.org/wiki/Global_warming_hiatus#/media/File:Temperaturanstieg-vergleich-zwischen-ausschnitt-und-gesamtverlauf.gif). He further considers only Satellite data, which is widely considered less accurate than ground station data.
     c) The Satellite data has been corrected to line up with the ground measurements and the "pause" he refers to disappears even with the highly optimized start/stop points of his pause interval.
+    d) On the wider time scale, there is a clear upward trend.
     
 2. Climate change can't be true because:
-    a) Regions in Georgia have *cooled* [since the early parts of the 1900s]()!
+    a) Regions in Georgia have *cooled* [since the early parts of the 1900s](https://github.com/dereksonderegger/141/raw/master/Images/Cherry_Picking_USA_Temperature_Change_Since_Early_1900s.png)!
     b) Yes but the rest of the country has warmed.
     c) Also, 1934 was the 2nd hottest year in the US, so comparing present day to the hottest part of the country in that particularly hot year results in seeing no increase.
+    
+
+Be careful to recognize specific intervals or specific measurements. Ask questions like:
+
+* Does the time interval presented represent all the data, could the author have expanded/contracted the time window?
+* Are there other relevant sources of data we aren't talking about?
+* Is the effect consistent across sources of data?
     

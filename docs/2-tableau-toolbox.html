@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 2 Tableau Toolbox | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 2 Tableau Toolbox | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 2 Tableau Toolbox | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 2 Tableau Toolbox | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="1-overview.html"/>
 
-<link rel="next" href="1-overview.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -182,82 +182,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 141 - Exploratory Data Analysis and Visualization</h1>
-<p class="author"><em>Derek L. Sonderegger</em></p>
-<p class="date"><em>January 12, 2020</em></p>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarkey that propagandists.</p>
-<p>The source code for my notes, homework assignments, and other information is available on my on <a href="https://github.com/dereksonderegger/141">GitHub</a>. In particular, there is a directory <code>data-raw</code> that contains all of the datasets that we’ll use in these notes and homeworks.</p>
-<div id="instructional-material" class="section level2">
-<h2><span class="header-section-number">0.1</span> Instructional Material</h2>
-<p>This course draws information from several websites and books.</p>
-<ul>
-<li><p>Alberto Cairo’s book <a href="https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F">The Truthful Art</a>. Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at <a href="http://www.thefunctionalart.com">thefunctionalart.com</a>. Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here.</p></li>
-<li><p>Claus O. Wilke has a book
-<a href="https://www.amazon.com/dp/1492031089/ref=cm_sw_em_r_mt_dp_U_DvAxDbV7NFYY6">Fundamentals of Data Visualization</a>.
-There is an online pre-print version of the book available
-<a href="https://serialmentor.com/dataviz/">here</a>
-as well as GitHub repositories for the book
-<a href="https://github.com/clauswilke/dataviz">source</a>
-and
-<a href="https://github.com/clauswilke/dviz.supp">data</a> used in the book.<br />
-He also has a nice R package called <a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">cowplot</a> that aids in making publication ready graphs using R’s <code>ggplot2</code>.</p></li>
-<li><p><a href="https://callingbullshit.org">Calling Bullshit</a> This is a 3-credit course taught at University of Washington. Their goal is to teach students to recognize bullshit provide another scientist a reason why a claim is bullshit.</p></li>
-<li><p>Amelia McNamara’s <a href="http://www.amelia.mn/sds136/index.html">SDS 136 course.</a> Amelia is an Assistant Professor at University of St Thomas and I’ve been influenced by her presentations at national conferences. These are her notes from a data visualization course that she teaches. She is also pretty fun to follow on twitter.</p></li>
-</ul>
-</div>
-<div id="data-sources" class="section level2">
-<h2><span class="header-section-number">0.2</span> Data Sources</h2>
-<ul>
-<li><p>The website <a href="https://ourworldindata.org">Our World in Data</a> has tried to bring together huge amounts of information about a variety of topics and presents the data in context. It typically addresses socioeconomic issues.</p></li>
-<li><p>The website <a href="https://www.kaggle.com">Kaggle</a> started out as a repository for data sets in which data scientists would have host informal competitions. It has grown to host thousands of data sets covering a wide variety of issues.</p></li>
-<li><p>The <a href="https://www.gapminder.org">Gapminder</a> website has health and socioeconomic data for counties going back in time.</p></li>
-<li><p>Access data from the US Government from <a href="http://www.data.gov">Data.gov</a></p></li>
-<li><p>The Centers for Disease Control <a href="https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm">Vital Stats</a> allows for direct download of commonly used downloads. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p></li>
-</ul>
-</div>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">0.3</span> Introduction</h2>
-<ul>
-<li><p>Why visualize data?</p>
-<ul>
-<li>See relationships that raw data obscure.</li>
-<li>Cognitive work to translate raw numbers into context between other data points are already done for you.</li>
-<li>Good graphics translate particular numerical relationships into physical relationships which our brains are really good at processing.</li>
-</ul></li>
-<li><p><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/articles/middleagedgenerationmostlikelytodiebysuicideanddrugpoisoning/2019-08-13">UK Drug Poison</a> These are the data from the UK related to drug overdose and misuse. Farther down the page gives a similar graph on suicide.</p></li>
-<li><p><a href="https://www.torre.nl/EUmoves/">Migration Patterns in Europe</a>.</p></li>
-<li><p>While the New York Times is generally really quite good, this <a href="https://www.nytimes.com/2016/11/29/world/americas/western-liberal-democracy.html?_r=0">graph</a> is quite misleading. Another view of the data is more fair, although the still
-<a href="https://1.bp.blogspot.com/-RQ66mUnaw9Y/XT2gT0j8-tI/AAAAAAAAKoU/G5eOqwdoXS4aW_n0s5-OPWTwes3rdDS6ACLcBGAs/s1600/democracy2.png">depressing.</a></p></li>
-<li><p>I feel compelled to show a bad <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">3-d Excel graphic</a> as well.</p></li>
-<li><p>Reuter’s infamous <a href="https://callingbullshit.org/tools/img/stand_your_ground.png">gun deaths in Florida</a> chart.</p></li>
-</ul>
-</div>
-<div id="pedigogical-plan" class="section level2">
-<h2><span class="header-section-number">0.4</span> Pedigogical Plan</h2>
+<div id="tableau-toolbox" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Tableau Toolbox</h1>
+<p>Tableau comes with two pieces of software, <code>Tableau Prep</code> and <code>Tableau</code>. The prep software is intended to support the data tidying, cleaning, and summarization steps. Then we save the result to a file and open the cleaned up data in Tableau to do the visualization.</p>
+<p>This course has access to both Tableau and Tableau Prep through an academic license.</p>
 <ol style="list-style-type: decimal">
-<li><p>Develop basic understanding and skills about data wrangling. Because this course will require you to find data that interests you, we need to also learn how to manipulate it because the data are <em>never</em> in a nice format.</p></li>
-<li><p>Introduce the Elementary Perceptual Task order and understand how certain visual tasks are more accurate than others.</p></li>
-<li><p>Introduce a slew of graphic types and examples of where and how they are commonly used.</p></li>
-<li><p>Investigate the choice of variables to display and how that can influence the graph interpretation.</p></li>
-<li><p>Understand how interactive graphics can be used across a broad audience.</p></li>
+<li>Go to <a href="https://www.tableau.com/products/prep/download">https://www.tableau.com/products/prep/download</a> to download both products.</li>
+<li>Select each product download link to get started. When prompted, enter your school email address for Business E-mail and enter the name of your school for Organization.</li>
+<li>Activate with your product key which will be distributed via email or on Bblearn.</li>
 </ol>
+<p>This license will work through the semester. You may continue using Tableau after the class is over by individually requesting their own one-year license through the <a href="https://www.tableau.com/academic/students">Tableau for Students</a> program.</p>
+<div id="importing-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Importing data</h2>
+<p>Often data will be stored in a Comma Separated Values file that has a <code>.csv</code> file suffix. These types of files store data tables, and use a comma to separate the columns. Spreadsheet programs will recognize these files and show columns for <code>Student Name</code>, <code>Exam 1</code>, <code>Exam 2</code> and the <code>Final Exam</code>. However, if you open these files using a text reader program, they’ll look something like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="2-tableau-toolbox.html#cb4-1"></a>Student Name,Exam <span class="dv">1</span>,Exam <span class="dv">2</span>,Final Exam</span>
+<span id="cb4-2"><a href="2-tableau-toolbox.html#cb4-2"></a>Alice,<span class="dv">87</span>,<span class="dv">87</span>,<span class="dv">81</span></span>
+<span id="cb4-3"><a href="2-tableau-toolbox.html#cb4-3"></a>Bob,<span class="dv">91</span>,<span class="dv">88</span>,<span class="dv">85</span></span>
+<span id="cb4-4"><a href="2-tableau-toolbox.html#cb4-4"></a>Charlie,<span class="dv">88</span>,<span class="dv">79</span>,<span class="dv">92</span></span></code></pre></div>
+<p>Below is a video showing how to open up this same data in Tableau Prep.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ruWnLWGcwBI" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="tidying-or-reshaping" class="section level2">
+<h2><span class="header-section-number">2.2</span> Tidying or Reshaping</h2>
+<div id="gather" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Gather</h3>
+</div>
+<div id="spread" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Spread</h3>
+</div>
+<div id="column-splitting" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Column Splitting</h3>
+</div>
+</div>
+<div id="cleaning-1" class="section level2">
+<h2><span class="header-section-number">2.3</span> Cleaning</h2>
+<div id="column-types" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Column Types</h3>
+<pre><code>1. Character strings
+2. Numerical
+3. Geographical
+4. Dates</code></pre>
+</div>
+<div id="new-column-via-calculation" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> New Column via Calculation</h3>
+</div>
+</div>
+<div id="use-cases" class="section level2">
+<h2><span class="header-section-number">2.4</span> Use Cases</h2>
+<div id="filtering" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Filtering</h3>
+</div>
+<div id="summarization" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Summarization</h3>
+</div>
+<div id="table-joins" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Table Joins</h3>
+</div>
+<div id="table-unions" class="section level3">
+<h3><span class="header-section-number">2.4.4</span> Table Unions</h3>
+</div>
+<div id="grouped-calculations" class="section level3">
+<h3><span class="header-section-number">2.4.5</span> Grouped Calculations</h3>
 
 </div>
 </div>
-
-
-
+</div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="1-overview.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="1-overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -290,7 +287,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/index.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/02_Wrangling_Tableau.Rmd",
 "text": "Edit"
 },
 "history": {

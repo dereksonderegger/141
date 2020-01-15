@@ -42,6 +42,10 @@ Below is a video showing how to open up this same data in Tableau Prep.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
 
+The import step gives a rotated view of the data and generally that doesn't bother me, but for purposes of show what the imported data looks like, we'll add a cleaning step that doesn't do anything but will show the data. In general I won't keep this step in my cleaning workflow, but it is handy to know how to do this.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f6KhNAlBNtU" frameborder="0" allowfullscreen></iframe>
+
 
 ## Tidying or Reshaping
 Often source data is stored in a structure that isn't useful for subsequent analysis. When the data isn't a format of one observation per row and one variable per column, we need to fix those issues before proceeding.
@@ -69,11 +73,15 @@ tidy.scores
 ```
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/suCAb8qJOSM" frameborder="0" allowfullscreen></iframe>
+
+
 ### Spread
 There are times that we need to convert a *"long"* dataset into *"wide"* format.  This is exactly the reverse function of the gather. Our example will be to undo the gather step from the previous. Again in Tableau, this is called pivoting, but we'll make sure that we are turning rows into columns.
 
-The tricky part is what variable goes into which pivot field.  The top box contains the new column headers and the bottom box contains the column values.
+The tricky part is what variable goes into which pivot field.  The top box specifies what the new column headers will be and the bottom box specifies what the cell values will be.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qZ8L3KrAwnE" frameborder="0" allowfullscreen></iframe>
 
 
 ### Column Splitting

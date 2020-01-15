@@ -1,6 +1,6 @@
 # Tableau Toolbox
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # Unattach any packages that happen to already be loaded. In general this is unecessary
 # but is important for the creation of the book to not have package namespaces
 # fighting unexpectedly.

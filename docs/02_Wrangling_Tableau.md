@@ -1,22 +1,6 @@
 # Tableau Toolbox
 
 
-```
-## ── Attaching packages ─────────────────────────────────────────────── tidyverse 1.2.1 ──
-```
-
-```
-## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
-## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
-## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.4.0
-```
-
-```
-## ── Conflicts ────────────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-```
 
 Tableau comes with two pieces of software, `Tableau Prep` and `Tableau`. The prep software is intended to support the data tidying, cleaning, and summarization steps. Then we save the result to a file and open the cleaned up data in Tableau to do the visualization. 
 
@@ -60,17 +44,8 @@ When data is in the *"wide"* format, we might need to convert it into *"long"* f
 ## 3 Charlie       88       79           92
 ```
 
-What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
+What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel and Tableau, this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
 
-
-```r
-# first we gather the score columns into columns we'll name Homework and Score
-tidy.scores <- grade.book %>% 
-  gather( key=Assessment,     # What should I call the key column
-          value=Score,      # What should I call the values column
-          `Exam 1`:`Final Exam`)        # which columns to apply this to
-tidy.scores
-```
 
 ```
 ## # A tibble: 9 x 3
@@ -88,9 +63,29 @@ tidy.scores
 ```
 
 
-
 ### Spread
+There are times that we need to convert a *"long"* dataset into *"wide"* format.  This is exactly the reverse function of the gather. Our example will be to undo the gather step from the previous. Again in Tableau, this is called pivoting, but we'll make sure that we are turning rows into columns.
+
+The tricky part is what variable goes into which pivot field.  The top box contains the new column headers and the bottom box contains the column values.
+
+
+
 ### Column Splitting
+Sometimes we have columns where we actually have two pieces of information stored and we have to split the single column into multiple columns. 
+
+For example, we might have data about across the country, where the city name obnoxiously includes the state.  It would be good to split the `Name` column into `City` and `State` columns. For example,
+
+
+```
+## # A tibble: 3 x 2
+##   Name          Population
+##   <chr>              <dbl>
+## 1 Phoenix, AZ      1660272
+## 2 Flagstaff, AZ      73964
+## 3 Tucson, AZ        545975
+```
+
+
 
 
 ## Cleaning

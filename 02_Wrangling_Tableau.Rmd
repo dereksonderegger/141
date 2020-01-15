@@ -90,14 +90,18 @@ Sometimes we have columns where we actually have two pieces of information store
 For example, we might have data about across the country, where the city name obnoxiously includes the state.  It would be good to split the `Name` column into `City` and `State` columns. For example,
 
 ```{r}
-tribble(
+cities <- tribble(
     ~Name, ~Population,
     'Phoenix, AZ', 1660272,
     'Flagstaff, AZ', 73964,
     'Tucson, AZ', 545975)
+cities
+
+write_csv(cities, 'data-raw/cities.csv')
 ```
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
 
 
 ## Cleaning

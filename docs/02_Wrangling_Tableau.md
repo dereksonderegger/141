@@ -94,6 +94,7 @@ For example, we might have data about across the country, where the city name ob
 ```
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
 
 
 ## Cleaning

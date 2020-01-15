@@ -1,5 +1,23 @@
 # Tableau Toolbox
 
+
+```
+## ── Attaching packages ─────────────────────────────────────────────── tidyverse 1.2.1 ──
+```
+
+```
+## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0
+```
+
+```
+## ── Conflicts ────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+```
+
 Tableau comes with two pieces of software, `Tableau Prep` and `Tableau`. The prep software is intended to support the data tidying, cleaning, and summarization steps. Then we save the result to a file and open the cleaned up data in Tableau to do the visualization. 
 
 This course has access to both Tableau and Tableau Prep through an academic license. 
@@ -23,12 +41,54 @@ Charlie,88,79,92
 
 Below is a video showing how to open up this same data in Tableau Prep.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
 
 
 ## Tidying or Reshaping
+Often source data is stored in a structure that isn't useful for subsequent analysis. When the data isn't a format of one observation per row and one variable per column, we need to fix those issues before proceeding.
+
 ### Gather
+When data is in the *"wide"* format, we might need to convert it into *"long"* format. For an example, suppose we have a gradebook with a few students.
+
+
+```
+## # A tibble: 3 x 4
+##   Name    `Exam 1` `Exam 2` `Final Exam`
+##   <chr>      <dbl>    <dbl>        <dbl>
+## 1 Alison        87       87           81
+## 2 Bob           91       88           85
+## 3 Charlie       88       79           92
+```
+
+What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
+
+
+```r
+# first we gather the score columns into columns we'll name Homework and Score
+tidy.scores <- grade.book %>% 
+  gather( key=Assessment,     # What should I call the key column
+          value=Score,      # What should I call the values column
+          `Exam 1`:`Final Exam`)        # which columns to apply this to
+tidy.scores
+```
+
+```
+## # A tibble: 9 x 3
+##   Name    Assessment Score
+##   <chr>   <chr>      <dbl>
+## 1 Alison  Exam 1        87
+## 2 Bob     Exam 1        91
+## 3 Charlie Exam 1        88
+## 4 Alison  Exam 2        87
+## 5 Bob     Exam 2        88
+## 6 Charlie Exam 2        79
+## 7 Alison  Final Exam    81
+## 8 Bob     Final Exam    85
+## 9 Charlie Final Exam    92
+```
+
+
+
 ### Spread
 ### Column Splitting
 

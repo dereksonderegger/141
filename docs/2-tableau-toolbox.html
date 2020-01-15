@@ -184,6 +184,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tableau-toolbox" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Tableau Toolbox</h1>
+<pre><code>## ── Attaching packages ─────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.2
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
+<pre><code>## ── Conflicts ────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 <p>Tableau comes with two pieces of software, <code>Tableau Prep</code> and <code>Tableau</code>. The prep software is intended to support the data tidying, cleaning, and summarization steps. Then we save the result to a file and open the cleaned up data in Tableau to do the visualization.</p>
 <p>This course has access to both Tableau and Tableau Prep through an academic license.</p>
 <ol style="list-style-type: decimal">
@@ -200,13 +208,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-3"><a href="2-tableau-toolbox.html#cb4-3"></a>Bob,<span class="dv">91</span>,<span class="dv">88</span>,<span class="dv">85</span></span>
 <span id="cb4-4"><a href="2-tableau-toolbox.html#cb4-4"></a>Charlie,<span class="dv">88</span>,<span class="dv">79</span>,<span class="dv">92</span></span></code></pre></div>
 <p>Below is a video showing how to open up this same data in Tableau Prep.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ruWnLWGcwBI" frameborder="0" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 <div id="tidying-or-reshaping" class="section level2">
 <h2><span class="header-section-number">2.2</span> Tidying or Reshaping</h2>
+<p>Often source data is stored in a structure that isn’t useful for subsequent analysis. When the data isn’t a format of one observation per row and one variable per column, we need to fix those issues before proceeding.</p>
 <div id="gather" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Gather</h3>
+<p>When data is in the <em>“wide”</em> format, we might need to convert it into <em>“long”</em> format. For an example, suppose we have a gradebook with a few students.</p>
+<pre><code>## # A tibble: 3 x 4
+##   Name    `Exam 1` `Exam 2` `Final Exam`
+##   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;        &lt;dbl&gt;
+## 1 Alison        87       87           81
+## 2 Bob           91       88           85
+## 3 Charlie       88       79           92</code></pre>
+<p>What we want to do is turn this data frame from a <em>wide</em> data frame into a <em>long</em> data frame. In MS Excel this is called pivoting. Essentially I’d like to create a data frame with three columns: <code>Name</code>, <code>Assessment</code>, and <code>Score</code>. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn’t conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score).</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="2-tableau-toolbox.html#cb6-1"></a><span class="co"># first we gather the score columns into columns we&#39;ll name Homework and Score</span></span>
+<span id="cb6-2"><a href="2-tableau-toolbox.html#cb6-2"></a>tidy.scores &lt;-<span class="st"> </span>grade.book <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-3"><a href="2-tableau-toolbox.html#cb6-3"></a><span class="st">  </span><span class="kw">gather</span>( <span class="dt">key=</span>Assessment,     <span class="co"># What should I call the key column</span></span>
+<span id="cb6-4"><a href="2-tableau-toolbox.html#cb6-4"></a>          <span class="dt">value=</span>Score,      <span class="co"># What should I call the values column</span></span>
+<span id="cb6-5"><a href="2-tableau-toolbox.html#cb6-5"></a>          <span class="st">`</span><span class="dt">Exam 1</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">Final Exam</span><span class="st">`</span>)        <span class="co"># which columns to apply this to</span></span>
+<span id="cb6-6"><a href="2-tableau-toolbox.html#cb6-6"></a>tidy.scores</span></code></pre></div>
+<pre><code>## # A tibble: 9 x 3
+##   Name    Assessment Score
+##   &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt;
+## 1 Alison  Exam 1        87
+## 2 Bob     Exam 1        91
+## 3 Charlie Exam 1        88
+## 4 Alison  Exam 2        87
+## 5 Bob     Exam 2        88
+## 6 Charlie Exam 2        79
+## 7 Alison  Final Exam    81
+## 8 Bob     Final Exam    85
+## 9 Charlie Final Exam    92</code></pre>
 </div>
 <div id="spread" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Spread</h3>

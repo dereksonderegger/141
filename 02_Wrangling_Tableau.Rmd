@@ -1,5 +1,23 @@
 # Tableau Toolbox
 
+```{r, echo=FALSE}
+# Unattach any packages that happen to already be loaded. In general this is unecessary
+# but is important for the creation of the book to not have package namespaces
+# fighting unexpectedly.
+pkgs = names(sessionInfo()$otherPkgs)
+if( length(pkgs > 0)){
+  pkgs = paste('package:', pkgs, sep = "")
+  for( i in 1:length(pkgs)){
+    detach(pkgs[i], character.only = TRUE, force=TRUE)
+  }
+}
+
+library(tidyverse) # dplyr, tidyr, ggplot2, etc.
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
 Tableau comes with two pieces of software, `Tableau Prep` and `Tableau`. The prep software is intended to support the data tidying, cleaning, and summarization steps. Then we save the result to a file and open the cleaned up data in Tableau to do the visualization. 
 
 This course has access to both Tableau and Tableau Prep through an academic license. 
@@ -13,7 +31,7 @@ This license will work through the semester. You may continue using Tableau afte
 ## Importing data
 Often data will be stored in a Comma Separated Values file that has a `.csv` file suffix. These types of files store data tables, and use a comma to separate the columns. Spreadsheet programs will recognize these files and show columns for `Student Name`, `Exam 1`, `Exam 2` and the `Final Exam`. However, if you open these files using a text reader program, they'll look something like this:
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 Student Name,Exam 1,Exam 2,Final Exam
 Alice,87,87,81
 Bob,91,88,85
@@ -22,14 +40,56 @@ Charlie,88,79,92
 
 Below is a video showing how to open up this same data in Tableau Prep.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
 
 
 ## Tidying or Reshaping
+Often source data is stored in a structure that isn't useful for subsequent analysis. When the data isn't a format of one observation per row and one variable per column, we need to fix those issues before proceeding.
+
 ### Gather
+When data is in the *"wide"* format, we might need to convert it into *"long"* format. For an example, suppose we have a gradebook with a few students.
+
+```{r}
+grade.book <- rbind(
+  tibble(Name='Alison', `Exam 1`=87, `Exam 2`=87, `Final Exam`=81),
+  tibble(Name='Bob',    `Exam 1`=91, `Exam 2`=88, `Final Exam`=85),
+  tibble(Name='Charlie',`Exam 1`=88, `Exam 2`=79, `Final Exam`=92))
+grade.book
+```
+
+What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel and Tableau, this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
+
+```{r}
+# first we gather the score columns into columns we'll name Homework and Score
+tidy.scores <- grade.book %>% 
+  gather( key=Assessment,     # What should I call the key column
+          value=Score,      # What should I call the values column
+          `Exam 1`:`Final Exam`)        # which columns to apply this to
+tidy.scores
+```
+
+
 ### Spread
+There are times that we need to convert a *"long"* dataset into *"wide"* format.  This is exactly the reverse function of the gather. Our example will be to undo the gather step from the previous. Again in Tableau, this is called pivoting, but we'll make sure that we are turning rows into columns.
+
+The tricky part is what variable goes into which pivot field.  The top box contains the new column headers and the bottom box contains the column values.
+
+
+
 ### Column Splitting
+Sometimes we have columns where we actually have two pieces of information stored and we have to split the single column into multiple columns. 
+
+For example, we might have data about across the country, where the city name obnoxiously includes the state.  It would be good to split the `Name` column into `City` and `State` columns. For example,
+
+```{r}
+tribble(
+    ~Name, ~Population,
+    'Phoenix, AZ', 1660272,
+    'Flagstaff, AZ', 73964,
+    'Tucson, AZ', 545975)
+```
+
+
 
 
 ## Cleaning

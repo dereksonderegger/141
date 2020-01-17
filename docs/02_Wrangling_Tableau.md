@@ -97,14 +97,98 @@ For example, we might have data about across the country, where the city name ob
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
 
 
+### New Column via Calculation
+
+Often we need to take a column and create some sort of calculation. For example, if we are given some information (say student height) in inches, we might want to calculate their height in centimeters by multiplying each height value by $2.54$ and naming the result `Height (cm)`.
+
+
+```
+## # A tibble: 9 x 4
+##   Grade      Gender Height `Height (cm)`
+##   <chr>      <chr>   <dbl>         <dbl>
+## 1 1st Grade  Male       44          112.
+## 2 1st Grade  Male       42          107.
+## 3 1st Grade  Female     42          107.
+## 4 1st Grade  Female     40          102.
+## 5 12th Grade Male       70          178.
+## 6 12th Grade Male       68          173.
+## 7 12th Grade Male       69          175.
+## 8 12th Grade Female     64          163.
+## 9 12th Grade Female     65          165.
+```
+
+The issue in Tableau is to make sure you remember how to specify a column in a formula.  The syntax is `[column_name]` and then you can use that quantity in whatever formula you want.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YvXg1HEqdc" frameborder="0" allowfullscreen></iframe>
+
+### Aggregation
+
+Given a data set we also want to be able to calculate summary for various columns. For example, we might want to calculate the mean height for each grade level, or perhaps each gender within each grade level. Notice that we end up with a data set with *fewer rows*.
+
+
+```
+## # A tibble: 4 x 3
+## # Groups:   Grade [2]
+##   Grade      Gender `Avg Height`
+##   <chr>      <chr>         <dbl>
+## 1 12th Grade Female         64.5
+## 2 12th Grade Male           69  
+## 3 1st Grade  Female         41  
+## 4 1st Grade  Male           43
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen></iframe>
+
+
+### New Column with Aggregation
+There are many cases where we need to create a calculated column, but the calculation involves 
+some aggregated information. For, if have the number of males and females in each grade and we want to calculate the percentage of males and females in each grade.  To do this we need to aggregate data to count the number of students in each grade and then divide the number of males or females in each grade by the total number of students in the grade.
+
+
+```
+## # A tibble: 4 x 3
+## # Groups:   Grade, Gender [4]
+##   Grade      Gender Grade_Gender_n
+##   <chr>      <chr>           <int>
+## 1 12th Grade Female              2
+## 2 12th Grade Male                3
+## 3 1st Grade  Female              2
+## 4 1st Grade  Male                2
+```
+
+
+```
+## # A tibble: 4 x 5
+## # Groups:   Grade [2]
+##   Grade      Gender Grade_Gender_n Grade_n Proportion
+##   <chr>      <chr>           <int>   <int>      <dbl>
+## 1 12th Grade Female              2       5        0.4
+## 2 12th Grade Male                3       5        0.6
+## 3 1st Grade  Female              2       4        0.5
+## 4 1st Grade  Male                2       4        0.5
+```
+
+Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: `{FIXED [Group]: SUM[Value]}`
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen></iframe>
+
 ## Cleaning
 ### Column Types
-    1. Character strings
-    2. Numerical
-    3. Geographical
-    4. Dates
-    
-### New Column via Calculation
+
+In a data set, columns have types. They could be 
+
+1. Character Strings
+2. Categorical Groups (sometimes called factors)
+3. Numerical Values
+4. Geographical Locations
+5. Dates and/or Times
+
+During the data import step, the software will attempt to recognize character strings and numerical values, but most software packages have a hard time detecting categorical data as well as geographical and date/time data. You'll need to verify and correct the types before doing any analysis.
+
+
+
 
 
 ## Use Cases

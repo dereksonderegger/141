@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-01-15" />
+<meta name="date" content="2020-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,10 +152,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#gather"><i class="fa fa-check"></i><b>2.2.1</b> Gather</a></li>
 <li class="chapter" data-level="2.2.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#spread"><i class="fa fa-check"></i><b>2.2.2</b> Spread</a></li>
 <li class="chapter" data-level="2.2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-splitting"><i class="fa fa-check"></i><b>2.2.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.2.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#aggregation"><i class="fa fa-check"></i><b>2.2.5</b> Aggregation</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>2.2.6</b> New Column with Aggregation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#cleaning-1"><i class="fa fa-check"></i><b>2.3</b> Cleaning</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-types"><i class="fa fa-check"></i><b>2.3.1</b> Column Types</a></li>
-<li class="chapter" data-level="2.3.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.3.2</b> New Column via Calculation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#use-cases"><i class="fa fa-check"></i><b>2.4</b> Use Cases</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#filtering"><i class="fa fa-check"></i><b>2.4.1</b> Filtering</a></li>
@@ -332,6 +334,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

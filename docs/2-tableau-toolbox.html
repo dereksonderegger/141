@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-01-15" />
+<meta name="date" content="2020-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,10 +152,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#gather"><i class="fa fa-check"></i><b>2.2.1</b> Gather</a></li>
 <li class="chapter" data-level="2.2.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#spread"><i class="fa fa-check"></i><b>2.2.2</b> Spread</a></li>
 <li class="chapter" data-level="2.2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-splitting"><i class="fa fa-check"></i><b>2.2.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.2.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#aggregation"><i class="fa fa-check"></i><b>2.2.5</b> Aggregation</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>2.2.6</b> New Column with Aggregation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#cleaning-1"><i class="fa fa-check"></i><b>2.3</b> Cleaning</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-types"><i class="fa fa-check"></i><b>2.3.1</b> Column Types</a></li>
-<li class="chapter" data-level="2.3.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.3.2</b> New Column via Calculation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#use-cases"><i class="fa fa-check"></i><b>2.4</b> Use Cases</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#filtering"><i class="fa fa-check"></i><b>2.4.1</b> Filtering</a></li>
@@ -254,18 +256,77 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen>
 </iframe>
 </div>
+<div id="new-column-via-calculation" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> New Column via Calculation</h3>
+<p>Often we need to take a column and create some sort of calculation. For example, if we are given some information (say student height) in inches, we might want to calculate their height in centimeters by multiplying each height value by <span class="math inline">\(2.54\)</span> and naming the result <code>Height (cm)</code>.</p>
+<pre><code>## # A tibble: 9 x 4
+##   Grade      Gender Height `Height (cm)`
+##   &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;         &lt;dbl&gt;
+## 1 1st Grade  Male       44          112.
+## 2 1st Grade  Male       42          107.
+## 3 1st Grade  Female     42          107.
+## 4 1st Grade  Female     40          102.
+## 5 12th Grade Male       70          178.
+## 6 12th Grade Male       68          173.
+## 7 12th Grade Male       69          175.
+## 8 12th Grade Female     64          163.
+## 9 12th Grade Female     65          165.</code></pre>
+<p>The issue in Tableau is to make sure you remember how to specify a column in a formula. The syntax is <code>[column_name]</code> and then you can use that quantity in whatever formula you want.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YvXg1HEqdc" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="aggregation" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Aggregation</h3>
+<p>Given a data set we also want to be able to calculate summary for various columns. For example, we might want to calculate the mean height for each grade level, or perhaps each gender within each grade level. Notice that we end up with a data set with <em>fewer rows</em>.</p>
+<pre><code>## # A tibble: 4 x 3
+## # Groups:   Grade [2]
+##   Grade      Gender `Avg Height`
+##   &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;
+## 1 12th Grade Female         64.5
+## 2 12th Grade Male           69  
+## 3 1st Grade  Female         41  
+## 4 1st Grade  Male           43</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="new-column-with-aggregation" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> New Column with Aggregation</h3>
+<p>There are many cases where we need to create a calculated column, but the calculation involves
+some aggregated information. For, if have the number of males and females in each grade and we want to calculate the percentage of males and females in each grade. To do this we need to aggregate data to count the number of students in each grade and then divide the number of males or females in each grade by the total number of students in the grade.</p>
+<pre><code>## # A tibble: 4 x 3
+## # Groups:   Grade, Gender [4]
+##   Grade      Gender Grade_Gender_n
+##   &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;
+## 1 12th Grade Female              2
+## 2 12th Grade Male                3
+## 3 1st Grade  Female              2
+## 4 1st Grade  Male                2</code></pre>
+<pre><code>## # A tibble: 4 x 5
+## # Groups:   Grade [2]
+##   Grade      Gender Grade_Gender_n Grade_n Proportion
+##   &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;   &lt;int&gt;      &lt;dbl&gt;
+## 1 12th Grade Female              2       5        0.4
+## 2 12th Grade Male                3       5        0.6
+## 3 1st Grade  Female              2       4        0.5
+## 4 1st Grade  Male                2       4        0.5</code></pre>
+<p>Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: <code>{FIXED [Group]: SUM[Value]}</code></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen>
+</iframe>
+</div>
 </div>
 <div id="cleaning-1" class="section level2">
 <h2><span class="header-section-number">2.3</span> Cleaning</h2>
 <div id="column-types" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Column Types</h3>
-<pre><code>1. Character strings
-2. Numerical
-3. Geographical
-4. Dates</code></pre>
-</div>
-<div id="new-column-via-calculation" class="section level3">
-<h3><span class="header-section-number">2.3.2</span> New Column via Calculation</h3>
+<p>In a data set, columns have types. They could be</p>
+<ol style="list-style-type: decimal">
+<li>Character Strings</li>
+<li>Categorical Groups (sometimes called factors)</li>
+<li>Numerical Values</li>
+<li>Geographical Locations</li>
+<li>Dates and/or Times</li>
+</ol>
+<p>During the data import step, the software will attempt to recognize character strings and numerical values, but most software packages have a hard time detecting categorical data as well as geographical and date/time data. You’ll need to verify and correct the types before doing any analysis.</p>
 </div>
 </div>
 <div id="use-cases" class="section level2">
@@ -344,6 +405,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

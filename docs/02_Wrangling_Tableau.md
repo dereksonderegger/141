@@ -170,31 +170,27 @@ some aggregated information. For, if have the number of males and females in eac
 
 Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: `{FIXED [Group]: SUM[Value]}`
 
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen></iframe>
 
-## Cleaning
-### Column Types
+## Exercises
 
-In a data set, columns have types. They could be 
+1. We are given information about the maximum daily temperature from a weather station in Flagstaff, AZ. The file is available at the GitHub site that this book is hosted on. You can find it [https://github.com/dereksonderegger/141/raw/master/data-raw/FlagMaxTemp.csv](https://github.com/dereksonderegger/570L/raw/master/data-raw/FlagMaxTemp.csv). This file is in a wide format, where each row represents a month and the columns 1, 2, ..., 31 represent the day of the month the observation was made. 
+    a. Convert data set to the long format where the data has only four columns: `Year`, `Month`, `Day`, `Tmax`.
+    b. Calculate the average monthly maximum temperature for each Month in the dataset (So there will be 365 mean maximum temperatures). There are several days that have missing data, represented by the value `NA`. If you have a problem taking the mean with them in there, you likely haven't converted the temperature from a character string to a numeric value.
+    c. Convert the average month maximums back to a wide data format where each line represents a year and there are 12 columns of temperature data (one for each month) along with a column for the year. *There will be a couple of months that still have missing data because the weather station was out of commission for those months and there was NO data for the entire month.*
+    d. Save this table as a .csv file.
+ 
 
-1. Character Strings
-2. Categorical Groups (sometimes called factors)
-3. Numerical Values
-4. Geographical Locations
-5. Dates and/or Times
+2. A common task is to take a set of data that has multiple categorical variables and create a table of the number of cases for each combination. An introductory statistics textbook contains a dataset summarizing student surveys from several sections of an intro class. The two variables of interest for us are `Gender` and `Year` which are the students gender and year in college.
+    a. Download the dataset as a `.csv` file from the following website: http://www.lock5stat.com/datasets/StudentSurvey.csv
+    b. Notice that there are two survey responses that did not give their year in school. Perform a filter step to remove any row with the value of `null` in the `Year` column.
+    c. Produce a data set with eight rows that contains the number of responses for each gender:year combination. 
+    d. Using a `pivot` command, produce a table of the number of responses in the following form:
+    
+        |   Gender    |  First Year  |  Sophmore  |  Junior   |  Senior   |
+        |:-----------:|:------------:|:----------:|:---------:|:---------:|
+        |  **Female** |              |            |           |           |  
+        |  **Male**   |              |            |           |           | 
 
-During the data import step, the software will attempt to recognize character strings and numerical values, but most software packages have a hard time detecting categorical data as well as geographical and date/time data. You'll need to verify and correct the types before doing any analysis.
-
-
-
-
-
-## Use Cases
-### Filtering
-### Summarization 
-### Table Joins
-### Table Unions
-### Grouped Calculations
-
+    e. Save this table as a .csv file.
+    

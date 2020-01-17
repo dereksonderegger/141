@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-01-16" />
+<meta name="date" content="2020-01-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -156,16 +156,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#aggregation"><i class="fa fa-check"></i><b>2.2.5</b> Aggregation</a></li>
 <li class="chapter" data-level="2.2.6" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>2.2.6</b> New Column with Aggregation</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#cleaning-1"><i class="fa fa-check"></i><b>2.3</b> Cleaning</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-types"><i class="fa fa-check"></i><b>2.3.1</b> Column Types</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#use-cases"><i class="fa fa-check"></i><b>2.4</b> Use Cases</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#filtering"><i class="fa fa-check"></i><b>2.4.1</b> Filtering</a></li>
-<li class="chapter" data-level="2.4.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#summarization"><i class="fa fa-check"></i><b>2.4.2</b> Summarization</a></li>
-<li class="chapter" data-level="2.4.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#table-joins"><i class="fa fa-check"></i><b>2.4.3</b> Table Joins</a></li>
-<li class="chapter" data-level="2.4.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#table-unions"><i class="fa fa-check"></i><b>2.4.4</b> Table Unions</a></li>
-<li class="chapter" data-level="2.4.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#grouped-calculations"><i class="fa fa-check"></i><b>2.4.5</b> Grouped Calculations</a></li>
-</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#exercises"><i class="fa fa-check"></i><b>2.3</b> Exercises</a></li>
 </ul></li>
 </ul>
 
@@ -314,39 +305,53 @@ some aggregated information. For, if have the number of males and females in eac
 </iframe>
 </div>
 </div>
-<div id="cleaning-1" class="section level2">
-<h2><span class="header-section-number">2.3</span> Cleaning</h2>
-<div id="column-types" class="section level3">
-<h3><span class="header-section-number">2.3.1</span> Column Types</h3>
-<p>In a data set, columns have types. They could be</p>
+<div id="exercises" class="section level2">
+<h2><span class="header-section-number">2.3</span> Exercises</h2>
 <ol style="list-style-type: decimal">
-<li>Character Strings</li>
-<li>Categorical Groups (sometimes called factors)</li>
-<li>Numerical Values</li>
-<li>Geographical Locations</li>
-<li>Dates and/or Times</li>
+<li>We are given information about the maximum daily temperature from a weather station in Flagstaff, AZ. The file is available at the GitHub site that this book is hosted on. You can find it <a href="https://github.com/dereksonderegger/570L/raw/master/data-raw/FlagMaxTemp.csv">https://github.com/dereksonderegger/141/raw/master/data-raw/FlagMaxTemp.csv</a>. This file is in a wide format, where each row represents a month and the columns 1, 2, …, 31 represent the day of the month the observation was made.
+<ol style="list-style-type: lower-alpha">
+<li>Convert data set to the long format where the data has only four columns: <code>Year</code>, <code>Month</code>, <code>Day</code>, <code>Tmax</code>.</li>
+<li>Calculate the average monthly maximum temperature for each Month in the dataset (So there will be 365 mean maximum temperatures). There are several days that have missing data, represented by the value <code>NA</code>. If you have a problem taking the mean with them in there, you likely haven’t converted the temperature from a character string to a numeric value.</li>
+<li>Convert the average month maximums back to a wide data format where each line represents a year and there are 12 columns of temperature data (one for each month) along with a column for the year. <em>There will be a couple of months that still have missing data because the weather station was out of commission for those months and there was NO data for the entire month.</em></li>
+<li>Save this table as a .csv file.</li>
+</ol></li>
+<li>A common task is to take a set of data that has multiple categorical variables and create a table of the number of cases for each combination. An introductory statistics textbook contains a dataset summarizing student surveys from several sections of an intro class. The two variables of interest for us are <code>Gender</code> and <code>Year</code> which are the students gender and year in college.
+<ol style="list-style-type: lower-alpha">
+<li><p>Download the dataset as a <code>.csv</code> file from the following website: <a href="http://www.lock5stat.com/datasets/StudentSurvey.csv" class="uri">http://www.lock5stat.com/datasets/StudentSurvey.csv</a></p></li>
+<li><p>Notice that there are two survey responses that did not give their year in school. Perform a filter step to remove any row with the value of <code>null</code> in the <code>Year</code> column.</p></li>
+<li><p>Produce a data set with eight rows that contains the number of responses for each gender:year combination.</p></li>
+<li><p>Using a <code>pivot</code> command, produce a table of the number of responses in the following form:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Gender</th>
+<th align="center">First Year</th>
+<th align="center">Sophmore</th>
+<th align="center">Junior</th>
+<th align="center">Senior</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>Female</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Male</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>Save this table as a .csv file.</p></li>
+</ol></li>
 </ol>
-<p>During the data import step, the software will attempt to recognize character strings and numerical values, but most software packages have a hard time detecting categorical data as well as geographical and date/time data. You’ll need to verify and correct the types before doing any analysis.</p>
-</div>
-</div>
-<div id="use-cases" class="section level2">
-<h2><span class="header-section-number">2.4</span> Use Cases</h2>
-<div id="filtering" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Filtering</h3>
-</div>
-<div id="summarization" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Summarization</h3>
-</div>
-<div id="table-joins" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> Table Joins</h3>
-</div>
-<div id="table-unions" class="section level3">
-<h3><span class="header-section-number">2.4.4</span> Table Unions</h3>
-</div>
-<div id="grouped-calculations" class="section level3">
-<h3><span class="header-section-number">2.4.5</span> Grouped Calculations</h3>
 
-</div>
 </div>
 </div>
             </section>

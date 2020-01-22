@@ -1,23 +1,22 @@
 # Principles of Graphing
 
+
+
+
+
 ## Elementary Perception Tasks
 
-* Some Visual tasks are easier than others.
+* Some Visual tasks are easier than others because our visual processing evolved to do certain tasks.
 
 ![From Alberto Cairo's "The Truthful Art"](./Resources/Alberto Cairo/EPT.png)
 
-From Hadley Wickham's Stat 405 at Rice. (Slides 34 - 40)
-[Effective Visualizations](http://stat405.had.co.nz/lectures/20-effective-vis.pdf)
 
 
-
-### Groupings / Gestalt
+## Groupings / Gestalt
 
 The way we organize our graphics can lead a viewer to create mental groups of marks.
 
-[Winona State's Data Visualization PowerPoint](https://github.com/WSU-DataScience/SDSS19-dataviz-workshop/blob/master/slides/Visualization%20theory%20and%20principles.pptx)
-
-Slides 30-50
+The way we form groupings can be in one of the following ways, (where higher grouping methods produce a stronger grouping effect.
 
 * Enclosures
 * Connections
@@ -25,13 +24,43 @@ Slides 30-50
 * Similarity (color/shape)
 
 
-Example: Warpbreaks
+In the following example, find all the fives:
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+If instead, we form a grouping by adding color, then the group of fives stands out prominently.
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
+
+### Grouping Examples
+
+In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped?
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+
+
+Some grouping is stronger than others
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+
+
+
+### Example: Warpbreaks
 While spinning wool into thread, if the tension on the wool isn't correctly set, the thread can break. Here we compare two different types of wool at three different tensions.
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-5.png" width="672" />
+<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-2.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-3.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-4.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-5.png" width="672" />
 
 
-### "Color" Scales
+## "Color" Scales
 
 Defining Color really has three different attributes (From [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)).
 
@@ -43,7 +72,7 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 ![HSV Cylinder from Wikipedia](./Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png)
 
 * Hue is appropriate for categorical variables.
-* Saturation and/or Value is approriate for a quantitative variable scale.
+* Saturation and/or Value is appropriate for a quantitative variable scale.
 
 Neither R nor Tableau make it particularly easy to map these aspects, so we won't get too deep into it.
 

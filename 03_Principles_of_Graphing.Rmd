@@ -1,23 +1,38 @@
 # Principles of Graphing
 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Unattach any packages that happen to already be loaded. In general this is unecessary
+# but is important for the creation of the book to not have package namespaces
+# fighting unexpectedly.
+pkgs = names(sessionInfo()$otherPkgs)
+if( length(pkgs > 0)){
+  pkgs = paste('package:', pkgs, sep = "")
+  for( i in 1:length(pkgs)){
+    detach(pkgs[i], character.only = TRUE, force=TRUE)
+  }
+}
+
+library(tidyverse) # dplyr, tidyr, ggplot2, etc.
+library(ggrepel)
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
 ## Elementary Perception Tasks
 
 * Some Visual tasks are easier than others because our visual processing evolved to do certain tasks.
 
 ![From Alberto Cairo's "The Truthful Art"](./Resources/Alberto Cairo/EPT.png)
 
-From Hadley Wickham's Stat 405 at Rice. (Slides 34 - 40)
-[Effective Visualizations](http://stat405.had.co.nz/lectures/20-effective-vis.pdf)
 
 
-
-### Groupings / Gestalt
+## Groupings / Gestalt
 
 The way we organize our graphics can lead a viewer to create mental groups of marks.
 
-[Winona State's Data Visualization PowerPoint](https://github.com/WSU-DataScience/SDSS19-dataviz-workshop/blob/master/slides/Visualization%20theory%20and%20principles.pptx)
-
-Slides 30-50
+The way we form groupings can be in one of the following ways, (where higher grouping methods produce a stronger grouping effect.
 
 * Enclosures
 * Connections
@@ -25,7 +40,136 @@ Slides 30-50
 * Similarity (color/shape)
 
 
-Example: Warpbreaks
+In the following example, find all the fives:
+```{r, fig.height=4, fig.width=7}
+seed <- runif(1, 0,1e7) %>% round();
+seed <- 1863486
+set.seed(seed)
+n <- 40
+fives <- data.frame(x=runif(n), y=runif(n), label = runif(n, 0,10) %>% floor()) %>%
+  mutate(Group = label == 5)
+
+ggplot(fives, aes(x=x, y=y, label=label)) +
+  geom_text_repel() +
+  theme_bw() +
+  scale_x_continuous(breaks=NULL) +
+  scale_y_continuous(breaks=NULL) +
+  labs(y=NULL, x=NULL)
+```
+
+If instead, we form a grouping by adding color, then the group of fives stands out prominently.
+```{r, fig.height=4, fig.width=7}
+ggplot(fives, aes(x=x, y=y, label=label, color=Group)) +
+  geom_text_repel() +
+  theme_bw() +
+  scale_color_manual( values = c('black','red')) + 
+  scale_x_continuous(breaks=NULL) +
+  scale_y_continuous(breaks=NULL) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+
+### Grouping Examples
+
+In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped?
+
+```{r, fig.height=4}
+expand.grid(x=1:4, y=1:4) %>%
+  mutate(group=ifelse(y %in% c(2,4), 'G1', 'G2')) %>%
+  ggplot(aes(x=x, y=y, shape=group)) +
+  geom_point(size=16) +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(-.5, 5.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+```{r, fig.height=4}
+expand.grid(x=1:4, y=1:4) %>%
+  mutate(group=ifelse(x %in% c(2,4), 'G1', 'G2')) %>%
+  ggplot(aes(x=x, y=y, color=group)) +
+  geom_point(size=16) +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(-.5, 5.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+```{r, fig.height=4}
+expand.grid(x=1:4*2, y=1:4) %>%
+  mutate(group='G1') %>%
+  ggplot(aes(x=x, y=y, color=group)) +
+  geom_point(size=16) +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(1.5, 8.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+```{r, fig.height=4}
+expand.grid(x=1:4, y=1:4) %>%
+  mutate(group=paste('G', y, sep='')) %>%
+  ggplot(aes(x=x, y=y, group=group)) +
+  geom_point(size=16) +
+  geom_line() +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(-.5, 5.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+```{r, fig.height=4}
+no_label <- as_labeller( function(input){ ifelse(input=='G1', ' ', '  ')} )
+expand.grid(x=1:2, y=1:4, group=c('G1','G2')) %>%
+  ggplot(aes(x=x, y=y, group=group)) +
+  geom_point(size=16) +
+  facet_grid(.~group, labeller=no_label) +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(.5, 2.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+
+Some grouping is stronger than others
+
+```{r, fig.height=4}
+expand.grid(x=1:4, y=1:4) %>%
+  mutate(group=paste('G', y, sep='')) %>%
+  mutate(shape_group = ifelse(x %in% c(1,3), 'S1','S2')) %>%
+  ggplot(aes(x=x, y=y, group=group)) +
+  geom_point(mapping = aes(shape=shape_group), size=16, ) +
+  geom_line() +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(-.5, 5.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+```{r, fig.height=4}
+no_label <- as_labeller( function(input){ ifelse(input=='G1', ' ', '  ')} )
+expand.grid(x=1:2, y=1:4, group=c('G1','G2')) %>%
+  mutate(shape_group = ifelse(x %in% c(1,3), 'S1','S2')) %>%
+  ggplot(aes(x=x, y=y, group=group)) +
+  geom_point(aes(shape=shape_group), size=16) +
+  facet_grid(.~group, labeller=no_label) +
+  theme_bw() + 
+  scale_x_continuous(breaks=NULL, limits = c(.5, 2.5)) +
+  scale_y_continuous(breaks=NULL, limits = c(.5, 4.5)) +
+  theme(legend.position = 'none') +
+  labs(y=NULL, x=NULL)
+```
+
+
+
+### Example: Warpbreaks
 While spinning wool into thread, if the tension on the wool isn't correctly set, the thread can break. Here we compare two different types of wool at three different tensions.
 
 ```{r, echo=FALSE, fig.height=3, warning=FALSE, message=FALSE}
@@ -62,7 +206,7 @@ ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
 ```
 
 
-### "Color" Scales
+## "Color" Scales
 
 Defining Color really has three different attributes (From [Wikipedia](https://en.wikipedia.org/wiki/HSL_and_HSV)).
 
@@ -74,7 +218,7 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 ![HSV Cylinder from Wikipedia](./Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png)
 
 * Hue is appropriate for categorical variables.
-* Saturation and/or Value is approriate for a quantitative variable scale.
+* Saturation and/or Value is appropriate for a quantitative variable scale.
 
 Neither R nor Tableau make it particularly easy to map these aspects, so we won't get too deep into it.
 

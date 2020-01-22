@@ -288,3 +288,6 @@ The `PersonID` column links the two tables. But when we now have to ask what we 
 
     e. Save this table as a .csv file.
     
+3. Read Chapter 2 in *The Functional Art*.
+    a. On page 46, figure 2.2 asks you to list aspects of the figure that "seem fishy". Before reading the rest of the chapter, list the things that seem fishy. After you've read the rest of the chapter, go back and examine the graph and reflect on why you didn't notice certain deceptive issues on the first reading of the graph.
+    b. On page 55, figure 2.11 asks which chart is more aesthetically pleasing?  Which do you think is more attractive and why?

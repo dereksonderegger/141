@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-01-17" />
+<meta name="date" content="2020-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,6 +155,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.2.4</b> New Column via Calculation</a></li>
 <li class="chapter" data-level="2.2.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#aggregation"><i class="fa fa-check"></i><b>2.2.5</b> Aggregation</a></li>
 <li class="chapter" data-level="2.2.6" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>2.2.6</b> New Column with Aggregation</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#unions"><i class="fa fa-check"></i><b>2.2.7</b> Unions</a></li>
+<li class="chapter" data-level="2.2.8" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#joins"><i class="fa fa-check"></i><b>2.2.8</b> Joins</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#exercises"><i class="fa fa-check"></i><b>2.3</b> Exercises</a></li>
 </ul></li>
@@ -302,6 +304,86 @@ some aggregated information. For, if have the number of males and females in eac
 ## 4 1st Grade  Male                2       4        0.5</code></pre>
 <p>Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: <code>{FIXED [Group]: SUM[Value]}</code></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="unions" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Unions</h3>
+<p>One way that we could “squish” two data sets together is if they have the same columns and we essentially just want to add new rows to a data set.</p>
+<p>In this example we have two tables with identical column types and we just want to stack the two tables to create a single table that contains all the rows of data.</p>
+<pre><code>## # A tibble: 3 x 3
+##   PersonID Type    Handle                      
+##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com</code></pre>
+<pre><code>## # A tibble: 2 x 3
+##   PersonID Type    Handle                     
+##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                      
+## 1 P0003    email   Elise.Sonderegger@gmail.com
+## 2 P0003    Twitter @UnicornsRule</code></pre>
+<pre><code>## # A tibble: 5 x 3
+##   PersonID Type    Handle                      
+##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com
+## 4 P0003    email   Elise.Sonderegger@gmail.com 
+## 5 P0003    Twitter @UnicornsRule</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UqwX79lHk-Y" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="joins" class="section level3">
+<h3><span class="header-section-number">2.2.8</span> Joins</h3>
+<p>There are many cases where we have two or more data sets that are related and we need to squish them together to make a table with more columns. For example we might have a data set <code>People</code> that contains a unique numeric code for each person, first and last names, and birth dates. We might also have a data set of <code>Contacts</code> which has the person’s unique numeric code and the contact type and value.</p>
+<pre><code>## # A tibble: 3 x 4
+##   PersonID First.Name Last.Name   Birthday  
+##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;     
+## 1 P0001    Derek      Sonderegger 01/10/1976
+## 2 P0002    Aubrey     Sonderegger 02/14/1980
+## 3 P0004    Casey      Sonderegger 02/14/2015</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   PersonID Type    Handle                      
+##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com</code></pre>
+<p>The <code>PersonID</code> column links the two tables. But when we now have to ask what we should do about Casey. There are really two options:</p>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="73%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Join Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Inner Join</td>
+<td align="left">Only include rows for individuals that have information in both tables.</td>
+</tr>
+<tr class="even">
+<td align="left">Full Join</td>
+<td align="left">Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty.</td>
+</tr>
+</tbody>
+</table>
+<pre><code>## # A tibble: 3 x 6
+##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
+##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;                  
+## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…</code></pre>
+<pre><code>## # A tibble: 4 x 6
+##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
+##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;                  
+## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…
+## 4 P0004    Casey      Sonderegger 02/14/2015 &lt;NA&gt;   &lt;NA&gt;</code></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 </div>

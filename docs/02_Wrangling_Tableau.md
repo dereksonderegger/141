@@ -172,6 +172,100 @@ Anytime you need to include an aggregation value in formula, we need to specify 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen></iframe>
 
+### Unions
+One way that we could "squish" two data sets together is if they have the same columns and we essentially just want to add new rows to a data set. 
+
+In this example we have two tables with identical column types and we just want to stack the two tables to create a single table that contains all the rows of data.
+
+
+
+```
+## # A tibble: 3 x 3
+##   PersonID Type    Handle                      
+##   <chr>    <chr>   <chr>                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com
+```
+
+```
+## # A tibble: 2 x 3
+##   PersonID Type    Handle                     
+##   <chr>    <chr>   <chr>                      
+## 1 P0003    email   Elise.Sonderegger@gmail.com
+## 2 P0003    Twitter @UnicornsRule
+```
+
+
+```
+## # A tibble: 5 x 3
+##   PersonID Type    Handle                      
+##   <chr>    <chr>   <chr>                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com
+## 4 P0003    email   Elise.Sonderegger@gmail.com 
+## 5 P0003    Twitter @UnicornsRule
+```
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UqwX79lHk-Y" frameborder="0" allowfullscreen></iframe>
+
+
+
+### Joins
+There are many cases where we have two or more data sets that are related and we need to squish them together to make a table with more columns. For example we might have a data set `People` that contains a unique numeric code for each person, first and last names, and birth dates. We might also have a data set of `Contacts` which has the person's unique numeric code and the contact type and value.
+
+
+
+```
+## # A tibble: 3 x 4
+##   PersonID First.Name Last.Name   Birthday  
+##   <chr>    <chr>      <chr>       <chr>     
+## 1 P0001    Derek      Sonderegger 01/10/1976
+## 2 P0002    Aubrey     Sonderegger 02/14/1980
+## 3 P0004    Casey      Sonderegger 02/14/2015
+```
+
+```
+## # A tibble: 3 x 3
+##   PersonID Type    Handle                      
+##   <chr>    <chr>   <chr>                       
+## 1 P0001    email   derek.sonderegger@nau.edu   
+## 2 P0001    Twitter @D_Sonderegger              
+## 3 P0002    email   aubrey.sonderegger@yahoo.com
+```
+
+The `PersonID` column links the two tables. But when we now have to ask what we should do about Casey.  There are really two options:
+
+| Join Type  | Description  |
+|:-----------|:--------------------------------|
+| Inner Join | Only include rows for individuals that have information in both tables. |
+| Full  Join | Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty. |
+
+
+```
+## # A tibble: 3 x 6
+##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
+##   <chr>    <chr>      <chr>       <chr>      <chr>  <chr>                  
+## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…
+```
+
+```
+## # A tibble: 4 x 6
+##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
+##   <chr>    <chr>      <chr>       <chr>      <chr>  <chr>                  
+## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…
+## 4 P0004    Casey      Sonderegger 02/14/2015 <NA>   <NA>
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen></iframe>
+
+
 ## Exercises
 
 1. We are given information about the maximum daily temperature from a weather station in Flagstaff, AZ. The file is available at the GitHub site that this book is hosted on. You can find it [https://github.com/dereksonderegger/141/raw/master/data-raw/FlagMaxTemp.csv](https://github.com/dereksonderegger/570L/raw/master/data-raw/FlagMaxTemp.csv). This file is in a wide format, where each row represents a month and the columns 1, 2, ..., 31 represent the day of the month the observation was made. 

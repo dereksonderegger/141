@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Principles of Graphing | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 3 Principles of Graphing | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Principles of Graphing | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Principles of Graphing | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2020-01-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-tableau-toolbox.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructional-material"><i class="fa fa-check"></i><b>0.1</b> Instructional Material</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data-sources"><i class="fa fa-check"></i><b>0.2</b> Data Sources</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>0.3</b> Introduction</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#pedigogical-plan"><i class="fa fa-check"></i><b>0.4</b> Pedigogical Plan</a></li>
+</ul></li>
+<li class="part"><span><b>Wrangling</b></span></li>
+<li class="chapter" data-level="1" data-path="1-overview.html"><a href="1-overview.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-overview.html"><a href="1-overview.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="1-overview.html"><a href="1-overview.html#tidying"><i class="fa fa-check"></i><b>1.2</b> Tidying</a></li>
+<li class="chapter" data-level="1.3" data-path="1-overview.html"><a href="1-overview.html#cleaning"><i class="fa fa-check"></i><b>1.3</b> Cleaning</a></li>
+<li class="chapter" data-level="1.4" data-path="1-overview.html"><a href="1-overview.html#use"><i class="fa fa-check"></i><b>1.4</b> Use</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html"><i class="fa fa-check"></i><b>2</b> Tableau Toolbox</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#importing-data"><i class="fa fa-check"></i><b>2.1</b> Importing data</a></li>
+<li class="chapter" data-level="2.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#tidying-or-reshaping"><i class="fa fa-check"></i><b>2.2</b> Tidying or Reshaping</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#gather"><i class="fa fa-check"></i><b>2.2.1</b> Gather</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#spread"><i class="fa fa-check"></i><b>2.2.2</b> Spread</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#column-splitting"><i class="fa fa-check"></i><b>2.2.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-via-calculation"><i class="fa fa-check"></i><b>2.2.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#aggregation"><i class="fa fa-check"></i><b>2.2.5</b> Aggregation</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>2.2.6</b> New Column with Aggregation</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#unions"><i class="fa fa-check"></i><b>2.2.7</b> Unions</a></li>
+<li class="chapter" data-level="2.2.8" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#joins"><i class="fa fa-check"></i><b>2.2.8</b> Joins</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-tableau-toolbox.html"><a href="2-tableau-toolbox.html#exercises"><i class="fa fa-check"></i><b>2.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-principles-of-graphing.html"><a href="3-principles-of-graphing.html"><i class="fa fa-check"></i><b>3</b> Principles of Graphing</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-principles-of-graphing.html"><a href="3-principles-of-graphing.html#elementary-perception-tasks"><i class="fa fa-check"></i><b>3.1</b> Elementary Perception Tasks</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="3-principles-of-graphing.html"><a href="3-principles-of-graphing.html#groupings-gestalt"><i class="fa fa-check"></i><b>3.1.1</b> Groupings / Gestalt</a></li>
+<li class="chapter" data-level="3.1.2" data-path="3-principles-of-graphing.html"><a href="3-principles-of-graphing.html#color-scales"><i class="fa fa-check"></i><b>3.1.2</b> “Color” Scales</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="principles-of-graphing" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Principles of Graphing</h1>
+<div id="elementary-perception-tasks" class="section level2">
+<h2><span class="header-section-number">3.1</span> Elementary Perception Tasks</h2>
+<ul>
+<li>Some Visual tasks are easier than others.</li>
+</ul>
+<div class="figure">
+<img src="Resources/Alberto%20Cairo/EPT.png" alt="" />
+<p class="caption">From Alberto Cairo’s “The Truthful Art”</p>
+</div>
+<p>From Hadley Wickham’s Stat 405 at Rice. (Slides 34 - 40)
+<a href="http://stat405.had.co.nz/lectures/20-effective-vis.pdf">Effective Visualizations</a></p>
+<div id="groupings-gestalt" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Groupings / Gestalt</h3>
+<p>The way we organize our graphics can lead a viewer to create mental groups of marks.</p>
+<p><a href="https://github.com/WSU-DataScience/SDSS19-dataviz-workshop/blob/master/slides/Visualization%20theory%20and%20principles.pptx">Winona State’s Data Visualization PowerPoint</a></p>
+<p>Slides 30-50</p>
+<ul>
+<li>Enclosures</li>
+<li>Connections</li>
+<li>Proximity</li>
+<li>Similarity (color/shape)</li>
+</ul>
+<p>Example: Warpbreaks
+While spinning wool into thread, if the tension on the wool isn’t correctly set, the thread can break. Here we compare two different types of wool at three different tensions.</p>
+<p><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-3.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-4.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-1-5.png" width="672" /></p>
+</div>
+<div id="color-scales" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> “Color” Scales</h3>
+<p>Defining Color really has three different attributes (From <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">Wikipedia</a>).</p>
+<div id="hsv-scale" class="section level4">
+<h4><span class="header-section-number">3.1.2.1</span> HSV Scale</h4>
+<ul>
+<li>Hue: The attribute of a visual sensation according to which an area appears to be similar to one of the perceived colors: red, yellow, green, and blue, or to a combination of two of them.</li>
+<li>Saturation: The “colorfulness of a stimulus relative to its own brightness”</li>
+<li>Value: The “brightness relative to the brightness of a similarly illuminated white”</li>
+</ul>
+<div class="figure">
+<img src="Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png" alt="" />
+<p class="caption">HSV Cylinder from Wikipedia</p>
+</div>
+<ul>
+<li>Hue is appropriate for categorical variables.</li>
+<li>Saturation and/or Value is approriate for a quantitative variable scale.</li>
+</ul>
+<p>Neither R nor Tableau make it particularly easy to map these aspects, so we won’t get too deep into it.</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-tableau-toolbox.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/03_Principles_of_Graphing.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

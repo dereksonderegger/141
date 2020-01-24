@@ -29,11 +29,11 @@ In the following example, find all the fives:
 
 If instead, we form a grouping by adding color, then the group of fives stands out prominently.
 <img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
-
+*This example was inspired by an example by Alberto Cairo.*
 
 ### Grouping Examples
 
-In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped?
+In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped? *These are taken from a presentation by Todd Iverson and Silas Bergen.*
 
 <img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
@@ -77,3 +77,21 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 Neither R nor Tableau make it particularly easy to map these aspects, so we won't get too deep into it.
 
 
+1. In soccer, Kylian Mbappé is being referred to as the next world dominating player. The graphic below compares Mbappé to soccer greats Cristiano Ronaldo and Lionel Messi. Below is a graph showing the number of goals scored during various parts of their career (first 100 professional games, second 100, etc). 
+
+    ![Mbappé vs Messi and Ronaldo](https://i.redd.it/nee50ufd1dc41.jpg)
+    a. Identify the EPT the reader is required to perform and the grouping structures used.
+    b. Comment on how the grouping was effective or if you think some change might be better.
+    
+2. In NBA basketball, shot accuracy and distance from the net is important. In the following graph, we can investigate how often shots are taken from different distances.
+
+    ![Shot distribution in the NBA](https://i.redd.it/umu3kya56wb41.png)
+    a. Identify the EPT the reader is required to perform and the grouping structures used.
+    b. Comment on how the grouping was effective or if you think some change might be better.
+    
+3. The following graphic calculates difference between a month's temperature compared to the monthly average temperature across the years since 1850. (i.e. Compare the average January 2014 temperature to the average January temperature across the last 170 Januaries.)
+
+    ![Average World Temperature Since 1850](https://i.redd.it/ughpnln124b41.png)
+    a. Identify the EPT the reader is required to perform and the grouping structures used.
+    b. Comment on how the grouping was effective or if you think some change might be better.
+    

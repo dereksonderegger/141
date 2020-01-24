@@ -222,6 +222,7 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 
 Neither R nor Tableau make it particularly easy to map these aspects, so we won't get too deep into it.
 
+## Exercises
 
 1. In soccer, Kylian Mbappé is being referred to as the next world dominating player. The graphic below compares Mbappé to soccer greats Cristiano Ronaldo and Lionel Messi. Below is a graph showing the number of goals scored during various parts of their career (first 100 professional games, second 100, etc). 
 

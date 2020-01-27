@@ -24,39 +24,39 @@ The way we form groupings can be in one of the following ways, (where higher gro
 
 
 In the following example, find all the fives:
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
 If instead, we form a grouping by adding color, then the group of fives stands out prominently.
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 *This example was inspired by an example by Alberto Cairo.*
 
 ### Grouping Examples
 
 In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped? *These are taken from a presentation by Todd Iverson and Silas Bergen.*
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-5-1.png" width="672" />
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-6-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 
 Some grouping is stronger than others
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
 
 
 ### Example: Warpbreaks
 While spinning wool into thread, if the tension on the wool isn't correctly set, the thread can break. Here we compare two different types of wool at three different tensions.
 
-<img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-2.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-3.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-4.png" width="672" /><img src="03_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-5.png" width="672" />
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-2.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-3.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-4.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-5.png" width="672" />
 
 
 ## "Color" Scales

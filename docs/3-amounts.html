@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Amounts | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 3 Amounts | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Amounts | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Amounts | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2020-01-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-graphing-principles.html"/>
+<link rel="next" href="4-proportions.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructional-material"><i class="fa fa-check"></i><b>0.1</b> Instructional Material</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data-sources"><i class="fa fa-check"></i><b>0.2</b> Data Sources</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>0.3</b> Introduction</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#pedigogical-plan"><i class="fa fa-check"></i><b>0.4</b> Pedigogical Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html"><i class="fa fa-check"></i><b>1</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying"><i class="fa fa-check"></i><b>1.1.1</b> Tidying</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#cleaning"><i class="fa fa-check"></i><b>1.1.2</b> Cleaning</a></li>
+<li class="chapter" data-level="1.1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#use"><i class="fa fa-check"></i><b>1.1.3</b> Use</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tableau"><i class="fa fa-check"></i><b>1.2</b> Tableau</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#importing-data"><i class="fa fa-check"></i><b>1.3</b> Importing data</a></li>
+<li class="chapter" data-level="1.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying-or-reshaping"><i class="fa fa-check"></i><b>1.4</b> Tidying or Reshaping</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#gather"><i class="fa fa-check"></i><b>1.4.1</b> Gather</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#spread"><i class="fa fa-check"></i><b>1.4.2</b> Spread</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#column-splitting"><i class="fa fa-check"></i><b>1.4.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="1.4.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-via-calculation"><i class="fa fa-check"></i><b>1.4.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="1.4.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#aggregation"><i class="fa fa-check"></i><b>1.4.5</b> Aggregation</a></li>
+<li class="chapter" data-level="1.4.6" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>1.4.6</b> New Column with Aggregation</a></li>
+<li class="chapter" data-level="1.4.7" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#unions"><i class="fa fa-check"></i><b>1.4.7</b> Unions</a></li>
+<li class="chapter" data-level="1.4.8" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#joins"><i class="fa fa-check"></i><b>1.4.8</b> Joins</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#exercises"><i class="fa fa-check"></i><b>1.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html"><i class="fa fa-check"></i><b>2</b> Graphing Principles</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#elementary-perception-tasks"><i class="fa fa-check"></i><b>2.1</b> Elementary Perception Tasks</a></li>
+<li class="chapter" data-level="2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#groupings-gestalt"><i class="fa fa-check"></i><b>2.2</b> Groupings / Gestalt</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#grouping-examples"><i class="fa fa-check"></i><b>2.2.1</b> Grouping Examples</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#example-warpbreaks"><i class="fa fa-check"></i><b>2.2.2</b> Example: Warpbreaks</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#color-scales"><i class="fa fa-check"></i><b>2.3</b> “Color” Scales</a></li>
+<li class="chapter" data-level="2.4" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#exercises-1"><i class="fa fa-check"></i><b>2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-amounts.html"><a href="3-amounts.html"><i class="fa fa-check"></i><b>3</b> Amounts</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-amounts.html"><a href="3-amounts.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-amounts.html"><a href="3-amounts.html#examples"><i class="fa fa-check"></i><b>3.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-proportions.html"><a href="4-proportions.html"><i class="fa fa-check"></i><b>4</b> Proportions</a></li>
+<li class="chapter" data-level="5" data-path="5-distributions.html"><a href="5-distributions.html"><i class="fa fa-check"></i><b>5</b> Distributions</a></li>
+<li class="chapter" data-level="6" data-path="6-x-y-relationships.html"><a href="6-x-y-relationships.html"><i class="fa fa-check"></i><b>6</b> X-Y Relationships</a></li>
+<li class="chapter" data-level="7" data-path="7-geographic.html"><a href="7-geographic.html"><i class="fa fa-check"></i><b>7</b> Geographic</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="amounts" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Amounts</h1>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>This chapter focuses on displaying a single numerical variable versus one or more categorical variables. To display the quantitative variable, we’ll try to stay at the top of the EPT tasks and the quantitative variable will be quantified with either the <code>x</code> or <code>y</code> axis or using length. The exception to this is the heatmap, where the quantitative variable is encoded by the color of the tile.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="examples" class="section level2">
+<h2><span class="header-section-number">3.2</span> Examples</h2>
+<p>The 2020 presidential candidate field has a wide range of ages.
+The
+<a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
+has a nice article showing the candidate ages. I grabbed a few of the most prominent candidates and pulled their birthdays from Wikipedia and then calculated their age on election day. As usual the data is <a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Prez_Candidate_Birthdays">available</a> on the Github pages for this book.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The order of the candidates is useless. Here we have ordered them alphabetically when we should try to think about an ordering that improves clarity. Lets switch to sorting the candidates by age.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>This isn’t too bad, but it fails to visually impress the differences. A bar chart should visually impress the ages based on the length of the bar so that we don’t have to keep looking at the Age axis.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>What would be <em>dishonest</em> is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Often we need to graph some value and want to know how it varies among <em>two</em> different categories. In these cases, we have to employ some sort of grouping strategy.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries.</p>
+<p>We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
+<img src="03_Amounts_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
+<img src="03_Amounts_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-graphing-principles.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-proportions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/03_Amounts.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

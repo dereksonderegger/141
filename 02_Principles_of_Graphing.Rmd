@@ -1,5 +1,4 @@
-# Principles of Graphing
-
+# Graphing Principles
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # Unattach any packages that happen to already be loaded. In general this is unecessary
@@ -236,7 +235,7 @@ Neither R nor Tableau make it particularly easy to map these aspects, so we won'
     a. Identify the EPT the reader is required to perform and the grouping structures used.
     b. Comment on how the grouping was effective or if you think some change might be better.
     
-3. The following graphic calculates difference between a month's temperature compared to the monthly average temperature across the years since 1850. (i.e. Compare the average January 2014 temperature to the average January temperature across the last 170 Januaries.)
+3. The following graphic calculates difference between a month's temperature compared to the monthly average temperature across the years since 1850. For example, this graph compares the average January 2014 temperature to the average January temperature across the last 170 Januaries.)
 
     ![Average World Temperature Since 1850](https://i.redd.it/ughpnln124b41.png)
     a. Identify the EPT the reader is required to perform and the grouping structures used.

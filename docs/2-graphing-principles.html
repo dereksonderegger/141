@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="1-data-wrangling.html"/>
+<link rel="prev" href="1-data-wrangling.html"/>
+<link rel="next" href="3-amounts.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -190,68 +190,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 141 - Exploratory Data Analysis and Visualization</h1>
-<p class="author"><em>Derek L. Sonderegger</em></p>
-<p class="date"><em>January 24, 2020</em></p>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarkey that propagandists.</p>
-<p>The source code for my notes, homework assignments, and other information is available on my on <a href="https://github.com/dereksonderegger/141">GitHub</a>. In particular, there is a directory <code>data-raw</code> that contains all of the datasets that we’ll use in these notes and homeworks.</p>
-<div id="instructional-material" class="section level2">
-<h2><span class="header-section-number">0.1</span> Instructional Material</h2>
-<p>This course draws information from several websites and books.</p>
+<div id="graphing-principles" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Graphing Principles</h1>
+<div id="elementary-perception-tasks" class="section level2">
+<h2><span class="header-section-number">2.1</span> Elementary Perception Tasks</h2>
 <ul>
-<li><p>Alberto Cairo’s book <a href="https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F">The Truthful Art</a>. Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at <a href="http://www.thefunctionalart.com">thefunctionalart.com</a>. Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here.</p></li>
-<li><p>Claus O. Wilke has a book
-<a href="https://www.amazon.com/dp/1492031089/ref=cm_sw_em_r_mt_dp_U_DvAxDbV7NFYY6">Fundamentals of Data Visualization</a>.
-There is an online pre-print version of the book available
-<a href="https://serialmentor.com/dataviz/">here</a>
-as well as GitHub repositories for the book
-<a href="https://github.com/clauswilke/dataviz">source</a>
-and
-<a href="https://github.com/clauswilke/dviz.supp">data</a> used in the book.<br />
-He also has a nice R package called <a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">cowplot</a> that aids in making publication ready graphs using R’s <code>ggplot2</code>.</p></li>
-<li><p><a href="https://callingbullshit.org">Calling Bullshit</a> This is a 3-credit course taught at University of Washington. Their goal is to teach students to recognize bullshit provide another scientist a reason why a claim is bullshit.</p></li>
-<li><p>Amelia McNamara’s <a href="http://www.amelia.mn/sds136/index.html">SDS 136 course.</a> Amelia is an Assistant Professor at University of St Thomas and I’ve been influenced by her presentations at national conferences. These are her notes from a data visualization course that she teaches. She is also pretty fun to follow on twitter.</p></li>
+<li>Some Visual tasks are easier than others because our visual processing evolved to do certain tasks.</li>
 </ul>
+<div class="figure">
+<img src="Resources/Alberto%20Cairo/EPT.png" alt="" />
+<p class="caption">From Alberto Cairo’s “The Truthful Art”</p>
 </div>
-<div id="data-sources" class="section level2">
-<h2><span class="header-section-number">0.2</span> Data Sources</h2>
+</div>
+<div id="groupings-gestalt" class="section level2">
+<h2><span class="header-section-number">2.2</span> Groupings / Gestalt</h2>
+<p>The way we organize our graphics can lead a viewer to create mental groups of marks.</p>
+<p>The way we form groupings can be in one of the following ways, (where higher grouping methods produce a stronger grouping effect.</p>
 <ul>
-<li><p>The website <a href="https://ourworldindata.org">Our World in Data</a> has tried to bring together huge amounts of information about a variety of topics and presents the data in context. It typically addresses socioeconomic issues.</p></li>
-<li><p>The website <a href="https://www.kaggle.com">Kaggle</a> started out as a repository for data sets in which data scientists would have host informal competitions. It has grown to host thousands of data sets covering a wide variety of issues.</p></li>
-<li><p>The <a href="https://www.gapminder.org">Gapminder</a> website has health and socioeconomic data for counties going back in time.</p></li>
-<li><p>Access data from the US Government from <a href="http://www.data.gov">Data.gov</a></p></li>
-<li><p>The Centers for Disease Control <a href="https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm">Vital Stats</a> allows for direct download of commonly used downloads. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p></li>
+<li>Enclosures</li>
+<li>Connections</li>
+<li>Proximity</li>
+<li>Similarity (color/shape)</li>
 </ul>
+<p>In the following example, find all the fives:
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>If instead, we form a grouping by adding color, then the group of fives stands out prominently.
+<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+<em>This example was inspired by an example by Alberto Cairo.</em></p>
+<div id="grouping-examples" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Grouping Examples</h3>
+<p>In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped? <em>These are taken from a presentation by Todd Iverson and Silas Bergen.</em></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Some grouping is stronger than others</p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">0.3</span> Introduction</h2>
+<div id="example-warpbreaks" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Example: Warpbreaks</h3>
+<p>While spinning wool into thread, if the tension on the wool isn’t correctly set, the thread can break. Here we compare two different types of wool at three different tensions.</p>
+<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-2.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-3.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-4.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-5.png" width="672" /></p>
+</div>
+</div>
+<div id="color-scales" class="section level2">
+<h2><span class="header-section-number">2.3</span> “Color” Scales</h2>
+<p>Defining Color really has three different attributes (From <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">Wikipedia</a>).</p>
+<div id="hsv-scale" class="section level4">
+<h4><span class="header-section-number">2.3.0.1</span> HSV Scale</h4>
 <ul>
-<li><p>Why visualize data?</p>
-<ul>
-<li>See relationships that raw data obscure.</li>
-<li>Cognitive work to translate raw numbers into context between other data points are already done for you.</li>
-<li>Good graphics translate particular numerical relationships into physical relationships which our brains are really good at processing.</li>
-</ul></li>
-<li><p><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/articles/middleagedgenerationmostlikelytodiebysuicideanddrugpoisoning/2019-08-13">UK Drug Poison</a> These are the data from the UK related to drug overdose and misuse. Farther down the page gives a similar graph on suicide.</p></li>
-<li><p><a href="https://www.torre.nl/EUmoves/">Migration Patterns in Europe</a>.</p></li>
-<li><p>While the New York Times is generally really quite good, this <a href="https://www.nytimes.com/2016/11/29/world/americas/western-liberal-democracy.html?_r=0">graph</a> is quite misleading. Another view of the data is more fair, although the still
-<a href="https://1.bp.blogspot.com/-RQ66mUnaw9Y/XT2gT0j8-tI/AAAAAAAAKoU/G5eOqwdoXS4aW_n0s5-OPWTwes3rdDS6ACLcBGAs/s1600/democracy2.png">depressing.</a></p></li>
-<li><p>I feel compelled to show a bad <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">3-d Excel graphic</a> as well.</p></li>
-<li><p>Reuter’s infamous <a href="https://callingbullshit.org/tools/img/stand_your_ground.png">gun deaths in Florida</a> chart.</p></li>
+<li>Hue: The attribute of a visual sensation according to which an area appears to be similar to one of the perceived colors: red, yellow, green, and blue, or to a combination of two of them.</li>
+<li>Saturation: The “colorfulness of a stimulus relative to its own brightness”</li>
+<li>Value: The “brightness relative to the brightness of a similarly illuminated white”</li>
 </ul>
+<div class="figure">
+<img src="Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png" alt="" />
+<p class="caption">HSV Cylinder from Wikipedia</p>
 </div>
-<div id="pedigogical-plan" class="section level2">
-<h2><span class="header-section-number">0.4</span> Pedigogical Plan</h2>
+<ul>
+<li>Hue is appropriate for categorical variables.</li>
+<li>Saturation and/or Value is appropriate for a quantitative variable scale.</li>
+</ul>
+<p>Neither R nor Tableau make it particularly easy to map these aspects, so we won’t get too deep into it.</p>
+</div>
+</div>
+<div id="exercises-1" class="section level2">
+<h2><span class="header-section-number">2.4</span> Exercises</h2>
 <ol style="list-style-type: decimal">
-<li><p>Develop basic understanding and skills about data wrangling. Because this course will require you to find data that interests you, we need to also learn how to manipulate it because the data are <em>never</em> in a nice format.</p></li>
-<li><p>Introduce the Elementary Perceptual Task order and understand how certain visual tasks are more accurate than others.</p></li>
-<li><p>Introduce a slew of graphic types and examples of where and how they are commonly used.</p></li>
-<li><p>Investigate the choice of variables to display and how that can influence the graph interpretation.</p></li>
-<li><p>Understand how interactive graphics can be used across a broad audience.</p></li>
+<li><p>In soccer, Kylian Mbappé is being referred to as the next world dominating player. The graphic below compares Mbappé to soccer greats Cristiano Ronaldo and Lionel Messi. Below is a graph showing the number of goals scored during various parts of their career (first 100 professional games, second 100, etc).</p>
+<div class="figure">
+<img src="https://i.redd.it/nee50ufd1dc41.jpg" alt="" />
+<p class="caption">Mbappé vs Messi and Ronaldo</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
+<li>Comment on how the grouping was effective or if you think some change might be better.</li>
+</ol></li>
+<li><p>In NBA basketball, shot accuracy and distance from the net is important. In the following graph, we can investigate how often shots are taken from different distances.</p>
+<div class="figure">
+<img src="https://i.redd.it/umu3kya56wb41.png" alt="" />
+<p class="caption">Shot distribution in the NBA</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
+<li>Comment on how the grouping was effective or if you think some change might be better.</li>
+</ol></li>
+<li><p>The following graphic calculates difference between a month’s temperature compared to the monthly average temperature across the years since 1850. For example, this graph compares the average January 2014 temperature to the average January temperature across the last 170 Januaries.)</p>
+<div class="figure">
+<img src="https://i.redd.it/ughpnln124b41.png" alt="" />
+<p class="caption">Average World Temperature Since 1850</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
+<li>Comment on how the grouping was effective or if you think some change might be better.</li>
+</ol></li>
 </ol>
 
 </div>
@@ -261,8 +295,8 @@ He also has a nice R package called <a href="https://cran.r-project.org/web/pack
           </div>
         </div>
       </div>
-
-<a href="1-data-wrangling.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1-data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-amounts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -295,7 +329,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/index.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/02_Principles_of_Graphing.Rmd",
 "text": "Edit"
 },
 "history": {

@@ -176,10 +176,6 @@ The bar chart here is obscuring the differences in life expectancies because the
 
 
 ```{r, echo=FALSE}
-data('gapminder', package='gapminder')
-gapminder <- gapminder %>% filter( country %in%  G7) %>%
-  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )
-
 ggplot(gapminder, aes(x=year, y=lifeExp)) +
   geom_point() + geom_line() +
   facet_grid( . ~ country) +
@@ -202,6 +198,17 @@ ggplot(gapminder, aes(x=year, y=lifeExp)) +
  scale_x_continuous(breaks = seq(1950, 2010,  by=20)) + 
   labs(title='Life Expectancy among G7 Countries (1950 - 2007)', y='Life Expectancy',
        x='') 
+```
+
+We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpaced the rest of the G7 countries.
+```{r}
+gapminder %>%
+  ggplot(aes(x=year, y=lifeExp, color=country)) +
+  geom_point() + geom_line() +
+  labs(title='Life Expectancy among G7 Countries (1950 - 2007)', 
+       y='Life Expectancy',
+       x='',
+       color = '')  
 ```
 
 

@@ -43,6 +43,9 @@ In the above graph, I am grouping countries both by enclosure and with a physica
 We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
+We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpaced the rest of the G7 countries.
+<img src="03_Amounts_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+
 
 A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
-<img src="03_Amounts_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<img src="03_Amounts_files/figure-html/unnamed-chunk-11-1.png" width="672" />

@@ -101,7 +101,7 @@ P5 <-
 cowplot::plot_grid(P1, P2, P3, P4, P5, ncol = 2)
 ```
 
-## Examples
+## Example 1
 The 2020 presidential candidate field has a wide range of ages. 
 The 
 [New York Times](https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html)
@@ -151,6 +151,42 @@ ggplot(birth, aes(x=Candidate, y=AgeOnElection, fill=Party)) +
   coord_flip(ylim=c(35,80)) 
 ```
 
+
+## Example 2
+
+In this section we'll consider two categories. We have the results from a survey administered to students in an introductory statistics class at a New York university. We'll compare the number of student responses broken down by year in school and gender.
+
+```{r}
+data('StudentSurvey', package='Lock5Data')
+StudentSurvey %>%
+  filter(Year != '') %>%
+  mutate(Year = fct_relevel(Year, 'FirstYear','Sophomore','Junior','Senior')) %>%
+  group_by(Year, Gender) %>% count() %>%
+  ggplot( aes(x=Gender, fill=Year, y=n)) +
+  geom_col() +
+  labs(y='Number of Surveys')
+```
+
+The first thing I notice is that there is approximate gender equality, but there are a few more males in class. After a more detailed look, I see that the most abundant class is sophomores, followed by first years, and juniors and seniors are approximately equally abundant. If we switch the grouping order and use color to denote gender and columns to denote the classes, the abundance of sophomores is the first insight to be noticed.
+
+```{r}
+StudentSurvey %>%
+  filter(Year != '') %>%
+  mutate(Year = fct_relevel(Year, 'FirstYear','Sophomore','Junior','Senior')) %>%
+  group_by(Year, Gender) %>% count() %>%
+  ggplot( aes(x=Year, fill=Gender, y=n)) +
+  geom_col() +
+  labs(y='Number of Surveys')
+```
+
+## Tableau Toolbox
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KOAgy0oIY14" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fd8Y1MoKvqc" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AaP8n9TdLyI" frameborder="0" allowfullscreen></iframe>
+
+## Example 3
 
 Often we need to graph some value and want to know how it varies among *two* different categories. In these cases, we have to employ some sort of grouping strategy.
 
@@ -224,3 +260,11 @@ ggplot(., aes( x=year, y=country, fill=lifeExp) ) +
   labs(title='Life Expectancy among G7 Countries (1950 - 2007)', fill='Life Expectancy',
        x='', y='') 
 ```
+
+
+
+## Exercises
+
+1. 
+
+

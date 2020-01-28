@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-01-27" />
+<meta name="date" content="2020-01-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -170,7 +170,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-amounts.html"><a href="3-amounts.html"><i class="fa fa-check"></i><b>3</b> Amounts</a><ul>
 <li class="chapter" data-level="3.1" data-path="3-amounts.html"><a href="3-amounts.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="3-amounts.html"><a href="3-amounts.html#examples"><i class="fa fa-check"></i><b>3.2</b> Examples</a></li>
+<li class="chapter" data-level="3.2" data-path="3-amounts.html"><a href="3-amounts.html#example-1"><i class="fa fa-check"></i><b>3.2</b> Example 1</a></li>
+<li class="chapter" data-level="3.3" data-path="3-amounts.html"><a href="3-amounts.html#example-2"><i class="fa fa-check"></i><b>3.3</b> Example 2</a></li>
+<li class="chapter" data-level="3.4" data-path="3-amounts.html"><a href="3-amounts.html#tableau-toolbox"><i class="fa fa-check"></i><b>3.4</b> Tableau Toolbox</a></li>
+<li class="chapter" data-level="3.5" data-path="3-amounts.html"><a href="3-amounts.html#example-3"><i class="fa fa-check"></i><b>3.5</b> Example 3</a></li>
+<li class="chapter" data-level="3.6" data-path="3-amounts.html"><a href="3-amounts.html#exercises-2"><i class="fa fa-check"></i><b>3.6</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-proportions.html"><a href="4-proportions.html"><i class="fa fa-check"></i><b>4</b> Proportions</a></li>
 <li class="chapter" data-level="5" data-path="5-distributions.html"><a href="5-distributions.html"><i class="fa fa-check"></i><b>5</b> Distributions</a></li>
@@ -200,8 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This chapter focuses on displaying a single numerical variable versus one or more categorical variables. To display the quantitative variable, we’ll try to stay at the top of the EPT tasks and the quantitative variable will be quantified with either the <code>x</code> or <code>y</code> axis or using length. The exception to this is the heatmap, where the quantitative variable is encoded by the color of the tile.</p>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
-<div id="examples" class="section level2">
-<h2><span class="header-section-number">3.2</span> Examples</h2>
+<div id="example-1" class="section level2">
+<h2><span class="header-section-number">3.2</span> Example 1</h2>
 <p>The 2020 presidential candidate field has a wide range of ages.
 The
 <a href="https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html">New York Times</a>
@@ -213,17 +217,42 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>What would be <em>dishonest</em> is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.</p>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Often we need to graph some value and want to know how it varies among <em>two</em> different categories. In these cases, we have to employ some sort of grouping strategy.</p>
+</div>
+<div id="example-2" class="section level2">
+<h2><span class="header-section-number">3.3</span> Example 2</h2>
+<p>In this section we’ll consider two categories. We have the results from a survey administered to students in an introductory statistics class at a New York university. We’ll compare the number of student responses broken down by year in school and gender.</p>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.</p>
+<p>The first thing I notice is that there is approximate gender equality, but there are a few more males in class. After a more detailed look, I see that the most abundant class is sophomores, followed by first years, and juniors and seniors are approximately equally abundant. If we switch the grouping order and use color to denote gender and columns to denote the classes, the abundance of sophomores is the first insight to be noticed.</p>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="tableau-toolbox" class="section level2">
+<h2><span class="header-section-number">3.4</span> Tableau Toolbox</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KOAgy0oIY14" frameborder="0" allowfullscreen>
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fd8Y1MoKvqc" frameborder="0" allowfullscreen>
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AaP8n9TdLyI" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+<div id="example-3" class="section level2">
+<h2><span class="header-section-number">3.5</span> Example 3</h2>
+<p>Often we need to graph some value and want to know how it varies among <em>two</em> different categories. In these cases, we have to employ some sort of grouping strategy.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.</p>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries.</p>
 <p>We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
-<img src="03_Amounts_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<p>We could have also used color to indicate which country is which, but this produces a bit of a <em>spaghetti plot</em> and is difficult to interpret. However, it is easier to identify when Japan’s life expectancy surpaced the rest of the G7 countries.
-<img src="03_Amounts_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>We could have also used color to indicate which country is which, but this produces a bit of a <em>spaghetti plot</em> and is difficult to interpret. However, it is easier to identify when Japan’s life expectancy surpaced the rest of the G7 countries.
+<img src="03_Amounts_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
+<img src="03_Amounts_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="exercises-2" class="section level2">
+<h2><span class="header-section-number">3.6</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
 
 </div>
 </div>

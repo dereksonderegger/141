@@ -241,3 +241,6 @@ Neither R nor Tableau make it particularly easy to map these aspects, so we won'
     a. Identify the EPT the reader is required to perform and the grouping structures used.
     b. Comment on how the grouping was effective or if you think some change might be better.
     
+4. Find a graphic "in the wild" that you think is interesting. Turn in both the original graphic as well as your answers to the following:
+   a. Identify the EPT the reader is required to perform and the grouping structures used.
+    b. Comment on how the graph was effective or if you think some change might improve the graph.

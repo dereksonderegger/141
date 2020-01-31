@@ -21,7 +21,7 @@ As typical, with a just a few categories, we should move the labels onto the gra
 
 
 ### Side-by-side Barchart
-<img src="04_Proportions_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+<img src="04_Proportions_files/figure-html/unnamed-chunk-5-1.png" width="672" /><img src="04_Proportions_files/figure-html/unnamed-chunk-5-2.png" width="672" />
 
 
 

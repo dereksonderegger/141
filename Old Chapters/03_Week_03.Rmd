@@ -311,6 +311,6 @@ This differs from a moasic plot in that a country only occurs withing one contin
     a) In Tableau, a faceted stacked barchart just as we did in these notes.
     b) In a new worksheet, copy your faceted stacked barchart and then turn it into faceted pie charts.
     c) Comment on which you prefer and why.
-    d) Finally create a mosaic plot of the Titatic dataset. 
+    d) Finally create a mosaic plot of the Titantic dataset. 
     
     

@@ -46,6 +46,9 @@ The first thing I notice is that there is approximate gender equality, but there
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AaP8n9TdLyI" frameborder="0" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tke-hgmfMNs" frameborder="0" allowfullscreen></iframe>
+
+
 ## Example 3
 
 Often we need to graph some value and want to know how it varies among *two* different categories. In these cases, we have to employ some sort of grouping strategy.

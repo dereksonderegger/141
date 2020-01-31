@@ -1,1 +1,135 @@
 # Proportions
+
+
+
+Conceptually graphing proportions is the same as graph raw values, but sum to 100%. This seemingly small difference means that our graphic can imply that our categories contain ALL possible categories. 
+
+## Single Set 
+### Pie Charts
+
+<img src="04_Proportions_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+
+As typical, with a just a few categories, we should move the labels onto the graph and just annotate the graph. Also, we'll order the categories from the most temporary employees (Graduate Teaching Assistants) to most permanent (Professors)
+<img src="04_Proportions_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+
+
+
+
+### Stacked Bar
+<img src="04_Proportions_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+
+
+### Side-by-side Barchart
+<img src="04_Proportions_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+
+
+
+|                                                                   |     Pie chart    |    Stacked bars  |   Side-by-side bars  |
+|:------------------------------------------------------------------|:----------------:|:----------------:|:--------------------:|
+| Clear that data is proportions of a whole                         |      **Yes**     |       **Yes**    |        *no*          |
+| Precise visual comparison of values                               |       *no*       |        *no*      |      **Yes**         | 
+| Visually appealing even in simple comparisons                     |     **Yes**      |        *no*      |      **Yes**         |
+| Extendable to nested or multiple distributions or time series     |      *no*        |       **Yes**    |       *no*           |
+
+
+## Multiple Sets of Proportions
+
+### Faceted Bar charts
+<img src="04_Proportions_files/figure-html/unnamed-chunk-6-1.png" width="768" />
+
+<img src="04_Proportions_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+<img src="04_Proportions_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="04_Proportions_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+
+
+### Side-by-Side Stacked Barcharts
+
+<img src="04_Proportions_files/figure-html/unnamed-chunk-10-1.png" width="768" />
+
+
+
+### Mosiac plots
+Sort like side-by-side stacked bar charts, but now we allow the column width to vary as well. The area is proportional the groups representation in the whole data. This reduces the number of really thin bands because we can make the column narrower as well.
+<img src="04_Proportions_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+
+
+<img src="04_Proportions_files/figure-html/unnamed-chunk-12-1.png" width="768" />
+
+
+
+### Alluvial Plots
+If we want to compare multiple categorical variables, another option is alluvial plots.
+<img src="04_Proportions_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+
+
+I find that alluvial plots work better for events that have a definate chronological order and there is less stream overlaps.. Here is an example from a [Washington Post story](https://www.washingtonpost.com/news/soloish/wp/2018/03/12/these-redditors-made-graphics-to-visualize-their-dating-lives-heres-what-they-can-teach-us/) about people graphing their online dating interactions. 
+
+![These are the results of 6.5 weeks of online dating by a 37 year old woman.](Resources/Graphs/Alluvial_Plots/OnlineDatingViaWashingtonPost.jpg)
+
+
+
+
+### Tree graphs
+
+In mosaic plots, we had *crossed* variables where every category level of one factor could show up with all levels of another factor. 
+
+
+-----------------------------
+ Factor.1   Factor.2   value 
+---------- ---------- -------
+    A          w         4   
+
+    A          x         6   
+
+    B          w        15   
+
+    B          x        25   
+-----------------------------
+Table: Crossed Factors Suitable for a Mosaic Plot. 
+
+
+Another possibility is that the variables are nested such that a category level of the second factor only ever occurs within a single level of the first factor.
+
+
+-----------------------------
+ Factor.1   Factor.2   value 
+---------- ---------- -------
+    A          w         4   
+
+    A          x         6   
+
+    B          y        15   
+
+    B          z        25   
+-----------------------------
+Table: Nested Factors Suitable for a Tree Map. 
+
+
+When we have a hierarchical structure of categories, then mosaic plots aren't quite right. Instead we'll hierarchically subdivide the graph area up.
+<img src="04_Proportions_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+
+The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.
+
+This differs from a moasic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
+
+
+
+## Exercises
+
+1. Alluvial plots are a particular type of *Sankey* graphs which show flow rates and amounts and have been around for quite some time. In 1869, Charles Minard created a graphic that details the size of Napaleon's army as they marched on Russia and subsequently returned. You can find the [original](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) or the [modern English translation](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png) on Wikipedia. 
+    a) How many men did the army start marching with?
+    b) How many men arrived in Moscow?
+    c) How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)
+    d) How cold was it when they cross the Berezina River on the retern trip?
+    
+2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/). In chapter 10 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
+
+3. Download data about the [Titanic](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv) disaster at the GitHub site for this class. Save the file as a Titanic.csv and open it in Tableau. 
+    a) In Tableau, a faceted stacked barchart just as we did in these notes.
+    b) In a new worksheet, copy your faceted stacked barchart and then turn it into faceted pie charts.
+    c) Comment on which you prefer and why.
+    d) Finally create a mosaic plot of the Titantic dataset. 
+    
+    

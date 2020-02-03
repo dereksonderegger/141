@@ -1,6 +1,6 @@
-# Proportions
 
 
+## Proportions
 
 Conceptually graphing proportions is the same as graph raw values, but sum to 100%. This seemingly small difference means that our graphic can imply that our categories contain ALL possible categories. 
 

@@ -594,7 +594,7 @@ This differs from a moasic plot in that a country only occurs withing one contin
 
 ## Exercises
 
-1. Alluvial plots are a particular type of *Sankey* graphs which show flow rates and amounts and have been around for quite some time. In 1869, Charles Minard created a graphic that details the size of Napaleon's army as they marched on Russia and subsequently returned. You can find the [original](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) or the [modern English translation](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png) on Wikipedia. 
+1. Alluvial plots are a particular type of *Sankey* graphs which show flow rates and amounts and have been around for quite some time. In 1869, Charles Minard created a graphic that details the size of Napoleon's  army as they marched on Russia and subsequently returned. You can find the [original](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) or the [modern English translation](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png) on Wikipedia. 
     a) How many men did the army start marching with?
     b) How many men arrived in Moscow?
     c) How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)

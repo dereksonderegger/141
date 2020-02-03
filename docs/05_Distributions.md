@@ -67,7 +67,7 @@ Next we'll consider comparing many different distributions. In our example, we'l
 ### Boxplots
 Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
 <img src="05_Distributions_files/figure-html/unnamed-chunk-11-1.png" width="672" />
-
+While boxplots are quite commonly used, they summarize the data *too* much and a lot of interesting detail is lost in this summary.
 
 ### Ridge Plots
 If we have a bunch of overlapping curves, but we stagger them along the y-axis, we get a type of graph called a *ridge graph*. 

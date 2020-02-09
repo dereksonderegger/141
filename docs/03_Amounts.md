@@ -65,7 +65,7 @@ In the above graph, I am grouping countries both by enclosure and with a physica
 We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-11-1.png" width="672" />
 
-We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpaced the rest of the G7 countries.
+We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpassed the rest of the G7 countries.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
 
@@ -81,6 +81,15 @@ Conceptually graphing proportions is the same as graph raw values, but sum to 10
 
 ## Single Set 
 ### Pie Charts
+
+
+```
+## Parsed with column specification:
+## cols(
+##   Type = col_character(),
+##   Number = col_double()
+## )
+```
 
 <img src="03_Amounts_files/figure-html/unnamed-chunk-15-1.png" width="672" />
 
@@ -116,6 +125,11 @@ As typical, with a just a few categories, we should move the labels onto the gra
 
 <img src="03_Amounts_files/figure-html/unnamed-chunk-20-1.png" width="672" />
 <img src="03_Amounts_files/figure-html/unnamed-chunk-21-1.png" width="672" />
+
+```
+## Warning: Removed 4 rows containing missing values (position_stack).
+```
+
 <img src="03_Amounts_files/figure-html/unnamed-chunk-22-1.png" width="672" />
 
 
@@ -136,6 +150,18 @@ Sort like side-by-side stacked bar charts, but now we allow the column width to 
 
 ### Alluvial Plots
 If we want to compare multiple categorical variables, another option is alluvial plots.
+
+```
+## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.
+
+## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.
+
+## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.
+```
+
 <img src="03_Amounts_files/figure-html/unnamed-chunk-26-1.png" width="672" />
 
 
@@ -187,7 +213,10 @@ When we have a hierarchical structure of categories, then mosaic plots aren't qu
 
 The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.
 
-This differs from a moasic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
+This differs from a mosaic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
+
+
+The previous graph is pretty ugly because we are trying to code two quantitative variables (population size and life expectancy). We'll concentrate on population size. Instead of using text to indicate both the continent and country, lets use text for the country and color for continent.
 
 
 
@@ -197,15 +226,15 @@ This differs from a moasic plot in that a country only occurs withing one contin
     a) How many men did the army start marching with?
     b) How many men arrived in Moscow?
     c) How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)
-    d) How cold was it when they cross the Berezina River on the retern trip?
+    d) How cold was it when they cross the Berezina River on the return trip?
     
-2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/). In chapter 10 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
+2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualization [book](https://serialmentor.com/dataviz/). In chapter 11 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
 
 3. Download data about the [Titanic](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv) disaster at the GitHub site for this class. Save the file as a Titanic.csv and open it in Tableau. 
     a) In Tableau, a faceted stacked barchart just as we did in these notes.
-    b) In a new worksheet, copy your faceted stacked barchart and then turn it into faceted pie charts.
+    b) In a new worksheet, copy your faceted stacked bar chart and then turn it into faceted pie charts.
     c) Comment on which you prefer and why.
-    d) Finally create a mosaic plot of the Titantic dataset. 
+    d) Finally create a mosaic plot of the Titanic dataset. 
     
     
 

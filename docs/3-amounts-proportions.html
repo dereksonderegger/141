@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-02-03" />
+<meta name="date" content="2020-02-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -280,7 +280,7 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <p>In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries.</p>
 <p>We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<p>We could have also used color to indicate which country is which, but this produces a bit of a <em>spaghetti plot</em> and is difficult to interpret. However, it is easier to identify when Japan’s life expectancy surpaced the rest of the G7 countries.
+<p>We could have also used color to indicate which country is which, but this produces a bit of a <em>spaghetti plot</em> and is difficult to interpret. However, it is easier to identify when Japan’s life expectancy surpassed the rest of the G7 countries.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
@@ -293,6 +293,11 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <h2><span class="header-section-number">3.7</span> Single Set</h2>
 <div id="pie-charts" class="section level3">
 <h3><span class="header-section-number">3.7.1</span> Pie Charts</h3>
+<pre><code>## Parsed with column specification:
+## cols(
+##   Type = col_character(),
+##   Number = col_double()
+## )</code></pre>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>As typical, with a just a few categories, we should move the labels onto the graph and just annotate the graph. Also, we’ll order the categories from the most temporary employees (Graduate Teaching Assistants) to most permanent (Professors)
 <img src="03_Amounts_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
@@ -348,8 +353,9 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <h3><span class="header-section-number">3.8.1</span> Faceted Bar charts</h3>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
 <p><img src="03_Amounts_files/figure-html/unnamed-chunk-20-1.png" width="672" />
-<img src="03_Amounts_files/figure-html/unnamed-chunk-21-1.png" width="672" />
-<img src="03_Amounts_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<img src="03_Amounts_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<pre><code>## Warning: Removed 4 rows containing missing values (position_stack).</code></pre>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 <div id="side-by-side-stacked-barcharts" class="section level3">
 <h3><span class="header-section-number">3.8.2</span> Side-by-Side Stacked Barcharts</h3>
@@ -363,8 +369,16 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 </div>
 <div id="alluvial-plots" class="section level3">
 <h3><span class="header-section-number">3.8.4</span> Alluvial Plots</h3>
-<p>If we want to compare multiple categorical variables, another option is alluvial plots.
-<img src="03_Amounts_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>If we want to compare multiple categorical variables, another option is alluvial plots.</p>
+<pre><code>## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.
+
+## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.
+
+## Warning in to_lodes_form(data = data, axes = axis_ind, discern =
+## params$discern): Some strata appear at multiple axes.</code></pre>
+<p><img src="03_Amounts_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <p>I find that alluvial plots work better for events that have a definate chronological order and there is less stream overlaps.. Here is an example from a <a href="https://www.washingtonpost.com/news/soloish/wp/2018/03/12/these-redditors-made-graphics-to-visualize-their-dating-lives-heres-what-they-can-teach-us/">Washington Post story</a> about people graphing their online dating interactions.</p>
 <div class="figure">
 <img src="Resources/Graphs/Alluvial_Plots/OnlineDatingViaWashingtonPost.jpg" alt="" />
@@ -452,7 +466,8 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <p>When we have a hierarchical structure of categories, then mosaic plots aren’t quite right. Instead we’ll hierarchically subdivide the graph area up.
 <img src="03_Amounts_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.</p>
-<p>This differs from a moasic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple “containers”.</p>
+<p>This differs from a mosaic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple “containers”.</p>
+<p>The previous graph is pretty ugly because we are trying to code two quantitative variables (population size and life expectancy). We’ll concentrate on population size. Instead of using text to indicate both the continent and country, lets use text for the country and color for continent.</p>
 </div>
 </div>
 <div id="exercises-2" class="section level2">
@@ -463,15 +478,15 @@ has a nice article showing the candidate ages. I grabbed a few of the most promi
 <li>How many men did the army start marching with?</li>
 <li>How many men arrived in Moscow?</li>
 <li>How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)</li>
-<li>How cold was it when they cross the Berezina River on the retern trip?</li>
+<li>How cold was it when they cross the Berezina River on the return trip?</li>
 </ol></li>
-<li><p>Read Chapter 10 and 11 in Claus Wilke’s Fundamentals of Data Visualiztion <a href="https://serialmentor.com/dataviz/">book</a>. In chapter 10 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.</p></li>
+<li><p>Read Chapter 10 and 11 in Claus Wilke’s Fundamentals of Data Visualization <a href="https://serialmentor.com/dataviz/">book</a>. In chapter 11 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.</p></li>
 <li><p>Download data about the <a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv">Titanic</a> disaster at the GitHub site for this class. Save the file as a Titanic.csv and open it in Tableau.</p>
 <ol style="list-style-type: lower-alpha">
 <li>In Tableau, a faceted stacked barchart just as we did in these notes.</li>
-<li>In a new worksheet, copy your faceted stacked barchart and then turn it into faceted pie charts.</li>
+<li>In a new worksheet, copy your faceted stacked bar chart and then turn it into faceted pie charts.</li>
 <li>Comment on which you prefer and why.</li>
-<li>Finally create a mosaic plot of the Titantic dataset.</li>
+<li>Finally create a mosaic plot of the Titanic dataset.</li>
 </ol></li>
 </ol>
 

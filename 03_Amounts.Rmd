@@ -18,6 +18,8 @@ library(tidyverse)
 library(cowplot)
 library(treemapify)
 library(ggmosaic)
+library(ggalluvial)
+
 
 # Don't show the R code!
 knitr::opts_chunk$set(echo = FALSE)
@@ -234,11 +236,13 @@ Often we need to graph some value and want to know how it varies among *two* dif
 ```{r, echo=FALSE}
 data('gapminder', package='gapminder')
 G7 <- c('United States', 'Canada', 'France', 'United Kingdom', 'Germany', 'Italy', 'Japan')
-gapminder <- gapminder %>%
+gapminder_G7 <- gapminder %>%
   filter( country %in%  G7) %>%
-  mutate( decade = cut(year, breaks = seq(1950, 2010, by=10), right=FALSE, labels = paste(seq(1950,2000,by=10),'s',sep='')))
+  mutate( decade = cut(year, breaks = seq(1950, 2010, by=10), right=FALSE, labels = paste(seq(1950,2000,by=10),'s',sep=''))) %>%
+  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )
 
-gapminder %>%
+
+gapminder_G7 %>%
   group_by(continent, country, decade) %>%
   summarize(lifeExp = median(lifeExp)) %>% 
   filter(decade == '2000s') %>%
@@ -253,7 +257,7 @@ The bar chart here is obscuring the differences in life expectancies because the
 
 
 ```{r, echo=FALSE}
-ggplot(gapminder, aes(x=year, y=lifeExp)) +
+ggplot(gapminder_G7, aes(x=year, y=lifeExp)) +
   geom_point() + geom_line() +
   facet_grid( . ~ country) +
  scale_x_continuous(breaks = seq(1950, 2010,  by=20)) + 
@@ -265,11 +269,8 @@ In the above graph, I am grouping countries both by enclosure and with a physica
 
 We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
 ```{r, echo=FALSE}
-data('gapminder', package='gapminder')
-gapminder <- gapminder %>% filter( country %in%  G7) %>%
-  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )
-
-ggplot(gapminder, aes(x=year, y=lifeExp)) +
+gapminder_G7 %>% 
+  ggplot(aes(x=year, y=lifeExp)) +
   geom_point() + geom_line() +
   facet_grid( country ~ . ) +
  scale_x_continuous(breaks = seq(1950, 2010,  by=20)) + 
@@ -277,9 +278,9 @@ ggplot(gapminder, aes(x=year, y=lifeExp)) +
        x='') 
 ```
 
-We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpaced the rest of the G7 countries.
+We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpassed the rest of the G7 countries.
 ```{r}
-gapminder %>%
+gapminder_G7 %>%
   ggplot(aes(x=year, y=lifeExp, color=country)) +
   geom_point() + geom_line() +
   labs(title='Life Expectancy among G7 Countries (1950 - 2007)', 
@@ -291,8 +292,8 @@ gapminder %>%
 
 A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
 ```{r}
-gapminder %>%
-  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )%>%
+gapminder_G7 %>%
+#  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )%>%
   mutate(country = fct_rev(country)) %>%
 ggplot(., aes( x=year, y=country, fill=lifeExp) ) +
   geom_tile() +
@@ -305,9 +306,9 @@ ggplot(., aes( x=year, y=country, fill=lifeExp) ) +
 
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
-library(tidyverse)
-library(cowplot)
-knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, fig.height=4)
+# library(tidyverse)
+# library(cowplot)
+# knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, fig.height=4)
 ```
 ## Proportions
 
@@ -524,7 +525,6 @@ workers %>%
 If we want to compare multiple categorical variables, another option is alluvial plots.
 ```{r}
 data('Titanic')
-library(ggalluvial)
 as.data.frame(Titanic) %>%
   mutate( Class = fct_rev(Class) ) %>%
   mutate( Survived = fct_recode(Survived, Died='No', Lived='Yes') ) %>%
@@ -575,7 +575,7 @@ Table: Nested Factors Suitable for a Tree Map.
 When we have a hierarchical structure of categories, then mosaic plots aren't quite right. Instead we'll hierarchically subdivide the graph area up.
 ```{r}
 library(gapminder)
-gapminder %>%
+gapminder_G7 %>%
   filter( year == 2007 ) %>%
 ggplot(., aes(label = country, area = pop, subgroup = continent, fill = lifeExp)) +
   geom_treemap(layout = "fixed") +
@@ -588,9 +588,31 @@ ggplot(., aes(label = country, area = pop, subgroup = continent, fill = lifeExp)
 
 The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.
 
-This differs from a moasic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
+This differs from a mosaic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
 
 
+The previous graph is pretty ugly because we are trying to code two quantitative variables (population size and life expectancy). We'll concentrate on population size. Instead of using text to indicate both the continent and country, lets use text for the country and color for continent.
+
+```{r, eval=FALSE}
+gapminder %>% 
+  filter(year==2007) %>%
+  mutate( long_group = case_when( continent == 'Americas' ~ 'West',
+                                  continent %in% c('Europe','Africa') ~ 'Central',
+                                  continent %in% c('Asia', 'Oceania') ~ 'East') ) %>%
+  mutate(long_group = fct_relevel(long_group, 'West','Central','East')) %>%
+  mutate( lat_group = case_when(  continent %in% c('Americas', 'Europe', 'Asia') ~ 'North',
+                                  TRUE ~ 'South')) %>% 
+  mutate( lat_group = fct_relevel(lat_group, 'South', 'North')) %>%
+  ggplot(., aes(label = country, area = pop, subgroup = long_group, subgroup2=lat_group, fill = continent)) +
+  geom_treemap(layout='fixed') +
+  geom_treemap_text(layout='fixed', place = "centre", grow = TRUE, colour = "white") +
+  geom_treemap_subgroup_text(layout = "fixed", place = "centre") +
+  geom_treemap_subgroup_border(layout = "fixed") +
+  labs(title='Tree map: Population vs Life Expectancy in 2007')
+
+  
+  
+```
 
 ## Exercises
 
@@ -598,15 +620,15 @@ This differs from a moasic plot in that a country only occurs withing one contin
     a) How many men did the army start marching with?
     b) How many men arrived in Moscow?
     c) How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)
-    d) How cold was it when they cross the Berezina River on the retern trip?
+    d) How cold was it when they cross the Berezina River on the return trip?
     
-2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualiztion [book](https://serialmentor.com/dataviz/). In chapter 10 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
+2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualization [book](https://serialmentor.com/dataviz/). In chapter 11 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
 
 3. Download data about the [Titanic](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv) disaster at the GitHub site for this class. Save the file as a Titanic.csv and open it in Tableau. 
     a) In Tableau, a faceted stacked barchart just as we did in these notes.
-    b) In a new worksheet, copy your faceted stacked barchart and then turn it into faceted pie charts.
+    b) In a new worksheet, copy your faceted stacked bar chart and then turn it into faceted pie charts.
     c) Comment on which you prefer and why.
-    d) Finally create a mosaic plot of the Titantic dataset. 
+    d) Finally create a mosaic plot of the Titanic dataset. 
     
     
 

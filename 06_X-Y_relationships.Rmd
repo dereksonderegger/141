@@ -49,6 +49,13 @@ ggplot(mtcars, aes(x=Weight, y=mpg, size=Power, color=Displacement)) +
 
 
 ### Pairs plots (All-vs-all scatterplots)
+Sometimes we have a dataset with several different variables of quantitative variables. One thing we could do is just make all possible pairs of scatterplots. In a *pairs* plot, we make a grid of graphs where x-axis or y-axis remains consistent as we move across the columns or rows of the grid.
+```{r}
+mtcars %>%
+  select(mpg, Displacement, Power, Weight) %>%
+  GGally::ggpairs(upper=list(continuous='points')  )  
+```
+
 
 ### Correlation Plots
 ## Pearson's Correlation Coefficient
@@ -123,7 +130,7 @@ cowplot::plot_grid(
 
 ```{r}
 mtcars %>%
-  select( Power, Displacement, Weight, mpg ) %>%
+  select( mpg, Displacement, Power, Weight ) %>%
 GGally::ggpairs(.)
 ```
 

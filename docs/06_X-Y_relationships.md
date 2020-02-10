@@ -17,6 +17,9 @@ We could also add other categorical variables by adding faceting. With this comb
 
 
 ### Pairs plots (All-vs-all scatterplots)
+Sometimes we have a dataset with several different variables of quantitative variables. One thing we could do is just make all possible pairs of scatterplots. In a *pairs* plot, we make a grid of graphs where x-axis or y-axis remains consistent as we move across the columns or rows of the grid.
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+
 
 ### Correlation Plots
 ## Pearson's Correlation Coefficient
@@ -26,9 +29,9 @@ $$r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i
 where $x_{i}$ and $y_{i}$ are the x and y coordinate of the $i$th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than $\bar{x}$) and the y-value is large (greater than $\bar{y}$), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.
 
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" />
-
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
 
 The following are true about Pearson's correlation coefficient:
@@ -38,10 +41,10 @@ The following are true about Pearson's correlation coefficient:
 3. A negative $r$ denotes a negative relationship between $x$ and $y$, while a positive value of $r$ represents a positive relationship.
 4. $r$ measures the strength of the *linear* relationship between the predictor and response.
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-6-1.png" width="672" />
-
-
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
+
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 
 ## Overplotting
@@ -50,13 +53,13 @@ The following are true about Pearson's correlation coefficient:
 
 Wilke's book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-9-1.png" width="672" />
 
 
 ### Intensity Maps
 No matter how much we adjust the transparency, we can't really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 
 This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
 
@@ -83,12 +86,12 @@ This graph leads me to think that MOST flights are quite late, when if fact, the
 
 Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes.
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
 
 ### Contour Plots
 
-<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
 
 ## Exercises

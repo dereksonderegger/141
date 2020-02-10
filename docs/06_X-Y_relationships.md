@@ -3,7 +3,7 @@
 
 
 
-### Scatter plots
+## Scatter plots
 Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.
 
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-2-1.png" width="672" />
@@ -21,8 +21,8 @@ Sometimes we have a dataset with several different variables of quantitative var
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
 
-### Correlation Plots
-## Pearson's Correlation Coefficient
+## Correlation Plots
+### Pearson's Correlation Coefficient
 
 We first consider Pearson's correlation coefficient, which is a statistics that measures the strength of the linear relationship between the predictor and response. Consider the following Pearson's correlation statistic
 $$r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)}{n-1}$$
@@ -84,12 +84,14 @@ This graph leads me to think that MOST flights are quite late, when if fact, the
  (180,Inf]    3893     0.01185   
 ---------------------------------
 
-Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes.
+Because we are interested in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes. We'll also modify the color scale so that hexagons with a small count fade into the background and are white and hexagons with relatively large counts have a noticable color.
 
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-12-1.png" width="672" />
 
 
 ### Contour Plots
+
+Contour plots are similar to density plots, but for two-axis.  The lines mark out regions of similar probability and we read it similarly as a topological map that shows elevation.  In this case we can see that the most frequent delays are around 30 minutes long and occur near 5 pm.  There is also a local peak of 20 minute delays around 10 am. 
 
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 

@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-02-09" />
+<meta name="date" content="2020-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,70 @@
 
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -139,16 +203,18 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html"><i class="fa fa-check"></i><b>5</b> X-Y Relationships</a><ul>
-<li class="chapter" data-level="5.0.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#scatter-plots"><i class="fa fa-check"></i><b>5.0.1</b> Scatter plots</a></li>
-<li class="chapter" data-level="5.0.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pairs-plots-all-vs-all-scatterplots"><i class="fa fa-check"></i><b>5.0.2</b> Pairs plots (All-vs-all scatterplots)</a></li>
-<li class="chapter" data-level="5.0.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#correlation-plots"><i class="fa fa-check"></i><b>5.0.3</b> Correlation Plots</a></li>
-<li class="chapter" data-level="5.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>5.1</b> Pearson’s Correlation Coefficient</a></li>
-<li class="chapter" data-level="5.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#overplotting"><i class="fa fa-check"></i><b>5.2</b> Overplotting</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#transparency"><i class="fa fa-check"></i><b>5.2.1</b> Transparency</a></li>
-<li class="chapter" data-level="5.2.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#intensity-maps"><i class="fa fa-check"></i><b>5.2.2</b> Intensity Maps</a></li>
-<li class="chapter" data-level="5.2.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#contour-plots"><i class="fa fa-check"></i><b>5.2.3</b> Contour Plots</a></li>
+<li class="chapter" data-level="5.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#scatter-plots"><i class="fa fa-check"></i><b>5.1</b> Scatter plots</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pairs-plots-all-vs-all-scatterplots"><i class="fa fa-check"></i><b>5.1.1</b> Pairs plots (All-vs-all scatterplots)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-3"><i class="fa fa-check"></i><b>5.3</b> Exercises</a></li>
+<li class="chapter" data-level="5.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#correlation-plots"><i class="fa fa-check"></i><b>5.2</b> Correlation Plots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>5.2.1</b> Pearson’s Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#overplotting"><i class="fa fa-check"></i><b>5.3</b> Overplotting</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#transparency"><i class="fa fa-check"></i><b>5.3.1</b> Transparency</a></li>
+<li class="chapter" data-level="5.3.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#intensity-maps"><i class="fa fa-check"></i><b>5.3.2</b> Intensity Maps</a></li>
+<li class="chapter" data-level="5.3.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#contour-plots"><i class="fa fa-check"></i><b>5.3.3</b> Contour Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-3"><i class="fa fa-check"></i><b>5.4</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a></li>
 </ul>
@@ -170,24 +236,23 @@
             <section class="normal" id="section-">
 <div id="x-y-relationships" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> X-Y Relationships</h1>
-<div id="scatter-plots" class="section level3">
-<h3><span class="header-section-number">5.0.1</span> Scatter plots</h3>
+<div id="scatter-plots" class="section level2">
+<h2><span class="header-section-number">5.1</span> Scatter plots</h2>
 <p>Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>In a scatter plot we can see the relationship between two variables. We can see the relationship among more variables (either continuous or discrete) by adding Size, Color, and Shape.</p>
 <p>We could also add other categorical variables by adding faceting. With this combination we can visualize the relationship between up to 6 different variables.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-</div>
 <div id="pairs-plots-all-vs-all-scatterplots" class="section level3">
-<h3><span class="header-section-number">5.0.2</span> Pairs plots (All-vs-all scatterplots)</h3>
+<h3><span class="header-section-number">5.1.1</span> Pairs plots (All-vs-all scatterplots)</h3>
 <p>Sometimes we have a dataset with several different variables of quantitative variables. One thing we could do is just make all possible pairs of scatterplots. In a <em>pairs</em> plot, we make a grid of graphs where x-axis or y-axis remains consistent as we move across the columns or rows of the grid.
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
-<div id="correlation-plots" class="section level3">
-<h3><span class="header-section-number">5.0.3</span> Correlation Plots</h3>
 </div>
-<div id="pearsons-correlation-coefficient" class="section level2">
-<h2><span class="header-section-number">5.1</span> Pearson’s Correlation Coefficient</h2>
+<div id="correlation-plots" class="section level2">
+<h2><span class="header-section-number">5.2</span> Correlation Plots</h2>
+<div id="pearsons-correlation-coefficient" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Pearson’s Correlation Coefficient</h3>
 <p>We first consider Pearson’s correlation coefficient, which is a statistics that measures the strength of the linear relationship between the predictor and response. Consider the following Pearson’s correlation statistic
 <span class="math display">\[r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)}{n-1}\]</span>
 where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\(y_{i}\)</span> are the x and y coordinate of the <span class="math inline">\(i\)</span>th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than <span class="math inline">\(\bar{x}\)</span>) and the y-value is large (greater than <span class="math inline">\(\bar{y}\)</span>), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.</p>
@@ -203,15 +268,16 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
+</div>
 <div id="overplotting" class="section level2">
-<h2><span class="header-section-number">5.2</span> Overplotting</h2>
+<h2><span class="header-section-number">5.3</span> Overplotting</h2>
 <div id="transparency" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> Transparency</h3>
+<h3><span class="header-section-number">5.3.1</span> Transparency</h3>
 <p>Wilke’s book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="intensity-maps" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Intensity Maps</h3>
+<h3><span class="header-section-number">5.3.2</span> Intensity Maps</h3>
 <p>No matter how much we adjust the transparency, we can’t really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t. This is due to the problem of “proportional pixels”. There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can’t help but have that impression.</p>
@@ -271,16 +337,17 @@ where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\
 </tr>
 </tbody>
 </table>
-<p>Because we are interest in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we’ll we’ll take a log<span class="math inline">\(_{10}\)</span> transformation of all the delays greater than 10 minutes.</p>
+<p>Because we are interested in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we’ll we’ll take a log<span class="math inline">\(_{10}\)</span> transformation of all the delays greater than 10 minutes. We’ll also modify the color scale so that hexagons with a small count fade into the background and are white and hexagons with relatively large counts have a noticable color.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 <div id="contour-plots" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Contour Plots</h3>
+<h3><span class="header-section-number">5.3.3</span> Contour Plots</h3>
+<p>Contour plots are similar to density plots, but for two-axis. The lines mark out regions of similar probability and we read it similarly as a topological map that shows elevation. In this case we can see that the most frequent delays are around 30 minutes long and occur near 5 pm. There is also a local peak of 20 minute delays around 10 am.</p>
 <p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 </div>
 <div id="exercises-3" class="section level2">
-<h2><span class="header-section-number">5.3</span> Exercises</h2>
+<h2><span class="header-section-number">5.4</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><p>Read Chapters 12 and 18 from Wilke’s book. Feel free to skip section 12.3.</p></li>
 <li><p>We will use a smaller version of the diamonds dataset that Wilke uses in his Chapter 18. You can download it from my GitHub site in a

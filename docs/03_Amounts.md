@@ -42,9 +42,9 @@ The first thing I notice is that there is approximate gender equality, but there
 ## Tableau Toolbox
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KOAgy0oIY14" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fd8Y1MoKvqc" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G1I3j8T4bhI" frameborder="0" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AaP8n9TdLyI" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nB_Ty1ZHo0" frameborder="0" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tke-hgmfMNs" frameborder="0" allowfullscreen></iframe>
 

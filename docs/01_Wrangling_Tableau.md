@@ -451,11 +451,11 @@ inner_join(People, Contacts)
 
 ```
 ## # A tibble: 3 x 6
-##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
-##   <chr>    <chr>      <chr>       <chr>      <chr>  <chr>                  
-## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…
+##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
+##   <chr>    <chr>      <chr>       <chr>      <chr>   <chr>                      
+## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…
 ```
 
 ```r
@@ -465,12 +465,12 @@ full_join(People, Contacts)
 
 ```
 ## # A tibble: 4 x 6
-##   PersonID First.Name Last.Name   Birthday   Type   Handle                 
-##   <chr>    <chr>      <chr>       <chr>      <chr>  <chr>                  
-## 1 P0001    Derek      Sonderegger 01/10/1976 email  derek.sonderegger@nau.…
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitt… @D_Sonderegger         
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email  aubrey.sonderegger@yah…
-## 4 P0004    Casey      Sonderegger 02/14/2015 <NA>   <NA>
+##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
+##   <chr>    <chr>      <chr>       <chr>      <chr>   <chr>                      
+## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
+## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
+## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…
+## 4 P0004    Casey      Sonderegger 02/14/2015 <NA>    <NA>
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen></iframe>

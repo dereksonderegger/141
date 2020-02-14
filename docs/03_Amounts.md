@@ -162,6 +162,11 @@ If we want to compare multiple categorical variables, another option is alluvial
 ## params$discern): Some strata appear at multiple axes.
 ```
 
+```
+## Warning: The parameter `label.strata` is deprecated.
+## Pass arguments to `infer.label` instead.
+```
+
 <img src="03_Amounts_files/figure-html/unnamed-chunk-26-1.png" width="672" />
 
 

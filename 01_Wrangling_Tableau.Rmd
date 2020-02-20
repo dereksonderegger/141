@@ -261,7 +261,7 @@ Anytime you need to include an aggregation value in formula, we need to specify 
 ### Unions
 One way that we could "squish" two data sets together is if they have the same columns and we essentially just want to add new rows to a data set. 
 
-In this example we have two tables with identical column types and we just want to stack the two tables to create a single table that contains all the rows of data.
+In this example we have two tables with identical column names and types and we just want to stack the two tables to create a single table that contains all the rows of data.
 
 
 ```{r}

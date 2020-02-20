@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2020-02-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="6-geographic.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructional-material"><i class="fa fa-check"></i><b>0.1</b> Instructional Material</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data-sources"><i class="fa fa-check"></i><b>0.2</b> Data Sources</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>0.3</b> Introduction</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#pedigogical-plan"><i class="fa fa-check"></i><b>0.4</b> Pedigogical Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html"><i class="fa fa-check"></i><b>1</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying"><i class="fa fa-check"></i><b>1.1.1</b> Tidying</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#cleaning"><i class="fa fa-check"></i><b>1.1.2</b> Cleaning</a></li>
+<li class="chapter" data-level="1.1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#use"><i class="fa fa-check"></i><b>1.1.3</b> Use</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tableau"><i class="fa fa-check"></i><b>1.2</b> Tableau</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#importing-data"><i class="fa fa-check"></i><b>1.3</b> Importing data</a></li>
+<li class="chapter" data-level="1.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying-or-reshaping"><i class="fa fa-check"></i><b>1.4</b> Tidying or Reshaping</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#gather"><i class="fa fa-check"></i><b>1.4.1</b> Gather</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#spread"><i class="fa fa-check"></i><b>1.4.2</b> Spread</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#column-splitting"><i class="fa fa-check"></i><b>1.4.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="1.4.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-via-calculation"><i class="fa fa-check"></i><b>1.4.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="1.4.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#aggregation"><i class="fa fa-check"></i><b>1.4.5</b> Aggregation</a></li>
+<li class="chapter" data-level="1.4.6" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>1.4.6</b> New Column with Aggregation</a></li>
+<li class="chapter" data-level="1.4.7" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#unions"><i class="fa fa-check"></i><b>1.4.7</b> Unions</a></li>
+<li class="chapter" data-level="1.4.8" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#joins"><i class="fa fa-check"></i><b>1.4.8</b> Joins</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#exercises"><i class="fa fa-check"></i><b>1.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html"><i class="fa fa-check"></i><b>2</b> Graphing Principles</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#elementary-perception-tasks"><i class="fa fa-check"></i><b>2.1</b> Elementary Perception Tasks</a></li>
+<li class="chapter" data-level="2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#groupings-gestalt"><i class="fa fa-check"></i><b>2.2</b> Groupings / Gestalt</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#grouping-examples"><i class="fa fa-check"></i><b>2.2.1</b> Grouping Examples</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#example-warpbreaks"><i class="fa fa-check"></i><b>2.2.2</b> Example: Warpbreaks</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#color-scales"><i class="fa fa-check"></i><b>2.3</b> “Color” Scales</a></li>
+<li class="chapter" data-level="2.4" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#exercises-1"><i class="fa fa-check"></i><b>2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html"><i class="fa fa-check"></i><b>3</b> Amounts &amp; Proportions</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-1"><i class="fa fa-check"></i><b>3.2</b> Example 1</a></li>
+<li class="chapter" data-level="3.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-2"><i class="fa fa-check"></i><b>3.3</b> Example 2</a></li>
+<li class="chapter" data-level="3.4" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#tableau-toolbox"><i class="fa fa-check"></i><b>3.4</b> Tableau Toolbox</a></li>
+<li class="chapter" data-level="3.5" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-3"><i class="fa fa-check"></i><b>3.5</b> Example 3</a></li>
+<li class="chapter" data-level="3.6" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#proportions"><i class="fa fa-check"></i><b>3.6</b> Proportions</a></li>
+<li class="chapter" data-level="3.7" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#single-set"><i class="fa fa-check"></i><b>3.7</b> Single Set</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#pie-charts"><i class="fa fa-check"></i><b>3.7.1</b> Pie Charts</a></li>
+<li class="chapter" data-level="3.7.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#stacked-bar"><i class="fa fa-check"></i><b>3.7.2</b> Stacked Bar</a></li>
+<li class="chapter" data-level="3.7.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#side-by-side-barchart"><i class="fa fa-check"></i><b>3.7.3</b> Side-by-side Barchart</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#multiple-sets-of-proportions"><i class="fa fa-check"></i><b>3.8</b> Multiple Sets of Proportions</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#faceted-bar-charts"><i class="fa fa-check"></i><b>3.8.1</b> Faceted Bar charts</a></li>
+<li class="chapter" data-level="3.8.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#side-by-side-stacked-barcharts"><i class="fa fa-check"></i><b>3.8.2</b> Side-by-Side Stacked Barcharts</a></li>
+<li class="chapter" data-level="3.8.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#mosiac-plots"><i class="fa fa-check"></i><b>3.8.3</b> Mosiac plots</a></li>
+<li class="chapter" data-level="3.8.4" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#alluvial-plots"><i class="fa fa-check"></i><b>3.8.4</b> Alluvial Plots</a></li>
+<li class="chapter" data-level="3.8.5" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#tree-graphs"><i class="fa fa-check"></i><b>3.8.5</b> Tree graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#exercises-2"><i class="fa fa-check"></i><b>3.9</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-distributions.html"><a href="4-distributions.html"><i class="fa fa-check"></i><b>4</b> Distributions</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="4-distributions.html"><a href="4-distributions.html#small-samples"><i class="fa fa-check"></i><b>4.0.1</b> Small samples</a></li>
+<li class="chapter" data-level="4.0.2" data-path="4-distributions.html"><a href="4-distributions.html#histograms"><i class="fa fa-check"></i><b>4.0.2</b> Histograms</a></li>
+<li class="chapter" data-level="4.0.3" data-path="4-distributions.html"><a href="4-distributions.html#density-plots"><i class="fa fa-check"></i><b>4.0.3</b> Density plots</a></li>
+<li class="chapter" data-level="4.0.4" data-path="4-distributions.html"><a href="4-distributions.html#faceting"><i class="fa fa-check"></i><b>4.0.4</b> Faceting</a></li>
+<li class="chapter" data-level="4.0.5" data-path="4-distributions.html"><a href="4-distributions.html#stacking"><i class="fa fa-check"></i><b>4.0.5</b> Stacking</a></li>
+<li class="chapter" data-level="4.0.6" data-path="4-distributions.html"><a href="4-distributions.html#overlapping-curves"><i class="fa fa-check"></i><b>4.0.6</b> Overlapping curves</a></li>
+<li class="chapter" data-level="4.1" data-path="4-distributions.html"><a href="4-distributions.html#many-distributions"><i class="fa fa-check"></i><b>4.1</b> Many distributions</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="4-distributions.html"><a href="4-distributions.html#boxplots"><i class="fa fa-check"></i><b>4.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4-distributions.html"><a href="4-distributions.html#ridge-plots"><i class="fa fa-check"></i><b>4.1.2</b> Ridge Plots</a></li>
+<li class="chapter" data-level="4.1.3" data-path="4-distributions.html"><a href="4-distributions.html#violin-plots"><i class="fa fa-check"></i><b>4.1.3</b> Violin Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html"><i class="fa fa-check"></i><b>5</b> X-Y Relationships</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#scatter-plots"><i class="fa fa-check"></i><b>5.1</b> Scatter plots</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pairs-plots-all-vs-all-scatterplots"><i class="fa fa-check"></i><b>5.1.1</b> Pairs plots (All-vs-all scatterplots)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#correlation-plots"><i class="fa fa-check"></i><b>5.2</b> Correlation Plots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>5.2.1</b> Pearson’s Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#overplotting"><i class="fa fa-check"></i><b>5.3</b> Overplotting</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#transparency"><i class="fa fa-check"></i><b>5.3.1</b> Transparency</a></li>
+<li class="chapter" data-level="5.3.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#intensity-maps"><i class="fa fa-check"></i><b>5.3.2</b> Intensity Maps</a></li>
+<li class="chapter" data-level="5.3.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#contour-plots"><i class="fa fa-check"></i><b>5.3.3</b> Contour Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-3"><i class="fa fa-check"></i><b>5.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-geographic.html"><a href="6-geographic.html#map-layers"><i class="fa fa-check"></i><b>6.1</b> Map Layers</a></li>
+<li class="chapter" data-level="6.2" data-path="6-geographic.html"><a href="6-geographic.html#tableau-1"><i class="fa fa-check"></i><b>6.2</b> Tableau</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html"><i class="fa fa-check"></i><b>7</b> What to Graph</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#total-35-38-38.75-34.4"><i class="fa fa-check"></i><b>7.1</b> Total 35% 38% 38.75% 34.4%</a></li>
+<li class="chapter" data-level="7.2" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#maternity-deaths"><i class="fa fa-check"></i><b>7.2</b> Maternity Deaths</a></li>
+<li class="chapter" data-level="7.3" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#exercises-4"><i class="fa fa-check"></i><b>7.3</b> Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="what-to-graph" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> What to Graph</h1>
+<p>This week we start asking “What” to graph instead of just “How” to graph.</p>
+<p>Example: Vehicle Deaths
+<img src="Images/Vehicle_Deaths_per_Year.png" />
+<img src="Images/Vehicle%20Deaths_per_Billion_VMT.png" /></p>
+<p>Example: Should we be using <a href="https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress">GDP to measure economic “success”?</a></p>
+<p>Example: Tim Cook displaying
+<a href="https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/">total iPhone sales</a>
+instead of quarterly sales.</p>
+<p>Example: Age Standardization
+Suppose we have two populations with the following age structures and proportion that believe that vaping is “very harmful”.</p>
+<p>Suppose that in each population we’ve asked if individuals believe that vaping is “very harmful”.</p>
+<table style="width:31%;">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Population</th>
+<th align="center">Agree</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">0.35</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">0.3798</td>
+</tr>
+</tbody>
+</table>
+<p>However It turns out that Population B has a much older population. Here I am considering population sizes of 100 individuals just to make the math convenient, but these could be arbitrary population sizes.</p>
+<p>Population Sizes</p>
+<table style="width:25%;">
+<colgroup>
+<col width="11%" />
+<col width="6%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age</th>
+<th align="center">A</th>
+<th align="center">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">18-29</td>
+<td align="center">40</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">30-49</td>
+<td align="center">30</td>
+<td align="center">20</td>
+</tr>
+<tr class="odd">
+<td align="center">50-64</td>
+<td align="center">20</td>
+<td align="center">30</td>
+</tr>
+<tr class="even">
+<td align="center">65+</td>
+<td align="center">10</td>
+<td align="center">40</td>
+</tr>
+</tbody>
+</table>
+<p>Is Vaping Harmful? (By age group and population).
+Here we see that, by age group, people in population B tend to be <em>more</em> permissive opinion about vaping than population A.</p>
+<table style="width:49%;">
+<colgroup>
+<col width="13%" />
+<col width="16%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age</th>
+<th align="center">A</th>
+<th align="center">B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">18-29
+30-49
+50-64
+65+
+<strong>Total</strong></td>
+<td align="center">40 (0.25)
+30 (0.4)
+20 (0.4)
+10 (0.5)
+<strong>0.35%</strong></td>
+<td align="center">10 (0.2)
+20 (0.35)
+30 (0.366)
+40 (0.45)
+<strong>0.38</strong></td>
+</tr>
+</tbody>
+</table>
+<p>What if Population A had the same demographics as Population B? Lets calculate the “Average Demographic Distribution” and then do the multiplication.</p>
+<table style="width:90%;">
+<colgroup>
+<col width="11%" />
+<col width="16%" />
+<col width="18%" />
+<col width="20%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age</th>
+<th align="center">A</th>
+<th align="center">B</th>
+<th align="center">A.Std</th>
+<th align="center">B.Std</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">18-29
+30-49
+50-64
+65+</td>
+<td align="center">40 (0.25)
+30 (0.4)
+20 (0.4)
+10 (0.5)</td>
+<td align="center">10 (0.2)
+20 (0.35)
+30 (0.366)
+40 (0.45)</td>
+<td align="center">25 (0.25)
+25 (0.4)
+25 (0.4)
+25 (0.5)</td>
+<td align="center">25 (0.2)
+25 (0.35)
+25 (0.366)
+25 (0.45)</td>
+</tr>
+</tbody>
+</table>
+<div id="total-35-38-38.75-34.4" class="section level2">
+<h2><span class="header-section-number">7.1</span> Total 35% 38% 38.75% 34.4%</h2>
+<p>Next we consider an example of where this might be helpful. Our example comes from a <a href="https://ourworldindata.org">website</a> “Our World in Data” which tries to provide useful data sets and analysis to address major societal issues. Here we will consider <a href="https://ourworldindata.org/suicide">suicide</a> rates in different countries around the world.</p>
+</div>
+<div id="maternity-deaths" class="section level2">
+<h2><span class="header-section-number">7.2</span> Maternity Deaths</h2>
+<p>Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.</p>
+<p>Step One: Variable of interest
+Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
+<p>Step Two: Context
+Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
+<p>Step Three: Conditional Statistics
+- How does this vary between countries?
+- How does this vary between states?
+- How does this vary between socio-economic or ethic groups?</p>
+<p>Step Four: Finding Data
+- Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.
+- I found data from the Centers for Disease Control. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p>
+<p>Now we find some data from the CDC…
+- Problem: Can’t get State by Year data due to confidentiality…
+- Year by race?</p>
+</div>
+<div id="exercises-4" class="section level2">
+<h2><span class="header-section-number">7.3</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li><p>Download from the STA 141 GitHub raw data directory files for the
+<a href="https://github.com/dereksonderegger/141/raw/master/data-raw/Guns_State_Deaths_2010.csv">murders per state</a>
+as well as
+<a href="https://github.com/dereksonderegger/141/raw/master/data-raw/State_Pop.csv">population sizes</a>
+of each state. The murder information data file contains information about the number of murders per state, how many of those murders were gun related, and the rate of gun ownership. I got this information from
+<a href="https://en.wikipedia.org/wiki/Firearm_death_rates_in_the_United_States_by_state">Wikipedia</a>,
+and it isn’t clear if gun ownership rate is the percent of residents that owns one or more gun or if it is the number of guns per state divided by the number of residents.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Join the state population and murder information data sets.</li>
+<li>Calculate the murder rate and gun murder rate for each statement per 100,000 residents.</li>
+<li>Make a scatterplot of gun ownership rate vs the gun murder rate.</li>
+</ol></li>
+<li><p>Download from the STA 141 GitHub raw data directory files for the
+<a href="https://github.com/dereksonderegger/141/raw/master/data-raw/State_Suicides_2016.csv">suicide rates</a>
+per state. Join this data to data you used in problem 1. Create a scatterplot graph of suicide rate vs gun ownership rates.</p></li>
+<li><p>Given the context of the problems (1) and (2), what follow-up questions come to mind? Given at least two follow-up questions and the graphs you would create to address those questions. Identify the data you would need to create such a graph. <em>Context: At this point, you are not expected to find the data, but identify what variables of interest you would need.</em></p></li>
+<li><p>Propose a topic of interest to you and consider what variables you would need to obtain to explain it to your fellow classmates in a series of one or more graphics. In particular, discuss how the variables you chose needed (or will need) to be transformed to provide useful comparisons.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="6-geographic.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/08_Variable_Selection.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -11,6 +11,9 @@ if( length(pkgs > 0)){
     detach(pkgs[i], character.only = TRUE, force=TRUE)
   }
 }
+
+# Don't show the R code!
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
 ```
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 # Chapter packages we will use
@@ -23,9 +26,9 @@ The process of data wrangling often seems very situation dependent and there isn
 | **Step**  |   Description                    |
 |:---------:|:------------------------------------------------------------------------|
 | Import    |  Get the data into software somehow. The structure of the data is just however it came in. |
-| Tidy      |  Restructure the data so that each row is an observation, and each column is a variable.|
-| Clean     |  Correct variable types, consistent and useful labels, validation and correction.   |
-| Use       |  Sub-setting the full data into a smaller set that addresses a particular question. |
+| Tidy      |  Restructure the data so that each row is an observation, and each column is a variable.   |
+| Clean     |  Correct variable types, consistent and useful labels, validation and correction.          |
+| Use       |  Sub-setting the full data into a smaller set that addresses a particular question.        |
 
 
 
@@ -50,10 +53,11 @@ Contacts <- tribble(
   ~Person,  ~Type,  ~Value,
   'Derek',  'Work Email', 'derek.sonderegger@nau.edu',
   'Derek',  'Cell Phone', '970-867-5309',
-  'Derek',  'Twitter',    '@D_Sonderegger',
+  'Derek',  'Twitter',    '\\@D_Sonderegger',
   'Derek',  'Github',     'dereksonderegger',
   'Mom',    'Home Phone', '555-867-5309')
-Contacts
+Contacts %>%
+  pander::pander()
 ```
 
 For a more challenging example, suppose we have grade book where we've stored students scores for four different homework assignments.
@@ -63,7 +67,8 @@ grade.book <- rbind(
   data.frame(name='Alison',  HW.1=8, HW.2=5, HW.3=8, HW.4=4),
   data.frame(name='Brandon', HW.1=5, HW.2=3, HW.3=6, HW.4=9),
   data.frame(name='Charles', HW.1=9, HW.2=7, HW.3=9, HW.4=10))
-grade.book
+grade.book %>%
+  pander::pander()
 ```
 
 In this case we are considering each row to represent a student and each variable represents homework score. An alternative representation would be for each row to represent a single score.
@@ -74,7 +79,8 @@ tidy.scores <- grade.book %>%
   gather( key=Assignment,   # What should I call the key column
           value=Score,      # What should I call the values column
           HW.1:HW.4)        # which columns to apply this to
-tidy.scores
+tidy.scores %>%
+  pander::pander()
 ```
 
 Either representation is fine in this case, because each student should have the same number of assignments. However, if I was combining grade books from multiple times I've taught the course, the first option won't work because sometimes I assign projects and sometimes not. So the tidy version of the data would be to have a table `scores` where each row represents a single assignment from a particular student.
@@ -136,7 +142,8 @@ grade.book <- rbind(
   tibble(Name='Alison', `Exam 1`=87, `Exam 2`=87, `Final Exam`=81),
   tibble(Name='Bob',    `Exam 1`=91, `Exam 2`=88, `Final Exam`=85),
   tibble(Name='Charlie',`Exam 1`=88, `Exam 2`=79, `Final Exam`=92))
-grade.book
+grade.book %>%
+  pander::pander(caption='Wide Format')
 ```
 
 What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel and Tableau, this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
@@ -147,7 +154,8 @@ tidy.scores <- grade.book %>%
   gather( key=Assessment,     # What should I call the key column
           value=Score,      # What should I call the values column
           `Exam 1`:`Final Exam`)        # which columns to apply this to
-tidy.scores
+tidy.scores %>%
+  pander::pander(caption='Long Format')
 ```
 
 
@@ -173,7 +181,8 @@ cities <- tribble(
     'Phoenix, AZ', 1660272,
     'Flagstaff, AZ', 73964,
     'Tucson, AZ', 545975)
-cities
+cities %>%
+  pander::pander()
 
 write_csv(cities, 'data-raw/cities.csv')
 ```
@@ -198,7 +207,11 @@ data <- tribble(
   '12th Grade', 'Male',   69,
   '12th Grade', 'Female', 64,
   '12th Grade', 'Female', 65)
-data %>% mutate(`Height (cm)` = Height *2.54)
+
+data %>% 
+  mutate(`Height (cm)` = Height *2.54) %>%
+  pander::pander(caption='Student Heights')
+
 write_csv(data, 'data-raw/Group_Summarization.csv')
 ```
 
@@ -213,7 +226,8 @@ Given a data set we also want to be able to calculate summary for various column
 ```{r}
 data %>%
   group_by(Grade, Gender) %>%
-  summarize(`Avg Height` = mean(Height))
+  summarize(`Avg Height` = mean(Height)) %>%
+  pander::pander(caption='Student Heights: Summarized')
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen></iframe>
@@ -226,7 +240,8 @@ some aggregated information. For, if have the number of males and females in eac
 ```{r}
 data %>%
   group_by(Grade, Gender) %>%
-  count(name = 'Grade_Gender_n')
+  count(name = 'Grade_Gender_n') %>%
+  pander::pander(caption='Student Heights: Summarized')
 ```
 
 ```{r}
@@ -235,7 +250,8 @@ data %>%
   count(name = 'Grade_Gender_n') %>%
   group_by(Grade) %>%
   mutate(Grade_n = sum(Grade_Gender_n)) %>%
-  mutate(Proportion = Grade_Gender_n / Grade_n )
+  mutate(Proportion = Grade_Gender_n / Grade_n ) %>%
+  pander::pander()
 ```
 
 Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: `{FIXED [Group]: SUM[Value]}`
@@ -257,23 +273,27 @@ People <-tribble(
 Contacts <- tribble(
     ~PersonID, ~Type, ~Handle,
     'P0001', 'email','derek.sonderegger@nau.edu',
-    'P0001', 'Twitter','@D_Sonderegger',
+    'P0001', 'Twitter','\\@D_Sonderegger',
     'P0002', 'email', 'aubrey.sonderegger@yahoo.com')
 New_Contacts <- tribble(
   ~PersonID, ~Type, ~Handle,
   'P0003', 'email', 'Elise.Sonderegger@gmail.com',
-  'P0003', 'Twitter','@UnicornsRule')
+  'P0003', 'Twitter','\\@UnicornsRule')
 
-Contacts
-New_Contacts
+Contacts %>%
+  pander::pander(caption='Parents')
+New_Contacts %>%
+  pander::pander(caption='Kids')
 
 write_csv(People,   path = './data-raw/Joins_People.csv')
 write_csv(Contacts, path = './data-raw/Joins_Contacts.csv')
 write_csv(New_Contacts, path = './data-raw/Joins_NewContacts.csv')
 ```
 
+Taking a union of these two data sets just squishes them together vertically.
 ```{r}
-bind_rows( Contacts, New_Contacts )
+bind_rows( Contacts, New_Contacts ) %>%
+  pander::pander(caption='Parents & Kid Unioned Together')
 ```
 
 
@@ -286,8 +306,10 @@ There are many cases where we have two or more data sets that are related and we
 
 
 ```{r}
-People 
-Contacts
+People   <- People   %>% select(-Last.Name) 
+
+People   %>% pander::pander(caption='People')
+Contacts %>% pander::pander(caption='Contact Information')
 ```
 
 The `PersonID` column links the two tables. But when we now have to ask what we should do about Casey.  There are really two options:
@@ -297,12 +319,16 @@ The `PersonID` column links the two tables. But when we now have to ask what we 
 | Inner Join | Only include rows for individuals that have information in both tables. |
 | Full  Join | Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty. |
 
+A join squishes the two data sets together horizontally while making sure the rows match up because of one matching column that occurs in each data set. The inner join only returns rows that have data in both data sets.
 ```{r, warning=FALSE, message=FALSE}
 # Inner Joining
-inner_join(People, Contacts)
+inner_join(People, Contacts) %>% pander::pander(caption='Inner Join')
+```
 
+The outer join returns all possible rows that occur in either data set. Notice that Casey has a row in the `People` data set but doesn't have a corresponding row in the `Contacts` table. So his row in the outer join has missing data for the contact information.
+```{r, warning=FALSE, message=FALSE}
 # Full Join
-full_join(People, Contacts)
+full_join(People, Contacts) %>% pander::pander(caption='Outer Join')
 ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen></iframe>

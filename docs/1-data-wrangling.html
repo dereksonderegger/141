@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-02-13" />
+<meta name="date" content="2020-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,7 +224,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-3"><i class="fa fa-check"></i><b>5.4</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a></li>
+<li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-geographic.html"><a href="6-geographic.html#map-layers"><i class="fa fa-check"></i><b>6.1</b> Map Layers</a></li>
+<li class="chapter" data-level="6.2" data-path="6-geographic.html"><a href="6-geographic.html#tableau-1"><i class="fa fa-check"></i><b>6.2</b> Tableau</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html"><i class="fa fa-check"></i><b>7</b> What to Graph</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#total-35-38-38.75-34.4"><i class="fa fa-check"></i><b>7.1</b> Total 35% 38% 38.75% 34.4%</a></li>
+<li class="chapter" data-level="7.2" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#maternity-deaths"><i class="fa fa-check"></i><b>7.2</b> Maternity Deaths</a></li>
+<li class="chapter" data-level="7.3" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#exercises-4"><i class="fa fa-check"></i><b>7.3</b> Exercises</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -289,33 +297,166 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>The difficult part is recognizing what constitutes an observation and what constitutes a variable. Often I like to think that the observations represent a noun and each now has multiple variables that adjectives that describe the noun. In particular I think that the attributes should be applicable to every single observation. If your data has a large number of <code>NA</code> values, that is a symptom of storing the data in a messy (non-tidy) format.</p>
 <p>Suppose I have an address book where I keep email addresses, phone numbers, and other contact information. However, because different people have several different types of contact information, it would be a bad idea to have one row per person because then we’d need a column for work email, personal email, home phone, work phone, cell phone, twitter handle, reddit user name, etc. Instead, store the information with a single row representing a particular contact.</p>
-<pre><code>## # A tibble: 5 x 3
-##   Person Type       Value                    
-##   &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;                    
-## 1 Derek  Work Email derek.sonderegger@nau.edu
-## 2 Derek  Cell Phone 970-867-5309             
-## 3 Derek  Twitter    @D_Sonderegger           
-## 4 Derek  Github     dereksonderegger         
-## 5 Mom    Home Phone 555-867-5309</code></pre>
+<table style="width:69%;">
+<colgroup>
+<col width="12%" />
+<col width="18%" />
+<col width="38%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Person</th>
+<th align="center">Type</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Derek</td>
+<td align="center">Work Email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">Derek</td>
+<td align="center">Cell Phone</td>
+<td align="center">970-867-5309</td>
+</tr>
+<tr class="odd">
+<td align="center">Derek</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="even">
+<td align="center">Derek</td>
+<td align="center">Github</td>
+<td align="center">dereksonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">Mom</td>
+<td align="center">Home Phone</td>
+<td align="center">555-867-5309</td>
+</tr>
+</tbody>
+</table>
 <p>For a more challenging example, suppose we have grade book where we’ve stored students scores for four different homework assignments.</p>
-<pre><code>##      name HW.1 HW.2 HW.3 HW.4
-## 1  Alison    8    5    8    4
-## 2 Brandon    5    3    6    9
-## 3 Charles    9    7    9   10</code></pre>
+<table style="width:53%;">
+<colgroup>
+<col width="13%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">name</th>
+<th align="center">HW.1</th>
+<th align="center">HW.2</th>
+<th align="center">HW.3</th>
+<th align="center">HW.4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">8</td>
+<td align="center">5</td>
+<td align="center">8</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">Brandon</td>
+<td align="center">5</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">Charles</td>
+<td align="center">9</td>
+<td align="center">7</td>
+<td align="center">9</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
 <p>In this case we are considering each row to represent a student and each variable represents homework score. An alternative representation would be for each row to represent a single score.</p>
-<pre><code>##       name Assignment Score
-## 1   Alison       HW.1     8
-## 2  Brandon       HW.1     5
-## 3  Charles       HW.1     9
-## 4   Alison       HW.2     5
-## 5  Brandon       HW.2     3
-## 6  Charles       HW.2     7
-## 7   Alison       HW.3     8
-## 8  Brandon       HW.3     6
-## 9  Charles       HW.3     9
-## 10  Alison       HW.4     4
-## 11 Brandon       HW.4     9
-## 12 Charles       HW.4    10</code></pre>
+<table style="width:43%;">
+<colgroup>
+<col width="13%" />
+<col width="18%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">name</th>
+<th align="center">Assignment</th>
+<th align="center">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">HW.1</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">Brandon</td>
+<td align="center">HW.1</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">Charles</td>
+<td align="center">HW.1</td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center">Alison</td>
+<td align="center">HW.2</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">Brandon</td>
+<td align="center">HW.2</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">Charles</td>
+<td align="center">HW.2</td>
+<td align="center">7</td>
+</tr>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">HW.3</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">Brandon</td>
+<td align="center">HW.3</td>
+<td align="center">6</td>
+</tr>
+<tr class="odd">
+<td align="center">Charles</td>
+<td align="center">HW.3</td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center">Alison</td>
+<td align="center">HW.4</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">Brandon</td>
+<td align="center">HW.4</td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center">Charles</td>
+<td align="center">HW.4</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
 <p>Either representation is fine in this case, because each student should have the same number of assignments. However, if I was combining grade books from multiple times I’ve taught the course, the first option won’t work because sometimes I assign projects and sometimes not. So the tidy version of the data would be to have a table <code>scores</code> where each row represents a single assignment from a particular student.</p>
 </div>
 <div id="cleaning" class="section level3">
@@ -348,10 +489,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="importing-data" class="section level2">
 <h2><span class="header-section-number">1.3</span> Importing data</h2>
 <p>Often data will be stored in a Comma Separated Values file that has a <code>.csv</code> file suffix. These types of files store data tables, and use a comma to separate the columns. Spreadsheet programs will recognize these files and show columns for <code>Student Name</code>, <code>Exam 1</code>, <code>Exam 2</code> and the <code>Final Exam</code>. However, if you open these files using a text reader program, they’ll look something like this:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="1-data-wrangling.html#cb4-1"></a>Student Name,Exam <span class="dv">1</span>,Exam <span class="dv">2</span>,Final Exam</span>
-<span id="cb4-2"><a href="1-data-wrangling.html#cb4-2"></a>Alice,<span class="dv">87</span>,<span class="dv">87</span>,<span class="dv">81</span></span>
-<span id="cb4-3"><a href="1-data-wrangling.html#cb4-3"></a>Bob,<span class="dv">91</span>,<span class="dv">88</span>,<span class="dv">85</span></span>
-<span id="cb4-4"><a href="1-data-wrangling.html#cb4-4"></a>Charlie,<span class="dv">88</span>,<span class="dv">79</span>,<span class="dv">92</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="1-data-wrangling.html#cb1-1"></a>Student Name,Exam <span class="dv">1</span>,Exam <span class="dv">2</span>,Final Exam</span>
+<span id="cb1-2"><a href="1-data-wrangling.html#cb1-2"></a>Alice,<span class="dv">87</span>,<span class="dv">87</span>,<span class="dv">81</span></span>
+<span id="cb1-3"><a href="1-data-wrangling.html#cb1-3"></a>Bob,<span class="dv">91</span>,<span class="dv">88</span>,<span class="dv">85</span></span>
+<span id="cb1-4"><a href="1-data-wrangling.html#cb1-4"></a>Charlie,<span class="dv">88</span>,<span class="dv">79</span>,<span class="dv">92</span></span></code></pre></div>
 <p>Below is a video showing how to open up this same data in Tableau Prep.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen>
 </iframe>
@@ -365,36 +506,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="gather" class="section level3">
 <h3><span class="header-section-number">1.4.1</span> Gather</h3>
 <p>When data is in the <em>“wide”</em> format, we might need to convert it into <em>“long”</em> format. For an example, suppose we have a gradebook with a few students.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="1-data-wrangling.html#cb5-1"></a>grade.book &lt;-<span class="st"> </span><span class="kw">rbind</span>(</span>
-<span id="cb5-2"><a href="1-data-wrangling.html#cb5-2"></a>  <span class="kw">tibble</span>(<span class="dt">Name=</span><span class="st">&#39;Alison&#39;</span>, <span class="st">`</span><span class="dt">Exam 1</span><span class="st">`</span>=<span class="dv">87</span>, <span class="st">`</span><span class="dt">Exam 2</span><span class="st">`</span>=<span class="dv">87</span>, <span class="st">`</span><span class="dt">Final Exam</span><span class="st">`</span>=<span class="dv">81</span>),</span>
-<span id="cb5-3"><a href="1-data-wrangling.html#cb5-3"></a>  <span class="kw">tibble</span>(<span class="dt">Name=</span><span class="st">&#39;Bob&#39;</span>,    <span class="st">`</span><span class="dt">Exam 1</span><span class="st">`</span>=<span class="dv">91</span>, <span class="st">`</span><span class="dt">Exam 2</span><span class="st">`</span>=<span class="dv">88</span>, <span class="st">`</span><span class="dt">Final Exam</span><span class="st">`</span>=<span class="dv">85</span>),</span>
-<span id="cb5-4"><a href="1-data-wrangling.html#cb5-4"></a>  <span class="kw">tibble</span>(<span class="dt">Name=</span><span class="st">&#39;Charlie&#39;</span>,<span class="st">`</span><span class="dt">Exam 1</span><span class="st">`</span>=<span class="dv">88</span>, <span class="st">`</span><span class="dt">Exam 2</span><span class="st">`</span>=<span class="dv">79</span>, <span class="st">`</span><span class="dt">Final Exam</span><span class="st">`</span>=<span class="dv">92</span>))</span>
-<span id="cb5-5"><a href="1-data-wrangling.html#cb5-5"></a>grade.book</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 4
-##   Name    `Exam 1` `Exam 2` `Final Exam`
-##   &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;        &lt;dbl&gt;
-## 1 Alison        87       87           81
-## 2 Bob           91       88           85
-## 3 Charlie       88       79           92</code></pre>
+<table style="width:57%;">
+<caption>Wide Format</caption>
+<colgroup>
+<col width="13%" />
+<col width="12%" />
+<col width="12%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Exam 1</th>
+<th align="center">Exam 2</th>
+<th align="center">Final Exam</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">87</td>
+<td align="center">87</td>
+<td align="center">81</td>
+</tr>
+<tr class="even">
+<td align="center">Bob</td>
+<td align="center">91</td>
+<td align="center">88</td>
+<td align="center">85</td>
+</tr>
+<tr class="odd">
+<td align="center">Charlie</td>
+<td align="center">88</td>
+<td align="center">79</td>
+<td align="center">92</td>
+</tr>
+</tbody>
+</table>
 <p>What we want to do is turn this data frame from a <em>wide</em> data frame into a <em>long</em> data frame. In MS Excel and Tableau, this is called pivoting. Essentially I’d like to create a data frame with three columns: <code>Name</code>, <code>Assessment</code>, and <code>Score</code>. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn’t conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score).</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="1-data-wrangling.html#cb7-1"></a><span class="co"># first we gather the score columns into columns we&#39;ll name Homework and Score</span></span>
-<span id="cb7-2"><a href="1-data-wrangling.html#cb7-2"></a>tidy.scores &lt;-<span class="st"> </span>grade.book <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-3"><a href="1-data-wrangling.html#cb7-3"></a><span class="st">  </span><span class="kw">gather</span>( <span class="dt">key=</span>Assessment,     <span class="co"># What should I call the key column</span></span>
-<span id="cb7-4"><a href="1-data-wrangling.html#cb7-4"></a>          <span class="dt">value=</span>Score,      <span class="co"># What should I call the values column</span></span>
-<span id="cb7-5"><a href="1-data-wrangling.html#cb7-5"></a>          <span class="st">`</span><span class="dt">Exam 1</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">Final Exam</span><span class="st">`</span>)        <span class="co"># which columns to apply this to</span></span>
-<span id="cb7-6"><a href="1-data-wrangling.html#cb7-6"></a>tidy.scores</span></code></pre></div>
-<pre><code>## # A tibble: 9 x 3
-##   Name    Assessment Score
-##   &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt;
-## 1 Alison  Exam 1        87
-## 2 Bob     Exam 1        91
-## 3 Charlie Exam 1        88
-## 4 Alison  Exam 2        87
-## 5 Bob     Exam 2        88
-## 6 Charlie Exam 2        79
-## 7 Alison  Final Exam    81
-## 8 Bob     Final Exam    85
-## 9 Charlie Final Exam    92</code></pre>
+<table style="width:43%;">
+<caption>Long Format</caption>
+<colgroup>
+<col width="13%" />
+<col width="18%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Assessment</th>
+<th align="center">Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">Exam 1</td>
+<td align="center">87</td>
+</tr>
+<tr class="even">
+<td align="center">Bob</td>
+<td align="center">Exam 1</td>
+<td align="center">91</td>
+</tr>
+<tr class="odd">
+<td align="center">Charlie</td>
+<td align="center">Exam 1</td>
+<td align="center">88</td>
+</tr>
+<tr class="even">
+<td align="center">Alison</td>
+<td align="center">Exam 2</td>
+<td align="center">87</td>
+</tr>
+<tr class="odd">
+<td align="center">Bob</td>
+<td align="center">Exam 2</td>
+<td align="center">88</td>
+</tr>
+<tr class="even">
+<td align="center">Charlie</td>
+<td align="center">Exam 2</td>
+<td align="center">79</td>
+</tr>
+<tr class="odd">
+<td align="center">Alison</td>
+<td align="center">Final Exam</td>
+<td align="center">81</td>
+</tr>
+<tr class="even">
+<td align="center">Bob</td>
+<td align="center">Final Exam</td>
+<td align="center">85</td>
+</tr>
+<tr class="odd">
+<td align="center">Charlie</td>
+<td align="center">Final Exam</td>
+<td align="center">92</td>
+</tr>
+</tbody>
+</table>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/suCAb8qJOSM" frameborder="0" allowfullscreen>
 </iframe>
 </div>
@@ -409,50 +620,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">1.4.3</span> Column Splitting</h3>
 <p>Sometimes we have columns where we actually have two pieces of information stored and we have to split the single column into multiple columns.</p>
 <p>For example, we might have data about across the country, where the city name obnoxiously includes the state. It would be good to split the <code>Name</code> column into <code>City</code> and <code>State</code> columns. For example,</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="1-data-wrangling.html#cb9-1"></a>cities &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
-<span id="cb9-2"><a href="1-data-wrangling.html#cb9-2"></a>    <span class="op">~</span>Name, <span class="op">~</span>Population,</span>
-<span id="cb9-3"><a href="1-data-wrangling.html#cb9-3"></a>    <span class="st">&#39;Phoenix, AZ&#39;</span>, <span class="dv">1660272</span>,</span>
-<span id="cb9-4"><a href="1-data-wrangling.html#cb9-4"></a>    <span class="st">&#39;Flagstaff, AZ&#39;</span>, <span class="dv">73964</span>,</span>
-<span id="cb9-5"><a href="1-data-wrangling.html#cb9-5"></a>    <span class="st">&#39;Tucson, AZ&#39;</span>, <span class="dv">545975</span>)</span>
-<span id="cb9-6"><a href="1-data-wrangling.html#cb9-6"></a>cities</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 2
-##   Name          Population
-##   &lt;chr&gt;              &lt;dbl&gt;
-## 1 Phoenix, AZ      1660272
-## 2 Flagstaff, AZ      73964
-## 3 Tucson, AZ        545975</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="1-data-wrangling.html#cb11-1"></a><span class="kw">write_csv</span>(cities, <span class="st">&#39;data-raw/cities.csv&#39;</span>)</span></code></pre></div>
+<table style="width:40%;">
+<colgroup>
+<col width="22%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Phoenix, AZ</td>
+<td align="center">1660272</td>
+</tr>
+<tr class="even">
+<td align="center">Flagstaff, AZ</td>
+<td align="center">73964</td>
+</tr>
+<tr class="odd">
+<td align="center">Tucson, AZ</td>
+<td align="center">545975</td>
+</tr>
+</tbody>
+</table>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 <div id="new-column-via-calculation" class="section level3">
 <h3><span class="header-section-number">1.4.4</span> New Column via Calculation</h3>
 <p>Often we need to take a column and create some sort of calculation. For example, if we are given some information (say student height) in inches, we might want to calculate their height in centimeters by multiplying each height value by <span class="math inline">\(2.54\)</span> and naming the result <code>Height (cm)</code>.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="1-data-wrangling.html#cb12-1"></a>data &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
-<span id="cb12-2"><a href="1-data-wrangling.html#cb12-2"></a>  <span class="op">~</span>Grade, <span class="op">~</span>Gender, <span class="op">~</span>Height,</span>
-<span id="cb12-3"><a href="1-data-wrangling.html#cb12-3"></a>  <span class="st">&#39;1st Grade&#39;</span>, <span class="st">&#39;Male&#39;</span>,   <span class="dv">44</span>,</span>
-<span id="cb12-4"><a href="1-data-wrangling.html#cb12-4"></a>  <span class="st">&#39;1st Grade&#39;</span>, <span class="st">&#39;Male&#39;</span>,   <span class="dv">42</span>,</span>
-<span id="cb12-5"><a href="1-data-wrangling.html#cb12-5"></a>  <span class="st">&#39;1st Grade&#39;</span>, <span class="st">&#39;Female&#39;</span>, <span class="dv">42</span>,</span>
-<span id="cb12-6"><a href="1-data-wrangling.html#cb12-6"></a>  <span class="st">&#39;1st Grade&#39;</span>, <span class="st">&#39;Female&#39;</span>, <span class="dv">40</span>,</span>
-<span id="cb12-7"><a href="1-data-wrangling.html#cb12-7"></a>  <span class="st">&#39;12th Grade&#39;</span>, <span class="st">&#39;Male&#39;</span>,   <span class="dv">70</span>,</span>
-<span id="cb12-8"><a href="1-data-wrangling.html#cb12-8"></a>  <span class="st">&#39;12th Grade&#39;</span>, <span class="st">&#39;Male&#39;</span>,   <span class="dv">68</span>,</span>
-<span id="cb12-9"><a href="1-data-wrangling.html#cb12-9"></a>  <span class="st">&#39;12th Grade&#39;</span>, <span class="st">&#39;Male&#39;</span>,   <span class="dv">69</span>,</span>
-<span id="cb12-10"><a href="1-data-wrangling.html#cb12-10"></a>  <span class="st">&#39;12th Grade&#39;</span>, <span class="st">&#39;Female&#39;</span>, <span class="dv">64</span>,</span>
-<span id="cb12-11"><a href="1-data-wrangling.html#cb12-11"></a>  <span class="st">&#39;12th Grade&#39;</span>, <span class="st">&#39;Female&#39;</span>, <span class="dv">65</span>)</span>
-<span id="cb12-12"><a href="1-data-wrangling.html#cb12-12"></a>data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="st">`</span><span class="dt">Height (cm)</span><span class="st">`</span> =<span class="st"> </span>Height <span class="op">*</span><span class="fl">2.54</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 9 x 4
-##   Grade      Gender Height `Height (cm)`
-##   &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;         &lt;dbl&gt;
-## 1 1st Grade  Male       44          112.
-## 2 1st Grade  Male       42          107.
-## 3 1st Grade  Female     42          107.
-## 4 1st Grade  Female     40          102.
-## 5 12th Grade Male       70          178.
-## 6 12th Grade Male       68          173.
-## 7 12th Grade Male       69          175.
-## 8 12th Grade Female     64          163.
-## 9 12th Grade Female     65          165.</code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="1-data-wrangling.html#cb14-1"></a><span class="kw">write_csv</span>(data, <span class="st">&#39;data-raw/Group_Summarization.csv&#39;</span>)</span></code></pre></div>
+<table style="width:62%;">
+<caption>Student Heights</caption>
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="12%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Grade</th>
+<th align="center">Gender</th>
+<th align="center">Height</th>
+<th align="center">Height (cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1st Grade</td>
+<td align="center">Male</td>
+<td align="center">44</td>
+<td align="center">111.8</td>
+</tr>
+<tr class="even">
+<td align="center">1st Grade</td>
+<td align="center">Male</td>
+<td align="center">42</td>
+<td align="center">106.7</td>
+</tr>
+<tr class="odd">
+<td align="center">1st Grade</td>
+<td align="center">Female</td>
+<td align="center">42</td>
+<td align="center">106.7</td>
+</tr>
+<tr class="even">
+<td align="center">1st Grade</td>
+<td align="center">Female</td>
+<td align="center">40</td>
+<td align="center">101.6</td>
+</tr>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">70</td>
+<td align="center">177.8</td>
+</tr>
+<tr class="even">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">68</td>
+<td align="center">172.7</td>
+</tr>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">69</td>
+<td align="center">175.3</td>
+</tr>
+<tr class="even">
+<td align="center">12th Grade</td>
+<td align="center">Female</td>
+<td align="center">64</td>
+<td align="center">162.6</td>
+</tr>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Female</td>
+<td align="center">65</td>
+<td align="center">165.1</td>
+</tr>
+</tbody>
+</table>
 <p>The issue in Tableau is to make sure you remember how to specify a column in a formula. The syntax is <code>[column_name]</code> and then you can use that quantity in whatever formula you want.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8YvXg1HEqdc" frameborder="0" allowfullscreen>
 </iframe>
@@ -460,17 +732,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="aggregation" class="section level3">
 <h3><span class="header-section-number">1.4.5</span> Aggregation</h3>
 <p>Given a data set we also want to be able to calculate summary for various columns. For example, we might want to calculate the mean height for each grade level, or perhaps each gender within each grade level. Notice that we end up with a data set with <em>fewer rows</em>.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="1-data-wrangling.html#cb15-1"></a>data <span class="op">%&gt;%</span></span>
-<span id="cb15-2"><a href="1-data-wrangling.html#cb15-2"></a><span class="st">  </span><span class="kw">group_by</span>(Grade, Gender) <span class="op">%&gt;%</span></span>
-<span id="cb15-3"><a href="1-data-wrangling.html#cb15-3"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="st">`</span><span class="dt">Avg Height</span><span class="st">`</span> =<span class="st"> </span><span class="kw">mean</span>(Height))</span></code></pre></div>
-<pre><code>## # A tibble: 4 x 3
-## # Groups:   Grade [2]
-##   Grade      Gender `Avg Height`
-##   &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt;
-## 1 12th Grade Female         64.5
-## 2 12th Grade Male           69  
-## 3 1st Grade  Female         41  
-## 4 1st Grade  Male           43</code></pre>
+<table style="width:49%;">
+<caption>Student Heights: Summarized</caption>
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Grade</th>
+<th align="center">Gender</th>
+<th align="center">Avg Height</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Female</td>
+<td align="center">64.5</td>
+</tr>
+<tr class="even">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">69</td>
+</tr>
+<tr class="odd">
+<td align="center">1st Grade</td>
+<td align="center">Female</td>
+<td align="center">41</td>
+</tr>
+<tr class="even">
+<td align="center">1st Grade</td>
+<td align="center">Male</td>
+<td align="center">43</td>
+</tr>
+</tbody>
+</table>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen>
 </iframe>
 </div>
@@ -478,31 +776,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">1.4.6</span> New Column with Aggregation</h3>
 <p>There are many cases where we need to create a calculated column, but the calculation involves
 some aggregated information. For, if have the number of males and females in each grade and we want to calculate the percentage of males and females in each grade. To do this we need to aggregate data to count the number of students in each grade and then divide the number of males or females in each grade by the total number of students in the grade.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="1-data-wrangling.html#cb17-1"></a>data <span class="op">%&gt;%</span></span>
-<span id="cb17-2"><a href="1-data-wrangling.html#cb17-2"></a><span class="st">  </span><span class="kw">group_by</span>(Grade, Gender) <span class="op">%&gt;%</span></span>
-<span id="cb17-3"><a href="1-data-wrangling.html#cb17-3"></a><span class="st">  </span><span class="kw">count</span>(<span class="dt">name =</span> <span class="st">&#39;Grade_Gender_n&#39;</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 4 x 3
-## # Groups:   Grade, Gender [4]
-##   Grade      Gender Grade_Gender_n
-##   &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;
-## 1 12th Grade Female              2
-## 2 12th Grade Male                3
-## 3 1st Grade  Female              2
-## 4 1st Grade  Male                2</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="1-data-wrangling.html#cb19-1"></a>data <span class="op">%&gt;%</span></span>
-<span id="cb19-2"><a href="1-data-wrangling.html#cb19-2"></a><span class="st">  </span><span class="kw">group_by</span>(Grade, Gender) <span class="op">%&gt;%</span></span>
-<span id="cb19-3"><a href="1-data-wrangling.html#cb19-3"></a><span class="st">  </span><span class="kw">count</span>(<span class="dt">name =</span> <span class="st">&#39;Grade_Gender_n&#39;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb19-4"><a href="1-data-wrangling.html#cb19-4"></a><span class="st">  </span><span class="kw">group_by</span>(Grade) <span class="op">%&gt;%</span></span>
-<span id="cb19-5"><a href="1-data-wrangling.html#cb19-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Grade_n =</span> <span class="kw">sum</span>(Grade_Gender_n)) <span class="op">%&gt;%</span></span>
-<span id="cb19-6"><a href="1-data-wrangling.html#cb19-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Proportion =</span> Grade_Gender_n <span class="op">/</span><span class="st"> </span>Grade_n )</span></code></pre></div>
-<pre><code>## # A tibble: 4 x 5
-## # Groups:   Grade [2]
-##   Grade      Gender Grade_Gender_n Grade_n Proportion
-##   &lt;chr&gt;      &lt;chr&gt;           &lt;int&gt;   &lt;int&gt;      &lt;dbl&gt;
-## 1 12th Grade Female              2       5        0.4
-## 2 12th Grade Male                3       5        0.6
-## 3 1st Grade  Female              2       4        0.5
-## 4 1st Grade  Male                2       4        0.5</code></pre>
+<table style="width:54%;">
+<caption>Student Heights: Summarized</caption>
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Grade</th>
+<th align="center">Gender</th>
+<th align="center">Grade_Gender_n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Female</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">1st Grade</td>
+<td align="center">Female</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">1st Grade</td>
+<td align="center">Male</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<table style="width:86%;">
+<colgroup>
+<col width="18%" />
+<col width="12%" />
+<col width="23%" />
+<col width="13%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Grade</th>
+<th align="center">Gender</th>
+<th align="center">Grade_Gender_n</th>
+<th align="center">Grade_n</th>
+<th align="center">Proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">12th Grade</td>
+<td align="center">Female</td>
+<td align="center">2</td>
+<td align="center">5</td>
+<td align="center">0.4</td>
+</tr>
+<tr class="even">
+<td align="center">12th Grade</td>
+<td align="center">Male</td>
+<td align="center">3</td>
+<td align="center">5</td>
+<td align="center">0.6</td>
+</tr>
+<tr class="odd">
+<td align="center">1st Grade</td>
+<td align="center">Female</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">1st Grade</td>
+<td align="center">Male</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">0.5</td>
+</tr>
+</tbody>
+</table>
 <p>Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: <code>{FIXED [Group]: SUM[Value]}</code></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen>
 </iframe>
@@ -511,66 +869,178 @@ some aggregated information. For, if have the number of males and females in eac
 <h3><span class="header-section-number">1.4.7</span> Unions</h3>
 <p>One way that we could “squish” two data sets together is if they have the same columns and we essentially just want to add new rows to a data set.</p>
 <p>In this example we have two tables with identical column types and we just want to stack the two tables to create a single table that contains all the rows of data.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="1-data-wrangling.html#cb21-1"></a>People &lt;-<span class="kw">tribble</span>(</span>
-<span id="cb21-2"><a href="1-data-wrangling.html#cb21-2"></a>    <span class="op">~</span>PersonID, <span class="op">~</span>First.Name, <span class="op">~</span>Last.Name, <span class="op">~</span>Birthday,</span>
-<span id="cb21-3"><a href="1-data-wrangling.html#cb21-3"></a>    <span class="st">&#39;P0001&#39;</span>, <span class="st">&#39;Derek&#39;</span>, <span class="st">&#39;Sonderegger&#39;</span>, <span class="st">&#39;01/10/1976&#39;</span>,</span>
-<span id="cb21-4"><a href="1-data-wrangling.html#cb21-4"></a>    <span class="st">&#39;P0002&#39;</span>, <span class="st">&#39;Aubrey&#39;</span>,<span class="st">&#39;Sonderegger&#39;</span>, <span class="st">&#39;02/14/1980&#39;</span>,</span>
-<span id="cb21-5"><a href="1-data-wrangling.html#cb21-5"></a>    <span class="st">&#39;P0004&#39;</span>, <span class="st">&#39;Casey&#39;</span>, <span class="st">&#39;Sonderegger&#39;</span>, <span class="st">&#39;02/14/2015&#39;</span>)</span>
-<span id="cb21-6"><a href="1-data-wrangling.html#cb21-6"></a>Contacts &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
-<span id="cb21-7"><a href="1-data-wrangling.html#cb21-7"></a>    <span class="op">~</span>PersonID, <span class="op">~</span>Type, <span class="op">~</span>Handle,</span>
-<span id="cb21-8"><a href="1-data-wrangling.html#cb21-8"></a>    <span class="st">&#39;P0001&#39;</span>, <span class="st">&#39;email&#39;</span>,<span class="st">&#39;derek.sonderegger@nau.edu&#39;</span>,</span>
-<span id="cb21-9"><a href="1-data-wrangling.html#cb21-9"></a>    <span class="st">&#39;P0001&#39;</span>, <span class="st">&#39;Twitter&#39;</span>,<span class="st">&#39;@D_Sonderegger&#39;</span>,</span>
-<span id="cb21-10"><a href="1-data-wrangling.html#cb21-10"></a>    <span class="st">&#39;P0002&#39;</span>, <span class="st">&#39;email&#39;</span>, <span class="st">&#39;aubrey.sonderegger@yahoo.com&#39;</span>)</span>
-<span id="cb21-11"><a href="1-data-wrangling.html#cb21-11"></a>New_Contacts &lt;-<span class="st"> </span><span class="kw">tribble</span>(</span>
-<span id="cb21-12"><a href="1-data-wrangling.html#cb21-12"></a>  <span class="op">~</span>PersonID, <span class="op">~</span>Type, <span class="op">~</span>Handle,</span>
-<span id="cb21-13"><a href="1-data-wrangling.html#cb21-13"></a>  <span class="st">&#39;P0003&#39;</span>, <span class="st">&#39;email&#39;</span>, <span class="st">&#39;Elise.Sonderegger@gmail.com&#39;</span>,</span>
-<span id="cb21-14"><a href="1-data-wrangling.html#cb21-14"></a>  <span class="st">&#39;P0003&#39;</span>, <span class="st">&#39;Twitter&#39;</span>,<span class="st">&#39;@UnicornsRule&#39;</span>)</span>
-<span id="cb21-15"><a href="1-data-wrangling.html#cb21-15"></a></span>
-<span id="cb21-16"><a href="1-data-wrangling.html#cb21-16"></a>Contacts</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 3
-##   PersonID Type    Handle                      
-##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com</code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="1-data-wrangling.html#cb23-1"></a>New_Contacts</span></code></pre></div>
-<pre><code>## # A tibble: 2 x 3
-##   PersonID Type    Handle                     
-##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                      
-## 1 P0003    email   Elise.Sonderegger@gmail.com
-## 2 P0003    Twitter @UnicornsRule</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="1-data-wrangling.html#cb25-1"></a><span class="kw">write_csv</span>(People,   <span class="dt">path =</span> <span class="st">&#39;./data-raw/Joins_People.csv&#39;</span>)</span>
-<span id="cb25-2"><a href="1-data-wrangling.html#cb25-2"></a><span class="kw">write_csv</span>(Contacts, <span class="dt">path =</span> <span class="st">&#39;./data-raw/Joins_Contacts.csv&#39;</span>)</span>
-<span id="cb25-3"><a href="1-data-wrangling.html#cb25-3"></a><span class="kw">write_csv</span>(New_Contacts, <span class="dt">path =</span> <span class="st">&#39;./data-raw/Joins_NewContacts.csv&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="1-data-wrangling.html#cb26-1"></a><span class="kw">bind_rows</span>( Contacts, New_Contacts )</span></code></pre></div>
-<pre><code>## # A tibble: 5 x 3
-##   PersonID Type    Handle                      
-##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com
-## 4 P0003    email   Elise.Sonderegger@gmail.com 
-## 5 P0003    Twitter @UnicornsRule</code></pre>
+<table style="width:72%;">
+<caption>Parents</caption>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0001</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">P0002</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:aubrey.sonderegger@yahoo.com" class="email">aubrey.sonderegger@yahoo.com</a></td>
+</tr>
+</tbody>
+</table>
+<table style="width:71%;">
+<caption>Kids</caption>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0003</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:Elise.Sonderegger@gmail.com" class="email">Elise.Sonderegger@gmail.com</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0003</td>
+<td align="center">Twitter</td>
+<td align="center">@UnicornsRule</td>
+</tr>
+</tbody>
+</table>
+<p>Taking a union of these two data sets just squishes them together vertically.</p>
+<table style="width:72%;">
+<caption>Parents &amp; Kid Unioned Together</caption>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0001</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">P0002</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:aubrey.sonderegger@yahoo.com" class="email">aubrey.sonderegger@yahoo.com</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0003</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:Elise.Sonderegger@gmail.com" class="email">Elise.Sonderegger@gmail.com</a></td>
+</tr>
+<tr class="odd">
+<td align="center">P0003</td>
+<td align="center">Twitter</td>
+<td align="center">@UnicornsRule</td>
+</tr>
+</tbody>
+</table>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UqwX79lHk-Y" frameborder="0" allowfullscreen>
 </iframe>
 </div>
 <div id="joins" class="section level3">
 <h3><span class="header-section-number">1.4.8</span> Joins</h3>
 <p>There are many cases where we have two or more data sets that are related and we need to squish them together to make a table with more columns. For example we might have a data set <code>People</code> that contains a unique numeric code for each person, first and last names, and birth dates. We might also have a data set of <code>Contacts</code> which has the person’s unique numeric code and the contact type and value.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="1-data-wrangling.html#cb28-1"></a>People </span></code></pre></div>
-<pre><code>## # A tibble: 3 x 4
-##   PersonID First.Name Last.Name   Birthday  
-##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;     
-## 1 P0001    Derek      Sonderegger 01/10/1976
-## 2 P0002    Aubrey     Sonderegger 02/14/1980
-## 3 P0004    Casey      Sonderegger 02/14/2015</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="1-data-wrangling.html#cb30-1"></a>Contacts</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 3
-##   PersonID Type    Handle                      
-##   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com</code></pre>
+<table style="width:51%;">
+<caption>People</caption>
+<colgroup>
+<col width="15%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">First.Name</th>
+<th align="center">Birthday</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">Derek</td>
+<td align="center">01/10/1976</td>
+</tr>
+<tr class="even">
+<td align="center">P0002</td>
+<td align="center">Aubrey</td>
+<td align="center">02/14/1980</td>
+</tr>
+<tr class="odd">
+<td align="center">P0004</td>
+<td align="center">Casey</td>
+<td align="center">02/14/2015</td>
+</tr>
+</tbody>
+</table>
+<table style="width:72%;">
+<caption>Contact Information</caption>
+<colgroup>
+<col width="15%" />
+<col width="13%" />
+<col width="43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0001</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">P0002</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:aubrey.sonderegger@yahoo.com" class="email">aubrey.sonderegger@yahoo.com</a></td>
+</tr>
+</tbody>
+</table>
 <p>The <code>PersonID</code> column links the two tables. But when we now have to ask what we should do about Casey. There are really two options:</p>
 <table>
 <colgroup>
@@ -594,23 +1064,99 @@ some aggregated information. For, if have the number of males and females in eac
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="1-data-wrangling.html#cb32-1"></a><span class="co"># Inner Joining</span></span>
-<span id="cb32-2"><a href="1-data-wrangling.html#cb32-2"></a><span class="kw">inner_join</span>(People, Contacts)</span></code></pre></div>
-<pre><code>## # A tibble: 3 x 6
-##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
-##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;                      
-## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="1-data-wrangling.html#cb34-1"></a><span class="co"># Full Join</span></span>
-<span id="cb34-2"><a href="1-data-wrangling.html#cb34-2"></a><span class="kw">full_join</span>(People, Contacts)</span></code></pre></div>
-<pre><code>## # A tibble: 4 x 6
-##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
-##   &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt;                      
-## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…
-## 4 P0004    Casey      Sonderegger 02/14/2015 &lt;NA&gt;    &lt;NA&gt;</code></pre>
+<p>A join squishes the two data sets together horizontally while making sure the rows match up because of one matching column that occurs in each data set. The inner join only returns rows that have data in both data sets.</p>
+<table>
+<caption>Inner Join</caption>
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="16%" />
+<col width="12%" />
+<col width="39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">First.Name</th>
+<th align="center">Birthday</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">Derek</td>
+<td align="center">01/10/1976</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0001</td>
+<td align="center">Derek</td>
+<td align="center">01/10/1976</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">P0002</td>
+<td align="center">Aubrey</td>
+<td align="center">02/14/1980</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:aubrey.sonderegger@yahoo.com" class="email">aubrey.sonderegger@yahoo.com</a></td>
+</tr>
+</tbody>
+</table>
+<p>The outer join returns all possible rows that occur in either data set. Notice that Casey has a row in the <code>People</code> data set but doesn’t have a corresponding row in the <code>Contacts</code> table. So his row in the outer join has missing data for the contact information.</p>
+<table>
+<caption>Outer Join</caption>
+<colgroup>
+<col width="14%" />
+<col width="16%" />
+<col width="16%" />
+<col width="12%" />
+<col width="39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">PersonID</th>
+<th align="center">First.Name</th>
+<th align="center">Birthday</th>
+<th align="center">Type</th>
+<th align="center">Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">P0001</td>
+<td align="center">Derek</td>
+<td align="center">01/10/1976</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:derek.sonderegger@nau.edu" class="email">derek.sonderegger@nau.edu</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0001</td>
+<td align="center">Derek</td>
+<td align="center">01/10/1976</td>
+<td align="center">Twitter</td>
+<td align="center">@D_Sonderegger</td>
+</tr>
+<tr class="odd">
+<td align="center">P0002</td>
+<td align="center">Aubrey</td>
+<td align="center">02/14/1980</td>
+<td align="center">email</td>
+<td align="center"><a href="mailto:aubrey.sonderegger@yahoo.com" class="email">aubrey.sonderegger@yahoo.com</a></td>
+</tr>
+<tr class="even">
+<td align="center">P0004</td>
+<td align="center">Casey</td>
+<td align="center">02/14/2015</td>
+<td align="center">NA</td>
+<td align="center">NA</td>
+</tr>
+</tbody>
+</table>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen>
 </iframe>
 </div>

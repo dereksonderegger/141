@@ -9,9 +9,9 @@ The process of data wrangling often seems very situation dependent and there isn
 | **Step**  |   Description                    |
 |:---------:|:------------------------------------------------------------------------|
 | Import    |  Get the data into software somehow. The structure of the data is just however it came in. |
-| Tidy      |  Restructure the data so that each row is an observation, and each column is a variable.|
-| Clean     |  Correct variable types, consistent and useful labels, validation and correction.   |
-| Use       |  Sub-setting the full data into a smaller set that addresses a particular question. |
+| Tidy      |  Restructure the data so that each row is an observation, and each column is a variable.   |
+| Clean     |  Correct variable types, consistent and useful labels, validation and correction.          |
+| Use       |  Sub-setting the full data into a smaller set that addresses a particular question.        |
 
 
 
@@ -32,45 +32,63 @@ The difficult part is recognizing what constitutes an observation and what const
 Suppose I have an address book where I keep email addresses, phone numbers, and other contact information.  However, because different people have several different types of contact information, it would be a bad idea to have one row per person because then we'd need a column for work email, personal email, home phone, work phone, cell phone, twitter handle, reddit user name, etc. Instead, store the information with a single row representing a particular contact.
 
 
-```
-## # A tibble: 5 x 3
-##   Person Type       Value                    
-##   <chr>  <chr>      <chr>                    
-## 1 Derek  Work Email derek.sonderegger@nau.edu
-## 2 Derek  Cell Phone 970-867-5309             
-## 3 Derek  Twitter    @D_Sonderegger           
-## 4 Derek  Github     dereksonderegger         
-## 5 Mom    Home Phone 555-867-5309
-```
+-------------------------------------------------
+ Person      Type                Value           
+-------- ------------ ---------------------------
+ Derek    Work Email   derek.sonderegger@nau.edu 
+
+ Derek    Cell Phone         970-867-5309        
+
+ Derek     Twitter          \@D_Sonderegger      
+
+ Derek      Github         dereksonderegger      
+
+  Mom     Home Phone         555-867-5309        
+-------------------------------------------------
 
 For a more challenging example, suppose we have grade book where we've stored students scores for four different homework assignments.
 
 
-```
-##      name HW.1 HW.2 HW.3 HW.4
-## 1  Alison    8    5    8    4
-## 2 Brandon    5    3    6    9
-## 3 Charles    9    7    9   10
-```
+-------------------------------------
+  name     HW.1   HW.2   HW.3   HW.4 
+--------- ------ ------ ------ ------
+ Alison     8      5      8      4   
+
+ Brandon    5      3      6      9   
+
+ Charles    9      7      9      10  
+-------------------------------------
 
 In this case we are considering each row to represent a student and each variable represents homework score. An alternative representation would be for each row to represent a single score.
 
 
-```
-##       name Assignment Score
-## 1   Alison       HW.1     8
-## 2  Brandon       HW.1     5
-## 3  Charles       HW.1     9
-## 4   Alison       HW.2     5
-## 5  Brandon       HW.2     3
-## 6  Charles       HW.2     7
-## 7   Alison       HW.3     8
-## 8  Brandon       HW.3     6
-## 9  Charles       HW.3     9
-## 10  Alison       HW.4     4
-## 11 Brandon       HW.4     9
-## 12 Charles       HW.4    10
-```
+------------------------------
+  name     Assignment   Score 
+--------- ------------ -------
+ Alison       HW.1        8   
+
+ Brandon      HW.1        5   
+
+ Charles      HW.1        9   
+
+ Alison       HW.2        5   
+
+ Brandon      HW.2        3   
+
+ Charles      HW.2        7   
+
+ Alison       HW.3        8   
+
+ Brandon      HW.3        6   
+
+ Charles      HW.3        9   
+
+ Alison       HW.4        4   
+
+ Brandon      HW.4        9   
+
+ Charles      HW.4       10   
+------------------------------
 
 Either representation is fine in this case, because each student should have the same number of assignments. However, if I was combining grade books from multiple times I've taught the course, the first option won't work because sometimes I assign projects and sometimes not. So the tidy version of the data would be to have a table `scores` where each row represents a single assignment from a particular student.
 
@@ -128,49 +146,44 @@ Often source data is stored in a structure that isn't useful for subsequent anal
 When data is in the *"wide"* format, we might need to convert it into *"long"* format. For an example, suppose we have a gradebook with a few students.
 
 
-```r
-grade.book <- rbind(
-  tibble(Name='Alison', `Exam 1`=87, `Exam 2`=87, `Final Exam`=81),
-  tibble(Name='Bob',    `Exam 1`=91, `Exam 2`=88, `Final Exam`=85),
-  tibble(Name='Charlie',`Exam 1`=88, `Exam 2`=79, `Final Exam`=92))
-grade.book
-```
+----------------------------------------
+  Name     Exam 1   Exam 2   Final Exam 
+--------- -------- -------- ------------
+ Alison      87       87         81     
 
-```
-## # A tibble: 3 x 4
-##   Name    `Exam 1` `Exam 2` `Final Exam`
-##   <chr>      <dbl>    <dbl>        <dbl>
-## 1 Alison        87       87           81
-## 2 Bob           91       88           85
-## 3 Charlie       88       79           92
-```
+   Bob       91       88         85     
+
+ Charlie     88       79         92     
+----------------------------------------
+
+Table: Wide Format
 
 What we want to do is turn this data frame from a *wide* data frame into a *long* data frame. In MS Excel and Tableau, this is called pivoting. Essentially I'd like to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That is to say that each homework datum really has three pieces of information: who it came from, which homework it was, and what the score was. It doesn't conceptually matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way to identify how a student scored on a particular homework. So we want to reshape the three Exam columns into just two columns (Assessment and Score). 
 
 
-```r
-# first we gather the score columns into columns we'll name Homework and Score
-tidy.scores <- grade.book %>% 
-  gather( key=Assessment,     # What should I call the key column
-          value=Score,      # What should I call the values column
-          `Exam 1`:`Final Exam`)        # which columns to apply this to
-tidy.scores
-```
+------------------------------
+  Name     Assessment   Score 
+--------- ------------ -------
+ Alison      Exam 1      87   
 
-```
-## # A tibble: 9 x 3
-##   Name    Assessment Score
-##   <chr>   <chr>      <dbl>
-## 1 Alison  Exam 1        87
-## 2 Bob     Exam 1        91
-## 3 Charlie Exam 1        88
-## 4 Alison  Exam 2        87
-## 5 Bob     Exam 2        88
-## 6 Charlie Exam 2        79
-## 7 Alison  Final Exam    81
-## 8 Bob     Final Exam    85
-## 9 Charlie Final Exam    92
-```
+   Bob       Exam 1      91   
+
+ Charlie     Exam 1      88   
+
+ Alison      Exam 2      87   
+
+   Bob       Exam 2      88   
+
+ Charlie     Exam 2      79   
+
+ Alison    Final Exam    81   
+
+   Bob     Final Exam    85   
+
+ Charlie   Final Exam    92   
+------------------------------
+
+Table: Long Format
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/suCAb8qJOSM" frameborder="0" allowfullscreen></iframe>
@@ -190,27 +203,15 @@ Sometimes we have columns where we actually have two pieces of information store
 For example, we might have data about across the country, where the city name obnoxiously includes the state.  It would be good to split the `Name` column into `City` and `State` columns. For example,
 
 
-```r
-cities <- tribble(
-    ~Name, ~Population,
-    'Phoenix, AZ', 1660272,
-    'Flagstaff, AZ', 73964,
-    'Tucson, AZ', 545975)
-cities
-```
+----------------------------
+     Name        Population 
+--------------- ------------
+  Phoenix, AZ     1660272   
 
-```
-## # A tibble: 3 x 2
-##   Name          Population
-##   <chr>              <dbl>
-## 1 Phoenix, AZ      1660272
-## 2 Flagstaff, AZ      73964
-## 3 Tucson, AZ        545975
-```
+ Flagstaff, AZ     73964    
 
-```r
-write_csv(cities, 'data-raw/cities.csv')
-```
+  Tucson, AZ       545975   
+----------------------------
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
@@ -221,39 +222,29 @@ write_csv(cities, 'data-raw/cities.csv')
 Often we need to take a column and create some sort of calculation. For example, if we are given some information (say student height) in inches, we might want to calculate their height in centimeters by multiplying each height value by $2.54$ and naming the result `Height (cm)`.
 
 
-```r
-data <- tribble(
-  ~Grade, ~Gender, ~Height,
-  '1st Grade', 'Male',   44,
-  '1st Grade', 'Male',   42,
-  '1st Grade', 'Female', 42,
-  '1st Grade', 'Female', 40,
-  '12th Grade', 'Male',   70,
-  '12th Grade', 'Male',   68,
-  '12th Grade', 'Male',   69,
-  '12th Grade', 'Female', 64,
-  '12th Grade', 'Female', 65)
-data %>% mutate(`Height (cm)` = Height *2.54)
-```
+--------------------------------------------
+   Grade      Gender   Height   Height (cm) 
+------------ -------- -------- -------------
+ 1st Grade     Male      44        111.8    
 
-```
-## # A tibble: 9 x 4
-##   Grade      Gender Height `Height (cm)`
-##   <chr>      <chr>   <dbl>         <dbl>
-## 1 1st Grade  Male       44          112.
-## 2 1st Grade  Male       42          107.
-## 3 1st Grade  Female     42          107.
-## 4 1st Grade  Female     40          102.
-## 5 12th Grade Male       70          178.
-## 6 12th Grade Male       68          173.
-## 7 12th Grade Male       69          175.
-## 8 12th Grade Female     64          163.
-## 9 12th Grade Female     65          165.
-```
+ 1st Grade     Male      42        106.7    
 
-```r
-write_csv(data, 'data-raw/Group_Summarization.csv')
-```
+ 1st Grade    Female     42        106.7    
+
+ 1st Grade    Female     40        101.6    
+
+ 12th Grade    Male      70        177.8    
+
+ 12th Grade    Male      68        172.7    
+
+ 12th Grade    Male      69        175.3    
+
+ 12th Grade   Female     64        162.6    
+
+ 12th Grade   Female     65        165.1    
+--------------------------------------------
+
+Table: Student Heights
 
 The issue in Tableau is to make sure you remember how to specify a column in a formula.  The syntax is `[column_name]` and then you can use that quantity in whatever formula you want.
 
@@ -264,22 +255,19 @@ The issue in Tableau is to make sure you remember how to specify a column in a f
 Given a data set we also want to be able to calculate summary for various columns. For example, we might want to calculate the mean height for each grade level, or perhaps each gender within each grade level. Notice that we end up with a data set with *fewer rows*.
 
 
-```r
-data %>%
-  group_by(Grade, Gender) %>%
-  summarize(`Avg Height` = mean(Height))
-```
+----------------------------------
+   Grade      Gender   Avg Height 
+------------ -------- ------------
+ 12th Grade   Female      64.5    
 
-```
-## # A tibble: 4 x 3
-## # Groups:   Grade [2]
-##   Grade      Gender `Avg Height`
-##   <chr>      <chr>         <dbl>
-## 1 12th Grade Female         64.5
-## 2 12th Grade Male           69  
-## 3 1st Grade  Female         41  
-## 4 1st Grade  Male           43
-```
+ 12th Grade    Male        69     
+
+ 1st Grade    Female       41     
+
+ 1st Grade     Male        43     
+----------------------------------
+
+Table: Student Heights: Summarized
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen></iframe>
 
@@ -289,43 +277,32 @@ There are many cases where we need to create a calculated column, but the calcul
 some aggregated information. For, if have the number of males and females in each grade and we want to calculate the percentage of males and females in each grade.  To do this we need to aggregate data to count the number of students in each grade and then divide the number of males or females in each grade by the total number of students in the grade.
 
 
-```r
-data %>%
-  group_by(Grade, Gender) %>%
-  count(name = 'Grade_Gender_n')
-```
+--------------------------------------
+   Grade      Gender   Grade_Gender_n 
+------------ -------- ----------------
+ 12th Grade   Female         2        
 
-```
-## # A tibble: 4 x 3
-## # Groups:   Grade, Gender [4]
-##   Grade      Gender Grade_Gender_n
-##   <chr>      <chr>           <int>
-## 1 12th Grade Female              2
-## 2 12th Grade Male                3
-## 3 1st Grade  Female              2
-## 4 1st Grade  Male                2
-```
+ 12th Grade    Male          3        
+
+ 1st Grade    Female         2        
+
+ 1st Grade     Male          2        
+--------------------------------------
+
+Table: Student Heights: Summarized
 
 
-```r
-data %>%
-  group_by(Grade, Gender) %>%
-  count(name = 'Grade_Gender_n') %>%
-  group_by(Grade) %>%
-  mutate(Grade_n = sum(Grade_Gender_n)) %>%
-  mutate(Proportion = Grade_Gender_n / Grade_n )
-```
+-------------------------------------------------------------
+   Grade      Gender   Grade_Gender_n   Grade_n   Proportion 
+------------ -------- ---------------- --------- ------------
+ 12th Grade   Female         2             5         0.4     
 
-```
-## # A tibble: 4 x 5
-## # Groups:   Grade [2]
-##   Grade      Gender Grade_Gender_n Grade_n Proportion
-##   <chr>      <chr>           <int>   <int>      <dbl>
-## 1 12th Grade Female              2       5        0.4
-## 2 12th Grade Male                3       5        0.6
-## 3 1st Grade  Female              2       4        0.5
-## 4 1st Grade  Male                2       4        0.5
-```
+ 12th Grade    Male          3             5         0.6     
+
+ 1st Grade    Female         2             4         0.5     
+
+ 1st Grade     Male          2             4         0.5     
+-------------------------------------------------------------
 
 Anytime you need to include an aggregation value in formula, we need to specify any grouping information for calculating the aggregate. The code for this is to specify the grouping variable and the aggregation function and column. The code is: `{FIXED [Group]: SUM[Value]}`
 
@@ -338,67 +315,46 @@ In this example we have two tables with identical column types and we just want 
 
 
 
-```r
-People <-tribble(
-    ~PersonID, ~First.Name, ~Last.Name, ~Birthday,
-    'P0001', 'Derek', 'Sonderegger', '01/10/1976',
-    'P0002', 'Aubrey','Sonderegger', '02/14/1980',
-    'P0004', 'Casey', 'Sonderegger', '02/14/2015')
-Contacts <- tribble(
-    ~PersonID, ~Type, ~Handle,
-    'P0001', 'email','derek.sonderegger@nau.edu',
-    'P0001', 'Twitter','@D_Sonderegger',
-    'P0002', 'email', 'aubrey.sonderegger@yahoo.com')
-New_Contacts <- tribble(
-  ~PersonID, ~Type, ~Handle,
-  'P0003', 'email', 'Elise.Sonderegger@gmail.com',
-  'P0003', 'Twitter','@UnicornsRule')
+---------------------------------------------------
+ PersonID    Type                Handle            
+---------- --------- ------------------------------
+  P0001      email     derek.sonderegger@nau.edu   
 
-Contacts
-```
+  P0001     Twitter         \@D_Sonderegger        
 
-```
-## # A tibble: 3 x 3
-##   PersonID Type    Handle                      
-##   <chr>    <chr>   <chr>                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com
-```
+  P0002      email    aubrey.sonderegger@yahoo.com 
+---------------------------------------------------
 
-```r
-New_Contacts
-```
-
-```
-## # A tibble: 2 x 3
-##   PersonID Type    Handle                     
-##   <chr>    <chr>   <chr>                      
-## 1 P0003    email   Elise.Sonderegger@gmail.com
-## 2 P0003    Twitter @UnicornsRule
-```
-
-```r
-write_csv(People,   path = './data-raw/Joins_People.csv')
-write_csv(Contacts, path = './data-raw/Joins_Contacts.csv')
-write_csv(New_Contacts, path = './data-raw/Joins_NewContacts.csv')
-```
+Table: Parents
 
 
-```r
-bind_rows( Contacts, New_Contacts )
-```
+--------------------------------------------------
+ PersonID    Type               Handle            
+---------- --------- -----------------------------
+  P0003      email    Elise.Sonderegger@gmail.com 
 
-```
-## # A tibble: 5 x 3
-##   PersonID Type    Handle                      
-##   <chr>    <chr>   <chr>                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com
-## 4 P0003    email   Elise.Sonderegger@gmail.com 
-## 5 P0003    Twitter @UnicornsRule
-```
+  P0003     Twitter         \@UnicornsRule        
+--------------------------------------------------
+
+Table: Kids
+
+Taking a union of these two data sets just squishes them together vertically.
+
+---------------------------------------------------
+ PersonID    Type                Handle            
+---------- --------- ------------------------------
+  P0001      email     derek.sonderegger@nau.edu   
+
+  P0001     Twitter         \@D_Sonderegger        
+
+  P0002      email    aubrey.sonderegger@yahoo.com 
+
+  P0003      email    Elise.Sonderegger@gmail.com  
+
+  P0003     Twitter          \@UnicornsRule        
+---------------------------------------------------
+
+Table: Parents & Kid Unioned Together
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UqwX79lHk-Y" frameborder="0" allowfullscreen></iframe>
@@ -410,31 +366,30 @@ There are many cases where we have two or more data sets that are related and we
 
 
 
-```r
-People 
-```
+------------------------------------
+ PersonID   First.Name    Birthday  
+---------- ------------ ------------
+  P0001       Derek      01/10/1976 
 
-```
-## # A tibble: 3 x 4
-##   PersonID First.Name Last.Name   Birthday  
-##   <chr>    <chr>      <chr>       <chr>     
-## 1 P0001    Derek      Sonderegger 01/10/1976
-## 2 P0002    Aubrey     Sonderegger 02/14/1980
-## 3 P0004    Casey      Sonderegger 02/14/2015
-```
+  P0002       Aubrey     02/14/1980 
 
-```r
-Contacts
-```
+  P0004       Casey      02/14/2015 
+------------------------------------
 
-```
-## # A tibble: 3 x 3
-##   PersonID Type    Handle                      
-##   <chr>    <chr>   <chr>                       
-## 1 P0001    email   derek.sonderegger@nau.edu   
-## 2 P0001    Twitter @D_Sonderegger              
-## 3 P0002    email   aubrey.sonderegger@yahoo.com
-```
+Table: People
+
+
+---------------------------------------------------
+ PersonID    Type                Handle            
+---------- --------- ------------------------------
+  P0001      email     derek.sonderegger@nau.edu   
+
+  P0001     Twitter         \@D_Sonderegger        
+
+  P0002      email    aubrey.sonderegger@yahoo.com 
+---------------------------------------------------
+
+Table: Contact Information
 
 The `PersonID` column links the two tables. But when we now have to ask what we should do about Casey.  There are really two options:
 
@@ -443,35 +398,35 @@ The `PersonID` column links the two tables. But when we now have to ask what we 
 | Inner Join | Only include rows for individuals that have information in both tables. |
 | Full  Join | Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty. |
 
+A join squishes the two data sets together horizontally while making sure the rows match up because of one matching column that occurs in each data set. The inner join only returns rows that have data in both data sets.
 
-```r
-# Inner Joining
-inner_join(People, Contacts)
-```
+-----------------------------------------------------------------------------
+ PersonID   First.Name    Birthday     Type                Handle            
+---------- ------------ ------------ --------- ------------------------------
+  P0001       Derek      01/10/1976    email     derek.sonderegger@nau.edu   
 
-```
-## # A tibble: 3 x 6
-##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
-##   <chr>    <chr>      <chr>       <chr>      <chr>   <chr>                      
-## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…
-```
+  P0001       Derek      01/10/1976   Twitter         \@D_Sonderegger        
 
-```r
-# Full Join
-full_join(People, Contacts)
-```
+  P0002       Aubrey     02/14/1980    email    aubrey.sonderegger@yahoo.com 
+-----------------------------------------------------------------------------
 
-```
-## # A tibble: 4 x 6
-##   PersonID First.Name Last.Name   Birthday   Type    Handle                     
-##   <chr>    <chr>      <chr>       <chr>      <chr>   <chr>                      
-## 1 P0001    Derek      Sonderegger 01/10/1976 email   derek.sonderegger@nau.edu  
-## 2 P0001    Derek      Sonderegger 01/10/1976 Twitter @D_Sonderegger             
-## 3 P0002    Aubrey     Sonderegger 02/14/1980 email   aubrey.sonderegger@yahoo.c…
-## 4 P0004    Casey      Sonderegger 02/14/2015 <NA>    <NA>
-```
+Table: Inner Join
+
+The outer join returns all possible rows that occur in either data set. Notice that Casey has a row in the `People` data set but doesn't have a corresponding row in the `Contacts` table. So his row in the outer join has missing data for the contact information.
+
+-----------------------------------------------------------------------------
+ PersonID   First.Name    Birthday     Type                Handle            
+---------- ------------ ------------ --------- ------------------------------
+  P0001       Derek      01/10/1976    email     derek.sonderegger@nau.edu   
+
+  P0001       Derek      01/10/1976   Twitter         \@D_Sonderegger        
+
+  P0002       Aubrey     02/14/1980    email    aubrey.sonderegger@yahoo.com 
+
+  P0004       Casey      02/14/2015     NA                   NA              
+-----------------------------------------------------------------------------
+
+Table: Outer Join
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen></iframe>
 

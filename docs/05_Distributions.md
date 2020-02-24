@@ -29,12 +29,15 @@ The choice of how many bins to include can make a dramatic difference in a graph
 
 <img src="05_Distributions_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 
-
+Histograms often have a y-axis that is labeled as density. Density is just a re-scaling such that the area of the bars sums up to one. As such, we often don't care too much about the y-axis because all we care about is the relative area of the bars. Because of that, people often don't even bother labeling the y-axis of a histogram if the data set size is large.
 
 ### Density plots
+
 Histograms suffer from being to angular or pointy. Another solution is call a kernel density smoother that mathematically smooths over the heights of the histogram bars.
+
 <img src="05_Distributions_files/figure-html/unnamed-chunk-7-1.png" width="672" />
 
+As with histograms, the y-axis of a density plot is scaled so that the area under the curve is one. Density is fairly useless for most audiences and again people often remove the y-axis.
 
 ### Faceting
 One of my favorite ways to display multiple distributions is to group each distribution into it's own plot in a process often referred to as faceting.
@@ -85,3 +88,7 @@ Now we can see the two peaks in December, but the three peaks in November have b
 
 Ridgeline and violin plots are great alternatives to box plots and the choice to have the density plots overlap or not is up to the user.
 
+
+# Exercises
+
+*I need to add this!

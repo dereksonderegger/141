@@ -3,22 +3,36 @@
 
 
 
-This week we start asking "What" to graph instead of just "How" to graph.
+## Examples
+### Example: Vehicle Deaths
 
-Example: Vehicle Deaths
+I want to understand how vehicle safety has changed over time. The first statistic we might consider is just the number of vehicle deaths per year. 
+
+The following image comes from the YouTube channel [**Real Engineering**](https://www.youtube.com/watch?v=dmPvGi4s9bg).
 ![](Images/Vehicle_Deaths_per_Year.png)
+But this isn't a good graph because the number of people driving isn't consistent over time. But what is the appropriate scaling? 
+
 ![](Images/Vehicle Deaths_per_Billion_VMT.png)
 
+### Example: Military Budgets
+    
+<img src="08_Variable_Selection_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+    
+In this data, the amount spent seems inappropriate because of the number of individuals per country is not the same. Furthermore, rich countries can spend more money without it affecting their populace.
 
-Example: Should we be using [GDP to measure economic "success"?](https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress)
+### Example: GDP
+
+Should we be using [GDP to measure economic "success"?](https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress)
 
 
-Example: Tim Cook displaying 
+### Example: Cummulative Iphone Sales
+
+Tim Cook displaying 
 [total iPhone sales](https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/) 
 instead of quarterly sales.
 
 
-Example: Age Standardization
+### Example: Age Standardization
 Suppose we have two populations with the following age structures and proportion that believe that vaping is "very harmful".
 
 
@@ -81,7 +95,7 @@ What if Population A had the same demographics as Population B? Lets calculate t
 Next we consider an example of where this might be helpful. Our example comes from a [website](https://ourworldindata.org) "Our World in Data" which tries to provide useful data sets and analysis to address major societal issues. Here we will consider [suicide](https://ourworldindata.org/suicide) rates in different countries around the world.
 
  
-## Maternity Deaths
+### Example Maternity Deaths
 
 Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.
 

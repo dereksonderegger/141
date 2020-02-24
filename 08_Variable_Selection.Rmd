@@ -19,22 +19,64 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
 library(tidyverse)
 ```
 
-This week we start asking "What" to graph instead of just "How" to graph.
+## Examples
+### Example: Vehicle Deaths
 
-Example: Vehicle Deaths
+I want to understand how vehicle safety has changed over time. The first statistic we might consider is just the number of vehicle deaths per year. 
+
+The following image comes from the YouTube channel [**Real Engineering**](https://www.youtube.com/watch?v=dmPvGi4s9bg).
 ![](Images/Vehicle_Deaths_per_Year.png)
+But this isn't a good graph because the number of people driving isn't consistent over time. But what is the appropriate scaling? 
+
 ![](Images/Vehicle Deaths_per_Billion_VMT.png)
 
+### Example: Military Budgets
+    
+```{r, fig.height = 3, message=FALSE, warning=FALSE, echo=FALSE}
+Military <- tribble(
+  ~Country, ~Amount,
+  'United States', 611.0,
+  'China', 215.0,
+  'Russia', 69.2,
+  'Saudi Arabia', 63.7,
+  'India', 55.9,
+  'France', 55.7,
+  'United Kingdom', 48.3,
+  'Japan', 46.1,
+  'Germany', 41.1,
+  'South Korea', 36.8,
+  'Italy', 27.9,
+  'Australia', 24.6,
+  'Brazil', 23.7,
+  'UAE', 22.8,
+  'Israel', 18.0) %>%
+  mutate( Country = factor(Country),
+          Country = fct_reorder(Country, Amount) )
 
-Example: Should we be using [GDP to measure economic "success"?](https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress)
+ggplot(Military, aes(x=Country, y=Amount)) + 
+  #  cowplot::theme_cowplot() +
+  theme_bw() +
+  geom_col( alpha=.5, width=.6) +
+  scale_y_log10(minor=c(1:10, 10*1:10, 100*1:10) ) +
+  labs(y='Amount (in Billions of US dollars)', x=NULL, title='2016: Top 15 Countries for Millitary Spending') +
+  coord_flip() 
+```
+    
+In this data, the amount spent seems inappropriate because of the number of individuals per country is not the same. Furthermore, rich countries can spend more money without it affecting their populace.
+
+### Example: GDP
+
+Should we be using [GDP to measure economic "success"?](https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress)
 
 
-Example: Tim Cook displaying 
+### Example: Cummulative Iphone Sales
+
+Tim Cook displaying 
 [total iPhone sales](https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/) 
 instead of quarterly sales.
 
 
-Example: Age Standardization
+### Example: Age Standardization
 Suppose we have two populations with the following age structures and proportion that believe that vaping is "very harmful".
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -103,7 +145,7 @@ What if Population A had the same demographics as Population B? Lets calculate t
 Next we consider an example of where this might be helpful. Our example comes from a [website](https://ourworldindata.org) "Our World in Data" which tries to provide useful data sets and analysis to address major societal issues. Here we will consider [suicide](https://ourworldindata.org/suicide) rates in different countries around the world.
 
  
-## Maternity Deaths
+### Example Maternity Deaths
 
 Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.
 

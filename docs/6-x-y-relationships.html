@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Distributions | STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="Chapter 4 Distributions | STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 6 X-Y Relationships | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 6 X-Y Relationships | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Distributions | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 6 X-Y Relationships | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Distributions | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 6 X-Y Relationships | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="3-amounts-proportions.html"/>
-<link rel="next" href="5-exercises-3.html"/>
+<link rel="prev" href="5-exercises-3.html"/>
+<link rel="next" href="7-geographic.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -262,73 +262,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="distributions" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Distributions</h1>
-<p>Given a single variable, we often want to know what values are common and what values are rare. To visualize this, we will primarily compare marks along a common axis (the most accurate EPT). The only question is we have is how indicate how common particular values are.</p>
-<div id="small-samples" class="section level3">
-<h3><span class="header-section-number">4.0.1</span> Small samples</h3>
-<p>If we only have a few observations, then we can just graph them along an axis. If we have too many data points, we’ll have problems with over-plotting.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>Another trick that works with more data, is to not use dots but rather lines. This is called a rugplot. The smaller width of the lines reduces, but don’t completely mitigate, the overplotting issue.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-3-1.png" width="672" />
-A rugplot layer is often used in conjunction with another graph such as a scatterplot.</p>
+<div id="x-y-relationships" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> X-Y Relationships</h1>
+<div id="scatter-plots" class="section level2">
+<h2><span class="header-section-number">6.1</span> Scatter plots</h2>
+<p>Basic idea is to build off of a scatter plot. This visualizes the relationship between two continuous variables.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>In a scatter plot we can see the relationship between two variables. We can see the relationship among more variables (either continuous or discrete) by adding Size, Color, and Shape.</p>
+<p>We could also add other categorical variables by adding faceting. With this combination we can visualize the relationship between up to 6 different variables.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="pairs-plots-all-vs-all-scatterplots" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Pairs plots (All-vs-all scatterplots)</h3>
+<p>Sometimes we have a dataset with several different variables of quantitative variables. One thing we could do is just make all possible pairs of scatterplots. In a <em>pairs</em> plot, we make a grid of graphs where x-axis or y-axis remains consistent as we move across the columns or rows of the grid.
+<img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
-<div id="histograms" class="section level3">
-<h3><span class="header-section-number">4.0.2</span> Histograms</h3>
-<p>When we have a moderate size of data, graphing dots exactly on an axis doesn’t work and results in overplotting and it is difficult to see where the data cluster. Instead we’ll stack the dots in columns along the axis and call this a dotplot.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>Each dot represents an observation, but the x-values have been rounded into group values. So we have lost some precision. Another common version of this is a histogram, where the y-axis represents how many observations fall into each bin.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>The choice of how many bins to include can make a dramatic difference in a graph. In particular, I don’t believe that there is any biological reason to think the dip near 2700 grams is real. I believe that is is actually just an artifact of the data I have. Instead we should consider changing the number of bins.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>Histograms often have a y-axis that is labeled as density. Density is just a re-scaling such that the area of the bars sums up to one. As such, we often don’t care too much about the y-axis because all we care about is the relative area of the bars. Because of that, people often don’t even bother labeling the y-axis of a histogram if the data set size is large.</p>
 </div>
-<div id="density-plots" class="section level3">
-<h3><span class="header-section-number">4.0.3</span> Density plots</h3>
-<p>Histograms suffer from being to angular or pointy. Another solution is call a kernel density smoother that mathematically smooths over the heights of the histogram bars.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>As with histograms, the y-axis of a density plot is scaled so that the area under the curve is one. Density is fairly useless for most audiences and again people often remove the y-axis.</p>
+<div id="correlation-plots" class="section level2">
+<h2><span class="header-section-number">6.2</span> Correlation Plots</h2>
+<div id="pearsons-correlation-coefficient" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Pearson’s Correlation Coefficient</h3>
+<p>We first consider Pearson’s correlation coefficient, which is a statistics that measures the strength of the linear relationship between the predictor and response. Consider the following Pearson’s correlation statistic
+<span class="math display">\[r=\frac{\sum_{i=1}^{n}\left(\frac{x_{i}-\bar{x}}{s_{x}}\right)\left(\frac{y_{i}-\bar{y}}{s_{y}}\right)}{n-1}\]</span>
+where <span class="math inline">\(x_{i}\)</span> and <span class="math inline">\(y_{i}\)</span> are the x and y coordinate of the <span class="math inline">\(i\)</span>th observation. Notice that each parenthesis value is the standardized value of each observation. If the x-value is big (greater than <span class="math inline">\(\bar{x}\)</span>) and the y-value is large (greater than <span class="math inline">\(\bar{y}\)</span>), then after multiplication, the result is positive. Likewise if the x-value is small and the y-value is small, both standardized values are negative and therefore after multiplication the result is positive. If a large x-value is paired with a small y-value, then the first value is positive, but the second is negative and so the multiplication result is negative.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>The following are true about Pearson’s correlation coefficient:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(r\)</span> is unit-less because we have standardized the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> values.</li>
+<li><span class="math inline">\(-1\le r\le1\)</span> because of the scaling by <span class="math inline">\(n-1\)</span></li>
+<li>A negative <span class="math inline">\(r\)</span> denotes a negative relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, while a positive value of <span class="math inline">\(r\)</span> represents a positive relationship.</li>
+<li><span class="math inline">\(r\)</span> measures the strength of the <em>linear</em> relationship between the predictor and response.</li>
+</ol>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
-<div id="faceting" class="section level3">
-<h3><span class="header-section-number">4.0.4</span> Faceting</h3>
-<p>One of my favorite ways to display multiple distributions is to group each distribution into it’s own plot in a process often referred to as faceting.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>By choosing to put the two graphs on top of the other, it becomes clear that the smoker’s tend to give birth to smaller infants. This fact isn’t clear in the side-by-side graphs.</p>
 </div>
-<div id="stacking" class="section level3">
-<h3><span class="header-section-number">4.0.5</span> Stacking</h3>
-<p>Stacking the distribution involes laying each distribution on top of each other, so that the zero of the top curve follows the curve on the bottom. You can visualize the B chart having the Non-smoker density graph just melt onto the smoker density.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-9-1.png" width="672" />
-I really don’t like this graph because it is very hard to see where the peak of the non-smoker curve is. This stacking trick works well enough when we have proportions but isn’t good here.</p>
+<div id="overplotting" class="section level2">
+<h2><span class="header-section-number">6.3</span> Overplotting</h2>
+<div id="transparency" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Transparency</h3>
+<p>Wilke’s book uses and example of departure time of day versus the delay amount for all the flights out of New York City in 2013. The story to take home is that longer delays tend to happen later in the afternoon or evening rather than in the morning. Wilke uses these data to argue that overplotting is annoying and that a heat map can help out.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
-<div id="overlapping-curves" class="section level3">
-<h3><span class="header-section-number">4.0.6</span> Overlapping curves</h3>
-<p>Another option is to graph the densities, but allow them to overlap each other and be a bit see-thru.
-<img src="05_Distributions_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>For seeing shifts in the center of the distribution, overlapping curves is quite powerful.</p>
+<div id="intensity-maps" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Intensity Maps</h3>
+<p>No matter how much we adjust the transparency, we can’t really fix this because there is so much data. If for each area on the graph, we count how many observations fall into the region, we can color the area based on how many observations are in the region.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>This graph leads me to think that MOST flights are quite late, when if fact, they aren’t. This is due to the problem of “proportional pixels”. There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can’t help but have that impression.</p>
+<table style="width:47%;">
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">delay</th>
+<th align="center">n</th>
+<th align="center">proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">(-30,-10]</td>
+<td align="center">12465</td>
+<td align="center">0.03794</td>
+</tr>
+<tr class="even">
+<td align="center">(-10,0]</td>
+<td align="center">187620</td>
+<td align="center">0.5711</td>
+</tr>
+<tr class="odd">
+<td align="center">(0,10]</td>
+<td align="center">45598</td>
+<td align="center">0.1388</td>
+</tr>
+<tr class="even">
+<td align="center">(10,30]</td>
+<td align="center">34543</td>
+<td align="center">0.1051</td>
+</tr>
+<tr class="odd">
+<td align="center">(30,60]</td>
+<td align="center">21710</td>
+<td align="center">0.06608</td>
+</tr>
+<tr class="even">
+<td align="center">(60,120]</td>
+<td align="center">16858</td>
+<td align="center">0.05132</td>
+</tr>
+<tr class="odd">
+<td align="center">(120,180]</td>
+<td align="center">5830</td>
+<td align="center">0.01775</td>
+</tr>
+<tr class="even">
+<td align="center">(180,Inf]</td>
+<td align="center">3893</td>
+<td align="center">0.01185</td>
+</tr>
+</tbody>
+</table>
+<p>Because we are interested in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we’ll we’ll take a log<span class="math inline">\(_{10}\)</span> transformation of all the delays greater than 10 minutes. We’ll also modify the color scale so that hexagons with a small count fade into the background and are white and hexagons with relatively large counts have a noticable color.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
-<div id="many-distributions" class="section level2">
-<h2><span class="header-section-number">4.1</span> Many distributions</h2>
-<p>Next we’ll consider comparing many different distributions. In our example, we’ll investigate the daily maximum temperature in Lincoln Nebraska in 2016 and we show the temperature distribution for each month. Therefore we’ll have 12 different distributions to compare.</p>
-<div id="boxplots" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Boxplots</h3>
-<p>Boxplots are a traditional way to display a distribution and the box contains the middle 50% of the data points.
-<img src="05_Distributions_files/figure-html/unnamed-chunk-11-1.png" width="672" />
-While boxplots are quite commonly used, they summarize the data <em>too</em> much and a lot of interesting detail is lost in this summary.</p>
+<div id="contour-plots" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Contour Plots</h3>
+<p>Contour plots are similar to density plots, but for two-axis. The lines mark out regions of similar probability and we read it similarly as a topological map that shows elevation. In this case we can see that the most frequent delays are around 30 minutes long and occur near 5 pm. There is also a local peak of 20 minute delays around 10 am.</p>
+<p><img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
-<div id="ridge-plots" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Ridge Plots</h3>
-<p>If we have a bunch of overlapping curves, but we stagger them along the y-axis, we get a type of graph called a <em>ridge graph</em>.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>Notice that in density plots, there were two peaks in December with the lower peak corresponding to a cold snap. That detail is lost in the boxplots.</p>
 </div>
-<div id="violin-plots" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> Violin Plots</h3>
-<p>An alternative to ridge plots a graph called a violin plot. This takes the density plots and mirrors them. Then we’ll display them with no overlap in the different distributions.</p>
-<p><img src="05_Distributions_files/figure-html/unnamed-chunk-13-1.png" width="672" />
-Now we can see the two peaks in December, but the three peaks in November have been flattened out because the amount of space necessary to show it would require that the densities overlap.</p>
-<p>Ridgeline and violin plots are great alternatives to box plots and the choice to have the density plots overlap or not is up to the user.</p>
-</div>
+<div id="exercises-4" class="section level2">
+<h2><span class="header-section-number">6.4</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li><p>Read Chapters 12 and 18 from Wilke’s book. Feel free to skip section 12.3.</p></li>
+<li><p>We will use a smaller version of the diamonds dataset that Wilke uses in his Chapter 18. You can download it from my GitHub site in a
+<a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Small_Diamonds.csv">.csv file</a>.
+We will examine price, carats, cut (Fair, Good, Very Good, Premium, and Ideal), color (J - D), and clarity (I1, SI2, SI1, VS2, VS1, VVS2, VVS1, IF), where the category labels I’ve given are from worst to best.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Had I not told you that clarity level IF is the best clarity, what graphs could you make to figure that out? Create and show a graph that demonstrates this and explain your graph.</li>
+<li>If the diamond clarity isn’t good, the dimond cutter won’t worry too much about the quality of cut. Make a graph that demonstrates that and explain your reasoning.</li>
+<li>While in principle it is possible for the dimond carats to be any number, they are often cut to be some common carat size. Create a visualization that shows this and discuss how the carat size changes as the cut and clarity improve.</li>
+</ol></li>
+<li><p>From the <a href="www.gapminder.com/data">Gapminder.com</a> website, I’ve downloaded a bunch of interesting covariates about countries. You can find my dataset at my GitHub site in a
+<a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Gapminder.csv">.csv file</a>.
+The variables I’ve included include the country region, year, population size, population growth, percent of population with basic sanitation, GDP per capita, Total GDP, life expectancy, adult male and female labor force participation rates. <em>Fertility is the number of children per woman, so a fertility rate of 2 children per woman is a stable population.</em></p>
+<ol style="list-style-type: lower-alpha">
+<li>For all the following questions, only consider the year 2015.</li>
+<li>Investigate the relationship between GDP and GDP_per_capita. Why should we prefer to work with GDP_per_capita when comparing standards of living between, say, the United States and Canada?</li>
+<li>Investigate the relationship between life expectancy, fertility, and GDP_per_capita. Do these relationships seem to vary by region? Comment on your graphs and relationships that you observe.</li>
+<li>Investigate the relationship relationship between life expectancy, adult female labor force participation and fertility. Does this vary by region? Comment on your graphs and relationships that you observe.</li>
+</ol></li>
+</ol>
+
 </div>
 </div>
             </section>
@@ -336,8 +404,8 @@ Now we can see the two peaks in December, but the three peaks in November have b
           </div>
         </div>
       </div>
-<a href="3-amounts-proportions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="5-exercises-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="5-exercises-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="7-geographic.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -370,7 +438,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/05_Distributions.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/06_X-Y_relationships.Rmd",
 "text": "Edit"
 },
 "history": {

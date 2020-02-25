@@ -32,6 +32,21 @@ Tim Cook displaying
 instead of quarterly sales.
 
 
+### Seasonal Unemployment
+Employment in various sectors of the economy often has a seasonal component. For example, the construction industry has much higher employment in the summer while the retail sector has a strong peak in October-December.
+
+Across all sectors, employment is lowest in January - April, and becomes higher in the late summer & fall. For a more detailed discussion see [this paper](https://www.chicagofed.org/publications/economic-perspectives/2018/3) published by the Federal Reserve Bank of Chicago.
+
+![](Images/SeasonalEmployment.png)
+
+Because the seasonal aspect is quite predictable, it is possible to report the black line in Figure A above instead of the monthly raw employment numbers. Because the seasonal fluctuations are quite large, if we don't account for seasonality, we would miss fundametal economic changes.
+
+So instead, we typically hear about changes to the seasonally adjusted employment rate.
+
+
+
+
+
 ### Example: Age Standardization
 Suppose we have two populations with the following age structures and proportion that believe that vaping is "very harmful".
 
@@ -63,34 +78,34 @@ Population Sizes
   65+    10   40 
 -----------------
 
-Is Vaping Harmful? (By age group and population). 
-Here we see that, by age group, people in population B tend to be *more* permissive opinion about vaping than population A.
+Is Vaping Harmful? (By age group and population). In this table we present the information as `# Individuals (proportion think vaping is harmful)`. In this fashion the value `40 (0.25)` indicates the group contains 40 people, and 25% of those believe that vaping is harmful.
 
 
-----------------------------------
-  Age          A           B      
--------   ----------- ------------
- 18-29     40 (0.25)    10 (0.2)  
- 30-49     30 (0.4)    20 (0.35)  
- 50-64     20 (0.4)    30 (0.366) 
-  65+      10 (0.5)    40 (0.45)  
-**Total**  **0.35%**     **0.38**  
-----------------------------------
+
+Here we see that, by age group, people in population B tend to be *more* permissive opinion about vaping than population A. The issue is that population B has a much older population.
+
+
+|  Age  |     A     |     B      |
+|:-----:|:---------:|:----------:|
+| 18-29 | 40 (0.25) |  10 (0.2)  |
+| 30-49 | 30 (0.4)  | 20 (0.35)  |
+| 50-64 | 20 (0.4)  | 30 (0.366) |
+|  65+  | 10 (0.5)  | 40 (0.45)  |
+|**Total** | **0.35%** | **0.38** |
 
 
 What if Population A had the same demographics as Population B? Lets calculate the "Average Demographic Distribution" and then do the multiplication.
 
+To calculate the average demographic distribution is calculate the percentage of individuals in each age group. For the 18-29 group, there are $40+10=50$ individuals within the total population of $n_A + n_B = 100+100 = 200$ and so the average demographics have $50/200=1/4 = 25\%$ of people in the 18-29 age group. 
 
-----------------------------------------------------------------
-  Age        A           B            A.Std         B.Std     
-------- ----------- ------------ -------------- ----------------
- 18-29   40 (0.25)    10 (0.2)      25 (0.25)      25 (0.2)
- 30-49   30 (0.4)    20 (0.35)      25 (0.4)       25 (0.35)
- 50-64   20 (0.4)    30 (0.366)     25 (0.4)       25 (0.366)
-  65+    10 (0.5)    40 (0.45)      25 (0.5)       25 (0.45)
-----------------------------------------------------------------
- Total      35%         38%           38.75%         34.4%
-----------------------------------------------------------------
+
+|  Age |    A      |    B     |     A.Std     |    B.Std      |
+|:----:|:---------:|:--------:|:-------------:|:---------------|
+| 18-29 |  40 (0.25) |  10 (0.2)   | 25 (0.25)  |   25 (0.2)    |
+| 30-49 |  30 (0.4)  |  20 (0.35)  | 25 (0.4)   |   25 (0.35)    |
+| 50-64 |  20 (0.4)  |  30 (0.366) | 25 (0.4)   |   25 (0.366)   |
+|  65+  |  10 (0.5)  |  40 (0.45)  | 25 (0.5)   |   25 (0.45)    |
+| **Total**   |   35% |    38%     |   38.75%   |   34.4%        |
 
 Next we consider an example of where this might be helpful. Our example comes from a [website](https://ourworldindata.org) "Our World in Data" which tries to provide useful data sets and analysis to address major societal issues. Here we will consider [suicide](https://ourworldindata.org/suicide) rates in different countries around the world.
 
@@ -99,26 +114,29 @@ Next we consider an example of where this might be helpful. Our example comes fr
 
 Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.
 
-Step One: Variable of interest
+#### Step One: Variable of interest {-}
+
 Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn't just consider all women. Instead we'll consider this maternal deaths per 100,000 live births. 
 
-Step Two: Context
+#### Step Two: Context {-}
 Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births. 
 
-Step Three: Conditional Statistics
+#### Step Three: Conditional Statistics {-}
   - How does this vary between countries?
   - How does this vary between states?
   - How does this vary between socio-economic or ethic groups?
   
 
-Step Four: Finding Data
+#### Step Four: Finding Data {-}
   - Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.
   - I found data from the Centers for Disease Control. The CDC's [Wonder](https://wonder.cdc.gov) on-line access allows you to format data requests for a wide variety of scenarios.
 
 Now we find some data from the CDC...
+
   - Problem: Can't get State by Year data due to confidentiality...
   - Year by race?
 
+<img src="08_Variable_Selection_files/figure-html/unnamed-chunk-8-1.png" width="672" />
 
 
 ## Exercises

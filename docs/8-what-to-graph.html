@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-02-23" />
+<meta name="date" content="2020-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,12 +238,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.2" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-military-budgets"><i class="fa fa-check"></i><b>8.1.2</b> Example: Military Budgets</a></li>
 <li class="chapter" data-level="8.1.3" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-gdp"><i class="fa fa-check"></i><b>8.1.3</b> Example: GDP</a></li>
 <li class="chapter" data-level="8.1.4" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-cummulative-iphone-sales"><i class="fa fa-check"></i><b>8.1.4</b> Example: Cummulative Iphone Sales</a></li>
-<li class="chapter" data-level="8.1.5" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-age-standardization"><i class="fa fa-check"></i><b>8.1.5</b> Example: Age Standardization</a></li>
+<li class="chapter" data-level="8.1.5" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#seasonal-unemployment"><i class="fa fa-check"></i><b>8.1.5</b> Seasonal Unemployment</a></li>
+<li class="chapter" data-level="8.1.6" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-age-standardization"><i class="fa fa-check"></i><b>8.1.6</b> Example: Age Standardization</a></li>
+<li class="chapter" data-level="8.1.7" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-maternity-deaths"><i class="fa fa-check"></i><b>8.1.7</b> Example Maternity Deaths</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#total-35-38-38.75-34.4"><i class="fa fa-check"></i><b>8.2</b> Total 35% 38% 38.75% 34.4%</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#example-maternity-deaths"><i class="fa fa-check"></i><b>8.2.1</b> Example Maternity Deaths</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#exercises-6"><i class="fa fa-check"></i><b>8.3</b> Exercises</a></li>
+<li class="chapter" data-level="8.2" data-path="8-what-to-graph.html"><a href="8-what-to-graph.html#exercises-6"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
 </ul></li>
 </ul>
 
@@ -289,8 +288,16 @@ But this isn’t a good graph because the number of people driving isn’t consi
 <a href="https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/">total iPhone sales</a>
 instead of quarterly sales.</p>
 </div>
+<div id="seasonal-unemployment" class="section level3">
+<h3><span class="header-section-number">8.1.5</span> Seasonal Unemployment</h3>
+<p>Employment in various sectors of the economy often has a seasonal component. For example, the construction industry has much higher employment in the summer while the retail sector has a strong peak in October-December.</p>
+<p>Across all sectors, employment is lowest in January - April, and becomes higher in the late summer &amp; fall. For a more detailed discussion see <a href="https://www.chicagofed.org/publications/economic-perspectives/2018/3">this paper</a> published by the Federal Reserve Bank of Chicago.</p>
+<p><img src="Images/SeasonalEmployment.png" /></p>
+<p>Because the seasonal aspect is quite predictable, it is possible to report the black line in Figure A above instead of the monthly raw employment numbers. Because the seasonal fluctuations are quite large, if we don’t account for seasonality, we would miss fundametal economic changes.</p>
+<p>So instead, we typically hear about changes to the seasonally adjusted employment rate.</p>
+</div>
 <div id="example-age-standardization" class="section level3">
-<h3><span class="header-section-number">8.1.5</span> Example: Age Standardization</h3>
+<h3><span class="header-section-number">8.1.6</span> Example: Age Standardization</h3>
 <p>Suppose we have two populations with the following age structures and proportion that believe that vaping is “very harmful”.</p>
 <p>Suppose that in each population we’ve asked if individuals believe that vaping is “very harmful”.</p>
 <table style="width:31%;">
@@ -353,14 +360,9 @@ instead of quarterly sales.</p>
 </tr>
 </tbody>
 </table>
-<p>Is Vaping Harmful? (By age group and population).
-Here we see that, by age group, people in population B tend to be <em>more</em> permissive opinion about vaping than population A.</p>
-<table style="width:49%;">
-<colgroup>
-<col width="13%" />
-<col width="16%" />
-<col width="18%" />
-</colgroup>
+<p>Is Vaping Harmful? (By age group and population). In this table we present the information as <code># Individuals (proportion think vaping is harmful)</code>. In this fashion the value <code>40 (0.25)</code> indicates the group contains 40 people, and 25% of those believe that vaping is harmful.</p>
+<p>Here we see that, by age group, people in population B tend to be <em>more</em> permissive opinion about vaping than population A. The issue is that population B has a much older population.</p>
+<table>
 <thead>
 <tr class="header">
 <th align="center">Age</th>
@@ -370,93 +372,120 @@ Here we see that, by age group, people in population B tend to be <em>more</em> 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">18-29
-30-49
-50-64
-65+
-<strong>Total</strong></td>
-<td align="center">40 (0.25)
-30 (0.4)
-20 (0.4)
-10 (0.5)
-<strong>0.35%</strong></td>
-<td align="center">10 (0.2)
-20 (0.35)
-30 (0.366)
-40 (0.45)
-<strong>0.38</strong></td>
+<td align="center">18-29</td>
+<td align="center">40 (0.25)</td>
+<td align="center">10 (0.2)</td>
+</tr>
+<tr class="even">
+<td align="center">30-49</td>
+<td align="center">30 (0.4)</td>
+<td align="center">20 (0.35)</td>
+</tr>
+<tr class="odd">
+<td align="center">50-64</td>
+<td align="center">20 (0.4)</td>
+<td align="center">30 (0.366)</td>
+</tr>
+<tr class="even">
+<td align="center">65+</td>
+<td align="center">10 (0.5)</td>
+<td align="center">40 (0.45)</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Total</strong></td>
+<td align="center"><strong>0.35%</strong></td>
+<td align="center"><strong>0.38</strong></td>
 </tr>
 </tbody>
 </table>
 <p>What if Population A had the same demographics as Population B? Lets calculate the “Average Demographic Distribution” and then do the multiplication.</p>
-<table style="width:90%;">
-<colgroup>
-<col width="11%" />
-<col width="16%" />
-<col width="18%" />
-<col width="20%" />
-<col width="23%" />
-</colgroup>
+<p>To calculate the average demographic distribution is calculate the percentage of individuals in each age group. For the 18-29 group, there are <span class="math inline">\(40+10=50\)</span> individuals within the total population of <span class="math inline">\(n_A + n_B = 100+100 = 200\)</span> and so the average demographics have <span class="math inline">\(50/200=1/4 = 25\%\)</span> of people in the 18-29 age group.</p>
+<table>
 <thead>
 <tr class="header">
 <th align="center">Age</th>
 <th align="center">A</th>
 <th align="center">B</th>
 <th align="center">A.Std</th>
-<th align="center">B.Std</th>
+<th align="left">B.Std</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">18-29
-30-49
-50-64
-65+</td>
-<td align="center">40 (0.25)
-30 (0.4)
-20 (0.4)
-10 (0.5)</td>
-<td align="center">10 (0.2)
-20 (0.35)
-30 (0.366)
-40 (0.45)</td>
-<td align="center">25 (0.25)
-25 (0.4)
-25 (0.4)
-25 (0.5)</td>
-<td align="center">25 (0.2)
-25 (0.35)
-25 (0.366)
-25 (0.45)</td>
+<td align="center">18-29</td>
+<td align="center">40 (0.25)</td>
+<td align="center">10 (0.2)</td>
+<td align="center">25 (0.25)</td>
+<td align="left">25 (0.2)</td>
+</tr>
+<tr class="even">
+<td align="center">30-49</td>
+<td align="center">30 (0.4)</td>
+<td align="center">20 (0.35)</td>
+<td align="center">25 (0.4)</td>
+<td align="left">25 (0.35)</td>
+</tr>
+<tr class="odd">
+<td align="center">50-64</td>
+<td align="center">20 (0.4)</td>
+<td align="center">30 (0.366)</td>
+<td align="center">25 (0.4)</td>
+<td align="left">25 (0.366)</td>
+</tr>
+<tr class="even">
+<td align="center">65+</td>
+<td align="center">10 (0.5)</td>
+<td align="center">40 (0.45)</td>
+<td align="center">25 (0.5)</td>
+<td align="left">25 (0.45)</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Total</strong></td>
+<td align="center">35%</td>
+<td align="center">38%</td>
+<td align="center">38.75%</td>
+<td align="left">34.4%</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div id="total-35-38-38.75-34.4" class="section level2">
-<h2><span class="header-section-number">8.2</span> Total 35% 38% 38.75% 34.4%</h2>
 <p>Next we consider an example of where this might be helpful. Our example comes from a <a href="https://ourworldindata.org">website</a> “Our World in Data” which tries to provide useful data sets and analysis to address major societal issues. Here we will consider <a href="https://ourworldindata.org/suicide">suicide</a> rates in different countries around the world.</p>
+</div>
 <div id="example-maternity-deaths" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> Example Maternity Deaths</h3>
+<h3><span class="header-section-number">8.1.7</span> Example Maternity Deaths</h3>
 <p>Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.</p>
-<p>Step One: Variable of interest
-Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
-<p>Step Two: Context
-Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
-<p>Step Three: Conditional Statistics
-- How does this vary between countries?
-- How does this vary between states?
-- How does this vary between socio-economic or ethic groups?</p>
-<p>Step Four: Finding Data
-- Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.
-- I found data from the Centers for Disease Control. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p>
-<p>Now we find some data from the CDC…
-- Problem: Can’t get State by Year data due to confidentiality…
-- Year by race?</p>
+<div id="step-one-variable-of-interest" class="section level4 unnumbered">
+<h4>Step One: Variable of interest</h4>
+<p>Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
+</div>
+<div id="step-two-context" class="section level4 unnumbered">
+<h4>Step Two: Context</h4>
+<p>Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
+</div>
+<div id="step-three-conditional-statistics" class="section level4 unnumbered">
+<h4>Step Three: Conditional Statistics</h4>
+<ul>
+<li>How does this vary between countries?</li>
+<li>How does this vary between states?</li>
+<li>How does this vary between socio-economic or ethic groups?</li>
+</ul>
+</div>
+<div id="step-four-finding-data" class="section level4 unnumbered">
+<h4>Step Four: Finding Data</h4>
+<ul>
+<li>Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.</li>
+<li>I found data from the Centers for Disease Control. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</li>
+</ul>
+<p>Now we find some data from the CDC…</p>
+<ul>
+<li>Problem: Can’t get State by Year data due to confidentiality…</li>
+<li>Year by race?</li>
+</ul>
+<p><img src="08_Variable_Selection_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
 </div>
 </div>
 <div id="exercises-6" class="section level2">
-<h2><span class="header-section-number">8.3</span> Exercises</h2>
+<h2><span class="header-section-number">8.2</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li><p>Download from the STA 141 GitHub raw data directory files for the
 <a href="https://github.com/dereksonderegger/141/raw/master/data-raw/Guns_State_Deaths_2010.csv">murders per state</a>

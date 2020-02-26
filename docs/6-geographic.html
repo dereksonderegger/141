@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-02-25" />
+<meta name="date" content="2020-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -223,7 +223,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#intensity-maps"><i class="fa fa-check"></i><b>5.3.2</b> Intensity Maps</a></li>
 <li class="chapter" data-level="5.3.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#contour-plots"><i class="fa fa-check"></i><b>5.3.3</b> Contour Plots</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-4"><i class="fa fa-check"></i><b>5.4</b> Exercises</a></li>
+<li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#regression-lines"><i class="fa fa-check"></i><b>5.4</b> Regression Lines</a></li>
+<li class="chapter" data-level="5.5" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#plot-building-process"><i class="fa fa-check"></i><b>5.5</b> Plot building process</a></li>
+<li class="chapter" data-level="5.6" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-4"><i class="fa fa-check"></i><b>5.6</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a><ul>
 <li class="chapter" data-level="6.1" data-path="6-geographic.html"><a href="6-geographic.html#projections"><i class="fa fa-check"></i><b>6.1</b> Projections</a></li>
@@ -275,8 +277,8 @@ Equirectangular has an even grid of latitude and logitude lines.
 <p>Another compromise is to allow for discontinuities on the map surface. This decreases the amount of distortion, but cleaves Greenland and Antarctica.
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Goode_homolosine_projection_SW.jpg" alt="Goode homolosine" /></p>
 <p>I haven’t had an opportunity to place my own spin on geographic maps and instead we will look at Claus Wilke’s Chapter on <a href="https://serialmentor.com/dataviz/geospatial-data.html">Geographic maps</a>.</p>
-<div id="htmlwidget-e92016e35fa1dd770005" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e92016e35fa1dd770005">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[35.1991666666667,-111.659722222222],14,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7c7ce8bd280f83f931e7" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7c7ce8bd280f83f931e7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[35.1991666666667,-111.659722222222],14,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}]},"evals":[],"jsHooks":[]}</script>
 <p>One of the best things about interactive maps is that you can zoom in and out and change the level of resolution. The ability to easily transition between different scale is amazing and is a hallmark of a quality interactive experience.</p>
 <p>Google Maps is built on a 256x256 pixel tile system where zoom level 0 is an image of the whole earth. Each zoom step in halves the X and Y range and so shows 1/4 of the surface area. Zoom level 20 is the scale of a single building, level 14 is the zoom level displayed above.</p>
 </div>

@@ -20,6 +20,7 @@ We could also add other categorical variables by adding faceting. With this comb
 Sometimes we have a dataset with several different variables of quantitative variables. One thing we could do is just make all possible pairs of scatterplots. In a *pairs* plot, we make a grid of graphs where x-axis or y-axis remains consistent as we move across the columns or rows of the grid.
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-4-1.png" width="672" />
 
+**In Tableau, put all of the variables onto the shelf spaces (using the average of each). This gets the grid of graphs, each with one point. Assuming you have a column that is a unique identifier for each observation, if you put that in the detail card (which basically defines the scale at which the average is being taken), then the average is taken over each observation, and we end up with the scatterplot matrix.**
 
 ## Correlation Plots
 ### Pearson's Correlation Coefficient
@@ -96,6 +97,24 @@ Contour plots are similar to density plots, but for two-axis.  The lines mark ou
 <img src="06_X-Y_relationships_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
 
+## Regression Lines
+
+Often I want to add a trend line to a scatter plot. This line is the line that fits through the data "the best", where "the best" minimizes the sum of the *squared* vertical distances between the data points and the trend line.
+
+**In Tableau, click the analytics tab and drag the trend line icon onto the graph. You can then select the shape of the line you'd like to add.**
+
+## Plot building process
+
+Often I find myself making a bunch of graphs and none of them show something interesting. The following is my usual path of investigation in situations where I have several (3 or more) variables and I want to understand how they relate to each other. Below is a recommended analysis path, but shouldn't be taken as the *only* path towards finding an interesting visualization in a data set.
+
+1. Identify the strongest or most interesting relationships. If there is an obvious response variable, I will examine all the others as predictors to the response. I then approximately rank them as to which variable most strongly predicts the response.  If there isn't a obvious response, I'll look at the pairs plot and pick out the strongest relationship.
+
+2. Start with the strongest relationship with those variables on the x and y axis. Preferentially, I'll use quantitative variables for these.  Next add other variables to the graph as attributes high on the EPT scale (size, color) or on the grouping scale (facets, shape).
+
+The critical aspect is that I want to select the most important relationship to be displayed via the x and y axis and then other relationships added on top via the other graph attributes.
+
+
+
 ## Exercises
 
 1. Read Chapters 12 and 18 from Wilke's book. Feel free to skip section 12.3.
@@ -109,7 +128,7 @@ We will examine price, carats, cut (Fair, Good, Very Good, Premium, and Ideal), 
     
 3. From the [Gapminder.com](www.gapminder.com/data) website, I've downloaded a bunch of interesting covariates about countries. You can find my dataset at my GitHub site in a 
 [.csv file](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Gapminder.csv). 
-The variables I've included include the country region, year, population size, population growth, percent of population with basic sanitation, GDP per capita, Total GDP, life expectancy, adult male and female labor force participation rates. *Fertility is the number of children per woman, so a fertility rate of 2 children per woman is a stable population.* 
+The variables I've included include the country region, year, population size, population growth, percent of population with basic sanitation, GDP per capita, Total GDP, life expectancy, adult male and female labor force participation rates. *Fertility is the number of children per woman, so a fertility rate of 2 children per woman is a stable population. For this question, create some version of the graphs presented in this chapter. We will address geographic maps in the next chapter.* 
     a) For all the following questions, only consider the year 2015. 
     b) Investigate the relationship between GDP and GDP_per_capita. Why should we prefer to work with GDP_per_capita when comparing standards of living between, say, the United States and Canada?
     c) Investigate the relationship between life expectancy, fertility, and GDP_per_capita. Do these relationships seem to vary by region?  Comment on your graphs and relationships that you observe.

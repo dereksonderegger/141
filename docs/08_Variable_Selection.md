@@ -142,7 +142,7 @@ Now we find some data from the CDC...
 ## Exercises
 
 1. Download from the STA 141 GitHub raw data directory files for the 
-[murders per state](https://github.com/dereksonderegger/141/raw/master/data-raw/Guns_State_Deaths_2010.csv)
+[murders per state](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Guns_%26_Suicide/Guns_State_Deaths_2010.csv)
 as well as 
 [population sizes](https://github.com/dereksonderegger/141/raw/master/data-raw/State_Pop.csv)
 of each state. The murder information data file contains information about the number of murders per state, how many of those murders were gun related, and the rate of gun ownership. I got this information from 
@@ -150,10 +150,10 @@ of each state. The murder information data file contains information about the n
 and it isn't clear if gun ownership rate is the percent of residents that owns one or more gun or if it is the number of guns per state divided by the number of residents.
     a) Join the state population and murder information data sets.
     b) Calculate the murder rate and gun murder rate for each statement per 100,000 residents.
-    c) Make a scatterplot of gun ownership rate vs the gun murder rate.
+    c) Make a scatter plot of gun ownership rate vs the gun murder rate.
     
 2. Download from the STA 141 GitHub raw data directory files for the 
-[suicide rates](https://github.com/dereksonderegger/141/raw/master/data-raw/State_Suicides_2016.csv) 
+[suicide rates](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Guns_%26_Suicide/State_Suicides_2016.csv)
 per state. Join this data to data you used in problem 1. Create a scatterplot graph of suicide rate vs gun ownership rates.
   
 3. Given the context of the problems (1) and (2), what follow-up questions come to mind? Given at least two follow-up questions and the graphs you would create to address those questions. Identify the data you would need to create such a graph. *Context: At this point, you are not expected to find the data, but identify what variables of interest you would need.*

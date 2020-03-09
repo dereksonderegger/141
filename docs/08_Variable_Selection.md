@@ -32,6 +32,27 @@ Tim Cook displaying
 instead of quarterly sales.
 
 
+### Example: Disease Mortality vs Fatality Rates
+In 2020, the Corona virus is spreading across the global. Many news reports are confusing fatality and mortality rates. These two rate statistics differ by what the denominator is.
+
+$$\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}}$$
+$$\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}}$$
+
+The fatality rate gives the risk of dying if you are infected, while the mortality rate gives the risk of a random person catching and dying from the disease. Fatality measures how sever the disease infection is while mortality measures how dangerous it is to the whole population.
+
+To see the difference between these statistics, consider two populations infected by different diseases.
+
+#### 1000 People, 300 Sick, 100 Die {-}
+$$\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}} = \frac{100}{300}= 33.3\%$$
+$$\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}} = \frac{100}{1000} = 10\%$$
+
+#### 1000 People, 50 Sick, 40 Die {-}
+$$\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}} = \frac{40}{50}= 80\%$$
+$$\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}} = \frac{40}{1000} = 4\%$$
+
+
+The first population has a more widespread disease outbreak which ultimately kills more people, but the second population has a disease that is more devastating to those who catch it but fewer people catch the disease.
+
 ### Seasonal Unemployment
 Employment in various sectors of the economy often has a seasonal component. For example, the construction industry has much higher employment in the summer while the retail sector has a strong peak in October-December.
 
@@ -157,8 +178,6 @@ and it isn't clear if gun ownership rate is the percent of residents that owns o
 per state. Join this data to data you used in problem 1. Create a scatterplot graph of suicide rate vs gun ownership rates.
   
 3. Given the context of the problems (1) and (2), what follow-up questions come to mind? Given at least two follow-up questions and the graphs you would create to address those questions. Identify the data you would need to create such a graph. *Context: At this point, you are not expected to find the data, but identify what variables of interest you would need.*
-
-4. Propose a topic of interest to you and consider what variables you would need to obtain to explain it to your fellow classmates in a series of one or more graphics. In particular, discuss how the variables you chose needed (or will need) to be transformed to provide useful comparisons.
 
 
 

@@ -39,7 +39,7 @@ We need to find some data. Sometimes this isn't too hard, but sometimes it is re
     d) Create four maps (one for each education group) showing the proportions for each county.
     e) Create a graph for the proportions, faceted by county.
     
-2. We are interested in the prevalence of asthma across the United States. For this exercise, we'll use state level data. *Finding county level information was harder. If you can find  and I'm not couldn't find county level data easily.*
+2. We are interested in the prevalence of asthma across the United States. For this exercise, we'll use state level data. *Finding county level information appears to be much harder. If you can find county level data, use that, but if not, the state level data is acceptable.*
     a) Using the CDC's website [data.cdc.gov/browse](data.cdc.gov/browse), search for asthma prevalence. You might find that data by metro area first, but adding the search term of `BRFSS` will refine the search to the Behavioral Risk Factor Surveillance System, which is a CDC survey.
     b) Download the data and produce a map of the data.
     

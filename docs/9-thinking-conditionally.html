@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 What to Graph | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="6-geographic.html"/>
-<link rel="next" href="8-finding-data.html"/>
+<link rel="prev" href="8-finding-data.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -274,269 +274,210 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-to-graph" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> What to Graph</h1>
-<div id="examples" class="section level2">
-<h2><span class="header-section-number">7.1</span> Examples</h2>
-<div id="example-vehicle-deaths" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Example: Vehicle Deaths</h3>
-<p>I want to understand how vehicle safety has changed over time. The first statistic we might consider is just the number of vehicle deaths per year.</p>
-<p>The following image comes from the YouTube channel <a href="https://www.youtube.com/watch?v=dmPvGi4s9bg"><strong>Real Engineering</strong></a>.
-<img src="Images/Vehicle_Deaths_per_Year.png" />
-But this isn’t a good graph because the number of people driving isn’t consistent over time. But what is the appropriate scaling?</p>
-<p><img src="Images/Vehicle%20Deaths_per_Billion_VMT.png" /></p>
-</div>
-<div id="example-military-budgets" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> Example: Military Budgets</h3>
-<p><img src="08_Variable_Selection_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>In this data, the amount spent seems inappropriate because of the number of individuals per country is not the same. Furthermore, rich countries can spend more money without it affecting their populace.</p>
-</div>
-<div id="example-gdp" class="section level3">
-<h3><span class="header-section-number">7.1.3</span> Example: GDP</h3>
-<p>Should we be using <a href="https://www.theguardian.com/commentisfree/2019/nov/24/metrics-gdp-economic-performance-social-progress">GDP to measure economic “success”?</a></p>
-</div>
-<div id="example-cummulative-iphone-sales" class="section level3">
-<h3><span class="header-section-number">7.1.4</span> Example: Cummulative Iphone Sales</h3>
-<p>Tim Cook displaying
-<a href="https://www.techjunkie.com/tim-cook-trying-prove-meaningless-chart/">total iPhone sales</a>
-instead of quarterly sales.</p>
-</div>
-<div id="example-disease-mortality-vs-fatality-rates" class="section level3">
-<h3><span class="header-section-number">7.1.5</span> Example: Disease Mortality vs Fatality Rates</h3>
-<p>In 2020, the Corona virus is spreading across the global. Many news reports are confusing fatality and mortality rates. These two rate statistics differ by what the denominator is.</p>
-<p><span class="math display">\[\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}}\]</span>
-<span class="math display">\[\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}}\]</span></p>
-<p>The fatality rate gives the risk of dying if you are infected, while the mortality rate gives the risk of a random person catching and dying from the disease. Fatality measures how sever the disease infection is while mortality measures how dangerous it is to the whole population.</p>
-<p>To see the difference between these statistics, consider two populations infected by different diseases.</p>
-<div id="people-300-sick-100-die" class="section level4 unnumbered">
-<h4>1000 People, 300 Sick, 100 Die</h4>
-<p><span class="math display">\[\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}} = \frac{100}{300}= 33.3\%\]</span>
-<span class="math display">\[\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}} = \frac{100}{1000} = 10\%\]</span></p>
-</div>
-<div id="people-50-sick-40-die" class="section level4 unnumbered">
-<h4>1000 People, 50 Sick, 40 Die</h4>
-<p><span class="math display">\[\textrm{Fatality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Infected}} = \frac{40}{50}= 80\%\]</span>
-<span class="math display">\[\textrm{Mortality Rate} = \frac{\textrm{# of Deaths}}{\textrm{# of People Exposed}} = \frac{40}{1000} = 4\%\]</span></p>
-<p>The first population has a more widespread disease outbreak which ultimately kills more people, but the second population has a disease that is more devastating to those who catch it but fewer people catch the disease.</p>
-</div>
-</div>
-<div id="seasonal-unemployment" class="section level3">
-<h3><span class="header-section-number">7.1.6</span> Seasonal Unemployment</h3>
-<p>Employment in various sectors of the economy often has a seasonal component. For example, the construction industry has much higher employment in the summer while the retail sector has a strong peak in October-December.</p>
-<p>Across all sectors, employment is lowest in January - April, and becomes higher in the late summer &amp; fall. For a more detailed discussion see <a href="https://www.chicagofed.org/publications/economic-perspectives/2018/3">this paper</a> published by the Federal Reserve Bank of Chicago.</p>
-<p><img src="Images/SeasonalEmployment.png" /></p>
-<p>Because the seasonal aspect is quite predictable, it is possible to report the black line in Figure A above instead of the monthly raw employment numbers. Because the seasonal fluctuations are quite large, if we don’t account for seasonality, we would miss fundametal economic changes.</p>
-<p>So instead, we typically hear about changes to the seasonally adjusted employment rate.</p>
-</div>
-<div id="example-age-standardization" class="section level3">
-<h3><span class="header-section-number">7.1.7</span> Example: Age Standardization</h3>
-<p>Suppose we have two populations with the following age structures and proportion that believe that vaping is “very harmful”.</p>
-<p>Suppose that in each population we’ve asked if individuals believe that vaping is “very harmful”.</p>
-<table style="width:31%;">
-<colgroup>
-<col width="18%" />
-<col width="12%" />
-</colgroup>
+<div id="thinking-conditionally" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Thinking Conditionally</h1>
+<p>There are many examples where the choice of grouping matters when looking at data sets. In particular, Simpson’s Paradox is a situation where the result changes based on what scale we examine the data.</p>
+<div id="examples-1" class="section level2">
+<h2><span class="header-section-number">9.1</span> Examples</h2>
+<div id="gender-bias-in-admission-rates." class="section level3">
+<h3><span class="header-section-number">9.1.1</span> Gender Bias in Admission Rates.</h3>
+<p>In 1975, researchers looked into alegations of gender bias in graduate program admissions at University of California, Berkeley. Data from 1973 admissions showed a statistically signficant difference between acceptance rates between males and females.</p>
+<table>
 <thead>
 <tr class="header">
-<th align="center">Population</th>
-<th align="center">Agree</th>
+<th align="center">Gender</th>
+<th align="center">Applicants</th>
+<th align="center">Percent Admitted</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">8442</td>
+<td align="center">44%</td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">4321</td>
+<td align="center">35%</td>
+</tr>
+</tbody>
+</table>
+<p>This appears to be pretty convincing evidence that females are being discriminated against. However… when we look closer at the data we should look at the department level admission rates.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Gender</th>
+<th align="center">Department</th>
+<th align="center">Applicants</th>
+<th align="left">Percent Admitted</th>
+<th align="center">Which is Higher?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">A</td>
+<td align="center">825</td>
+<td align="left">62%</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">A</td>
+<td align="center">108</td>
+<td align="left">82%</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">B</td>
+<td align="center">560</td>
+<td align="left">63%</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">B</td>
+<td align="center">25</td>
+<td align="left">68%</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">C</td>
+<td align="center">325</td>
+<td align="left">37%</td>
+<td align="center">M</td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">C</td>
+<td align="center">593</td>
+<td align="left">34%</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">D</td>
+<td align="center">417</td>
+<td align="left">33%</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">D</td>
+<td align="center">375</td>
+<td align="left">35%</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">E</td>
+<td align="center">191</td>
+<td align="left">28%</td>
+<td align="center">M</td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">E</td>
+<td align="center">393</td>
+<td align="left">24%</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Males</td>
+<td align="center">F</td>
+<td align="center">373</td>
+<td align="left">6%</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">Females</td>
+<td align="center">F</td>
+<td align="center">341</td>
+<td align="left">7%</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>We first notice that males and females tended to apply to different programs. For example 88% of department A applicants were male. Because females tended to apply to departments with lower acceptance rates, they had a lower university wide acceptance rate. However, in most departments (6/8) they actually were accepted at a higher rate than males.</p>
+</div>
+<div id="kidney-stone-treatment" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> Kidney Stone Treatment</h3>
+<p>Suppose that we have two different treatments to address Kidney Stones.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Treatment</th>
+<th align="center">Patients</th>
+<th align="center">Success Percent</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">A</td>
-<td align="center">0.35</td>
+<td align="center">273/350</td>
+<td align="center">78%</td>
 </tr>
 <tr class="even">
 <td align="center">B</td>
-<td align="center">0.3798</td>
+<td align="center">289/350</td>
+<td align="center">83%</td>
 </tr>
 </tbody>
 </table>
-<p>However It turns out that Population B has a much older population. Here I am considering population sizes of 100 individuals just to make the math convenient, but these could be arbitrary population sizes.</p>
-<p>Population Sizes</p>
-<table style="width:25%;">
-<colgroup>
-<col width="11%" />
-<col width="6%" />
-<col width="6%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">Age</th>
-<th align="center">A</th>
-<th align="center">B</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">18-29</td>
-<td align="center">40</td>
-<td align="center">10</td>
-</tr>
-<tr class="even">
-<td align="center">30-49</td>
-<td align="center">30</td>
-<td align="center">20</td>
-</tr>
-<tr class="odd">
-<td align="center">50-64</td>
-<td align="center">20</td>
-<td align="center">30</td>
-</tr>
-<tr class="even">
-<td align="center">65+</td>
-<td align="center">10</td>
-<td align="center">40</td>
-</tr>
-</tbody>
-</table>
-<p>Is Vaping Harmful? (By age group and population). In this table we present the information as <code># Individuals (proportion think vaping is harmful)</code>. In this fashion the value <code>40 (0.25)</code> indicates the group contains 40 people, and 25% of those believe that vaping is harmful.</p>
-<p>Here we see that, by age group, people in population B tend to be <em>more</em> permissive opinion about vaping than population A. The issue is that population B has a much older population.</p>
+<p>So it appears that treatment B is a superior treatment. But behind the scenes we have the issue that kidney stones come in different sizes and treatment A is commonly used to treat small stones, and treatment B is commonly used to treat large stones.</p>
 <table>
 <thead>
 <tr class="header">
-<th align="center">Age</th>
-<th align="center">A</th>
-<th align="center">B</th>
+<th align="center">Treatment</th>
+<th align="center">Size</th>
+<th align="center">Patients</th>
+<th align="center">Success Percent</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">18-29</td>
-<td align="center">40 (0.25)</td>
-<td align="center">10 (0.2)</td>
+<td align="center">A</td>
+<td align="center">Small</td>
+<td align="center">81/87</td>
+<td align="center">93%</td>
 </tr>
 <tr class="even">
-<td align="center">30-49</td>
-<td align="center">30 (0.4)</td>
-<td align="center">20 (0.35)</td>
+<td align="center">B</td>
+<td align="center">Small</td>
+<td align="center">234/270</td>
+<td align="center">87%</td>
 </tr>
 <tr class="odd">
-<td align="center">50-64</td>
-<td align="center">20 (0.4)</td>
-<td align="center">30 (0.366)</td>
+<td align="center">A</td>
+<td align="center">Large</td>
+<td align="center">192/263</td>
+<td align="center">73%</td>
 </tr>
 <tr class="even">
-<td align="center">65+</td>
-<td align="center">10 (0.5)</td>
-<td align="center">40 (0.45)</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Total</strong></td>
-<td align="center"><strong>0.35%</strong></td>
-<td align="center"><strong>0.38</strong></td>
+<td align="center">B</td>
+<td align="center">Large</td>
+<td align="center">55/80</td>
+<td align="center">69%</td>
 </tr>
 </tbody>
 </table>
-<p>What if Population A had the same demographics as Population B? Lets calculate the “Average Demographic Distribution” and then do the multiplication.</p>
-<p>To calculate the average demographic distribution is calculate the percentage of individuals in each age group. For the 18-29 group, there are <span class="math inline">\(40+10=50\)</span> individuals within the total population of <span class="math inline">\(n_A + n_B = 100+100 = 200\)</span> and so the average demographics have <span class="math inline">\(50/200=1/4 = 25\%\)</span> of people in the 18-29 age group.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">Age</th>
-<th align="center">A</th>
-<th align="center">B</th>
-<th align="center">A.Std</th>
-<th align="left">B.Std</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">18-29</td>
-<td align="center">40 (0.25)</td>
-<td align="center">10 (0.2)</td>
-<td align="center">25 (0.25)</td>
-<td align="left">25 (0.2)</td>
-</tr>
-<tr class="even">
-<td align="center">30-49</td>
-<td align="center">30 (0.4)</td>
-<td align="center">20 (0.35)</td>
-<td align="center">25 (0.4)</td>
-<td align="left">25 (0.35)</td>
-</tr>
-<tr class="odd">
-<td align="center">50-64</td>
-<td align="center">20 (0.4)</td>
-<td align="center">30 (0.366)</td>
-<td align="center">25 (0.4)</td>
-<td align="left">25 (0.366)</td>
-</tr>
-<tr class="even">
-<td align="center">65+</td>
-<td align="center">10 (0.5)</td>
-<td align="center">40 (0.45)</td>
-<td align="center">25 (0.5)</td>
-<td align="left">25 (0.45)</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Total</strong></td>
-<td align="center">35%</td>
-<td align="center">38%</td>
-<td align="center">38.75%</td>
-<td align="left">34.4%</td>
-</tr>
-</tbody>
-</table>
-<p>Next we consider an example of where this might be helpful. Our example comes from a <a href="https://ourworldindata.org">website</a> “Our World in Data” which tries to provide useful data sets and analysis to address major societal issues. Here we will consider <a href="https://ourworldindata.org/suicide">suicide</a> rates in different countries around the world.</p>
+<p>So treatment A is is the superior treatment in <em>both</em> the small and large kidney stone cases. But because treatment A is actually more expensive, it is more commonly used in the large stone case.</p>
+<p><img src="10_Conditional_Thinking_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="10_Conditional_Thinking_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+Without considering groups, there is a negative relationship between the cause/response, but when we consider the groups, there is a positive relationship.</p>
 </div>
-<div id="example-maternity-deaths" class="section level3">
-<h3><span class="header-section-number">7.1.8</span> Example Maternity Deaths</h3>
-<p>Suppose that we are interested the mortality rates that women experience related to pregnancy and birth.</p>
-<div id="step-one-variable-of-interest" class="section level4 unnumbered">
-<h4>Step One: Variable of interest</h4>
-<p>Clearly we want to have some sort rate adjustment to account for different population sizes. However, because not all women give birth, we shouldn’t just consider all women. Instead we’ll consider this maternal deaths per 100,000 live births.</p>
-</div>
-<div id="step-two-context" class="section level4 unnumbered">
-<h4>Step Two: Context</h4>
-<p>Approximately 700 women per year die due to complications of pregnancy or child birth in the United States. This turns out to be ~17.2 deaths per 100,000 births, or about 1 maternal death per 5,000 live births.</p>
-</div>
-<div id="step-three-conditional-statistics" class="section level4 unnumbered">
-<h4>Step Three: Conditional Statistics</h4>
-<ul>
-<li>How does this vary between countries?</li>
-<li>How does this vary between states?</li>
-<li>How does this vary between socio-economic or ethic groups?</li>
-</ul>
-</div>
-<div id="step-four-finding-data" class="section level4 unnumbered">
-<h4>Step Four: Finding Data</h4>
-<ul>
-<li>Typically it is easy to google for a single statistic for a country. However, it is often difficult to find a dataset that allows for the conditional statistics, such as between states or ethnic groups.</li>
-<li>I found data from the Centers for Disease Control. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</li>
-</ul>
-<p>Now we find some data from the CDC…</p>
-<ul>
-<li>Problem: Can’t get State by Year data due to confidentiality…</li>
-<li>Year by race?</li>
-</ul>
-<p><img src="08_Variable_Selection_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-</div>
-</div>
-</div>
-<div id="exercises-6" class="section level2">
-<h2><span class="header-section-number">7.2</span> Exercises</h2>
+<div id="build-your-own" class="section level3">
+<h3><span class="header-section-number">9.1.3</span> Build your own</h3>
+<p>Simpson’s paradox appears in a variety of situations. Come up with a scenario where the statistic changes interpretation based on the scale.</p>
 <ol style="list-style-type: decimal">
-<li><p>Download from the STA 141 GitHub raw data directory files for the
-<a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Guns_%26_Suicide/Guns_State_Deaths_2010.csv">murders per state</a>
-as well as
-<a href="https://github.com/dereksonderegger/141/raw/master/data-raw/State_Pop.csv">population sizes</a>
-of each state. The murder information data file contains information about the number of murders per state, how many of those murders were gun related, and the rate of gun ownership. I got this information from
-<a href="https://en.wikipedia.org/wiki/Firearm_death_rates_in_the_United_States_by_state">Wikipedia</a>,
-and it isn’t clear if gun ownership rate is the percent of residents that owns one or more gun or if it is the number of guns per state divided by the number of residents.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Join the state population and murder information data sets.</li>
-<li>Calculate the murder rate and gun murder rate for each statement per 100,000 residents.</li>
-<li>Make a scatter plot of gun ownership rate vs the gun murder rate.</li>
-</ol></li>
-<li><p>Download from the STA 141 GitHub raw data directory files for the
-<a href="https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Guns_%26_Suicide/State_Suicides_2016.csv">suicide rates</a>
-per state. Join this data to data you used in problem 1. Create a scatterplot graph of suicide rate vs gun ownership rates.</p></li>
-<li><p>Given the context of the problems (1) and (2), what follow-up questions come to mind? Given at least two follow-up questions and the graphs you would create to address those questions. Identify the data you would need to create such a graph. <em>Context: At this point, you are not expected to find the data, but identify what variables of interest you would need.</em></p></li>
+<li>Suppose that we look at patient fatalities between two surgeons. One surgeon is pretty average, while the other gets assigned the most dangerous and sever cases.</li>
+<li>Consider two baseball players where one players batting percentage is higher each year, but overall is lower.</li>
 </ol>
 
+</div>
 </div>
 </div>
             </section>
@@ -544,8 +485,8 @@ per state. Join this data to data you used in problem 1. Create a scatterplot gr
           </div>
         </div>
       </div>
-<a href="6-geographic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="8-finding-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="8-finding-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -578,7 +519,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/08_Variable_Selection.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/10_Conditional_Thinking.Rmd",
 "text": "Edit"
 },
 "history": {

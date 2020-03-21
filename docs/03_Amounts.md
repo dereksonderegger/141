@@ -101,11 +101,27 @@ As typical, with a just a few categories, we should move the labels onto the gra
 
 
 ### Stacked Bar
+
+```
+## Warning: `expand_scale()` is deprecated; use `expansion()` instead.
+```
+
 <img src="03_Amounts_files/figure-html/unnamed-chunk-17-1.png" width="672" />
 
 
 ### Side-by-side Barchart
-<img src="03_Amounts_files/figure-html/unnamed-chunk-18-1.png" width="672" /><img src="03_Amounts_files/figure-html/unnamed-chunk-18-2.png" width="672" />
+
+```
+## Warning: `expand_scale()` is deprecated; use `expansion()` instead.
+```
+
+<img src="03_Amounts_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+
+```
+## Warning: `expand_scale()` is deprecated; use `expansion()` instead.
+```
+
+<img src="03_Amounts_files/figure-html/unnamed-chunk-18-2.png" width="672" />
 
 
 
@@ -121,6 +137,11 @@ As typical, with a just a few categories, we should move the labels onto the gra
 ## Multiple Sets of Proportions
 
 ### Faceted Bar charts
+
+```
+## Warning: `expand_scale()` is deprecated; use `expansion()` instead.
+```
+
 <img src="03_Amounts_files/figure-html/unnamed-chunk-19-1.png" width="768" />
 
 <img src="03_Amounts_files/figure-html/unnamed-chunk-20-1.png" width="672" />
@@ -134,6 +155,11 @@ As typical, with a just a few categories, we should move the labels onto the gra
 
 
 ### Side-by-Side Stacked Barcharts
+
+
+```
+## Warning: `expand_scale()` is deprecated; use `expansion()` instead.
+```
 
 <img src="03_Amounts_files/figure-html/unnamed-chunk-23-1.png" width="768" />
 

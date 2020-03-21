@@ -10,6 +10,9 @@ bookdown::gitbook:
       after: |
     edit:
       link: https://github.com/dereksonderegger/141/raw/master/%s
+    # download:
+    #   - ["Introduction_to_DataScience_with_R.pdf",  "PDF"]
+    #   - ["Introduction_to_DataScience_with_R.epub", "EPUB"]
     search: yes
     fontsettings:
       theme: white
@@ -24,3 +27,10 @@ bookdown::gitbook:
       vk: no
       all: ['facebook', 'google', 'twitter', 'weibo', 'instapaper']      
 
+# bookdown::pdf_book:
+#   includes:
+#     in_header: preamble.tex
+#   latex_engine: xelatex
+#   citation_package: natbib
+# 
+# bookdown::epub_book: default

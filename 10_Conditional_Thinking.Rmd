@@ -115,3 +115,13 @@ When doing exploratory data analysis, we often find ourselves examining the rela
   4. Does the relationship change across space?
   5. Does the relationship change across **some grouping structure**?
   
+### Corona Virus Example
+In Spring of 2020, the corona virus is causing considerable worldwide problems and is widely spread. We are interested in how this disease has spread across the globe and could potentially affect us (at Northern Arizona University) as of March 10th.
+
+Fortunately Johns Hopkins University has done the hard work of compiling case information from a variety of world and national resources and provided the aggregated data via a publicly accessible GitHub site. All the following graphs and discussion are based on their data and subject to Johns Hopkins license that their work shouldn't be used commercially.
+
+```{r}
+#devtools::install_github('CSSEGISandData/COVID-19')
+#"CSSEGISandData/COVID-19"
+```
+

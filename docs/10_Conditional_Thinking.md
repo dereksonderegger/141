@@ -6,7 +6,7 @@
 
 There are many examples where the choice of grouping matters when looking at data sets.  In particular, Simpson's Paradox is a situation where the result changes based on what scale we examine the data.
 
-## Examples
+## Simple Examples
 
 ### Gender Bias in Admission Rates.
 
@@ -69,3 +69,22 @@ Simpson's paradox appears in a variety of situations. Come up with a scenario wh
 
   1. Suppose that we look at patient fatalities between two surgeons. One surgeon is pretty average, while the other gets assigned the most dangerous and sever cases.
   2. Consider two baseball players where one players batting percentage is higher each year, but overall is lower.
+  
+  
+### In Practice
+
+When doing exploratory data analysis, we often find ourselves examining the relationship between two variables and seeing something interesting. The follow-up questions to ask yourself are:
+
+  1. Does the relationship change for different genders?
+  2. Does the relationship change for different socio/economic groups?
+  3. Does the relationship change across time?
+  4. Does the relationship change across space?
+  5. Does the relationship change across **some grouping structure**?
+  
+### Corona Virus Example
+In Spring of 2020, the corona virus is causing considerable worldwide problems and is widely spread. We are interested in how this disease has spread across the globe and could potentially affect us (at Northern Arizona University) as of March 10th.
+
+Fortunately Johns Hopkins University has done the hard work of compiling case information from a variety of world and national resources and provided the aggregated data via a publicly accessible GitHub site. All the following graphs and discussion are based on their data and subject to Johns Hopkins license that their work shouldn't be used commercially.
+
+
+

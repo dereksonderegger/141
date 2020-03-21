@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization</title>
   <meta name="description" content="Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Thinking Conditionally | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-03-09" />
+<meta name="date" content="2020-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="8-finding-data.html"/>
-
+<link rel="next" href="10-presentations.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -251,11 +251,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1" data-path="8-finding-data.html"><a href="8-finding-data.html#exercises-7"><i class="fa fa-check"></i><b>8.1</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html"><i class="fa fa-check"></i><b>9</b> Thinking Conditionally</a><ul>
-<li class="chapter" data-level="9.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#examples-1"><i class="fa fa-check"></i><b>9.1</b> Examples</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#simple-examples"><i class="fa fa-check"></i><b>9.1</b> Simple Examples</a><ul>
 <li class="chapter" data-level="9.1.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#gender-bias-in-admission-rates."><i class="fa fa-check"></i><b>9.1.1</b> Gender Bias in Admission Rates.</a></li>
 <li class="chapter" data-level="9.1.2" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#kidney-stone-treatment"><i class="fa fa-check"></i><b>9.1.2</b> Kidney Stone Treatment</a></li>
 <li class="chapter" data-level="9.1.3" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#build-your-own"><i class="fa fa-check"></i><b>9.1.3</b> Build your own</a></li>
+<li class="chapter" data-level="9.1.4" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#in-practice"><i class="fa fa-check"></i><b>9.1.4</b> In Practice</a></li>
+<li class="chapter" data-level="9.1.5" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#corona-virus-example"><i class="fa fa-check"></i><b>9.1.5</b> Corona Virus Example</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-presentations.html"><a href="10-presentations.html"><i class="fa fa-check"></i><b>10</b> Presentations</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-presentations.html"><a href="10-presentations.html#introduction-3"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="10-presentations.html"><a href="10-presentations.html#audience"><i class="fa fa-check"></i><b>10.2</b> Audience</a></li>
+<li class="chapter" data-level="10.3" data-path="10-presentations.html"><a href="10-presentations.html#outline"><i class="fa fa-check"></i><b>10.3</b> Outline</a></li>
+<li class="chapter" data-level="10.4" data-path="10-presentations.html"><a href="10-presentations.html#figures"><i class="fa fa-check"></i><b>10.4</b> Figures</a></li>
+<li class="chapter" data-level="10.5" data-path="10-presentations.html"><a href="10-presentations.html#presentations-1"><i class="fa fa-check"></i><b>10.5</b> Presentations</a></li>
 </ul></li>
 </ul>
 
@@ -277,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="thinking-conditionally" class="section level1">
 <h1><span class="header-section-number">Chapter 9</span> Thinking Conditionally</h1>
 <p>There are many examples where the choice of grouping matters when looking at data sets. In particular, Simpson’s Paradox is a situation where the result changes based on what scale we examine the data.</p>
-<div id="examples-1" class="section level2">
-<h2><span class="header-section-number">9.1</span> Examples</h2>
+<div id="simple-examples" class="section level2">
+<h2><span class="header-section-number">9.1</span> Simple Examples</h2>
 <div id="gender-bias-in-admission-rates." class="section level3">
 <h3><span class="header-section-number">9.1.1</span> Gender Bias in Admission Rates.</h3>
 <p>In 1975, researchers looked into alegations of gender bias in graduate program admissions at University of California, Berkeley. Data from 1973 admissions showed a statistically signficant difference between acceptance rates between males and females.</p>
@@ -476,6 +485,22 @@ Without considering groups, there is a negative relationship between the cause/r
 <li>Suppose that we look at patient fatalities between two surgeons. One surgeon is pretty average, while the other gets assigned the most dangerous and sever cases.</li>
 <li>Consider two baseball players where one players batting percentage is higher each year, but overall is lower.</li>
 </ol>
+</div>
+<div id="in-practice" class="section level3">
+<h3><span class="header-section-number">9.1.4</span> In Practice</h3>
+<p>When doing exploratory data analysis, we often find ourselves examining the relationship between two variables and seeing something interesting. The follow-up questions to ask yourself are:</p>
+<ol style="list-style-type: decimal">
+<li>Does the relationship change for different genders?</li>
+<li>Does the relationship change for different socio/economic groups?</li>
+<li>Does the relationship change across time?</li>
+<li>Does the relationship change across space?</li>
+<li>Does the relationship change across <strong>some grouping structure</strong>?</li>
+</ol>
+</div>
+<div id="corona-virus-example" class="section level3">
+<h3><span class="header-section-number">9.1.5</span> Corona Virus Example</h3>
+<p>In Spring of 2020, the corona virus is causing considerable worldwide problems and is widely spread. We are interested in how this disease has spread across the globe and could potentially affect us (at Northern Arizona University) as of March 10th.</p>
+<p>Fortunately Johns Hopkins University has done the hard work of compiling case information from a variety of world and national resources and provided the aggregated data via a publicly accessible GitHub site. All the following graphs and discussion are based on their data and subject to Johns Hopkins license that their work shouldn’t be used commercially.</p>
 
 </div>
 </div>
@@ -485,8 +510,8 @@ Without considering groups, there is a negative relationship between the cause/r
           </div>
         </div>
       </div>
-<a href="8-finding-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="8-finding-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="10-presentations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

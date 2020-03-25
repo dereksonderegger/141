@@ -21,6 +21,7 @@ library(tidyverse)
 
 We need to find some data. Sometimes this isn't too hard, but sometimes it is really hard.
 
+## Examples
 1. If the data is associated with some sort of federal agencies, then often there is either a web interface or an API.
     a) Centers for Disease Control and Prevention. This federal agency is responsible for tons of health care and mortality data. For example, from the CDC you can find about diabetes rates, impaired driving fatalities, or prevalence of disability types.
         [Main Page](https://www.cdc.gov)
@@ -50,8 +51,9 @@ We need to find some data. Sometimes this isn't too hard, but sometimes it is re
 
 ## Exercises
 1. For this exercise, we will ultimately create graphs to investigate the education levels in Arizona counties.
-    a) From the American Communities Survey data portal, [https:://data.census.gov](https:://data.census.gov) use the web interface to find the educational attainment of people over 25 for counties in Arizona in 2018. Download that data into a .csv file.
-    b) Using the estimated number of people in each county/education group, aggregate the education groups into `Not HS Graduate`, `HS Graduate`, `Some College`, `BS or Higher`. c) Calculate the proportions of each educational group within each of the counties.
+    a) From the American Communities Survey data portal, [https://data.census.gov](https://data.census.gov) use the web interface to find the "Educational Attainment" of people over 25 for counties in Arizona in 2018. Download that data into a .csv file. You might find that ACS won't give this estimate for every county. That is because the populations are so small that ACS won't give breakdowns by race/ethnicity. If the data you download doesn't include all counties, just make a note of that.
+    b) Using the estimated number of people in each county/education group, aggregate the education groups into `Not HS Graduate`, `HS Graduate`, `Some College`, `BS or Higher`. 
+    c) Calculate the proportions of each educational group within each of the counties.
     d) Create four maps (one for each education group) showing the proportions for each county.
     e) Create a graph for the proportions, faceted by county.
     

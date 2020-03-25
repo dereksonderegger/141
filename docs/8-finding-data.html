@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-03-21" />
+<meta name="date" content="2020-03-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -248,7 +248,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#exercises-6"><i class="fa fa-check"></i><b>7.2</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="8-finding-data.html"><a href="8-finding-data.html"><i class="fa fa-check"></i><b>8</b> Finding Data</a><ul>
-<li class="chapter" data-level="8.1" data-path="8-finding-data.html"><a href="8-finding-data.html#exercises-7"><i class="fa fa-check"></i><b>8.1</b> Exercises</a></li>
+<li class="chapter" data-level="8.1" data-path="8-finding-data.html"><a href="8-finding-data.html#examples-1"><i class="fa fa-check"></i><b>8.1</b> Examples</a></li>
+<li class="chapter" data-level="8.2" data-path="8-finding-data.html"><a href="8-finding-data.html#exercises-7"><i class="fa fa-check"></i><b>8.2</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html"><i class="fa fa-check"></i><b>9</b> Thinking Conditionally</a><ul>
 <li class="chapter" data-level="9.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#simple-examples"><i class="fa fa-check"></i><b>9.1</b> Simple Examples</a><ul>
@@ -286,6 +287,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="finding-data" class="section level1">
 <h1><span class="header-section-number">Chapter 8</span> Finding Data</h1>
 <p>We need to find some data. Sometimes this isn’t too hard, but sometimes it is really hard.</p>
+<div id="examples-1" class="section level2">
+<h2><span class="header-section-number">8.1</span> Examples</h2>
 <ol style="list-style-type: decimal">
 <li><p>If the data is associated with some sort of federal agencies, then often there is either a web interface or an API.</p>
 <ol style="list-style-type: lower-alpha">
@@ -317,13 +320,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://dereksonderegger.github.io/sonderegger_et_al_2009_size.pdf">SiZer Paper</a> and associated <a href="https://cran.r-project.org/web/packages/SiZer/SiZer.pdf">R Package</a></li>
 </ol></li>
 </ol>
+</div>
 <div id="exercises-7" class="section level2">
-<h2><span class="header-section-number">8.1</span> Exercises</h2>
+<h2><span class="header-section-number">8.2</span> Exercises</h2>
 <ol style="list-style-type: decimal">
 <li>For this exercise, we will ultimately create graphs to investigate the education levels in Arizona counties.
 <ol style="list-style-type: lower-alpha">
-<li>From the American Communities Survey data portal, <a href="https:://data.census.gov">https:://data.census.gov</a> use the web interface to find the educational attainment of people over 25 for counties in Arizona in 2018. Download that data into a .csv file.</li>
-<li>Using the estimated number of people in each county/education group, aggregate the education groups into <code>Not HS Graduate</code>, <code>HS Graduate</code>, <code>Some College</code>, <code>BS or Higher</code>. c) Calculate the proportions of each educational group within each of the counties.</li>
+<li>From the American Communities Survey data portal, <a href="https://data.census.gov">https://data.census.gov</a> use the web interface to find the “Educational Attainment” of people over 25 for counties in Arizona in 2018. Download that data into a .csv file. You might find that ACS won’t give this estimate for every county. That is because the populations are so small that ACS won’t give breakdowns by race/ethnicity. If the data you download doesn’t include all counties, just make a note of that.</li>
+<li>Using the estimated number of people in each county/education group, aggregate the education groups into <code>Not HS Graduate</code>, <code>HS Graduate</code>, <code>Some College</code>, <code>BS or Higher</code>.</li>
+<li>Calculate the proportions of each educational group within each of the counties.</li>
 <li>Create four maps (one for each education group) showing the proportions for each county.</li>
 <li>Create a graph for the proportions, faceted by county.</li>
 </ol></li>

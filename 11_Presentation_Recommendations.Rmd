@@ -1,8 +1,8 @@
 # Presentations 
 
 ```{r, echo=FALSE}
-# Un-attach any packages that happen to already be loaded. In general this is unecessary
-# but is important for the creation of the book to not have package namespaces
+# Un-attach any packages that happen to already be loaded. In general this is unnecessary
+# but is important for the creation of the book to not have package name-spaces
 # fighting unexpectedly.
 pkgs = names(sessionInfo()$otherPkgs)
 if( length(pkgs > 0)){

@@ -32,6 +32,16 @@ We need to find some data. Sometimes this isn't too hard, but sometimes it is re
     a) [Bacterial infections in Cattle](https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000068)
     b) [SiZer Paper](https://dereksonderegger.github.io/sonderegger_et_al_2009_size.pdf) and associated [R Package](https://cran.r-project.org/web/packages/SiZer/SiZer.pdf)
     
+    
+    
+## Classroom Discussion Topics
+
+### Bicycle Safety
+Recently I was talking with my wife about merits of bicycle commuting to NAU versus driving a car.  The question of risk of injury or death from an accident was brought up and I wondering if we could quantify the risk. What should the the response variable? Where could we find data that might address this question.
+
+### Asthma prevalance
+Suppose we have information about the number of asthma related hospitalizations for each county. Using that information can we make any inference about the relationship between asthma and race/ethnicity? What about the urban/rural divide? Gender differences?
+
 
 ## Exercises
 1. For this exercise, we will ultimately create graphs to investigate the education levels in Arizona counties.

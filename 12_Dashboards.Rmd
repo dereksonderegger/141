@@ -15,7 +15,7 @@ One reason that people get more out of an interactive experience is because they
 
 Second, it allows the reader to ask question that they are interested in. If I see a graph about immigration patterns in Europe, I will likely gravitate to asking about Germany, because I took German in high school and have traveled there. Whoever build the graphic couldn't have guessed why I care about Germany, but they made it possible for me to dig into the question that I care about.
 
-## Examples:
+## Examples
 
 ### Covid-19 Example
 
@@ -44,24 +44,25 @@ It is tempting to think of interactive graphics as either:
 1. A method to get viewers to interact and therefore pay attention.
 2. A shiny whiz-bang doodad that is fun to fiddle with.
 
-But it is more subtle than that. By giving the reader some toggles to play with, we often allow them to change the level of *focus*.
+But it is more subtle than that. By giving the reader some toggles to play with, we often allow them to change the level of *focus*. I like to think of the metaphor of looking at a forest/tree at several different distances. At an extreme close up, all we can see is the color and ridge pattern that define the bark.  As we step back we see the trunk girth.  Even farther back and we start to see the branch patterns and then the tree height. Finally moving even farther back we see how the tree is integrated into the surrounding environment. There are interesting questions to ask at each level of focus, and we need to provide a tool that allows an easy exploration of different levels of focus. 
 
-Often interactive visualizations are all about changing the level of focus.
 
-### Aggregation Level
-1. Interaction is to choose the level of resolution about a certain question.
-2. Typically much of the information is hidden until an aggregation level is selected. 
-3. By zooming in and out of resolution, we keep the big picture in mind while allowing us to dig into as much detail as you want or need.
-4. Examples
-    a) [Google Maps](maps.google.com)
-    b) [Google Maps Developer Documentation](https://developers.google.com/maps/documentation/maps-static/dev-guide)
+### Geographic Aggregation Level
+Aside from their use when out of your technology is out of power, paper maps are incredibly limited because you have to decide on the map scale when you buy it. But when we use the map, you are constrained to just this scale. When interactive, mobile mapping applications became widespread, the limitations of static maps became obvious. When I plan a cross-country trip, I want to see both the national level information as well as block level information as I am navigating to a hotel. 
+
+For most mapping applications, the interaction is to choose the level of resolution about a certain question. At a high level view, most of the information known by the application is actually hidden from view and only a limited amount of information is displayed. Once we start zooming into map, more details are shown, but at each level, the amount of data shown is usually pretty consistent. By zooming in and out of resolution, we keep the big picture in mind while allowing us to dig into as much detail as you want or need.
+
+On a technical note, there are twenty zoom levels with 1 being the world level and 20 being the building scale level. 
+
+[Google Maps](maps.google.com)
+[Google Maps Developer Documentation](https://developers.google.com/maps/documentation/maps-static/dev-guide)
     
 
-### Highlight Level
-1. Often we can show a high-level view of an entire topic. However there are too many details to be presented all at once and we want to suppress the details, but we want to see the relationship.
-2. Examples
-    a) [Bruce Springstein's History](http://duelingdatalarge.blogspot.com)
-    b) [Game of Throne's Character Interactions](http://beta.wind-and-words.com)
+### Miscellaneous Aggregation Levels 
+There are many real-world examples where we want to be able to shift between different levels of detail. Similarly to the maps, want to keep the amount of information given at each zoom level understandable. 
+
+[Bruce Springstein's History](http://duelingdatalarge.blogspot.com)
+[Game of Throne's Character Interactions](http://beta.wind-and-words.com)
 
 
 ### The "Me" Layer

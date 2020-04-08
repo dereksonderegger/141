@@ -54,7 +54,7 @@ For most mapping applications, the interaction is to choose the level of resolut
 
 On a technical note, there are twenty zoom levels with 1 being the world level and 20 being the building scale level. 
 
-[Google Maps](maps.google.com)
+[Google Maps](https://maps.google.com)
 
 [Google Maps Developer Documentation](https://developers.google.com/maps/documentation/maps-static/dev-guide)
     
@@ -73,8 +73,47 @@ Viewers tend to be very self-centric and a goal of most any story or analysis sh
 1. Somebody like me.
 2. My favorite team.
 3. My state/town.
-4. Examples:
+
+Examples:
     a) [NFL Elo Ratings](https://projects.fivethirtyeight.com/complete-history-of-the-nfl/)
     b) [The Birthday Problem](https://pudding.cool/2018/04/birthday-paradox/)
+
+
+## Tableau Example
+
+For our example, we are going to create a graph that shows the spatial expansion of the coranoa Virus across the United States as well as the exponential growth in cases. We would also like to be able to compare different regions growth rates in the number of cases as well as the number of cases per capita or per 100,000 individuals.  
+
+To do this, we'll need one chloropleth map of county level corona virus cases by date as well as county level information about population sizes.
+
+### Data
+
+I got county level corona virus data from the Johns Hopkins github [site](https://github.com/CSSEGISandData/COVID-19). In their data directory they have time series data for the [counties](time_series_covid19_confirmed_US.csv). To get the county population numbers, I went to the US [Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html) Bureau.
+
+The only problem we have is that the county names from the US Census Bureau are usually like "Gallatin County, Montana". However there are some weird alternatives to counties such as "Parish", "Borough", "Census Area", "Municipality", and "city". So to handle that, we'll split the counties on the comma and then remove the "County", "Parish", etc.
+
+```{r, eval=FALSE}
+library(tidyverse)
+library(readxl)
+data <- read_excel('data-raw/COVID-19/US_County_Population_Estimates.xlsx', skip=3) %>%
+  slice(-1) %>% rename(County = 1, Population = `2019`) %>%
+  select(County, Population) %>%
+  tidyr::separate(County, c('County', 'State'), ',', remove=TRUE) %>%
+  mutate(County = str_remove(County, 'County'),
+         County = str_remove(County, 'Borough'),
+         County = str_remove(County, 'Census Area'),
+         County = str_remove(County, 'Municipality'),
+         County = str_remove(County, 'city')) %>%
+  mutate(County = str_remove(County, '\\.'))
+```
+
+Once the county names are aligned, we can join the corona virus data with the population sizes.
+
+### Tableau
+
+We need to first make two graphs. A chlrolopleth map for the number of cases and a line chart with date and number of cases.
+
+Some considerations are that chloropleth map with fill color based on the number of cases doesn't work too well because the color gradient is dominated by New York City, which geographically pretty small. So instead of the fill color being based on the cases, we could base it on the $log_{10}(cases)$.  
+
+Next we can create a dashboard and place the the map and line chart. The final thing to add is an `Action` that takes the selected date on the line chart and uses that as the filter on the chloropleth.
 
 

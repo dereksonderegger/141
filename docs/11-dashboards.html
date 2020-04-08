@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-03-31" />
+<meta name="date" content="2020-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -286,6 +286,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.3.2" data-path="11-dashboards.html"><a href="11-dashboards.html#miscellaneous-aggregation-levels"><i class="fa fa-check"></i><b>11.3.2</b> Miscellaneous Aggregation Levels</a></li>
 <li class="chapter" data-level="11.3.3" data-path="11-dashboards.html"><a href="11-dashboards.html#the-me-layer"><i class="fa fa-check"></i><b>11.3.3</b> The “Me” Layer</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-example"><i class="fa fa-check"></i><b>11.4</b> Tableau Example</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="11-dashboards.html"><a href="11-dashboards.html#data"><i class="fa fa-check"></i><b>11.4.1</b> Data</a></li>
+<li class="chapter" data-level="11.4.2" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-1"><i class="fa fa-check"></i><b>11.4.2</b> Tableau</a></li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -352,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Aside from their use when out of your technology is out of power, paper maps are incredibly limited because you have to decide on the map scale when you buy it. But when we use the map, you are constrained to just this scale. When interactive, mobile mapping applications became widespread, the limitations of static maps became obvious. When I plan a cross-country trip, I want to see both the national level information as well as block level information as I am navigating to a hotel.</p>
 <p>For most mapping applications, the interaction is to choose the level of resolution about a certain question. At a high level view, most of the information known by the application is actually hidden from view and only a limited amount of information is displayed. Once we start zooming into map, more details are shown, but at each level, the amount of data shown is usually pretty consistent. By zooming in and out of resolution, we keep the big picture in mind while allowing us to dig into as much detail as you want or need.</p>
 <p>On a technical note, there are twenty zoom levels with 1 being the world level and 20 being the building scale level.</p>
-<p><a href="maps.google.com">Google Maps</a></p>
+<p><a href="https://maps.google.com">Google Maps</a></p>
 <p><a href="https://developers.google.com/maps/documentation/maps-static/dev-guide">Google Maps Developer Documentation</a></p>
 </div>
 <div id="miscellaneous-aggregation-levels" class="section level3">
@@ -368,12 +372,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Somebody like me.</li>
 <li>My favorite team.</li>
 <li>My state/town.</li>
-<li>Examples:
-<ol style="list-style-type: lower-alpha">
-<li><a href="https://projects.fivethirtyeight.com/complete-history-of-the-nfl/">NFL Elo Ratings</a></li>
-<li><a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem</a></li>
-</ol></li>
 </ol>
+<p>Examples:
+a) <a href="https://projects.fivethirtyeight.com/complete-history-of-the-nfl/">NFL Elo Ratings</a>
+b) <a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem</a></p>
+</div>
+</div>
+<div id="tableau-example" class="section level2">
+<h2><span class="header-section-number">11.4</span> Tableau Example</h2>
+<p>For our example, we are going to create a graph that shows the spatial expansion of the coranoa Virus across the United States as well as the exponential growth in cases. We would also like to be able to compare different regions growth rates in the number of cases as well as the number of cases per capita or per 100,000 individuals.</p>
+<p>To do this, we’ll need one chloropleth map of county level corona virus cases by date as well as county level information about population sizes.</p>
+<div id="data" class="section level3">
+<h3><span class="header-section-number">11.4.1</span> Data</h3>
+<p>I got county level corona virus data from the Johns Hopkins github <a href="https://github.com/CSSEGISandData/COVID-19">site</a>. In their data directory they have time series data for the <a href="time_series_covid19_confirmed_US.csv">counties</a>. To get the county population numbers, I went to the US <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html">Census</a> Bureau.</p>
+<p>The only problem we have is that the county names from the US Census Bureau are usually like “Gallatin County, Montana”. However there are some weird alternatives to counties such as “Parish”, “Borough”, “Census Area”, “Municipality”, and “city”. So to handle that, we’ll split the counties on the comma and then remove the “County”, “Parish”, etc.</p>
+<p>Once the county names are aligned, we can join the corona virus data with the population sizes.</p>
+</div>
+<div id="tableau-1" class="section level3">
+<h3><span class="header-section-number">11.4.2</span> Tableau</h3>
+<p>We need to first make two graphs. A chlrolopleth map for the number of cases and a line chart with date and number of cases.</p>
+<p>Some considerations are that chloropleth map with fill color based on the number of cases doesn’t work too well because the color gradient is dominated by New York City, which geographically pretty small. So instead of the fill color being based on the cases, we could base it on the <span class="math inline">\(log_{10}(cases)\)</span>.</p>
+<p>Next we can create a dashboard and place the the map and line chart. The final thing to add is an <code>Action</code> that takes the selected date on the line chart and uses that as the filter on the chloropleth.</p>
 
 </div>
 </div>

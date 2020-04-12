@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 12 Exercises | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 12 Exercises | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 12 Exercises | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 12 Exercises | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="11-dashboards.html"/>
 
-<link rel="next" href="1-data-wrangling.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -309,79 +309,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">STA 141 - Exploratory Data Analysis and Visualization</h1>
-<p class="author"><em>Derek L. Sonderegger</em></p>
-<p class="date"><em>April 12, 2020</em></p>
-</div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarkey that propagandists.</p>
-<p>The source code for my notes, homework assignments, and other information is available on my on <a href="https://github.com/dereksonderegger/141">GitHub</a>. In particular, there is a directory <code>data-raw</code> that contains all of the datasets that we’ll use in these notes and homeworks.</p>
-<div id="instructional-material" class="section level2">
-<h2><span class="header-section-number">0.1</span> Instructional Material</h2>
-<p>This course draws information from several websites and books.</p>
-<ul>
-<li><p>Alberto Cairo’s book <a href="https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F">The Truthful Art</a>. Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at <a href="http://www.thefunctionalart.com">thefunctionalart.com</a>. Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here.</p></li>
-<li><p>Claus O. Wilke has a book
-<a href="https://www.amazon.com/dp/1492031089/ref=cm_sw_em_r_mt_dp_U_DvAxDbV7NFYY6">Fundamentals of Data Visualization</a>.
-There is an online pre-print version of the book available
-<a href="https://serialmentor.com/dataviz/">here</a>
-as well as GitHub repositories for the book
-<a href="https://github.com/clauswilke/dataviz">source</a>
-and
-<a href="https://github.com/clauswilke/dviz.supp">data</a> used in the book.<br />
-He also has a nice R package called <a href="https://cran.r-project.org/web/packages/cowplot/vignettes/introduction.html">cowplot</a> that aids in making publication ready graphs using R’s <code>ggplot2</code>.</p></li>
-<li><p><a href="https://callingbullshit.org">Calling Bullshit</a> This is a 3-credit course taught at University of Washington. Their goal is to teach students to recognize bullshit provide another scientist a reason why a claim is bullshit.</p></li>
-<li><p>Amelia McNamara’s <a href="http://www.amelia.mn/sds136/index.html">SDS 136 course.</a> Amelia is an Assistant Professor at University of St Thomas and I’ve been influenced by her presentations at national conferences. These are her notes from a data visualization course that she teaches. She is also pretty fun to follow on twitter.</p></li>
-</ul>
-</div>
-<div id="data-sources" class="section level2">
-<h2><span class="header-section-number">0.2</span> Data Sources</h2>
-<ul>
-<li><p>The website <a href="https://ourworldindata.org">Our World in Data</a> has tried to bring together huge amounts of information about a variety of topics and presents the data in context. It typically addresses socioeconomic issues.</p></li>
-<li><p>The website <a href="https://www.kaggle.com">Kaggle</a> started out as a repository for data sets in which data scientists would have host informal competitions. It has grown to host thousands of data sets covering a wide variety of issues.</p></li>
-<li><p>The <a href="https://www.gapminder.org">Gapminder</a> website has health and socioeconomic data for counties going back in time.</p></li>
-<li><p>Access data from the US Government from <a href="http://www.data.gov">Data.gov</a></p></li>
-<li><p>The Centers for Disease Control <a href="https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm">Vital Stats</a> allows for direct download of commonly used downloads. The CDC’s <a href="https://wonder.cdc.gov">Wonder</a> on-line access allows you to format data requests for a wide variety of scenarios.</p></li>
-</ul>
-</div>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">0.3</span> Introduction</h2>
-<ul>
-<li><p>Why visualize data?</p>
-<ul>
-<li>See relationships that raw data obscure.</li>
-<li>Cognitive work to translate raw numbers into context between other data points are already done for you.</li>
-<li>Good graphics translate particular numerical relationships into physical relationships which our brains are really good at processing.</li>
-</ul></li>
-<li><p><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandwellbeing/articles/middleagedgenerationmostlikelytodiebysuicideanddrugpoisoning/2019-08-13">UK Drug Poison</a> These are the data from the UK related to drug overdose and misuse. Farther down the page gives a similar graph on suicide.</p></li>
-<li><p><a href="https://www.torre.nl/EUmoves/">Migration Patterns in Europe</a>.</p></li>
-<li><p>While the New York Times is generally really quite good, this <a href="https://www.nytimes.com/2016/11/29/world/americas/western-liberal-democracy.html?_r=0">graph</a> is quite misleading. Another view of the data is more fair, although the still
-<a href="https://1.bp.blogspot.com/-RQ66mUnaw9Y/XT2gT0j8-tI/AAAAAAAAKoU/G5eOqwdoXS4aW_n0s5-OPWTwes3rdDS6ACLcBGAs/s1600/democracy2.png">depressing.</a></p></li>
-<li><p>I feel compelled to show a bad <a href="https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk">3-d Excel graphic</a> as well.</p></li>
-<li><p>Reuter’s infamous <a href="https://callingbullshit.org/tools/img/stand_your_ground.png">gun deaths in Florida</a> chart.</p></li>
-</ul>
-</div>
-<div id="pedigogical-plan" class="section level2">
-<h2><span class="header-section-number">0.4</span> Pedigogical Plan</h2>
+<div id="exercises-8" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> Exercises</h1>
 <ol style="list-style-type: decimal">
-<li><p>Develop basic understanding and skills about data wrangling. Because this course will require you to find data that interests you, we need to also learn how to manipulate it because the data are <em>never</em> in a nice format.</p></li>
-<li><p>Introduce the Elementary Perceptual Task order and understand how certain visual tasks are more accurate than others.</p></li>
-<li><p>Introduce a slew of graphic types and examples of where and how they are commonly used.</p></li>
-<li><p>Investigate the choice of variables to display and how that can influence the graph interpretation.</p></li>
-<li><p>Understand how interactive graphics can be used across a broad audience.</p></li>
+<li>From the <code>data-raw</code> directory of the note github, I have a sub-directory for the <a href="https://github.com/dereksonderegger/141/tree/master/data-raw/COVID-19">Covid-19</a> information.
+<ol style="list-style-type: lower-alpha">
+<li>Download the cleaned-up data <code>Covid-19_Cases_Population.csv</code> and the Tableau Desktop file <code>Interactive_Covid_V1.twb</code>. While your there, also download the Tableau Prep File <code>Tidy_JohnHopkins_TimeSeries.tfl</code>.</li>
+<li>Open the Tableau file and make sure the data connection is to the file you downloaded.</li>
+<li>In the data, create a calculated column for the number of cases per 100,000 residents. Name this new column <code>Rate</code>.</li>
+<li>Using the <code>Map</code> and <code>TotalCases</code> graphs as templates, create similar graphs using the <code>Rate</code> column as the response.</li>
+<li>Using the CasesDashboard as a template, create a <code>RateDashboard</code> that allows the same date and county/state selection.</li>
+<li>Add a <code>Navigation Object</code> to each dashboard that, on selection, changes the view to the other dashboard. <em>Note: in the creation mode you have to alt-click to make it switch the view. In display mode, a regular click will do it. The idea is that when a user is actually interacting with the dashboard, that is a different display mode than when you are building it.</em></li>
+<li>Download the latest version of the Covid-19 county level <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv">time series data</a>. Utilize the Tableau Prep file to update the data set. Examine the updated visualization.</li>
+</ol></li>
 </ol>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="11-dashboards.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="1-data-wrangling.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -414,7 +364,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/index.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/12_Dashboards.Rmd",
 "text": "Edit"
 },
 "history": {

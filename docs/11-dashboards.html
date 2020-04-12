@@ -24,7 +24,7 @@
 <meta name="author" content="Derek L. Sonderegger" />
 
 
-<meta name="date" content="2020-04-08" />
+<meta name="date" content="2020-04-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="10-presentations.html"/>
-
+<link rel="next" href="12-exercises-8.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -291,6 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.2" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-1"><i class="fa fa-check"></i><b>11.4.2</b> Tableau</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="12" data-path="12-exercises-8.html"><a href="12-exercises-8.html"><i class="fa fa-check"></i><b>12</b> Exercises</a></li>
 </ul>
 
       </nav>
@@ -384,7 +385,7 @@ b) <a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem
 <p>To do this, we’ll need one chloropleth map of county level corona virus cases by date as well as county level information about population sizes.</p>
 <div id="data" class="section level3">
 <h3><span class="header-section-number">11.4.1</span> Data</h3>
-<p>I got county level corona virus data from the Johns Hopkins github <a href="https://github.com/CSSEGISandData/COVID-19">site</a>. In their data directory they have time series data for the <a href="time_series_covid19_confirmed_US.csv">counties</a>. To get the county population numbers, I went to the US <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html">Census</a> Bureau.</p>
+<p>I got county level corona virus data from the Johns Hopkins github <a href="https://github.com/CSSEGISandData/COVID-19">site</a>. In their data directory they have time series data for the <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv">counties</a>. To get the county population numbers, I went to the US <a href="https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html">Census</a> Bureau.</p>
 <p>The only problem we have is that the county names from the US Census Bureau are usually like “Gallatin County, Montana”. However there are some weird alternatives to counties such as “Parish”, “Borough”, “Census Area”, “Municipality”, and “city”. So to handle that, we’ll split the counties on the comma and then remove the “County”, “Parish”, etc.</p>
 <p>Once the county names are aligned, we can join the corona virus data with the population sizes.</p>
 </div>
@@ -393,7 +394,6 @@ b) <a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem
 <p>We need to first make two graphs. A chlrolopleth map for the number of cases and a line chart with date and number of cases.</p>
 <p>Some considerations are that chloropleth map with fill color based on the number of cases doesn’t work too well because the color gradient is dominated by New York City, which geographically pretty small. So instead of the fill color being based on the cases, we could base it on the <span class="math inline">\(log_{10}(cases)\)</span>.</p>
 <p>Next we can create a dashboard and place the the map and line chart. The final thing to add is an <code>Action</code> that takes the selected date on the line chart and uses that as the filter on the chloropleth.</p>
-
 </div>
 </div>
 </div>
@@ -402,8 +402,8 @@ b) <a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem
           </div>
         </div>
       </div>
-<a href="10-presentations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="10-presentations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="12-exercises-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

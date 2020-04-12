@@ -82,7 +82,7 @@ To do this, we'll need one chloropleth map of county level corona virus cases by
 
 ### Data
 
-I got county level corona virus data from the Johns Hopkins github [site](https://github.com/CSSEGISandData/COVID-19). In their data directory they have time series data for the [counties](time_series_covid19_confirmed_US.csv). To get the county population numbers, I went to the US [Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html) Bureau.
+I got county level corona virus data from the Johns Hopkins github [site](https://github.com/CSSEGISandData/COVID-19). In their data directory they have time series data for the [counties](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv). To get the county population numbers, I went to the US [Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html) Bureau.
 
 The only problem we have is that the county names from the US Census Bureau are usually like "Gallatin County, Montana". However there are some weird alternatives to counties such as "Parish", "Borough", "Census Area", "Municipality", and "city". So to handle that, we'll split the counties on the comma and then remove the "County", "Parish", etc.
 
@@ -97,5 +97,17 @@ We need to first make two graphs. A chlrolopleth map for the number of cases and
 Some considerations are that chloropleth map with fill color based on the number of cases doesn't work too well because the color gradient is dominated by New York City, which geographically pretty small. So instead of the fill color being based on the cases, we could base it on the $log_{10}(cases)$.  
 
 Next we can create a dashboard and place the the map and line chart. The final thing to add is an `Action` that takes the selected date on the line chart and uses that as the filter on the chloropleth.
+
+# Exercises
+
+1. From the `data-raw` directory of the note github, I have a sub-directory for the [Covid-19](https://github.com/dereksonderegger/141/tree/master/data-raw/COVID-19) information. 
+    a) Download the cleaned-up data `Covid-19_Cases_Population.csv` and the Tableau Desktop file `Interactive_Covid_V1.twb`. While your there, also download the Tableau Prep File `Tidy_JohnHopkins_TimeSeries.tfl`.
+    b) Open the Tableau file and make sure the data connection is to the file you downloaded.
+    c) In the data, create a calculated column for the number of cases per 100,000 residents. Name this new column `Rate`.
+    d) Using the `Map` and `TotalCases` graphs as templates, create similar graphs using the `Rate` column as the response.
+    e) Using the CasesDashboard as a template, create a `RateDashboard` that allows the same date and county/state selection.
+    f) Add a `Navigation Object` to each dashboard that, on selection, changes the view to the other dashboard.  *Note: in the creation mode you have to alt-click to make it switch the view. In display mode, a regular click will do it. The idea is that when a user is actually interacting with the dashboard, that is a different display mode than when you are building it.*
+    g) Download the latest version of the Covid-19 county level [time series data](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv). Utilize the Tableau Prep file to update the data set. Examine the updated visualization.
+    
 
 

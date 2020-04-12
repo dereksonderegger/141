@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="10-presentations.html"/>
-<link rel="next" href="12-exercises-8.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -290,8 +290,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.1" data-path="11-dashboards.html"><a href="11-dashboards.html#data"><i class="fa fa-check"></i><b>11.4.1</b> Data</a></li>
 <li class="chapter" data-level="11.4.2" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-1"><i class="fa fa-check"></i><b>11.4.2</b> Tableau</a></li>
 </ul></li>
+<li class="chapter" data-level="11.5" data-path="11-dashboards.html"><a href="11-dashboards.html#exercises-8"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="12-exercises-8.html"><a href="12-exercises-8.html"><i class="fa fa-check"></i><b>12</b> Exercises</a></li>
 </ul>
 
       </nav>
@@ -396,14 +396,30 @@ b) <a href="https://pudding.cool/2018/04/birthday-paradox/">The Birthday Problem
 <p>Next we can create a dashboard and place the the map and line chart. The final thing to add is an <code>Action</code> that takes the selected date on the line chart and uses that as the filter on the chloropleth.</p>
 </div>
 </div>
+<div id="exercises-8" class="section level2">
+<h2><span class="header-section-number">11.5</span> Exercises</h2>
+<ol style="list-style-type: decimal">
+<li>From the <code>data-raw</code> directory of the note github, I have a sub-directory for the <a href="https://github.com/dereksonderegger/141/tree/master/data-raw/COVID-19">Covid-19</a> information.
+<ol style="list-style-type: lower-alpha">
+<li>Download the cleaned-up data <code>Covid-19_Cases_Population.csv</code> and the Tableau Desktop file <code>Interactive_Covid_V1.twb</code>. While your there, also download the Tableau Prep File <code>Tidy_JohnHopkins_TimeSeries.tfl</code>.</li>
+<li>Open the Tableau file and make sure the data connection is to the file you downloaded.</li>
+<li>In the data, create a calculated column for the number of cases per 100,000 residents. Name this new column <code>Rate</code>.</li>
+<li>Using the <code>Map</code> and <code>TotalCases</code> graphs as templates, create similar graphs using the <code>Rate</code> column as the response.</li>
+<li>Using the CasesDashboard as a template, create a <code>RateDashboard</code> that allows the same date and county/state selection.</li>
+<li>Add a <code>Navigation Object</code> to each dashboard that, on selection, changes the view to the other dashboard. <em>Note: in the creation mode you have to alt-click to make it switch the view. In display mode, a regular click will do it. The idea is that when a user is actually interacting with the dashboard, that is a different display mode than when you are building it.</em></li>
+<li>Download the latest version of the Covid-19 county level <a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv">time series data</a>. Utilize the Tableau Prep file to update the data set. Examine the updated visualization.</li>
+</ol></li>
+</ol>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="10-presentations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="12-exercises-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="10-presentations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

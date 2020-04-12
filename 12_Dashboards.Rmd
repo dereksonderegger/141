@@ -116,7 +116,7 @@ Some considerations are that chloropleth map with fill color based on the number
 
 Next we can create a dashboard and place the the map and line chart. The final thing to add is an `Action` that takes the selected date on the line chart and uses that as the filter on the chloropleth.
 
-# Exercises
+## Exercises
 
 1. From the `data-raw` directory of the note github, I have a sub-directory for the [Covid-19](https://github.com/dereksonderegger/141/tree/master/data-raw/COVID-19) information. 
     a) Download the cleaned-up data `Covid-19_Cases_Population.csv` and the Tableau Desktop file `Interactive_Covid_V1.twb`. While your there, also download the Tableau Prep File `Tidy_JohnHopkins_TimeSeries.tfl`.

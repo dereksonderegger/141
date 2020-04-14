@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 Critiques! | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 12 Critiques! | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 Critiques! | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="dereksonderegger/141" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 Critiques! | STA 141 - Exploratory Data Analysis and Visualization" />
+  
+  
+  
+
+<meta name="author" content="Derek L. Sonderegger" />
+
+
+<meta name="date" content="2020-04-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="11-dashboards.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<br> &nbsp;&nbsp; Exploratory Visual Data Analysis <br><br>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#instructional-material"><i class="fa fa-check"></i><b>0.1</b> Instructional Material</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#data-sources"><i class="fa fa-check"></i><b>0.2</b> Data Sources</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>0.3</b> Introduction</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#pedigogical-plan"><i class="fa fa-check"></i><b>0.4</b> Pedigogical Plan</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html"><i class="fa fa-check"></i><b>1</b> Data Wrangling</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying"><i class="fa fa-check"></i><b>1.1.1</b> Tidying</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#cleaning"><i class="fa fa-check"></i><b>1.1.2</b> Cleaning</a></li>
+<li class="chapter" data-level="1.1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#use"><i class="fa fa-check"></i><b>1.1.3</b> Use</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tableau"><i class="fa fa-check"></i><b>1.2</b> Tableau</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#importing-data"><i class="fa fa-check"></i><b>1.3</b> Importing data</a></li>
+<li class="chapter" data-level="1.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#tidying-or-reshaping"><i class="fa fa-check"></i><b>1.4</b> Tidying or Reshaping</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#gather"><i class="fa fa-check"></i><b>1.4.1</b> Gather</a></li>
+<li class="chapter" data-level="1.4.2" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#spread"><i class="fa fa-check"></i><b>1.4.2</b> Spread</a></li>
+<li class="chapter" data-level="1.4.3" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#column-splitting"><i class="fa fa-check"></i><b>1.4.3</b> Column Splitting</a></li>
+<li class="chapter" data-level="1.4.4" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-via-calculation"><i class="fa fa-check"></i><b>1.4.4</b> New Column via Calculation</a></li>
+<li class="chapter" data-level="1.4.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#aggregation"><i class="fa fa-check"></i><b>1.4.5</b> Aggregation</a></li>
+<li class="chapter" data-level="1.4.6" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#new-column-with-aggregation"><i class="fa fa-check"></i><b>1.4.6</b> New Column with Aggregation</a></li>
+<li class="chapter" data-level="1.4.7" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#unions"><i class="fa fa-check"></i><b>1.4.7</b> Unions</a></li>
+<li class="chapter" data-level="1.4.8" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#joins"><i class="fa fa-check"></i><b>1.4.8</b> Joins</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="1-data-wrangling.html"><a href="1-data-wrangling.html#exercises"><i class="fa fa-check"></i><b>1.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html"><i class="fa fa-check"></i><b>2</b> Graphing Principles</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#elementary-perception-tasks"><i class="fa fa-check"></i><b>2.1</b> Elementary Perception Tasks</a></li>
+<li class="chapter" data-level="2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#groupings-gestalt"><i class="fa fa-check"></i><b>2.2</b> Groupings / Gestalt</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#grouping-examples"><i class="fa fa-check"></i><b>2.2.1</b> Grouping Examples</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#example-warpbreaks"><i class="fa fa-check"></i><b>2.2.2</b> Example: Warpbreaks</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#color-scales"><i class="fa fa-check"></i><b>2.3</b> “Color” Scales</a></li>
+<li class="chapter" data-level="2.4" data-path="2-graphing-principles.html"><a href="2-graphing-principles.html#exercises-1"><i class="fa fa-check"></i><b>2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html"><i class="fa fa-check"></i><b>3</b> Amounts &amp; Proportions</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#introduction-2"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-1"><i class="fa fa-check"></i><b>3.2</b> Example 1</a></li>
+<li class="chapter" data-level="3.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-2"><i class="fa fa-check"></i><b>3.3</b> Example 2</a></li>
+<li class="chapter" data-level="3.4" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#tableau-toolbox"><i class="fa fa-check"></i><b>3.4</b> Tableau Toolbox</a></li>
+<li class="chapter" data-level="3.5" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#example-3"><i class="fa fa-check"></i><b>3.5</b> Example 3</a></li>
+<li class="chapter" data-level="3.6" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#proportions"><i class="fa fa-check"></i><b>3.6</b> Proportions</a></li>
+<li class="chapter" data-level="3.7" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#single-set"><i class="fa fa-check"></i><b>3.7</b> Single Set</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#pie-charts"><i class="fa fa-check"></i><b>3.7.1</b> Pie Charts</a></li>
+<li class="chapter" data-level="3.7.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#stacked-bar"><i class="fa fa-check"></i><b>3.7.2</b> Stacked Bar</a></li>
+<li class="chapter" data-level="3.7.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#side-by-side-barchart"><i class="fa fa-check"></i><b>3.7.3</b> Side-by-side Barchart</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#multiple-sets-of-proportions"><i class="fa fa-check"></i><b>3.8</b> Multiple Sets of Proportions</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#faceted-bar-charts"><i class="fa fa-check"></i><b>3.8.1</b> Faceted Bar charts</a></li>
+<li class="chapter" data-level="3.8.2" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#side-by-side-stacked-barcharts"><i class="fa fa-check"></i><b>3.8.2</b> Side-by-Side Stacked Barcharts</a></li>
+<li class="chapter" data-level="3.8.3" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#mosiac-plots"><i class="fa fa-check"></i><b>3.8.3</b> Mosiac plots</a></li>
+<li class="chapter" data-level="3.8.4" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#alluvial-plots"><i class="fa fa-check"></i><b>3.8.4</b> Alluvial Plots</a></li>
+<li class="chapter" data-level="3.8.5" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#tree-graphs"><i class="fa fa-check"></i><b>3.8.5</b> Tree graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="3-amounts-proportions.html"><a href="3-amounts-proportions.html#exercises-2"><i class="fa fa-check"></i><b>3.9</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-distributions.html"><a href="4-distributions.html"><i class="fa fa-check"></i><b>4</b> Distributions</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="4-distributions.html"><a href="4-distributions.html#small-samples"><i class="fa fa-check"></i><b>4.0.1</b> Small samples</a></li>
+<li class="chapter" data-level="4.0.2" data-path="4-distributions.html"><a href="4-distributions.html#histograms"><i class="fa fa-check"></i><b>4.0.2</b> Histograms</a></li>
+<li class="chapter" data-level="4.0.3" data-path="4-distributions.html"><a href="4-distributions.html#density-plots"><i class="fa fa-check"></i><b>4.0.3</b> Density plots</a></li>
+<li class="chapter" data-level="4.0.4" data-path="4-distributions.html"><a href="4-distributions.html#faceting"><i class="fa fa-check"></i><b>4.0.4</b> Faceting</a></li>
+<li class="chapter" data-level="4.0.5" data-path="4-distributions.html"><a href="4-distributions.html#stacking"><i class="fa fa-check"></i><b>4.0.5</b> Stacking</a></li>
+<li class="chapter" data-level="4.0.6" data-path="4-distributions.html"><a href="4-distributions.html#overlapping-curves"><i class="fa fa-check"></i><b>4.0.6</b> Overlapping curves</a></li>
+<li class="chapter" data-level="4.1" data-path="4-distributions.html"><a href="4-distributions.html#many-distributions"><i class="fa fa-check"></i><b>4.1</b> Many distributions</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="4-distributions.html"><a href="4-distributions.html#boxplots"><i class="fa fa-check"></i><b>4.1.1</b> Boxplots</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4-distributions.html"><a href="4-distributions.html#ridge-plots"><i class="fa fa-check"></i><b>4.1.2</b> Ridge Plots</a></li>
+<li class="chapter" data-level="4.1.3" data-path="4-distributions.html"><a href="4-distributions.html#violin-plots"><i class="fa fa-check"></i><b>4.1.3</b> Violin Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="4-distributions.html"><a href="4-distributions.html#exercises-3"><i class="fa fa-check"></i><b>4.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html"><i class="fa fa-check"></i><b>5</b> X-Y Relationships</a><ul>
+<li class="chapter" data-level="5.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#scatter-plots"><i class="fa fa-check"></i><b>5.1</b> Scatter plots</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pairs-plots-all-vs-all-scatterplots"><i class="fa fa-check"></i><b>5.1.1</b> Pairs plots (All-vs-all scatterplots)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#correlation-plots"><i class="fa fa-check"></i><b>5.2</b> Correlation Plots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#pearsons-correlation-coefficient"><i class="fa fa-check"></i><b>5.2.1</b> Pearson’s Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#overplotting"><i class="fa fa-check"></i><b>5.3</b> Overplotting</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#transparency"><i class="fa fa-check"></i><b>5.3.1</b> Transparency</a></li>
+<li class="chapter" data-level="5.3.2" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#intensity-maps"><i class="fa fa-check"></i><b>5.3.2</b> Intensity Maps</a></li>
+<li class="chapter" data-level="5.3.3" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#contour-plots"><i class="fa fa-check"></i><b>5.3.3</b> Contour Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#regression-lines"><i class="fa fa-check"></i><b>5.4</b> Regression Lines</a></li>
+<li class="chapter" data-level="5.5" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#plot-building-process"><i class="fa fa-check"></i><b>5.5</b> Plot building process</a></li>
+<li class="chapter" data-level="5.6" data-path="5-x-y-relationships.html"><a href="5-x-y-relationships.html#exercises-4"><i class="fa fa-check"></i><b>5.6</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-geographic.html"><a href="6-geographic.html"><i class="fa fa-check"></i><b>6</b> Geographic</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-geographic.html"><a href="6-geographic.html#projections"><i class="fa fa-check"></i><b>6.1</b> Projections</a></li>
+<li class="chapter" data-level="6.2" data-path="6-geographic.html"><a href="6-geographic.html#map-layers"><i class="fa fa-check"></i><b>6.2</b> Map Layers</a></li>
+<li class="chapter" data-level="6.3" data-path="6-geographic.html"><a href="6-geographic.html#chloropleths"><i class="fa fa-check"></i><b>6.3</b> Chloropleths</a></li>
+<li class="chapter" data-level="6.4" data-path="6-geographic.html"><a href="6-geographic.html#chloropleths-in-tableau"><i class="fa fa-check"></i><b>6.4</b> Chloropleths in Tableau</a></li>
+<li class="chapter" data-level="6.5" data-path="6-geographic.html"><a href="6-geographic.html#exercises-5"><i class="fa fa-check"></i><b>6.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html"><i class="fa fa-check"></i><b>7</b> What to Graph</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#examples"><i class="fa fa-check"></i><b>7.1</b> Examples</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-vehicle-deaths"><i class="fa fa-check"></i><b>7.1.1</b> Example: Vehicle Deaths</a></li>
+<li class="chapter" data-level="7.1.2" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-military-budgets"><i class="fa fa-check"></i><b>7.1.2</b> Example: Military Budgets</a></li>
+<li class="chapter" data-level="7.1.3" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-gdp"><i class="fa fa-check"></i><b>7.1.3</b> Example: GDP</a></li>
+<li class="chapter" data-level="7.1.4" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-cummulative-iphone-sales"><i class="fa fa-check"></i><b>7.1.4</b> Example: Cummulative Iphone Sales</a></li>
+<li class="chapter" data-level="7.1.5" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-disease-mortality-vs-fatality-rates"><i class="fa fa-check"></i><b>7.1.5</b> Example: Disease Mortality vs Fatality Rates</a></li>
+<li class="chapter" data-level="7.1.6" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#seasonal-unemployment"><i class="fa fa-check"></i><b>7.1.6</b> Seasonal Unemployment</a></li>
+<li class="chapter" data-level="7.1.7" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-age-standardization"><i class="fa fa-check"></i><b>7.1.7</b> Example: Age Standardization</a></li>
+<li class="chapter" data-level="7.1.8" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#example-maternity-deaths"><i class="fa fa-check"></i><b>7.1.8</b> Example Maternity Deaths</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="7-what-to-graph.html"><a href="7-what-to-graph.html#exercises-6"><i class="fa fa-check"></i><b>7.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-finding-data.html"><a href="8-finding-data.html"><i class="fa fa-check"></i><b>8</b> Finding Data</a><ul>
+<li class="chapter" data-level="8.1" data-path="8-finding-data.html"><a href="8-finding-data.html#examples-1"><i class="fa fa-check"></i><b>8.1</b> Examples</a></li>
+<li class="chapter" data-level="8.2" data-path="8-finding-data.html"><a href="8-finding-data.html#classroom-discussion-topics"><i class="fa fa-check"></i><b>8.2</b> Classroom Discussion Topics</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="8-finding-data.html"><a href="8-finding-data.html#bicycle-safety"><i class="fa fa-check"></i><b>8.2.1</b> Bicycle Safety</a></li>
+<li class="chapter" data-level="8.2.2" data-path="8-finding-data.html"><a href="8-finding-data.html#asthma-prevalance"><i class="fa fa-check"></i><b>8.2.2</b> Asthma prevalance</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="8-finding-data.html"><a href="8-finding-data.html#exercises-7"><i class="fa fa-check"></i><b>8.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html"><i class="fa fa-check"></i><b>9</b> Thinking Conditionally</a><ul>
+<li class="chapter" data-level="9.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#simple-examples"><i class="fa fa-check"></i><b>9.1</b> Simple Examples</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#gender-bias-in-admission-rates."><i class="fa fa-check"></i><b>9.1.1</b> Gender Bias in Admission Rates.</a></li>
+<li class="chapter" data-level="9.1.2" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#kidney-stone-treatment"><i class="fa fa-check"></i><b>9.1.2</b> Kidney Stone Treatment</a></li>
+<li class="chapter" data-level="9.1.3" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#build-your-own"><i class="fa fa-check"></i><b>9.1.3</b> Build your own</a></li>
+<li class="chapter" data-level="9.1.4" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#in-practice"><i class="fa fa-check"></i><b>9.1.4</b> In Practice</a></li>
+<li class="chapter" data-level="9.1.5" data-path="9-thinking-conditionally.html"><a href="9-thinking-conditionally.html#corona-virus-example"><i class="fa fa-check"></i><b>9.1.5</b> Corona Virus Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-presentations.html"><a href="10-presentations.html"><i class="fa fa-check"></i><b>10</b> Presentations</a><ul>
+<li class="chapter" data-level="10.1" data-path="10-presentations.html"><a href="10-presentations.html#introduction-3"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="10-presentations.html"><a href="10-presentations.html#audience"><i class="fa fa-check"></i><b>10.2</b> Audience</a></li>
+<li class="chapter" data-level="10.3" data-path="10-presentations.html"><a href="10-presentations.html#outline"><i class="fa fa-check"></i><b>10.3</b> Outline</a></li>
+<li class="chapter" data-level="10.4" data-path="10-presentations.html"><a href="10-presentations.html#figures"><i class="fa fa-check"></i><b>10.4</b> Figures</a></li>
+<li class="chapter" data-level="10.5" data-path="10-presentations.html"><a href="10-presentations.html#presentations-1"><i class="fa fa-check"></i><b>10.5</b> Presentations</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-dashboards.html"><a href="11-dashboards.html"><i class="fa fa-check"></i><b>11</b> Dashboards</a><ul>
+<li class="chapter" data-level="11.1" data-path="11-dashboards.html"><a href="11-dashboards.html#introduction-4"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="11-dashboards.html"><a href="11-dashboards.html#examples-2"><i class="fa fa-check"></i><b>11.2</b> Examples</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="11-dashboards.html"><a href="11-dashboards.html#covid-19-example"><i class="fa fa-check"></i><b>11.2.1</b> Covid-19 Example</a></li>
+<li class="chapter" data-level="11.2.2" data-path="11-dashboards.html"><a href="11-dashboards.html#a-history-of-world-civilizations"><i class="fa fa-check"></i><b>11.2.2</b> A history of World Civilizations</a></li>
+<li class="chapter" data-level="11.2.3" data-path="11-dashboards.html"><a href="11-dashboards.html#rainforest-biodiversity"><i class="fa fa-check"></i><b>11.2.3</b> Rainforest Biodiversity</a></li>
+<li class="chapter" data-level="11.2.4" data-path="11-dashboards.html"><a href="11-dashboards.html#oil-rigs-in-texas"><i class="fa fa-check"></i><b>11.2.4</b> Oil Rigs in Texas</a></li>
+<li class="chapter" data-level="11.2.5" data-path="11-dashboards.html"><a href="11-dashboards.html#women-in-politics"><i class="fa fa-check"></i><b>11.2.5</b> Women in Politics</a></li>
+<li class="chapter" data-level="11.2.6" data-path="11-dashboards.html"><a href="11-dashboards.html#taxi-rides-in-nyc"><i class="fa fa-check"></i><b>11.2.6</b> Taxi Rides in NYC</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="11-dashboards.html"><a href="11-dashboards.html#deeper-thoughts"><i class="fa fa-check"></i><b>11.3</b> Deeper Thoughts</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="11-dashboards.html"><a href="11-dashboards.html#geographic-aggregation-level"><i class="fa fa-check"></i><b>11.3.1</b> Geographic Aggregation Level</a></li>
+<li class="chapter" data-level="11.3.2" data-path="11-dashboards.html"><a href="11-dashboards.html#miscellaneous-aggregation-levels"><i class="fa fa-check"></i><b>11.3.2</b> Miscellaneous Aggregation Levels</a></li>
+<li class="chapter" data-level="11.3.3" data-path="11-dashboards.html"><a href="11-dashboards.html#the-me-layer"><i class="fa fa-check"></i><b>11.3.3</b> The “Me” Layer</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-example"><i class="fa fa-check"></i><b>11.4</b> Tableau Example</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="11-dashboards.html"><a href="11-dashboards.html#data"><i class="fa fa-check"></i><b>11.4.1</b> Data</a></li>
+<li class="chapter" data-level="11.4.2" data-path="11-dashboards.html"><a href="11-dashboards.html#tableau-1"><i class="fa fa-check"></i><b>11.4.2</b> Tableau</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="11-dashboards.html"><a href="11-dashboards.html#exercises-8"><i class="fa fa-check"></i><b>11.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-critiques.html"><a href="12-critiques.html"><i class="fa fa-check"></i><b>12</b> Critiques!</a><ul>
+<li class="chapter" data-level="12.1" data-path="12-critiques.html"><a href="12-critiques.html#final-projects"><i class="fa fa-check"></i><b>12.1</b> Final Projects</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STA 141 - Exploratory Data Analysis and Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="critiques" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> Critiques!</h1>
+<ol style="list-style-type: decimal">
+<li>90 Years of Gender Inequality in Canadian Politics (1930-2019).
+<ol style="list-style-type: lower-alpha">
+<li>Deputies are elected members of the House of Commons.</li>
+<li>Ministers are similar to the US Cabinet members. These are senior members of the ruling party and each Minister is also a House of Commons Deputy.</li>
+<li><iframe width="560" height="315" src="https://www.youtube.com/embed/NFLNhMsbvw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe></li>
+<li>What do the dots represent?
+<ol style="list-style-type: lower-roman">
+<li>A person, a seat?</li>
+<li>Why do the dots turn black and then fall out? Why do new dots show up?</li>
+</ol></li>
+<li>What could help this video?
+<ol style="list-style-type: lower-roman">
+<li>Are dots the right choice?</li>
+<li>What about a pie chart over time?</li>
+</ol></li>
+</ol></li>
+<li>Scrollytelling! The Gates Foundations 2019 Report.
+<ol style="list-style-type: lower-alpha">
+<li><a href="https://www.gatesfoundation.org/goalkeepers/report/2019-report/#ExaminingInequality" class="uri">https://www.gatesfoundation.org/goalkeepers/report/2019-report/#ExaminingInequality</a></li>
+<li>Initial graphic sets the stage, and indirectly the order of discussion. Font sets the tone that this is not data, but rather an idealized visualization.</li>
+<li>Scrollytelling is the zooming.</li>
+<li>Annotation on demand!</li>
+</ol></li>
+<li>More Scrollytelling! Again we are zooming out to a wider and wider perspective.
+<ol style="list-style-type: lower-alpha">
+<li><a href="https://www.nytimes.com/interactive/2019/11/06/us/politics/elizabeth-warren-policies-taxes.html" class="uri">https://www.nytimes.com/interactive/2019/11/06/us/politics/elizabeth-warren-policies-taxes.html</a></li>
+<li>The adding of dots is pretty cool.</li>
+</ol></li>
+<li>Fonts indicating uncertainty (This is a pretty new idea!)
+<ol style="list-style-type: lower-alpha">
+<li>Washington Post <a href="https://www.washingtonpost.com/graphics/politics/trifecta/">article</a></li>
+<li>Races that are considered competitive are circled in a handwriting font to indicate that the notion of “competitive” is subjective.</li>
+<li>A <a href="https://tobias.isenberg.cc/personal/papers/Wood_2012_SRI.pdf">journal article</a> about “sketchiness” as a visual attribute of a graph mark.</li>
+<li>Do you think a gradient scale of sketchiness would work? Or is it a binary on/off stylistic choice?</li>
+<li>Not widely available in graphing packages.</li>
+</ol></li>
+<li>Other Methods for indicating variability
+<ol style="list-style-type: lower-alpha">
+<li>Background distribution.
+<ol style="list-style-type: lower-roman">
+<li><a href="https://flowingdata.com/2016/12/06/how-people-like-you-spend-their-time/">Flowing Data - Time Spent</a></li>
+<li><a href="https://flowingdata.com/2017/02/23/the-first-time/">Flowing Data - Firsts!</a></li>
+</ol></li>
+<li>Error Bars / Error Ribbons
+<ol style="list-style-type: lower-roman">
+<li><a href="https://i.redd.it/tbkdkwgxgmy31.png">Supreme Court Justices</a></li>
+<li><a href="https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo">Donald Trumps Approval Rating</a></li>
+</ol></li>
+</ol></li>
+</ol>
+<div id="final-projects" class="section level2">
+<h2><span class="header-section-number">12.1</span> Final Projects</h2>
+<ol style="list-style-type: decimal">
+<li>Pick a DataVis of the month from <a href="https://www.reddit.com/r/dataisbeautiful/search?q=author%3AAutoModerator+title%3A%22Battle+for+the+month+of%22&amp;sort=new&amp;restrict_sr=on">reddit/r/dataisbeautiful</a></li>
+<li>Pick several submissions and do a critique of them. Pick at least one bad submission, two mediocre submissions that you can say both good and bad things about, at least one very good submission.</li>
+<li>Create a comprehensive story, creating at least 3 graphics, that a reader would be able to follow. This info-graphic should be for mass consumption among adults, so pay attention to good annotation and labeling.</li>
+<li>Create a report that describes your process of and the issues that you encountered and how you overcame them, design choices you wrestled with, and revision process you used to simplify your final product.</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="11-dashboards.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dereksonderegger/141/raw/master/13_Critiques.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

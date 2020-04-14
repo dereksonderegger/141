@@ -108,6 +108,7 @@ Next we can create a dashboard and place the the map and line chart. The final t
     e) Using the CasesDashboard as a template, create a `RateDashboard` that allows the same date and county/state selection.
     f) Add a `Navigation Object` to each dashboard that, on selection, changes the view to the other dashboard.  *Note: in the creation mode you have to alt-click to make it switch the view. In display mode, a regular click will do it. The idea is that when a user is actually interacting with the dashboard, that is a different display mode than when you are building it.*
     g) Download the latest version of the Covid-19 county level [time series data](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv). Utilize the Tableau Prep file to update the data set. Examine the updated visualization.
+    h) To share this dashboard with me, export the workbook as a `Packaged Workbook`. Because workbooks could connect to data that lives in a database, sharing the workbook with others requires some way of capturing a snapshot of the data we use. The `Packaged Workbook` format is the way that Tableau accomplishes that. Export your work as a `Packaged Workbook` and upload that to Bblearn for this assignment.
     
 
 

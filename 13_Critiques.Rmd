@@ -45,6 +45,25 @@ library(lubridate)
         ii) [Donald Trumps Approval Rating](https://projects.fivethirtyeight.com/trump-approval-ratings/?ex_cid=rrpromo)
 
 
+
+## Some Final Graphs
+
+1. Awesome xkcd graphs
+    a) [Movie Timelines](https://xkcd.com/657/)
+    b) [Heatmaps that are just population density](https://xkcd.com/1138/)
+    c) [Fukushima Radiation Dose Chart](https://xkcd.com/radiation/)
+    d) [Money](https://xkcd.com/980/)
+    e) [Flagstaff Temperature is Perfect](https://xkcd.com/1916/)
+    f) [Congressional Makeup](https://xkcd.com/1127/)
+    g) [Dumb Maps of "Most/Best XXXX in each state"](https://xkcd.com/1845/)
+    
+2. Historical Graphs
+    a) In London 1854, the physician [John Snow](https://blogs.cdc.gov/publichealthmatters/2017/03/a-legacy-of-disease-detectives/) stopped a cholera outbreak by keeping careful records of deaths by cholera and [mapped them](https://en.wikipedia.org/wiki/John_Snow#/media/File:Snow-cholera-map-1.jpg). As a result of this map, and the death of a person who had stopped near the neighborhood and like the taste of water from a particular well, he identified the well as the source of the outbreak and removed the well pump handle.  It would eventually turn out that the well was contaminated by a old cesspit, only 3 feet away.
+    b) Florence Nightingale kept detailed records about deaths in a military hospital during the Crimean War (1854) and believed that the conditions of the hospital were partly to blame for the death of 4077 soldiers (10 times more died from disease than from their wounds). Her [coxcomb graph](https://en.wikipedia.org/wiki/Florence_Nightingale#/media/File:Nightingale-mortality.jpg) helped show the change in mortality after a sanitation commission flushed out the sewers and improved ventilation. Also in that same time, Nightingale implemented handwashing and other hygiene practices to the hospital.
+    c) The space shuttle *Challenger* exploded due to o-rings not sealing the rocket boosters. Engineers working on the launch warned that due to the cold weather predicted on launch day, there could be an issue. However, they presented their worries in a table of data, and their warnings were ignored.  Would a [scatterplot](https://vizdatar.wordpress.com/2015/05/06/space-shuttle-challenger-explosion-2/) have changed the decision to fly that morning?
+    
+
+
 ## Final Projects
 
 1. Pick a DataVis of the month from [reddit/r/dataisbeautiful](https://www.reddit.com/r/dataisbeautiful/search?q=author%3AAutoModerator+title%3A%22Battle+for+the+month+of%22&sort=new&restrict_sr=on) 

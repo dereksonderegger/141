@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization</title>
-  <meta name="description" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
+  <title>Chapter 13 Malicious Graphics | STA 141 - Exploratory Data Analysis and Visualization</title>
+  <meta name="description" content="Chapter 13 Malicious Graphics | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta property="og:title" content="Chapter 13 Malicious Graphics | STA 141 - Exploratory Data Analysis and Visualization" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="dereksonderegger/141" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Graphing Principles | STA 141 - Exploratory Data Analysis and Visualization" />
+  <meta name="twitter:title" content="Chapter 13 Malicious Graphics | STA 141 - Exploratory Data Analysis and Visualization" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="1-data-wrangling.html"/>
-<link rel="next" href="3-amounts-proportions.html"/>
+<link rel="prev" href="12-critiques.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -318,108 +318,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphing-principles" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Graphing Principles</h1>
-<div id="elementary-perception-tasks" class="section level2">
-<h2><span class="header-section-number">2.1</span> Elementary Perception Tasks</h2>
-<ul>
-<li>Some Visual tasks are easier than others because our visual processing evolved to do certain tasks.</li>
-</ul>
-<div class="figure">
-<img src="Resources/Alberto%20Cairo/EPT.png" alt="" />
-<p class="caption">From Alberto Cairo’s “The Truthful Art”</p>
+<div id="malicious-graphics" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> Malicious Graphics</h1>
+<p>For the most part, we have looked at examples of good and bad graphs where we expect the creators of the graph were attempting to be truthful about the evidence. Next we will examine cases where people deliberately misrepresent the data for their own purpose.</p>
+<div id="dual-y-axes" class="section level2">
+<h2><span class="header-section-number">13.1</span> Dual Y-Axes</h2>
+<p>In general, dual y-axes are hard to do correctly, and can be easily used maliciously.</p>
+<p><a href="https://blog.datawrapper.de/dualaxis/">Lisa Charlotte Rost</a> has a great example of how the arbitrary scaling of each axis results can result in unintentionally confusing graphs.</p>
+<p>In particular, the relative percent change or the rate of change is now messed up because the slopes on the two axes are not equivalent. Malicious tweaking of the scales would allow us to show whatever we want.</p>
+<p><a href="https://badvisualisations.tumblr.com/image/186899740601">Example.</a> Market share of a particular cookie manufacturer.</p>
 </div>
-</div>
-<div id="groupings-gestalt" class="section level2">
-<h2><span class="header-section-number">2.2</span> Groupings / Gestalt</h2>
-<p>The way we organize our graphics can lead a viewer to create mental groups of marks.</p>
-<p>The way we form groupings can be in one of the following ways, (where higher grouping methods produce a stronger grouping effect.</p>
-<ul>
-<li>Enclosures</li>
-<li>Connections</li>
-<li>Proximity</li>
-<li>Similarity (color/shape)</li>
-</ul>
-<p>In the following example, find all the fives:
-<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>If instead, we form a grouping by adding color, then the group of fives stands out prominently.
-<img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-3-1.png" width="672" />
-<em>This example was inspired by an example by Alberto Cairo.</em></p>
-<div id="grouping-examples" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Grouping Examples</h3>
-<p>In the following examples, ask yourself what the visual grouping the graph is encouraging? Are the rows or columns grouped? <em>These are taken from a presentation by Todd Iverson and Silas Bergen.</em></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>Some grouping is stronger than others</p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-</div>
-<div id="example-warpbreaks" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Example: Warpbreaks</h3>
-<p>While spinning wool into thread, if the tension on the wool isn’t correctly set, the thread can break. Here we compare two different types of wool at three different tensions.</p>
-<p><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-1.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-2.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-3.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-4.png" width="672" /><img src="02_Principles_of_Graphing_files/figure-html/unnamed-chunk-11-5.png" width="672" /></p>
-</div>
-</div>
-<div id="color-scales" class="section level2">
-<h2><span class="header-section-number">2.3</span> “Color” Scales</h2>
-<p>Defining Color really has three different attributes (From <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">Wikipedia</a>).</p>
-<div id="hsv-scale" class="section level4">
-<h4><span class="header-section-number">2.3.0.1</span> HSV Scale</h4>
-<ul>
-<li>Hue: The attribute of a visual sensation according to which an area appears to be similar to one of the perceived colors: red, yellow, green, and blue, or to a combination of two of them.</li>
-<li>Saturation: The “colorfulness of a stimulus relative to its own brightness”</li>
-<li>Value: The “brightness relative to the brightness of a similarly illuminated white”</li>
-</ul>
-<div class="figure">
-<img src="Resources/Wikipedia/HSV_color_solid_cylinder_saturation_gray.png" alt="" />
-<p class="caption">HSV Cylinder from Wikipedia</p>
-</div>
-<ul>
-<li>Hue is appropriate for categorical variables.</li>
-<li>Saturation and/or Value is appropriate for a quantitative variable scale.</li>
-</ul>
-<p>Neither R nor Tableau make it particularly easy to map these aspects, so we won’t get too deep into it.</p>
-</div>
-</div>
-<div id="exercises-1" class="section level2">
-<h2><span class="header-section-number">2.4</span> Exercises</h2>
+<div id="examples-of-bad-graphs" class="section level2">
+<h2><span class="header-section-number">13.2</span> Examples of bad graphs</h2>
 <ol style="list-style-type: decimal">
-<li><p>In soccer, Kylian Mbappé is being referred to as the next world dominating player. The graphic below compares Mbappé to soccer greats Cristiano Ronaldo and Lionel Messi. Below is a graph showing the number of goals scored during various parts of their career (first 100 professional games, second 100, etc).</p>
-<div class="figure">
-<img src="https://i.redd.it/nee50ufd1dc41.jpg" alt="" />
-<p class="caption">Mbappé vs Messi and Ronaldo</p>
+<li><a href="https://eagereyes.org/blog/2008/linear-vs-quadratic-change">Example</a> Here we examine another case where the same quantity is show using two different EPT scales and they do not agree.</li>
+<li><a href="https://twitter.com/ObamaWhiteHouse/status/677189256834609152/photo/1">Example</a> This is an Obama administration graphic where the graphic design considerations were put before the data visualization considerations.</li>
+<li><a href="https://www.uv.uio.no/cemo/english/studies/news/really-bad-data-graphics-competition.html">Example</a> This is an example of trying to take data and make it “look” like a chart.</li>
+<li><a href="https://badvisualisations.tumblr.com/image/187107071331">Example</a> THis is talking about cricket scores for various teams and to indicate the team city, they added the most iconic building from the city. Does the area/height/color of the building indicate anything?</li>
+<li><a href="https://www.cnbc.com/2019/06/12/tesla-looks-like-netflix-did-in-2011and-it-may-see-a-similar-recovery.html">Example</a></li>
+<li><a href="https://i.redd.it/5lcfql006xv31.png">Example</a> Another example of taking raw percentages and pasting them onto a pie chart without making the area of the slices correspond.</li>
+<li><a href="https://i.redd.it/8ygd8oczmm301.jpg">Example</a> In reporting the 2018 election results, this graph labels are extremely confusing.</li>
+</ol>
 </div>
+<div id="cherry-picking-issues" class="section level2">
+<h2><span class="header-section-number">13.3</span> Cherry Picking Issues</h2>
+<p>Gish Gallop: A debating technique that attempts to overwhelm the listener with as many arguments as possible without any regard for accuracy or coherency.</p>
+<p>Alberto Brandolini’s Law of Bullshit Asymmetry: The amount of energy necessary to refute bullshit is an order of magnitude larger than to produce it.</p>
+<p>Cherry Picking: Selectively looking at data that supports your position while ignoring evidence that is counter to it.</p>
+<p><a href="https://twitter.com/rsimmon/status/923344256713965568/photo/1">Example</a> This simplistic graph shows the change in the number of abortions vs cancer screenings done at Planned Parenthood disregards the increases in <a href="https://twitter.com/rsimmon/status/923344256713965568/photo/2">other services</a></p>
+<p>For another example of all of these, check out <a href="https://via.hypothes.is/https://www.washingtonexaminer.com/opinion/op-eds/the-great-failure-of-the-climate-models">this</a> opinion article published by the <a href="https://www.adfontesmedia.com/static-mbc/">Washington Examiner</a>. Notice you can click on the highlights to see the commentary by climate scientists that took the time to discuss what the best scientific consensus is on each point. It is exhausting.</p>
+<ol style="list-style-type: decimal">
+<li>Climate change can’t be true because:
 <ol style="list-style-type: lower-alpha">
-<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
-<li>Comment on how the grouping was effective or if you think some change might be better.</li>
+<li>In 2019, Ted Cruz claims there hasn’t <a href="https://www.youtube.com/watch?v=Z0JWONI-d9w&amp;t=2m47s">been any global warming since 1998</a><br />
+</li>
+<li>This claim is based on Satellite data from 1997-2012. Those <a href="https://www.sfgate.com/technology/dotcommentary/article/How-climate-deniers-abuse-statistics-to-mislead-4677033.php">years</a> are <a href="https://www.climate.gov/news-features/climate-qa/did-global-warming-stop-1998">chosen</a> very <a href="https://en.wikipedia.org/wiki/Global_warming_hiatus#/media/File:Temperaturanstieg-vergleich-zwischen-ausschnitt-und-gesamtverlauf.gif">carefully</a>. He further considers only satellite data, which is widely considered less accurate than ground station data. Broadly, scientists use satellite data only when there isn’t reliable ground measurements.</li>
+<li>After the satellite data has been aligned with the more accurate ground measurements, the “pause” he refers to disappears even with the highly optimized start/stop points of his pause interval.</li>
+<li>On the wider time scale, there is a clear upward trend.</li>
 </ol></li>
-<li><p>In NBA basketball, shot accuracy and distance from the net is important. In the following graph, we can investigate how often shots are taken from different distances.</p>
-<div class="figure">
-<img src="https://i.redd.it/umu3kya56wb41.png" alt="" />
-<p class="caption">Shot distribution in the NBA</p>
-</div>
+<li>Climate change can’t be true because:
 <ol style="list-style-type: lower-alpha">
-<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
-<li>Comment on how the grouping was effective or if you think some change might be better.</li>
-</ol></li>
-<li><p>The following graphic calculates difference between a month’s temperature compared to the monthly average temperature across the years since 1850. For example, this graph compares the average January 2014 temperature to the average January temperature across the last 170 Januaries.)</p>
-<div class="figure">
-<img src="https://i.redd.it/ughpnln124b41.png" alt="" />
-<p class="caption">Average World Temperature Since 1850</p>
-</div>
-<ol style="list-style-type: lower-alpha">
-<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
-<li>Comment on how the grouping was effective or if you think some change might be better.</li>
-</ol></li>
-<li><p>Find a graphic “in the wild” that you think is interesting. Turn in both the original graphic as well as your answers to the following:</p>
-<ol style="list-style-type: lower-alpha">
-<li>Identify the EPT the reader is required to perform and the grouping structures used.</li>
-<li>Comment on how the graph was effective or if you think some change might improve the graph.</li>
+<li>Regions in Georgia have <em>cooled</em> <a href="https://github.com/dereksonderegger/141/raw/master/Images/Cherry_Picking_USA_Temperature_Change_Since_Early_1900s.png">since the early parts of the 1900s</a>!</li>
+<li>Yes but the rest of the country has warmed.</li>
+<li>Also, 1934 was the 2nd hottest year in the US, so comparing present day to the hottest part of the country in that particularly hot year results in seeing no increase.</li>
 </ol></li>
 </ol>
+<p>Be careful to recognize specific intervals or specific measurements. Ask questions like:</p>
+<ul>
+<li>Does the time interval presented represent all the data, could the author have expanded/contracted the time window?</li>
+<li>Are there other relevant sources of data we aren’t talking about?</li>
+<li>Is the effect consistent across sources of data?</li>
+</ul>
 
 </div>
 </div>
@@ -428,8 +377,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="1-data-wrangling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="3-amounts-proportions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="12-critiques.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -462,7 +411,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/dereksonderegger/141/raw/master/02_Principles_of_Graphing.Rmd",
+"link": "https://github.com/dereksonderegger/141/raw/master/14_Malicious_Lying.Rmd",
 "text": "Edit"
 },
 "history": {

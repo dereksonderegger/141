@@ -26,7 +26,11 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Introduction
-This chapter focuses on displaying a single numerical variable versus one or more categorical variables. To display the quantitative variable, we'll try to stay at the top of the EPT tasks and the quantitative variable will be quantified with either the `x` or `y` axis or using length. The exception to this is the heatmap, where the quantitative variable is encoded by the color of the tile.
+This chapter focuses on displaying a single numerical variable versus one or more 
+categorical variables. To display the quantitative variable, we'll try to stay at 
+the top of the EPT tasks and the quantitative variable will be quantified with 
+either the `x` or `y` axis or using length. The exception to this is the heatmap, 
+where the quantitative variable is encoded by the color of the tile.
 
 ```{r, echo=FALSE}
 data <- tribble(
@@ -145,7 +149,10 @@ cowplot::plot_grid(P1, P2, P3, P4, P5, P6, P7, ncol = 2)
 The 2020 presidential candidate field has a wide range of ages. 
 The 
 [New York Times](https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html)
-has a nice article showing the candidate ages. I grabbed a few of the most prominent candidates and pulled their birthdays from Wikipedia and then calculated their age on election day. As usual the data is [available](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Prez_Candidate_Birthdays) on the Github pages for this book. 
+has a nice article showing the candidate ages. I grabbed a few of the most prominent 
+candidates and pulled their birthdays from Wikipedia and then calculated their 
+age on election day. As usual the data is [available](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Prez_Candidate_Birthdays) 
+on the Github pages for this book. 
 
 ```{r, echo=FALSE, message=FALSE, fig.height=5}
 birth <- read_csv('data-raw/Prez_Candidate_Birthdays')
@@ -155,7 +162,9 @@ ggplot(birth, aes(x=Candidate, y=AgeOnElection)) +
   coord_flip()
 ```
 
-The order of the candidates is useless. Here we have ordered them alphabetically when we should try to think about an ordering that improves clarity. Lets switch to sorting the candidates by age.
+The order of the candidates is useless. Here we have ordered them alphabetically 
+when we should try to think about an ordering that improves clarity. Lets switch 
+to sorting the candidates by age.
 
 ```{r, echo=FALSE, message=FALSE, fig.height=5}
 birth <- birth %>%
@@ -167,7 +176,9 @@ ggplot(birth, aes(x=Candidate, y=AgeOnElection, color=Party)) +
   coord_flip()
 ```
 
-This isn't too bad, but it fails to visually impress the differences. A bar chart should visually impress the ages based on the length of the bar so that we don't have to keep looking at the Age axis.
+This isn't too bad, but it fails to visually impress the differences. A bar chart 
+should visually impress the ages based on the length of the bar so that we don't 
+have to keep looking at the Age axis.
 
 ```{r, echo=FALSE, message=FALSE, fig.height=5}
 birth %>%
@@ -179,7 +190,8 @@ ggplot( aes(x=Candidate, y=AgeOnElection, fill=Party)) +
   coord_flip()
 ```
 
-What would be *dishonest* is if we were to chop off the bars at 35 or 40 to make the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.
+What would be *dishonest* is if we were to chop off the bars at 35 or 40 to make 
+the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.
 
 ```{r, echo=FALSE, message=FALSE, fig.height=5}
 birth <- birth %>%
@@ -194,7 +206,10 @@ ggplot(birth, aes(x=Candidate, y=AgeOnElection, fill=Party)) +
 
 ## Example 2
 
-In this section we'll consider two categories. We have the results from a survey administered to students in an introductory statistics class at a New York university. We'll compare the number of student responses broken down by year in school and gender.
+In this section we'll consider two categories. We have the results from a survey 
+administered to students in an introductory statistics class at a New York 
+university. We'll compare the number of student responses broken down by year in 
+school and gender.
 
 ```{r}
 data('StudentSurvey', package='Lock5Data')
@@ -207,7 +222,12 @@ StudentSurvey %>%
   labs(y='Number of Surveys')
 ```
 
-The first thing I notice is that there is approximate gender equality, but there are a few more males in class. After a more detailed look, I see that the most abundant class is sophomores, followed by first years, and juniors and seniors are approximately equally abundant. If we switch the grouping order and use color to denote gender and columns to denote the classes, the abundance of sophomores is the first insight to be noticed.
+The first thing I notice is that there is approximate gender equality, but there 
+are a few more males in class. After a more detailed look, I see that the most 
+abundant class is sophomores, followed by first years, and juniors and seniors 
+are approximately equally abundant. If we switch the grouping order and use color 
+to denote gender and columns to denote the classes, the abundance of sophomores 
+is the first insight to be noticed.
 
 ```{r}
 StudentSurvey %>%
@@ -231,7 +251,8 @@ StudentSurvey %>%
 
 ## Example 3
 
-Often we need to graph some value and want to know how it varies among *two* different categories. In these cases, we have to employ some sort of grouping strategy.
+Often we need to graph some value and want to know how it varies among *two* 
+different categories. In these cases, we have to employ some sort of grouping strategy.
 
 ```{r, echo=FALSE}
 data('gapminder', package='gapminder')
@@ -253,7 +274,9 @@ ggplot(., aes(x=country, y=lifeExp)) +
   labs(title='Life Expectancy among G7 Countries in 2007', y='Life Expectancy')
 ```
 
-The bar chart here is obscuring the differences in life expectancies because the numbers are so close. In this case, I think points make more sense. Also I want to see how life expectancy has changed since World War II.
+The bar chart here is obscuring the differences in life expectancies because the 
+numbers are so close. In this case, I think points make more sense. Also I want 
+to see how life expectancy has changed since World War II.
 
 
 ```{r, echo=FALSE}
@@ -265,9 +288,12 @@ ggplot(gapminder_G7, aes(x=year, y=lifeExp)) +
        x='') 
 ```
 
-In the above graph, I am grouping countries both by enclosure and with a physical path connection. The reader tends to see the line as a whole object and compare the line max/min and slope among the seven countries. 
+In the above graph, I am grouping countries both by enclosure and with a physical 
+path connection. The reader tends to see the line as a whole object and compare 
+the line max/min and slope among the seven countries. 
 
-We might consider changing the faceting to stack the countries, but this makes it much harder to compare countries to see which has a higher life expectancy.
+We might consider changing the faceting to stack the countries, but this makes 
+it much harder to compare countries to see which has a higher life expectancy.
 ```{r, echo=FALSE}
 gapminder_G7 %>% 
   ggplot(aes(x=year, y=lifeExp)) +
@@ -278,7 +304,10 @@ gapminder_G7 %>%
        x='') 
 ```
 
-We could have also used color to indicate which country is which, but this produces a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to identify when Japan's life expectancy surpassed the rest of the G7 countries.
+We could have also used color to indicate which country is which, but this produces 
+a bit of a *spaghetti plot* and is difficult to interpret. However, it is easier to 
+identify when Japan's life expectancy surpassed the rest of the G7 countries.
+
 ```{r}
 gapminder_G7 %>%
   ggplot(aes(x=year, y=lifeExp, color=country)) +
@@ -290,7 +319,8 @@ gapminder_G7 %>%
 ```
 
 
-A heat map makes it easier to see which country has the highest life expectancy, but we lose precision in the actual values.
+A heat map makes it easier to see which country has the highest life expectancy, 
+but we lose precision in the actual values.
 ```{r}
 gapminder_G7 %>%
 #  mutate(country = fct_relevel(country, c('Japan','Italy','Canada','France','Germany','United Kingdom', 'United States' )) )%>%
@@ -312,7 +342,9 @@ ggplot(., aes( x=year, y=country, fill=lifeExp) ) +
 ```
 ## Proportions
 
-Conceptually graphing proportions is the same as graph raw values, but sum to 100%. This seemingly small difference means that our graphic can imply that our categories contain ALL possible categories. 
+Conceptually graphing proportions is the same as graph raw values, but sum to 100%. 
+This seemingly small difference means that our graphic can imply that our categories 
+contain ALL possible categories. 
 
 ## Single Set 
 ### Pie Charts
@@ -337,7 +369,10 @@ ggplot(MathStat_Faculty_Composition, aes(x='', y=Number, fill=Type) ) +
 ```
 
 
-As typical, with a just a few categories, we should move the labels onto the graph and just annotate the graph. Also, we'll order the categories from the most temporary employees (Graduate Teaching Assistants) to most permanent (Professors)
+As typical, with a just a few categories, we should move the labels onto the 
+graph and just annotate the graph. Also, we'll order the categories from the most 
+temporary employees (Graduate Teaching Assistants) to most permanent (Professors).
+
 ```{r}
 MathStat_Faculty_Composition %>%
   mutate( Text.Location = cumsum(Number) - Number/2 ) %>%
@@ -434,12 +469,13 @@ data('Titanic')
 Titanic <- as.data.frame(Titanic) %>%
   mutate( Class = fct_rev(Class) ) %>%
   mutate( Survived = fct_recode(Survived, Died='No', Lived='Yes') ) %>%
-  group_by(Class, Age, Class) %>%
+  group_by(Class, Age, Sex) %>%
   mutate( Proportion = Freq/sum(Freq) )  
 ggplot(Titanic, aes(x=Sex, y=Freq, fill=Survived))+
   geom_col() +
   facet_grid(Age~Class, scales='free_y') +
-  labs(title='Faceted Stacked Bar plots: Survival of Titanic Passengers and Crew') 
+  labs(title='Faceted Stacked Bar plots: Survival of Titanic Passengers and Crew',
+       y='Number of People') 
 ```
 ```{r}
 ggplot(Titanic, aes(x=Sex, y=Freq, fill=Survived))+
@@ -481,7 +517,10 @@ workers %>%
 
 
 ### Mosiac plots
-Sort like side-by-side stacked bar charts, but now we allow the column width to vary as well. The area is proportional the groups representation in the whole data. This reduces the number of really thin bands because we can make the column narrower as well.
+Sort like side-by-side stacked bar charts, but now we allow the column width to 
+vary as well. The area is proportional the groups representation in the whole data. 
+This reduces the number of really thin bands because we can make the column 
+narrower as well.
 ```{r}
 library(ggmosaic)
 data('Titanic')
@@ -541,7 +580,9 @@ ggplot(., aes(y = Freq, axis1=Class, axis2 = Survived, axis3=Age, axis4=Class)) 
 ```
 
 
-I find that alluvial plots work better for events that have a definate chronological order and there is less stream overlaps.. Here is an example from a [Washington Post story](https://www.washingtonpost.com/news/soloish/wp/2018/03/12/these-redditors-made-graphics-to-visualize-their-dating-lives-heres-what-they-can-teach-us/) about people graphing their online dating interactions. 
+I find that alluvial plots work better for events that have a definite chronological 
+order and there is less stream overlaps.. Here is an example from a [Washington Post story](https://www.washingtonpost.com/news/soloish/wp/2018/03/12/these-redditors-made-graphics-to-visualize-their-dating-lives-heres-what-they-can-teach-us/) 
+about people graphing their online dating interactions. 
 
 ![These are the results of 6.5 weeks of online dating by a 37 year old woman.](Resources/Graphs/Alluvial_Plots/OnlineDatingViaWashingtonPost.jpg)
 
@@ -550,7 +591,8 @@ I find that alluvial plots work better for events that have a definate chronolog
 
 ### Tree graphs
 
-In mosaic plots, we had *crossed* variables where every category level of one factor could show up with all levels of another factor. 
+In mosaic plots, we had *crossed* variables where every category level of one 
+factor could show up with all levels of another factor. 
 
 ```{r}
 Crossed <- data.frame( `Factor 1` = c('A','A', 'B','B'),
@@ -561,7 +603,8 @@ pander::pander(Crossed)
 Table: Crossed Factors Suitable for a Mosaic Plot. 
 
 
-Another possibility is that the variables are nested such that a category level of the second factor only ever occurs within a single level of the first factor.
+Another possibility is that the variables are nested such that a category level 
+of the second factor only ever occurs within a single level of the first factor.
 
 ```{r}
 Nested <- data.frame( `Factor 1` = c('A','A', 'B','B'),
@@ -572,7 +615,8 @@ pander::pander(Nested)
 Table: Nested Factors Suitable for a Tree Map. 
 
 
-When we have a hierarchical structure of categories, then mosaic plots aren't quite right. Instead we'll hierarchically subdivide the graph area up.
+When we have a hierarchical structure of categories, then mosaic plots aren't 
+quite right. Instead we'll hierarchically subdivide the graph area up.
 ```{r}
 library(gapminder)
 gapminder_G7 %>%
@@ -586,12 +630,20 @@ ggplot(., aes(label = country, area = pop, subgroup = continent, fill = lifeExp)
 
 ```
 
-The graph first separates the graph into continents and scales the area of each continent by the population of the continent. Then each continent is split into the countries that compose the continent, again with area representing population. Finally the countries are color-coded by their 2007 life expectancy.
+The graph first separates the graph into continents and scales the area of each 
+continent by the population of the continent. Then each continent is split into 
+the countries that compose the continent, again with area representing population. 
+Finally the countries are color-coded by their 2007 life expectancy.
 
-This differs from a mosaic plot in that a country only occurs withing one continent whereas in a mosaic plot, a category level will occur in multiple "containers".
+This differs from a mosaic plot in that a country only occurs withing one 
+continent whereas in a mosaic plot, a category level will occur in multiple 
+"containers".
 
 
-The previous graph is pretty ugly because we are trying to code two quantitative variables (population size and life expectancy). We'll concentrate on population size. Instead of using text to indicate both the continent and country, lets use text for the country and color for continent.
+The previous graph is pretty ugly because we are trying to code two quantitative 
+variables (population size and life expectancy). We'll concentrate on population 
+size. Instead of using text to indicate both the continent and country, lets use 
+text for the country and color for continent.
 
 ```{r, eval=FALSE}
 gapminder %>% 
@@ -616,19 +668,35 @@ gapminder %>%
 
 ## Exercises
 
-1. Alluvial plots are a particular type of *Sankey* graphs which show flow rates and amounts and have been around for quite some time. In 1869, Charles Minard created a graphic that details the size of Napoleon's  army as they marched on Russia and subsequently returned. You can find the [original](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) or the [modern English translation](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png) on Wikipedia. 
-    a) How many men did the army start marching with?
-    b) How many men arrived in Moscow?
-    c) How many men died crossing the Berezina River on the return trip? (approximately from the map information provided)
-    d) How cold was it when they cross the Berezina River on the return trip?
+1.  Alluvial plots are a particular type of *Sankey* graphs which show flow rates 
+    and amounts and have been around for quite some time. In 1869, Charles Minard 
+    created a graphic that details the size of Napoleon's  army as they marched on 
+    Russia and subsequently returned. You can find the 
+    [original](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) 
+    or the 
+    [modern English translation](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard_Update.png) 
+    on Wikipedia. 
+    a)  How many men did the army start marching with?
+    b)  How many men arrived in Moscow?
+    c)  How many men died crossing the Berezina River on the return trip? 
+        (approximately from the map information provided)
+    d)  How cold was it when they cross the Berezina River on the return trip?
     
-2. Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualization [book](https://serialmentor.com/dataviz/). In chapter 11 he presents several different graphics that visualize the bridge construction era, bridge material, and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss three of them and explain which graph you prefer and why.
+2.  Read Chapter 10 and 11 in Claus Wilke's Fundamentals of Data Visualization 
+    [book](https://serialmentor.com/dataviz/). In chapter 11 he presents several 
+    different graphics that visualize the bridge construction era, bridge material, 
+    and which river they cross for bridges near Pittsburgh, Pennsylvania. Discuss 
+    three of them and explain which graph you prefer and why.
 
-3. Download data about the [Titanic](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv) disaster at the GitHub site for this class. Save the file as a Titanic.csv and open it in Tableau. 
-    a) In Tableau, a faceted stacked barchart just as we did in these notes.
-    b) In a new worksheet, copy your faceted stacked bar chart and then turn it into faceted pie charts.
-    c) Comment on which you prefer and why.
-    d) Finally create a mosaic plot of the Titanic dataset. 
+3.  Download data about the 
+    [Titanic](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Titanic.csv) 
+    disaster at the GitHub site for this class. Save the file as a `Titanic.csv` 
+    and open it in Tableau. 
+    a)  In Tableau, create a faceted stacked bar chart just as we did in these notes.
+    b)  In a new worksheet, copy your faceted stacked bar chart and then turn it 
+        into faceted pie charts.
+    c)  Comment on which you prefer and why.
+    d)  Finally create a mosaic plot of the Titanic data set. 
     
     
 

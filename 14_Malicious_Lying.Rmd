@@ -24,10 +24,10 @@ In particular, the relative percent change or the rate of change is now messed u
   1.  [Example](https://eagereyes.org/blog/2008/linear-vs-quadratic-change) Here we examine another case where the same quantity is show using two different EPT scales and they do not agree.
   2.  [Example](https://twitter.com/ObamaWhiteHouse/status/677189256834609152/photo/1) This is an Obama administration graphic where the graphic design considerations were put before the data visualization considerations.
   3.  [Example](https://www.uv.uio.no/cemo/english/studies/news/really-bad-data-graphics-competition.html) This is an example of trying to take data and make it "look" like a chart.
-  4.  [Example](https://badvisualisations.tumblr.com/image/187107071331) THis is talking about cricket scores for various teams and to indicate the team city, they added the most iconic building from the city.  Does the area/height/color of the building indicate anything?
-  5.  [Example](https://www.cnbc.com/2019/06/12/tesla-looks-like-netflix-did-in-2011and-it-may-see-a-similar-recovery.html)
-  7.  [Example](https://i.redd.it/5lcfql006xv31.png) Another example of taking raw percentages and pasting them onto a pie chart without making the area of the slices correspond.
-  8. [Example](https://i.redd.it/8ygd8oczmm301.jpg) In reporting the 2018 election results, this graph labels are extremely confusing.
+  4.  [Example](https://i.redd.it/5lcfql006xv31.png) Another example of taking raw percentages and pasting them onto a pie chart without making the area of the slices correspond.
+  5.  [Example](https://badvisualisations.tumblr.com/image/187107071331) This is talking about cricket scores for various teams and to indicate the team city, they added the most iconic building from the city.  Does the area/height/color of the building indicate anything?
+  6.  [Example](https://www.cnbc.com/2019/06/12/tesla-looks-like-netflix-did-in-2011and-it-may-see-a-similar-recovery.html) Here an analyst compares the stock prices of Tesla and Netflix, but cherry picks certain time points to try to conflate the recovery of Netflix with his prediction of the future of Tesla.
+  7. [Example](https://i.redd.it/8ygd8oczmm301.jpg) In reporting the 2018 election results, this graph labels are extremely confusing.
 
 
 ## Cherry Picking Issues

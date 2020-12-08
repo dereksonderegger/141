@@ -1,4 +1,4 @@
 book_filename: "Introduction_to_Exploratory_Data_Analysis_And_Visualization"
 chapter_name: "Chapter "
-output_dir: "docs"
+output_dir: "_book"
 new_session: yes

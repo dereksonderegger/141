@@ -17,7 +17,24 @@ These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This
 
 The source code for my notes, homework assignments, and other information is available on my on [GitHub](https://github.com/dereksonderegger/141). In particular, there is a directory `data-raw` that contains all of the datasets that we'll use in these notes and homeworks.
 
-## Instructional Material
+
+## Pedigogical Plan
+
+1. Data exploration and visualization requires both a source of data and mechanism to manipulate the data and wrangle the data into a format that is usable by our graphing software. The first section (chapters 1 & 2) addresses these two issues. Then we consider examples where the choice of variable standardization matters.
+
+2. Introduce foundational ideas about Elementary Perceptual Task order and grouping ideas. These will provide the basis to discuss why a visualization is good or bad. (chapter 3). Next we introduce a slew of graphic types and examples of where and how they are commonly used. (chapters 4-10?)
+
+3. Important relationships between two variables might exist for one group of individuals but not another group. Exploring relationships between variables across a variety of scales and groups is crucial for understanding nuanced relationships. Interactive graphics allow for a convenient way to allow the user to move between scales.
+
+4. Unfortunately data visualizations can be used to mislead the audience. This section outlines common malicious techniques for lying with data and how to provide transparency that such shenanigans aren't present.
+
+
+
+
+
+
+
+
 This course draws information from several websites and books.
 
 * Alberto Cairo's book [The Truthful Art](https://www.amazon.com/dp/0321934075/ref=cm_sw_em_r_mt_dp_U_C6zxDbY6JT04F). Alberto Cairo is the Knight Chair in Visual Journalism at the School of Communication of the University of Miami (UM), where he heads specializations in infographics and data visualization. You can find more about him at [thefunctionalart.com](http://www.thefunctionalart.com). Also at his website, his blog highlights data visualizations in the news. Many of the graphs I will shown in this class are featured here. 
@@ -67,14 +84,3 @@ He also has a nice R package called [cowplot](https://cran.r-project.org/web/pac
 
 * Reuter's infamous [gun deaths in Florida](https://callingbullshit.org/tools/img/stand_your_ground.png) chart.
 
-## Pedigogical Plan
-
-1. Develop basic understanding and skills about data wrangling. Because this course will require you to find data that interests you, we need to also learn how to manipulate it because the data are *never* in a nice format.
-
-2. Introduce the Elementary Perceptual Task order and understand how certain visual tasks are more accurate than others.
-
-3. Introduce a slew of graphic types and examples of where and how they are commonly used.
-
-4. Investigate the choice of variables to display and how that can influence the graph interpretation.
-
-5. Understand how interactive graphics can be used across a broad audience.

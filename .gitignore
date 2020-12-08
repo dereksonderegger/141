@@ -10,6 +10,7 @@
 
 # Output files from R CMD build
 /*.tar.gz
+/*.rds
 
 # Output files from R CMD check
 /*.Rcheck/
@@ -35,3 +36,13 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .Rproj.user
+
+# Lecture resources taken from other instructors powerpoints, etc
+Resources
+Old_Chapters
+
+# The resulting website directories shouldn't be saved in Git
+_book
+_bookdown_files
+_bookdown_files/*
+

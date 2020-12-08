@@ -44,5 +44,4 @@ Old_Chapters
 # The resulting website directories shouldn't be saved in Git
 _book
 _bookdown_files
-_bookdown_files/*
 

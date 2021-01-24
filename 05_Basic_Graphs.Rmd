@@ -1,0 +1,20 @@
+# Basic Graphs
+
+* Data Types - Categorical vs Continuous
+
+* 1 Variable
+  * Continuous - box plot, smoothed histogram, and histogram
+  * Categorical - Bar chart
+  * Talk about the summarization obscuring the data and but more clearly showing
+  the major points - what is the center, spread, and shape.
+  
+  
+* 2 Variables
+  * Both Continuous - Scatter plot.
+  * one Categorical one Continuous - 
+    * side by side box plots
+    * side by side histogram or smoothed histogram
+    * stacked histogram (how does this help)?
+    
+
+

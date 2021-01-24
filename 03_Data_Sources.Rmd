@@ -1,0 +1,150 @@
+# Data Sources
+
+In this chapter, we'll examine a number of public data sources
+
+The field of "Data Science" mixes computer science, statistics, and an
+application area of interest. One aspect that data scientists working in a
+particular application area need to learn that is "Where to get data that is
+applicable?"
+
+There are so many data sources available that nobody could know every single
+source and this chapter won't attempt to identify every useful source, but
+rather give background context.
+
+## Government Collected Data
+Most nations around the world collect some information about the people and 
+economic activity in their country. The United States collects a vast amount
+of information and makes much of it available for free in order to promote
+economic activity as well as local and regional planning. There isn't a single
+government agency that oversees all data collection and distribution, but rather
+each major department handles it in slightly different fashion.
+
+### US Census Bureau
+
+Perhaps the most famous US agency that collects data is the United States
+Census Bureau. It's most famous for the census that occurs every 10 years, but
+it also collects a wide variety of other data on a monthly basis.
+
+One important consideration is that the Census Bureau produces estimates of
+different quantities for different geographical areas. From the whole nation, to 
+state-level, county-level, and 
+
+[Census Area Tract,](https://www.census.gov/geographies/reference-maps/2010/geo/2010-census-tract-maps.html)
+
+which are regions that are slightly larger than neighborhoods. 
+
+> Census tracts generally have a population size between 1,200 and 8,000 people, 
+> with an optimum size of 4,000 people. A census tract usually covers a 
+> contiguous area; however, the spatial size of census tracts varies widely 
+> depending on the density of settlement.
+>                             - US Census Bureau
+
+#### Decadal Census
+The US Constitution mandates that every 10 years, a count of all persons living
+in each of the states. This decadal census attempts to count everybody in each 
+[Census Area Tract,](https://www.census.gov/geographies/reference-maps/2010/geo/2010-census-tract-maps.html)
+
+Quite a lot of demographic data is collected during the decadal census and the
+aggregate information about the Census Tracts are made freely available at
+[www.census.gov.](https://www.census.gov/data.html)
+Some businesses use this data, add some user accessibility, and sell access to the 
+[cleaner interface.](http://censusviewer.com/free-maps-and-data-links/)
+
+#### American Community Survey
+
+The American Community Survey (ACS) is a long running data collection survey run by the
+US Census Bureau and strives to get estimates of demographic, housing,
+economic status, and social information. A full list can be found on the ACS 
+[website](https://www.census.gov/programs-surveys/acs/guidance/subjects.html).
+The ACS is a panel survey sample and approximately 300,000 households per month
+are interviewed. 
+It is relatively easy to access ACS data as it is available freely
+[available](https://www.census.gov/acs/www/data/data-tables-and-tools/).
+
+The most annoying aspect of Census Bureau data is that they take care that the
+presented statistics cannot be used to infer information about any single individual.
+As a result, the monthly and yearly data is only presented on large spatial scales 
+(i.e. highly populated counties, or states) or only on relatively long time scales 
+(i.e. the 5-year average).
+
+### US NOAA
+
+The US National Oceanic and Atmospheric Administration is responsible for tracking
+weather tracking.
+
+> NOAA's Mission: Science, Service and Stewardship
+>
+> 1. To understand and predict changes in climate, weather, oceans and coasts;
+> 2. To share that knowledge and information with others; and
+> 3. To conserve and manage coastal and marine ecosystems and resources.
+>                - NOAA Mission and Vision Statements
+
+They continuously produce weather predictions as well as historical information.
+Most people can find predictions for where ever they live, but finding historical
+data requires a little more digging on the NOAA website.
+
+[Historical Data Archive](https://www.ncdc.noaa.gov/cdo-web/)
+
+### US Bureau of Labor Statistics
+The Bureau of Labor Statistics (BLS) is responsible calculating crucial economic indicators
+such as the Consumer Price Index (CPI) which is a key element in the inflation 
+calculation. The CPI is the cost of buying a set of consumer goods relative to the
+average price in the period 1982-1984. The current CPI is around 260 which means
+that the average cost of consumer goods is about two and half times as much as in
+the early 1980s. 
+
+There is a great NPR Planet Money 
+[podcast](https://www.npr.org/sections/money/2015/01/07/375653397/episode-222-the-price-of-lettuce-in-brooklyn)
+that details how they collect the data.
+
+The BLS information is easily available 
+[online](https://www.bls.gov)
+via their Data Tools tab.
+
+
+### Data.gov
+Because there are so many different government agencies charged with collecting
+and making it available. Knowing which agency is responsible for what info is
+quite overwhelming but fortunately the website [data.gov](https://www.data.gov)
+has a search feature that allows users to find relevant sources.
+
+## Known but not government collected
+There is a great deal of data that isn't government collect but is known. Sometimes
+you'll need to to pay for access, and sometimes people keep and host the data as
+a public service.
+
+#### Major Leage Baseball
+There are many Open Source as well as pay sites. Here are a few that I found just
+doing a little googling, but I can't vouch for these.
+
+* [mlb.com](https://www.mlb.com) is the official website from the MLB.
+    For example, [here](https://www.mlb.com/player/lyle-overbay-407489) is 
+    Lyle Overbay's career statistics. However there is no convenient way to export
+    this data into an Excel file. We could program a script to grab data from the 
+    page and then convert it (a process called Web Scrapping) but that is annoying.
+    
+* [Sean Lahman's Site](http://www.seanlahman.com/baseball-archive/statistics/) is
+    a fan run site that allows you to download a bunch of data in a convenient form.
+
+
+
+## Exercises
+
+1.  Find a source for historical stock market data. What was the closing 
+    price of Tesla (symbol TSLA) on December 1, 2018. Was there a convenient way
+    to download the data?
+    
+2.  Listen to the NPR Planet Money #222 
+    [podcast](https://www.npr.org/sections/money/2015/01/07/375653397/episode-222-the-price-of-lettuce-in-brooklyn)
+    about the Consumer Price Index.
+    a) How often is CPI calculated?
+    b) In the podcast, how many people were tasked with collecting the raw data?
+    c) In the podcast, how many items are priced each month to create the CPI?
+    d) There are two variants of CPI, what are they?
+    e) What four items did they check the price of during the interview?
+    
+3.  Using the Bureau of Labor Statistics 
+    [webpage](https://beta.bls.gov/dataViewer/view/timeseries/CUUR0000SA0)
+    What was the CPI score for May of 2020? Was there a convenient way to 
+    download the data?
+    

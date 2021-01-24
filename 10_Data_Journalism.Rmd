@@ -1,0 +1,11 @@
+# Data Journalism
+
+We'll go over many examples of data journalism and explain the component
+pieces.
+
+1. The big trend
+2. Does this trend hold across subsets?
+3. Where doesn't it hold and why?
+
+Emphasize that these are a "guided" tour of the data and the issue they address.
+

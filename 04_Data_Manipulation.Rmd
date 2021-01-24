@@ -1,0 +1,882 @@
+# Data Manipulation
+```{r, echo=FALSE}
+# Un-attach any packages that happen to already be loaded. In general this is unnecessary
+# but is important for the creation of the book to not have package namespaces
+# fighting unexpectedly.
+pkgs = names(sessionInfo()$otherPkgs)
+if( length(pkgs > 0)){
+  pkgs = paste('package:', pkgs, sep = "")
+  for( i in 1:length(pkgs)){
+    detach(pkgs[i], character.only = TRUE, force=TRUE)
+  }
+}
+```
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+# Don't show the R code!
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message=FALSE)
+# Chapter packages we will use
+library(tidyverse)
+```
+
+## Introduction
+The process of data wrangling often seems very situation dependent and there 
+isn't a unifying process. However this isn't completely true. The process can be 
+thought of as having four distinct steps.
+
+| **Step**  |   Description                    |
+|:---------:|:------------------------------------------------------------------------|
+| Import    |  Get the data into software somehow. The structure of the data is just however it came in. |
+| Tidy      |  Restructure the data so that each row is an observation, and each column is a variable.   |
+| Clean     |  Correct variable types, consistent and useful labels, validation and correction.          |
+| Use       |  Sub-setting the full data into a smaller set that addresses a particular question.        |
+
+
+In many real world examples, the data wrangling work is concentrated in only one 
+of the first three steps. Typically you might be able to skip one or more steps, but 
+pedagogically it is helpful to be aware of the full process.
+
+### Import 
+Importing your data into your software is usually easy, and usually falls into
+one of the following scenarios.
+
+1.  The data is stored in a file with a known format, such as a 
+    *comma separated values* file or an Excel document.
+2.  The data is accessible on-line and the user has to do some work to figure
+    out how to request the data, and ultimately downloads the data as a file
+    with a nice file format, as in scenario 1.
+3.  The data lives in a database and you need to log onto the database sign in. 
+    This is something that often happens in professional settings, but for this
+    course, we'll not worry about this situation.
+
+One of the most common file formats we will encounter is the *comma separated values*
+file, which has the file extension `.csv`. These files look like this:
+
+    Student, HW1, HW2, HW3
+    Sarah Anderson, 10, 9.5, 10
+    Bob Barker, 9, 10, 8
+
+In this case we see that the data is organized as you might see in an Excel file
+with the first row of information being the column names, with each column separated
+with commas. The second row in the file is actually the *first row* of data, again
+with commas separating the columns.
+
+Typically your computer will show a preview of the file as if it were in spread 
+sheet and hide the commas from you. If you open the file, the operating system will
+open it with a spreadsheet program and again, not show the commas. If you want to
+see the raw file, you should specify to open it with a simple text editor. On a 
+daily basis for viewing and editing the data, I'm happy to use my spread sheet 
+program, but it is useful to know the underlying file format and how to view it
+if there is a problem with the import.
+
+### Tidying 
+
+The terminology of "tidy data" popularized by Hadley Wickham and his introduction 
+to the concept lives in a 
+[vignette](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) 
+in the R `tidyr` package. I highly recommend reading Hadley Wickham's introduction 
+as well as what I present here. 
+
+![](https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/tidydata_1.jpg)
+![](https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/tidydata_2.jpg)
+![](https://github.com/allisonhorst/stats-illustrations/raw/master/rstats-artwork/tidydata_3.jpg)
+
+*The above graphs are courtesy of \@Alison_Horst.*^["Illustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst"]
+
+Data is usually described as "tidy" if it satisfies the following:
+
+1. Each row represents an observation.
+2. Each column represents a variable.
+3. Each table of data represents a different type of observational unit.
+
+The difficult part is recognizing what constitutes an observation and what 
+constitutes a variable. Often I like to think that the observations represent a 
+noun and each now has multiple variables that adjectives that describe the noun. 
+In particular I think that the attributes should be applicable to every single 
+observation. If your data has a large number of missing values, that is a symptom 
+of storing the data in a messy (non-tidy) format. 
+
+Suppose I have an address book where I keep email addresses, phone numbers, and 
+other contact information. However, because different people have several 
+different types of contact information, it would be a bad idea to have one row 
+per person because then we'd need a column for work email, personal email, home 
+phone, work phone, cell phone, twitter handle, reddit user name, etc. Instead, 
+store the information with a single row representing a particular contact.
+
+```{r, echo=FALSE}
+Contacts <- tribble(
+  ~Person,  ~Type,  ~Value,
+  'Derek',  'Work Email', 'derek.sonderegger@nau.edu',
+  'Derek',  'Cell Phone', '970-867-5309',
+  'Derek',  'Twitter',    '\\@D_Sonderegger',
+  'Derek',  'Github',     'dereksonderegger',
+  'Mom',    'Home Phone', '555-867-5309',
+  'Dad',    'Home Phone', '555-867-5309',
+  'Dad',    'Email',      'json@aol.com',
+  'Dad',    'TikTok',     'olddesertdude')   # Really Dad??!??
+Contacts %>%
+  pander::pander()
+```
+
+For a more challenging example, suppose we have grade book where we've stored 
+students scores for four different homework assignments. In this representation,
+each row represents the information about a single.
+
+```{r, echo=FALSE}
+grade.book <- rbind(
+  data.frame(name='Alison',  HW.1=8, HW.2=5, HW.3=8, HW.4=4),
+  data.frame(name='Brandon', HW.1=5, HW.2=3, HW.3=6, HW.4=9),
+  data.frame(name='Charles', HW.1=9, HW.2=7, HW.3=9, HW.4=10))
+grade.book %>%
+  pander::pander()
+```
+
+In this case we are considering each row to represent a student and each variable 
+represents homework score. An alternative representation would be for each row 
+to represent a single score.
+
+```{r, echo=FALSE}
+# first we gather the score columns into columns we'll name Homework and Score
+tidy.scores <- grade.book %>% 
+  gather( key=Assignment,   # What should I call the key column
+          value=Score,      # What should I call the values column
+          HW.1:HW.4)        # which columns to apply this to
+tidy.scores %>%
+  pander::pander()
+```
+
+Either representation is fine in this case, because each student should have the 
+same number of assignments. However, if I was combining grade books from multiple 
+times I've taught the course, the first option won't work because sometimes I 
+assign projects and sometimes not. So the tidy version of the data would be to 
+have a table `Scores` where each row represents a single assignment from a particular 
+student.
+
+### Cleaning
+
+The cleaning step is usually highly dependent on the data set content. This step involves:
+
+1.  Making sure every variable has the right type. For example, make sure that 
+    dates are dates, not character strings. 
+2.  Fix factor labels and sort order.
+3.  Verify numeric values are reasonable.
+4.  Create (some) calculated variables
+
+Most of our data frame manipulation tools are designed to work with tidy data. 
+As a result, cleaning is most easily done after the data set structure has been 
+tidied. Therefore,I recommend first performing the reshaping tidying step and 
+*then* perform the cleaning. 
+
+### Use
+In this step, we concentrate on the research question of interest. Often this 
+involves calculating summary statistics, calculating selecting only particular 
+rows of data, and finally creating graphs and models.
+
+
+
+## Fundamental Actions
+Most actions we need to perform can be done with a sequence of the following
+"fundamental actions". These actions allow us to create or modify columns, 
+calculate summary statistics for one or more columns, 
+reshape the table, and combine multiple tables into a single table.
+
+### Sorting
+```{r}
+students <- tribble(
+  ~Name, ~Grade, ~Gender, ~Height, 
+  'Adam', '1st Grade', 'Male',   42,
+  'Bob',  '2nd Grade', 'Male',   45,
+  'Carrie',  '2nd Grade', 'Female',   43,
+  'Darlene',   '1st Grade', 'Female', 39
+  )
+students %>%
+  pander::pander()
+```
+
+Given the data set above, we might want to sort the information by any of the
+`Name`, `Grade`, or `Height` columns. 
+
+### Subsetting 
+Sub-setting is removing either some set of rows or columns. For example, we might
+want to create a data set that only contains the columns for `Height` and `Name` 
+columns for just the 1st Grade children but sorted by `Height`:
+
+```{r}
+students %>%
+  filter(Grade == '1st Grade') %>%
+  select(Height, Name) %>%
+  arrange(Height) %>%
+  pander::pander()
+```
+
+### New Column via from Existing Column(s)
+
+Often we need to take a column and create some sort of calculation. For example, if we are given some information (say student height) in inches, we might want to calculate their height in centimeters by multiplying each height value by $2.54$ and naming the result `Height (cm)`.
+
+```{r}
+students <- tribble(
+  ~Name, ~Grade, ~Gender, ~Height, 
+  'Adam', '1st Grade', 'Male',   42,
+  'Bob',  '2nd Grade', 'Male',   45,
+  'Carrie',  '2nd Grade', 'Female',   43,
+  'Darlene',   '1st Grade', 'Female', 39
+  ) %>%
+  mutate(`Height (cm)` = Height *2.54) 
+students %>%
+  pander::pander()
+```
+
+
+### Aggregation
+
+We need to be able to calculate summary statistics like counting the number
+of observations in a group or calculating the mean of some column. For example
+we might want to calculate the number of students in each grade as well as the
+average height of students in each of the grades.
+
+```{r}
+students %>%
+  group_by(Grade) %>%
+  summarize(Number = n(), Avg_Height = mean(Height)) %>%
+  pander::pander()
+```
+
+We call this action an *aggregation* step because we are combining (aka aggregating)
+information from multiple rows. Notice that in the above example, we actually
+did an aggregation for each grade level, and then "squished" together those 
+individual grade level results.
+
+
+### Unions
+One way that we could "squish" two data sets together is if they have the same 
+columns and we essentially just want to add new rows to a data set. 
+
+In this example we have two tables with identical column names and types and we 
+just want to stack the two tables to create a single table that contains all the 
+rows of data.
+
+```{r}
+People <-tribble(
+    ~PersonID, ~First.Name, ~Last.Name, ~Birthday,
+    'P0001', 'Derek', 'Sonderegger', '01/10/1976',
+    'P0002', 'Aubrey','Sonderegger', '02/14/1980',
+    'P0004', 'Casey', 'Sonderegger', '02/14/2015')
+Contacts <- tribble(
+    ~PersonID, ~Type, ~Handle,
+    'P0001', 'email','derek.sonderegger@nau.edu',
+    'P0001', 'Twitter','\\@D_Sonderegger',
+    'P0002', 'email', 'aubrey.sonderegger@yahoo.com')
+New_Contacts <- tribble(
+  ~PersonID, ~Type, ~Handle,
+  'P0003', 'email', 'Elise.Sonderegger@gmail.com',
+  'P0003', 'Twitter','\\@UnicornsRule')
+
+Contacts %>%
+  pander::pander(caption='Parents')
+New_Contacts %>%
+  pander::pander(caption='Kids')
+
+write_csv(People,   file = './data-raw/Joins_People.csv')
+write_csv(Contacts, file = './data-raw/Joins_Contacts.csv')
+write_csv(New_Contacts, file = './data-raw/Joins_NewContacts.csv')
+```
+
+Taking a union of these two data sets just squishes them together vertically.
+```{r}
+bind_rows( Contacts, New_Contacts ) %>%
+  pander::pander(caption='Parents & Kid Unioned Together')
+```
+
+
+
+### Joins
+There are many cases where we have two or more data sets that are related and we 
+need to squish them together to make a table with more columns. For example we 
+might have a data set `People` that contains a unique numeric code for each person, 
+first and last names, and birth dates. We might also have a data set of `Contacts` 
+which has the person's unique numeric code and the contact type and value.
+
+
+```{r}
+People   <- People   %>% select(-Last.Name) 
+
+People   %>% pander::pander(caption='People')
+Contacts %>% pander::pander(caption='Contact Information')
+```
+
+The `PersonID` column links the two tables. But when we now have to ask what we 
+should do about Casey.  There are really two options:
+
+| Join Type  | Description  |
+|:-----------|:--------------------------------|
+| Inner Join | Only include rows for individuals that have information in both tables. |
+| Full  Join | Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty. |
+
+A join squishes the two data sets together horizontally while making sure the 
+rows match up because of one matching column that occurs in each data set. The 
+inner join only returns rows that have data in both data sets.
+```{r, warning=FALSE, message=FALSE}
+# Inner Joining
+inner_join(People, Contacts) %>% pander::pander(caption='Inner Join')
+```
+
+The outer join returns all possible rows that occur in either data set. Notice 
+that Casey has a row in the `People` data set but doesn't have a corresponding 
+row in the `Contacts` table. So his row in the outer join has missing data for 
+the contact information.
+```{r, warning=FALSE, message=FALSE}
+# Full Join
+full_join(People, Contacts) %>% 
+  pander::pander(caption='Outer Join')
+```
+
+
+### Pivots
+
+Often source data is stored in a structure that isn't useful for subsequent 
+analysis. When the data isn't a format of one observation per row and one 
+variable per column, we need to fix those issues before proceeding.
+
+#### Pivot Longer
+When data is in the *"wide"* format, we might need to convert it into 
+*"long"* format. For an example, suppose we have a grade book with a few 
+students.
+
+```{r}
+grade.book <- rbind(
+  tibble(Name='Alison', `Exam 1`=87, `Exam 2`=87, `Final Exam`=81),
+  tibble(Name='Bob',    `Exam 1`=91, `Exam 2`=88, `Final Exam`=85),
+  tibble(Name='Charlie',`Exam 1`=88, `Exam 2`=79, `Final Exam`=92))
+grade.book %>%
+  pander::pander(caption='Wide Format')
+```
+
+What we want to do is turn this data frame from a *wide* data frame into a 
+*long* data frame and this action is called pivoting. Essentially 
+I'd like to create a data frame with three columns: 
+`Name`, `Assessment`, and `Score`. 
+That is to say that each homework datum really 
+has three pieces of information: who it came from, which homework it was, and 
+what the score was. It doesn't conceptually matter if I store it as 3 rows of 
+4 columns or 12 rows so long as there is a way to identify how a student scored 
+on a particular homework. 
+Fundamentally we'll need to indicate a set of columns to be we want to be reshaped
+into two columns as well as what to name those two columns. 
+
+
+
+```{r}
+# first we gather the score columns into columns we'll name Homework and Score
+tidy.scores <- grade.book %>% 
+  gather( key=Assessment,     # What should I call the key column
+          value=Score,      # What should I call the values column
+          `Exam 1`:`Final Exam`)        # which columns to apply this to
+tidy.scores %>%
+  pander::pander(caption='Long Format')
+```
+
+#### Pivot Wider
+There are times that we need to convert a *"long"* data set into *"wide"* format. 
+This is exactly the reverse function of the gather. Our example will be to undo 
+the gather step from the previous. Again this is called pivoting, 
+but we'll make sure that we are turning rows into columns. In a reverse of the
+with the *pivot longer* action, you'll specify which two columns to pivot and
+distiguish which will become the column headers, and which will be the cell values.
+
+
+## Combining Actions
+
+### Example: Column Splitting
+Sometimes we have columns where we actually have two pieces of information stored 
+and we have to split the single column into multiple columns. 
+
+For example, we might have data about across the country, where the city name 
+obnoxiously includes the state.  It would be good to split the `Name` column 
+into `City` and `State` columns. For example,
+
+```{r}
+cities <- tribble(
+    ~Name, ~Population,
+    'Phoenix, AZ', 1660272,
+    'Flagstaff, AZ', 73964,
+    'Tucson, AZ', 545975)
+cities %>%
+  pander::pander()
+
+write_csv(cities, 'data-raw/cities.csv')
+```
+
+and what we want is:
+```{r}
+cities %>%
+  tidyr::separate(Name, into=c('City','State'))
+```
+
+We could think of this splitting as a sequence of steps:
+1.  Create a new column, called `City` that takes the `Name` column and grabs all the
+    characters *before* the comma.
+2.  Create a new column, called `State` that takes the `Name column and grabs 
+    all the characters *after* the comma.
+3.  Remove the now redundant `Name` column and arrange the columns in the order you want.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
+
+### Example: Calculating Percentages
+We might have a data set where we need to calculate the percentage of the data
+composed by each group. For example, I have a data set of high school student survey 
+responses and we might want to know the percentages of First Year, Sophomore, Junior, 
+and Seniors are in the data.
+
+```{r}
+data('StudentSurvey', package='Lock5Data')
+StudentSurvey <- StudentSurvey %>% 
+  filter( Year != '' ) %>%
+  mutate( Year = forcats::fct_drop(Year) ) 
+head(StudentSurvey)
+```
+
+
+We could think of this calculation as a seqence of steps:
+1.  Summarize each data for each year to calculate the number of survey responses
+    for each year. We'll call this column `n`.
+
+```{r}
+StudentSurvey %>%
+  group_by(Year) %>%
+  count()
+```
+2.  Calculate the total number of student responses by summing across the years
+    and creating a new column `Total_Num`.
+    
+```{r}
+StudentSurvey %>%
+  group_by(Year) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(Total_Num = sum(n))
+```
+
+3.  Finally calculate a new column `Percent` = `n` / `Total_Num`.
+```{r}
+StudentSurvey %>%
+  group_by(Year) %>%
+  count() %>%
+  ungroup() %>%
+  mutate(Total_Num = sum(n)) %>%
+  mutate(Percent = n / Total_Num) %>%
+  mutate(Percent = round(Percent, digits = 3) )
+```
+
+
+## Using Software
+
+### Excel 
+Microsoft Excel is a wonderful program that is used widely across many many industries
+and nearly everyone who works with a computer in some fashion should have at least
+some familiarity with it. There are a number of spreadsheet programs and Excel is
+just the most ubiquitous. However, there are some serious downsides to using spreadsheets.
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=yb2zkxHDfUE" frameborder="0" allowfullscreen></iframe>
+
+This being said, knowing how to do simple formulas in Excel is surprisingly helpful.
+
+1.  Excel cells are identified by the column/row combination. Columns are identified
+    using the alphabet (first column is `A`, second is `B`). A range of cells is 
+    specified using the UpperLeft:LowerRight of the range. For example A2:B10 
+    specifies the first two columns and rows 2 through 10.
+2.  Formula Cells have their cell information starting with an `=`. If I were
+    interested in calculating the average value of cells A1:A20, I would select
+    the cell I want to store the result in and input the formula:
+    ```
+    = AVERAGE( A1:A20 )
+    ```
+3.  If you *copy* a formula and past it into a new cell, the *range* gets modified
+    by however much you've shifted copied formula from. 
+    
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=DsZ7lsTaAYo" frameborder="0" allowfullscreen></iframe>
+
+To prevent range shifting when copying formulas, you would specify the range but 
+preceding each part that you *don't* want to shift with a `$`. For example
+
+```
+= AVERAGE( $A$1:$A$20 )
+```
+
+will always refer to this same range no matter where you paste the formula. 
+
+Finally, you can specify ranges across worksheets pre-pending the sheet name 
+and exclamation point (!). For example to specify cell `G10` in my `RawData` 
+worksheet, we'd use the notation `RawData!G10`.
+
+It is also incredible useful to be comfortable with the sorting and filtering
+within Microsoft Excel as well as Google Sheets. One extremely dangerous thing
+that Excel allows is to sort a single column while keeping the original order
+for the remaining columns. *I've personally encountered data where this mistake*
+*was made. Be careful!*
+
+### Tableau 
+Tableau comes with two pieces of software, `Tableau Prep Builder` and 
+`Tableau Desktop`. The prep software is intended to support the data tidying, 
+cleaning, and summarization steps. Then we save the result to a file and open 
+the cleaned up data in Tableau to do the visualization. 
+
+This course has access to both Tableau and Tableau Prep through an academic license. 
+
+1.  Go to [https://www.tableau.com/tft/activation](https://www.tableau.com/tft/activation) 
+    to download both products.
+2.  Select each product download link to get started. When prompted, enter your 
+    school email address for Business E-mail.
+3.  Activate with your product key which will be distributed via email and on Bblearn.
+
+This license will work through the semester. You may continue using Tableau 
+after the class is over by individually requesting their own one-year license 
+through the 
+[Tableau for Students](https://www.tableau.com/academic/students) 
+program.
+
+#### Importing data
+Often data will be stored in a Comma Separated Values file that has a `.csv` 
+file suffix. These types of files store data tables, and use a comma to separate 
+the columns. Spreadsheet programs will recognize these files and show columns 
+for `Student Name`, `Exam 1`, `Exam 2` and the `Final Exam`. However, if you 
+open these files using a text reader program, they'll look something like this:
+
+```{r, eval=FALSE, echo=TRUE}
+Student Name,Exam 1,Exam 2,Final Exam
+Alice,87,87,81
+Bob,91,88,85
+Charlie,88,79,92
+```
+
+Below is a video showing how to open up this same data in Tableau Prep.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ruWnLWGcwBI" frameborder="0" allowfullscreen></iframe>
+
+The import step gives a rotated view of the data and generally that doesn't 
+bother me, but for purposes of show what the imported data looks like, we'll 
+add a cleaning step that doesn't do anything but will show the data. In general 
+I won't keep this step in my cleaning workflow, but it is handy to know how to 
+do this.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f6KhNAlBNtU" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+#### Tidying or Reshaping
+Often source data is stored in a structure that isn't useful for subsequent 
+analysis. When the data isn't a format of one observation per row and one variable 
+per column, we need to fix those issues before proceeding.
+
+##### Pivot Longer
+When data is in the *"wide"* format, we might need to convert it into *"long"* 
+format. For an example, suppose we have a gradebook with a few students.
+
+```{r}
+grade.book <- rbind(
+  tibble(Name='Alison', `Exam 1`=87, `Exam 2`=87, `Final Exam`=81),
+  tibble(Name='Bob',    `Exam 1`=91, `Exam 2`=88, `Final Exam`=85),
+  tibble(Name='Charlie',`Exam 1`=88, `Exam 2`=79, `Final Exam`=92))
+grade.book %>%
+  pander::pander(caption='Wide Format')
+```
+
+What we want to do is turn this data frame from a *wide* data frame into a *long* 
+data frame. In MS Excel and Tableau, this is called pivoting. Essentially I'd like 
+to create a data frame with three columns: `Name`, `Assessment`, and `Score`. That 
+is to say that each homework datum really has three pieces of information: who 
+it came from, which homework it was, and what the score was. It doesn't conceptually 
+matter if I store it as 3 rows of 4 columns or 12 rows so long as there is a way 
+to identify how a student scored on a particular homework. So we want to reshape 
+the three Exam columns into just two columns (Assessment and Score). 
+
+```{r}
+# first we gather the score columns into columns we'll name Homework and Score
+tidy.scores <- grade.book %>% 
+  gather( key=Assessment,     # What should I call the key column
+          value=Score,      # What should I call the values column
+          `Exam 1`:`Final Exam`)        # which columns to apply this to
+tidy.scores %>%
+  pander::pander(caption='Long Format')
+```
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/suCAb8qJOSM" frameborder="0" allowfullscreen></iframe>
+
+
+##### Pivot Wider
+There are times that we need to convert a *"long"* dataset into *"wide"* format. 
+This is exactly the reverse function of the gather. Our example will be to undo 
+the gather step from the previous. Again in Tableau, this is called pivoting, 
+but we'll make sure that we are turning rows into columns.
+
+The tricky part is what variable goes into which pivot field.  The top box 
+specifies what the new column headers will be and the bottom box specifies what 
+the cell values will be.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qZ8L3KrAwnE" frameborder="0" allowfullscreen></iframe>
+
+
+#### Column Splitting
+Sometimes we have columns where we actually have two pieces of information stored 
+and we have to split the single column into multiple columns. 
+
+For example, we might have data about across the country, where the city name 
+obnoxiously includes the state.  It would be good to split the `Name` column 
+into `City` and `State` columns. For example,
+
+```{r}
+cities <- tribble(
+    ~Name, ~Population,
+    'Phoenix, AZ', 1660272,
+    'Flagstaff, AZ', 73964,
+    'Tucson, AZ', 545975)
+cities %>%
+  pander::pander()
+
+write_csv(cities, 'data-raw/cities.csv')
+```
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
+
+
+#### New Column via Calculation
+
+Often we need to take a column and create some sort of calculation. For example, 
+if we are given some information (say student height) in inches, we might want 
+to calculate their height in centimeters by multiplying each height value by 
+$2.54$ and naming the result `Height (cm)`.
+
+```{r}
+data <- tribble(
+  ~Grade, ~Gender, ~Height,
+  '1st Grade', 'Male',   44,
+  '1st Grade', 'Male',   42,
+  '1st Grade', 'Female', 42,
+  '1st Grade', 'Female', 40,
+  '12th Grade', 'Male',   70,
+  '12th Grade', 'Male',   68,
+  '12th Grade', 'Male',   69,
+  '12th Grade', 'Female', 64,
+  '12th Grade', 'Female', 65)
+
+data %>% 
+  mutate(`Height (cm)` = Height *2.54) %>%
+  pander::pander(caption='Student Heights')
+
+write_csv(data, 'data-raw/Group_Summarization.csv')
+```
+
+The issue in Tableau is to make sure you remember how to specify a column in a 
+formula.  The syntax is `[column_name]` and then you can use that quantity in 
+whatever formula you want.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8YvXg1HEqdc" frameborder="0" allowfullscreen></iframe>
+
+#### Aggregation
+
+Given a data set we also want to be able to calculate summary for various columns. 
+For example, we might want to calculate the mean height for each grade level, or 
+perhaps each gender within each grade level. Notice that we end up with a data 
+set with *fewer rows*.
+
+```{r}
+data %>%
+  group_by(Grade, Gender) %>%
+  summarize(`Avg Height` = mean(Height)) %>%
+  pander::pander(caption='Student Heights: Summarized')
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nMSppaAHTSM" frameborder="0" allowfullscreen></iframe>
+
+
+#### New Column with Aggregation
+There are many cases where we need to create a calculated column, but the 
+calculation involves some aggregated information. For, if have the number of 
+males and females in each grade and we want to calculate the percentage of males 
+and females in each grade.  To do this we need to aggregate data to count the 
+number of students in each grade and then divide the number of males or females 
+in each grade by the total number of students in the grade.
+
+```{r}
+data %>%
+  group_by(Grade, Gender) %>%
+  count(name = 'Grade_Gender_n') %>%
+  pander::pander(caption='Student Heights: Summarized')
+```
+
+```{r}
+data %>%
+  group_by(Grade, Gender) %>%
+  count(name = 'Grade_Gender_n') %>%
+  group_by(Grade) %>%
+  mutate(Grade_n = sum(Grade_Gender_n)) %>%
+  mutate(Proportion = Grade_Gender_n / Grade_n ) %>%
+  pander::pander()
+```
+
+Anytime you need to include an aggregation value in formula, we need to specify any 
+grouping information for calculating the aggregate. The code for this is to specify 
+the grouping variable and the aggregation function and column. 
+The code is: `{FIXED [Group]: SUM[Value]}`
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2USmtAcluEY" frameborder="0" allowfullscreen></iframe>
+
+#### Unions
+One way that we could "squish" two data sets together is if they have the same 
+columns and we essentially just want to add new rows to a data set. 
+
+In this example we have two tables with identical column names and types and we 
+just want to stack the two tables to create a single table that contains all the 
+rows of data.
+
+
+```{r}
+People <-tribble(
+    ~PersonID, ~First.Name, ~Last.Name, ~Birthday,
+    'P0001', 'Derek', 'Sonderegger', '01/10/1976',
+    'P0002', 'Aubrey','Sonderegger', '02/14/1980',
+    'P0004', 'Casey', 'Sonderegger', '02/14/2015')
+Contacts <- tribble(
+    ~PersonID, ~Type, ~Handle,
+    'P0001', 'email','derek.sonderegger@nau.edu',
+    'P0001', 'Twitter','\\@D_Sonderegger',
+    'P0002', 'email', 'aubrey.sonderegger@yahoo.com')
+New_Contacts <- tribble(
+  ~PersonID, ~Type, ~Handle,
+  'P0003', 'email', 'Elise.Sonderegger@gmail.com',
+  'P0003', 'Twitter','\\@UnicornsRule')
+
+Contacts %>%
+  pander::pander(caption='Parents')
+New_Contacts %>%
+  pander::pander(caption='Kids')
+
+write_csv(People,   file = './data-raw/Joins_People.csv')
+write_csv(Contacts, file = './data-raw/Joins_Contacts.csv')
+write_csv(New_Contacts, file = './data-raw/Joins_NewContacts.csv')
+```
+
+Taking a union of these two data sets just squishes them together vertically.
+```{r}
+bind_rows( Contacts, New_Contacts ) %>%
+  pander::pander(caption='Parents & Kid Unioned Together')
+```
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UqwX79lHk-Y" frameborder="0" allowfullscreen></iframe>
+
+
+
+#### Joins
+There are many cases where we have two or more data sets that are related and we 
+need to squish them together to make a table with more columns. For example we 
+might have a data set `People` that contains a unique numeric code for each person, 
+first and last names, and birth dates. We might also have a data set of `Contacts` 
+which has the person's unique numeric code and the contact type and value.
+
+
+```{r}
+People   <- People   %>% select(-Last.Name) 
+
+People   %>% pander::pander(caption='People')
+Contacts %>% pander::pander(caption='Contact Information')
+```
+
+The `PersonID` column links the two tables. But when we now have to ask what we 
+should do about Casey.  There are really two options:
+
+| Join Type  | Description  |
+|:-----------|:--------------------------------|
+| Inner Join | Only include rows for individuals that have information in both tables. |
+| Full  Join | Include a row for for every row in either of the tables being joined. In this case, it results in a row Casey being included, but the contact information being left empty. |
+
+A join squishes the two data sets together horizontally while making sure the rows 
+match up because of one matching column that occurs in each data set. The inner 
+join only returns rows that have data in both data sets.
+```{r, warning=FALSE, message=FALSE}
+# Inner Joining
+inner_join(People, Contacts) %>% pander::pander(caption='Inner Join')
+```
+
+The outer join returns all possible rows that occur in either data set. Notice that 
+Casey has a row in the `People` data set but doesn't have a corresponding row in 
+the `Contacts` table. So his row in the outer join has missing data for the contact
+information.
+```{r, warning=FALSE, message=FALSE}
+# Full Join
+full_join(People, Contacts) %>% pander::pander(caption='Outer Join')
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tEQQbN_-ZyY" frameborder="0" allowfullscreen></iframe>
+
+
+
+## Exercises
+
+1.  We are given information about the maximum daily temperature from a weather 
+    station in Flagstaff, AZ. The file is available at the GitHub site that this 
+    book is hosted on. You can find it here:
+    [https://github.com/dereksonderegger/141/raw/master/data-raw/FlagMaxTemp.csv](https://github.com/dereksonderegger/570L/raw/master/data-raw/FlagMaxTemp.csv). 
+    *Within your browser, you should be able to save the linked file use the*
+    *"Save As..." option.*
+    This file is in a wide format, where each row represents a month and the 
+    columns 1, 2, ..., 31 represent the day of the month the observation was made. 
+    a.  Convert data set to the long format where the data has only four columns:
+        `Year`, `Month`, `Day`, `Tmax`.
+    b.  Calculate the average monthly maximum temperature for each Month in the 
+        data set (So there will be 365 mean maximum temperatures). There are several 
+        days that have missing data, represented by the value `NA`. If you have a 
+        problem taking the mean with them in there, you likely haven't converted the
+        temperature from a character string to a numeric value.
+    c.  Convert the average month maximums back to a wide data format where each line
+        represents a year and there are 12 columns of temperature data (one for each 
+        month) along with a column for the year. *There will be a couple of months that*
+        *still have missing data because the weather station was out of commission for*
+        *those months and there was NO data for the entire month.*
+    d.  Save this table as a .csv file.
+ 
+
+2.  A common task is to take a set of data that has multiple categorical variables 
+    and create a table of the number of cases for each combination. An introductory
+    statistics textbook contains a data set summarizing student surveys from several 
+    sections of an intro class. The two variables of interest for us are 
+    `Gender` and `Year` which are the students gender and year in college.
+    a.  Download the dataset as a `.csv` file from the following website:
+        http://www.lock5stat.com/datasets/StudentSurvey.csv
+    b.  Notice that there are two survey responses that did not give their year 
+        in school. Perform a filter step to remove any row with the value of 
+        `null` in the `Year` column.
+    c.  Produce a data set with eight rows that contains the number of responses 
+        for each gender:year combination. 
+    d.  Using a `pivot` command, produce a table of the number of responses in the 
+        following form:
+        
+        |   Gender    |  First Year  |  Sophmore  |  Junior   |  Senior   |
+        |:-----------:|:------------:|:----------:|:---------:|:---------:|
+        |  **Female** |              |            |           |           |  
+        |  **Male**   |              |            |           |           | 
+        
+    e.  Save this table as a .csv file.
+    
+3.  In the `data-raw` directory on this book's Github site, I keep a bunch of 
+    raw data.
+    [https://github.com/dereksonderegger/141/tree/master/data-raw](https://github.com/dereksonderegger/141/tree/master/data-raw).
+    For any of those files, you can download it by clicking on the file. For some
+    files you'll be offered the option to download the file. For files that can be
+    viewed in the browser, it will show a preview, and the `Raw` option lets you
+    see (and subsequently "Save As" to download) the file. For this problem we
+    will consider the `Murders_State.csv` file along with the `State_Pop.csv` file.
+    a.  Download both data sets. 
+    b.  For the `Murders` data, select only the 2018 years.
+    c.  Join this data to the population data, again for the 2018 year.
+    d.  Calculate the Murder rate as the number of murders per 100,000 people.
+    e.  Save this table as a .csv file.
+    
+<!-- 3. Read Chapter 2 in *The Truthful Art*. -->
+<!--     a.  On page 46, figure 2.2 asks you to list aspects of the figure that  -->
+<!--         "seem fishy". Before reading the rest of the chapter, list the things  -->
+<!--         that seem fishy. After you've read the rest of the chapter, go back and  -->
+<!--         examine the graph and reflect on why you didn't notice certain deceptive  -->
+<!--         issues on the first reading of the graph. -->
+<!--     b.  On page 55, figure 2.11 asks which chart is more aesthetically pleasing?  -->
+<!--         Which do you think is more attractive and why? -->

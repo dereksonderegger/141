@@ -13,20 +13,63 @@ description: ""
 ---
 
 # Preface {-}
-These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This course is intended to teach students how to think critically about problems, examine data that can provide answers, and create graphs that are insightful, and ask follow-up questions to the visual analysis. Also, because disinformation can be disguised to seem credible, students will also be exposed to various data visualization tricks and statistical malarkey that propagandists.
 
-The source code for my notes, homework assignments, and other information is available on my on [GitHub](https://github.com/dereksonderegger/141). In particular, there is a directory `data-raw` that contains all of the datasets that we'll use in these notes and homeworks.
+The history of advertisement is full of examples of 
+[false advertisement](https://en.wikipedia.org/wiki/False_advertising). 
+In the United States, the Federal Trade Commission regulates advertisement and
+can level fines for deceptive or misleading ads. As a result, the ads typically
+say true, but misleading facts.
+
+The shift to people getting information from social media sources has exacerbated
+the problem. With hundreds of automated accounts on a media site, a disinformation
+campaign can continually present their information without suffering any 
+penalty.
+
+In order to be compelling, the disinformation has to be compelling and *look*
+like reasonable data.
+
+The goal for this textbook is to inoculate people against disinformation
+provided they ask the questions taught. The reader needs to be willing to question
+what is being said and always ask appropriate follow on questions.
+
+Unfortunately, to convince somebody that already believes something, is much 
+harder convince a person otherwise.
+"You can reason somebody out of a position they didn't reason themselves into."
+
+These are the lecture notes for STA 141 - Exploratory Visual Data Analysis. This 
+course is intended to teach students how to think critically about problems, 
+examine data that can provide answers, and create graphs that are insightful, 
+and ask follow-up questions to the visual analysis. Also, because disinformation 
+can be disguised to seem credible, students will also be exposed to various data 
+visualization tricks and statistical malarkey that propagandists.
+
+The source code for my notes, homework assignments, and other information is 
+available on my on [GitHub](https://github.com/dereksonderegger/141). In particular, 
+there is a directory `data-raw` that contains many of the data sets that we'll use 
+in these notes and homeworks.
 
 
 ## Pedigogical Plan
 
-1. Data exploration and visualization requires both a source of data and mechanism to manipulate the data and wrangle the data into a format that is usable by our graphing software. The first section (chapters 1 & 2) addresses these two issues. Then we consider examples where the choice of variable standardization matters.
+1.  Data exploration and visualization requires both a source of data and mechanism 
+    to manipulate the data and wrangle the data into a format that is usable by our 
+    graphing software. The first section addresses these two issues. 
+    Then we consider examples where the choice of variable standardization matters.
 
-2. Introduce foundational ideas about Elementary Perceptual Task order and grouping ideas. These will provide the basis to discuss why a visualization is good or bad. (chapter 3). Next we introduce a slew of graphic types and examples of where and how they are commonly used. (chapters 4-10?)
+2.  Introduce foundations about Elementary Perceptual Task order and grouping ideas. 
+    These will provide the basis to discuss why a visualization is good or bad. 
+    Next we introduce a slew of graphic types and examples of where and how they 
+    are commonly used. 
 
-3. Important relationships between two variables might exist for one group of individuals but not another group. Exploring relationships between variables across a variety of scales and groups is crucial for understanding nuanced relationships. Interactive graphics allow for a convenient way to allow the user to move between scales.
+3.  Important relationships between two variables might exist for one group of 
+    individuals but not another group. Exploring relationships between variables 
+    across a variety of scales and groups is crucial for understanding nuanced 
+    relationships. Interactive graphics allow for a convenient way to allow the 
+    user to move between scales.
 
-4. Unfortunately data visualizations can be used to mislead the audience. This section outlines common malicious techniques for lying with data and how to provide transparency that such shenanigans aren't present.
+4.  Unfortunately data visualizations can be used to mislead the audience. This 
+    section outlines common malicious techniques for lying with data and how to 
+    provide transparency that such shenanigans aren't present.
 
 
 

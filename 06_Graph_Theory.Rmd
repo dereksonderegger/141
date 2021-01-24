@@ -1,0 +1,8 @@
+# Graph Theory
+
+EPTs and Grouping theory
+
+
+A grouping example question:
+
+https://www.reddit.com/r/statistics/comments/kaodkp/why_are_pyramid_plots_very_popular_for_showing/

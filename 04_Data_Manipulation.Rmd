@@ -205,7 +205,7 @@ students %>%
   filter(Grade == '1st Grade') %>%
   select(Height, Name) %>%
   arrange(Height) %>%
-  pander::pander()
+  pander::pander(caption = '1st Graders')
 ```
 
 ### New Column via from Existing Column(s)
@@ -236,8 +236,8 @@ average height of students in each of the grades.
 ```{r}
 students %>%
   group_by(Grade) %>%
-  summarize(Number = n(), Avg_Height = mean(Height)) %>%
-  pander::pander()
+  summarize(Number = n(), Avg_Height = mean(Height), .groups='drop') %>%
+  pander::pander(caption='Average Height by Grade')
 ```
 
 We call this action an *aggregation* step because we are combining (aka aggregating)
@@ -316,7 +316,8 @@ rows match up because of one matching column that occurs in each data set. The
 inner join only returns rows that have data in both data sets.
 ```{r, warning=FALSE, message=FALSE}
 # Inner Joining
-inner_join(People, Contacts) %>% pander::pander(caption='Inner Join')
+inner_join(People, Contacts, by='PersonID') %>% 
+  pander::pander(caption='Inner Join')
 ```
 
 The outer join returns all possible rows that occur in either data set. Notice 
@@ -325,7 +326,7 @@ row in the `Contacts` table. So his row in the outer join has missing data for
 the contact information.
 ```{r, warning=FALSE, message=FALSE}
 # Full Join
-full_join(People, Contacts) %>% 
+full_join(People, Contacts, by='PersonID') %>% 
   pander::pander(caption='Outer Join')
 ```
 
@@ -408,16 +409,19 @@ write_csv(cities, 'data-raw/cities.csv')
 and what we want is:
 ```{r}
 cities %>%
-  tidyr::separate(Name, into=c('City','State'))
+  tidyr::separate(Name, into=c('City','State')) %>%
+  pander::pander()
 ```
 
 We could think of this splitting as a sequence of steps:
+
 1.  Create a new column, called `City` that takes the `Name` column and grabs all the
     characters *before* the comma.
 2.  Create a new column, called `State` that takes the `Name column and grabs 
     all the characters *after* the comma.
 3.  Remove the now redundant `Name` column and arrange the columns in the order you want.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hrr_xYy8v-U" frameborder="0" allowfullscreen></iframe> -->
 
 ### Example: Calculating Percentages
 We might have a data set where we need to calculate the percentage of the data
@@ -429,8 +433,10 @@ and Seniors are in the data.
 data('StudentSurvey', package='Lock5Data')
 StudentSurvey <- StudentSurvey %>% 
   filter( Year != '' ) %>%
-  mutate( Year = forcats::fct_drop(Year) ) 
-head(StudentSurvey)
+  mutate( Year = forcats::fct_drop(Year) ) %>%
+  select(Year, Gender, Smoke, Height, SAT)
+head(StudentSurvey) %>%
+  pander::pander(caption='First 6 students (out of 360)')
 ```
 
 
@@ -441,7 +447,8 @@ We could think of this calculation as a seqence of steps:
 ```{r}
 StudentSurvey %>%
   group_by(Year) %>%
-  count()
+  count() %>%
+  pander::pander()
 ```
 2.  Calculate the total number of student responses by summing across the years
     and creating a new column `Total_Num`.
@@ -451,7 +458,8 @@ StudentSurvey %>%
   group_by(Year) %>%
   count() %>%
   ungroup() %>%
-  mutate(Total_Num = sum(n))
+  mutate(Total_Num = sum(n)) %>%
+  pander::pander()
 ```
 
 3.  Finally calculate a new column `Percent` = `n` / `Total_Num`.
@@ -462,7 +470,8 @@ StudentSurvey %>%
   ungroup() %>%
   mutate(Total_Num = sum(n)) %>%
   mutate(Percent = n / Total_Num) %>%
-  mutate(Percent = round(Percent, digits = 3) )
+  mutate(Percent = round(Percent, digits = 3) ) %>%
+  pander::pander()
 ```
 
 
@@ -474,7 +483,7 @@ and nearly everyone who works with a computer in some fashion should have at lea
 some familiarity with it. There are a number of spreadsheet programs and Excel is
 just the most ubiquitous. However, there are some serious downsides to using spreadsheets.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=yb2zkxHDfUE" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yb2zkxHDfUE" frameborder="0" allowfullscreen></iframe>
 
 This being said, knowing how to do simple formulas in Excel is surprisingly helpful.
 
@@ -491,7 +500,9 @@ This being said, knowing how to do simple formulas in Excel is surprisingly help
 3.  If you *copy* a formula and past it into a new cell, the *range* gets modified
     by however much you've shifted copied formula from. 
     
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=DsZ7lsTaAYo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DsZ7lsTaAYo" frameborder="0" allowfullscreen></iframe>
+
+
 
 To prevent range shifting when copying formulas, you would specify the range but 
 preceding each part that you *don't* want to shift with a `$`. For example

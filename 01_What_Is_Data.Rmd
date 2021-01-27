@@ -433,7 +433,7 @@ study and qualifies as a purposefully designed study.
     an individual in a variety lighting situations and angles. For each of the 
     data sets below, identify issues related to bias, representativeness,
     and sufficiency for training facial recognition software for detecting individuals
-    with arrest warrents outstanding from public video feeds (for example at an airport
+    with arrest warrants outstanding from public video feeds (for example at an airport
     or subway).
     a)  The website 'LinkedIn' is intended to be a professional social network where
         users are encouraged to upload a facial profile picture of themselves. The
@@ -457,4 +457,14 @@ study and qualifies as a purposefully designed study.
 3.  Find a news article or story that includes a data set. Identify any issues
     regarding bias, representativeness, and sufficiency and then classify the
     data set as either anecdotal/deceptive, ad-hoc, or purposefully-designed.
-        
+
+<!-- 4.  Read chapter 3 in *How Charts Lie* by Alberto Cairo. This chapter is about -->
+<!--     charts that lie by using dubious data. In this chapter, Cairo's examples are -->
+<!--     of people accepting data and graphs where the the data was either ad hoc and not  -->
+<!--     well thought out or maliciously misrepresented. -->
+<!--     a)  What mistake did Dr Cairo make before he shared the map of metal bands? Why -->
+<!--         was he not initially suspicious? -->
+<!--     b)  Explain how the CCC percentages on violent crime and race of the victim and -->
+<!--         offender were misleading due to a basic demographic issue. -->
+<!--     c)  Explain why Kansas is disproportionately represented in graphs involving -->
+<!--         on-line activities? -->

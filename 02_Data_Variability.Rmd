@@ -164,8 +164,8 @@ the cooling side of the scale.
     dot represents and why the above chart has integer values on the vertical axis while
     the book's does not.
 
-
 4.  Of the graphs in the Introduction section of the class textbook *"How Charts Lie"*,
     select one graph that you found interesting or surprising. Describe what is 
     being conveyed by the graph and why you found it interesting or insightful.
 
+5.  

@@ -1,20 +1,33 @@
-# Basic Graphs
+# Basic Graphs {-}
 
-* Data Types - Categorical vs Continuous
+It is important to know how to create basic graphs and the technical process 
+for doing so. In part, it forces us to confront basic questions like
 
-* 1 Variable
-  * Continuous - box plot, smoothed histogram, and histogram
-  * Categorical - Bar chart
-  * Talk about the summarization obscuring the data and but more clearly showing
-  the major points - what is the center, spread, and shape.
-  
-  
-* 2 Variables
-  * Both Continuous - Scatter plot.
-  * one Categorical one Continuous - 
-    * side by side box plots
-    * side by side histogram or smoothed histogram
-    * stacked histogram (how does this help)?
-    
+1.  What variables should correspond to the x- and y-axes?
+2.  What variables should be encoded with color or size?
+3.  What variables should be encoded as I switch facets (groups)?
 
+But before those question can be addressed thoughtfully, we must understand
+that they are even an option.
+
+There are many different graphing software packages and a user should
+concentrate on learning at least one package. I do most of my graphing 
+using `ggplot2` in R and I have a 
+[tutorial](https://bookdown.org/dereksonderegger/444/) 
+on it.
+
+For this book (and class) we will focus on using Tableau Desktop. I've developed
+a few Youtube videos to introduce how to interact with this software.
+
+Creating a basic graph.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KOAgy0oIY14" frameborder="0" allowfullscreen></iframe>
+
+Light pre-processing and adjusting labels
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G1I3j8T4bhI" frameborder="0" allowfullscreen></iframe>
+
+Exporting the graph to MS Word. 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tke-hgmfMNs" frameborder="0" allowfullscreen></iframe>
+
+Selecting EPTs is done using the Marks pane and you have a lot of control there.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nB_Ty1ZHo0" frameborder="0" allowfullscreen></iframe>
 

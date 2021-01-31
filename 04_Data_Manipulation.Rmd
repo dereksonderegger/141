@@ -693,7 +693,7 @@ set with *fewer rows*.
 ```{r}
 data %>%
   group_by(Grade, Gender) %>%
-  summarize(`Avg Height` = mean(Height)) %>%
+  summarize(`Avg Height` = mean(Height), .groups='drop') %>%
   pander::pander(caption='Student Heights: Summarized')
 ```
 
@@ -891,3 +891,14 @@ full_join(People, Contacts) %>% pander::pander(caption='Outer Join')
 <!--         issues on the first reading of the graph. -->
 <!--     b.  On page 55, figure 2.11 asks which chart is more aesthetically pleasing?  -->
 <!--         Which do you think is more attractive and why? -->
+
+4.  Read chapter 3 in *How Charts Lie* by Alberto Cairo. This chapter is about
+    charts that lie by using dubious data. In this chapter, Cairo's examples are
+    of people accepting data and graphs where the the data was either ad-hoc and not
+    well thought out or maliciously misrepresented.
+    a)  What mistake did Dr Cairo make before he shared the map of metal bands? Why
+        was he not initially suspicious?
+    b)  Explain how the CCC percentages on violent crime and race of the victim and
+        offender were misleading due to a basic demographic issue.
+    c)  Explain why Kansas is disproportionately represented in graphs involving
+        on-line activities?

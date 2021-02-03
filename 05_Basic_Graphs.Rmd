@@ -1,4 +1,4 @@
-# Basic Graphs {-}
+# Basic Graphs 
 
 It is important to know how to create basic graphs and the technical process 
 for doing so. In part, it forces us to confront basic questions like
@@ -19,15 +19,38 @@ on it.
 For this book (and class) we will focus on using Tableau Desktop. I've developed
 a few Youtube videos to introduce how to interact with this software.
 
-Creating a basic graph.
+## Creating a basic graph 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KOAgy0oIY14" frameborder="0" allowfullscreen></iframe>
 
-Light pre-processing and adjusting labels
+## Light pre-processing and adjusting labels
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G1I3j8T4bhI" frameborder="0" allowfullscreen></iframe>
 
-Exporting the graph to MS Word. 
+## Exporting the graph to MS Word
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tke-hgmfMNs" frameborder="0" allowfullscreen></iframe>
 
-Selecting EPTs is done using the Marks pane and you have a lot of control there.
+## Selecting EPTs is done using the Marks pane
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8nB_Ty1ZHo0" frameborder="0" allowfullscreen></iframe>
 
+## Creating Histograms, Boxplots, and Regression Lines
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B37tXkrPI1M" frameborder="0" allowfullscreen></iframe>
+
+## Exercises
+1.  For the following exercises we'll use the Student Survey data which is 
+    available at the book's 
+    [GitHub](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/StudentSurvey.csv) 
+    site in the data-raw directory. Recall this data set is the result of a several
+    years of survey's in a college level introductory statistics class at a 
+    St. Lawerence University.
+    
+    a.  Remove the observations with `NULL` in the `Year` in school. Re-order the year
+        variable to be in a reasonable sort order.
+    b.  Create a scatter plot with `SAT` on the x-axis and College `GPA` on the y-axis.
+    c.  Create a bar-chart that shows the number of `Piercings`. Make this with
+        separate charts for males and females, with the charts stacked on-top of
+        each other.
+    d.  Create a graph with side-by-side boxplots for `GPA` on the y-axis and
+        `GPA` on the y-axis.

@@ -836,7 +836,7 @@ full_join(People, Contacts) %>% pander::pander(caption='Outer Join')
         `Year`, `Month`, `Day`, `Tmax`.
     b.  Calculate the average monthly maximum temperature for each Month in the 
         data set (So there will be 365 mean maximum temperatures). There are several 
-        days that have missing data, represented by the value `NA`. If you have a 
+        days that have missing data, represented by the value `null`. If you have a 
         problem taking the mean with them in there, you likely haven't converted the
         temperature from a character string to a numeric value.
     c.  Convert the average month maximums back to a wide data format where each line

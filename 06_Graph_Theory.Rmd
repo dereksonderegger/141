@@ -261,6 +261,62 @@ Defining Color really has three different attributes (From [Wikipedia](https://e
 Neither R nor Tableau make it particularly easy to map these aspects, 
 so we won't get too deep into it.
 
+
+## Examples
+### RobinHood App
+The brokerage firm RobinHood is a low cost stock trading platform that purports
+to make the stock market accessible to everyone. However in the middle of the
+GameStop short-squeeze, it blocked users from buying GameStop shares and the
+users retaliated by leaving negative reviews on the Apple App store.
+
+<!-- ![](Images/RobinHood_Reviews.png) -->
+
+![](https://i.redd.it/6ihlb3uyxaf61.jpg)
+What EPTs are being used? What Grouping structure is being used?
+
+*There are actually two EPTs being used. First, we are comparing the number*
+*of reviews each day to a common axis. So it is very easy to see the peak*
+*number of reviews on Jan 7. We also have that same information encoded using*
+*the length of the bar. Bar charts are easy to read because the same information*
+*is encoded in the graph two different ways.*
+*There are two types of grouping going on. First, the color grouping is encoding*
+*if the review was positive or negative. Second, there is also a day grouping*
+*that is encoded by the space between the bars.*
+
+### Coffee Varieties & Origins
+In this example, we have information about the country of origin and
+coffee types. This is an 
+[interactive](https://datacrayon.com/posts/statistics/data-is-beautiful/arabica-coffee-beans-origin-and-variety/)
+graph and reader can select a country
+or variety and see the corresponding item.
+
+![](Images/Coffee_Variety_Origin.png)
+
+What EPTs are being used? What Grouping structure is being used?
+
+*While it isn't stated anywhere in the graph, I think the length of the bars*
+*is related to the amount of coffee exported. I initially thought that perhaps*
+*the color of the country was related to the county continent or region, but on*
+*deeper inspection I think the color is just randomly assigned to country. The*
+*color does basic grouping for the lines traversing from a coffee type to the*
+*country.*
+
+### Trade with Britain
+In this scatter plot example, the x and y-axes are a country's GDP growth versus
+the its growth in trade with Britain. So data points above the 1-to-1 line have
+increased their economic ties with Britain and points below have reduced their
+ties.
+
+![](Images/TradeWithBritain.png)
+
+What EPTs are being used? What Grouping structure is being used?
+
+*In this example the primary relationship being explored is the change in*
+*economic ties with Britain. This is encoded using the common scales EPT.*
+*The overall size of the country's trade with Britain is encoded using the point area.* 
+*It is hard to detect fine differences (for example it is unclear if Poland, Turkey,*
+*or India has more trade with Britain. There isn't any grouping structure in this graph.*
+
 ## Exercises
 
 1.  In soccer, Kylian Mbappé is being referred to as the next world dominating 

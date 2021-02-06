@@ -53,4 +53,4 @@ a few Youtube videos to introduce how to interact with this software.
         separate charts for males and females, with the charts stacked on-top of
         each other.
     d.  Create a graph with side-by-side boxplots for `GPA` on the y-axis and
-        `GPA` on the y-axis.
+        `Year` on the x-axis and color code by `Gender`.

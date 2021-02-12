@@ -28,7 +28,9 @@ reference point.
 
 ## Elementary Perception Tasks
 We can break basic graph reading tasks into a hierarchy of tasks that 
-range between very quick and precise to extremely difficult.
+range between very quick and precise to extremely difficult. These EPTs 
+will be how we encode continuous variables. For example, using the length
+of a bar or area of a region.
 
 ![From Alberto Cairo's "The Truthful Art"](./Resources/Alberto Cairo/EPT.png)
 
@@ -59,7 +61,10 @@ P1
 
 ## Groupings / Gestalt
 
-The way we organize our graphics can lead a viewer to create mental groups of marks.
+To encode categorical variables into the group, we can utilize a number of 
+grouping techniques. Appropriate choice of grouping structure allows us to
+form a hierarchy of groupings that encourage the reader to see trends within and
+between groups.
 
 The way we form groupings can be in one of the following ways, (where higher 
 grouping methods produce a stronger grouping effect.

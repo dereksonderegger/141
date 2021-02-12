@@ -137,11 +137,14 @@ doing a little googling, but I can't vouch for these.
 2.  Listen to the NPR Planet Money #222 
     [podcast](https://www.npr.org/sections/money/2015/01/07/375653397/episode-222-the-price-of-lettuce-in-brooklyn)
     about the Consumer Price Index.
-    a) How often is CPI calculated?
-    b) In the podcast, how many people were tasked with collecting the raw data?
-    c) In the podcast, how many items are priced each month to create the CPI?
-    d) There are two variants of CPI, what are they?
-    e) What four items did they check the price of during the interview?
+    a)  How often is CPI calculated?
+    b)  As described in the podcast, how many people were tasked with collecting 
+        the raw data each month (not just the person interviewed)?
+    c)  As described in the podcast, how many total items are priced each month 
+        to create the CPI?
+    d)  As described in the podcast, there are two variants of CPI, what are they
+        and why might you prefer one versus the other?
+    e)  What four items did they check the price of during the interview?
     
 3.  Using the Bureau of Labor Statistics 
     [webpage](https://beta.bls.gov/dataViewer/view/timeseries/CUUR0000SA0)

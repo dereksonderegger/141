@@ -1,4 +1,4 @@
-# A Survey of Graph Types
+# A Selection of Graph Examples
 
 
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE)
 This chapter focuses on displaying a single numerical variable versus one or more 
 categorical variables. To display the quantitative variable, we'll try to stay at 
 the top of the EPT tasks and the quantitative variable will be quantified with 
-either the `x` or `y` axis or using length. The exception to this is the heatmap, 
+either the `x` or `y` axis or using length. The exception to this is the heat map, 
 where the quantitative variable is encoded by the color of the tile.
 
 ```{r, echo=FALSE}
@@ -138,14 +138,14 @@ P7 <-
   data2 %>%
   ggplot() +
   geom_mosaic( aes(x=product(Cat1,Cat2), fill=Cat4, weight=Quant), offset=.01) +
-  labs(x=NULL, y=NULL, title='Mosaic Plots') +
+  labs(x='', y='', title='Mosaic Plots') +
   theme_bw() + theme(legend.position = 'none') +
   scale_x_productlist(breaks=c(.145,.45,.81), labels=c('W','X','Y') ) 
 
 cowplot::plot_grid(P1, P2, P3, P4, P5, P6, P7, ncol = 2)
 ```
 
-## Example 1
+### Example 1
 The 2020 presidential candidate field has a wide range of ages. 
 The 
 [New York Times](https://www.nytimes.com/interactive/2019/06/09/us/politics/2020-democractic-candidates-ages.html)
@@ -190,8 +190,21 @@ ggplot( aes(x=Candidate, y=AgeOnElection, fill=Party)) +
   coord_flip()
 ```
 
+The reason that bar charts are widely used is that they use *both* a common axis
+and *area* to represent the data. So we can easily see that Bernie Sanders is just
+a little older
+than Joe Biden. We can accurately calculate the difference between the two but we
+can also estimate the percent difference based on the area of the bar. By using
+two EPTs to encode this information, bar charts are particularly easy to interpret.
+In particular our eyes use the area information to get the general relationships
+and only use the axis scale if we want to be precise.
+
 What would be *dishonest* is if we were to chop off the bars at 35 or 40 to make 
 the age difference between Buttigieg and Warren, Trump, Biden and Sanders seem huge.
+The problem is that now the bar *areas* are no longer proportional to the axis value.
+By having the numerical axis and the bar area giving contradictory information,
+we can sensationalize the differences and mislead our audience because most people
+will only look at the area differences.
 
 ```{r, echo=FALSE, message=FALSE, fig.height=5}
 birth <- birth %>%
@@ -203,27 +216,43 @@ ggplot(birth, aes(x=Candidate, y=AgeOnElection, fill=Party)) +
   coord_flip(ylim=c(35,80)) 
 ```
 
+Unfortunately this sort of shenanigan is common among biased journalism.
+Below are three examples of Fox News doing this exact trick.
 
-## Example 2
+![](Images/FoxNewsBarcharts/BorderApprehensions.png)
+![](Images/FoxNewsBarcharts/BushTaxCutExpire.jpg)
 
-In this section we'll consider two categories. We have the results from a survey 
-administered to students in an introductory statistics class at a New York 
-university. We'll compare the number of student responses broken down by year in 
-school and gender.
+![](Images/FoxNewsBarcharts/ObamaCare.jpg)
+
+### Example 2
+
+In this section we'll consider two categorical variables. In this example, we have 
+the results from a survey administered to students in an introductory statistics 
+class at a New York university. We'll compare the number of student responses broken 
+down by year in school and gender. 
 
 ```{r}
 data('StudentSurvey', package='Lock5Data')
-StudentSurvey %>%
+StudentSurvey <- StudentSurvey %>%
   filter(Year != '') %>%
   mutate(Year = fct_relevel(Year, 'FirstYear','Sophomore','Junior','Senior')) %>%
-  group_by(Year, Gender) %>% count() %>%
+  mutate(Year = fct_recode(Year, 'First Year' = 'FirstYear')) %>%
+  group_by(Year, Gender) %>% count()
+
+StudentSurvey %>%
   ggplot( aes(x=Gender, fill=Year, y=n)) +
   geom_col() +
-  labs(y='Number of Surveys')
+  labs(y='Number of Surveys') +
+  labs(title='Stacked Bar Chart (by year)') +
+  theme_bw()
 ```
 
 The first thing I notice is that there is approximate gender equality, but there 
-are a few more males in class. After a more detailed look, I see that the most 
+are a few more males in class. It is only really possible to compare the genders
+among the Seniors because they start at the same point (common axis) but the
+other years don't start at the same point (uncommon axis).
+
+After a more detailed look, I see that the most 
 abundant class is sophomores, followed by first years, and juniors and seniors 
 are approximately equally abundant. If we switch the grouping order and use color 
 to denote gender and columns to denote the classes, the abundance of sophomores 
@@ -231,15 +260,37 @@ is the first insight to be noticed.
 
 ```{r}
 StudentSurvey %>%
-  filter(Year != '') %>%
-  mutate(Year = fct_relevel(Year, 'FirstYear','Sophomore','Junior','Senior')) %>%
-  group_by(Year, Gender) %>% count() %>%
   ggplot( aes(x=Year, fill=Gender, y=n)) +
+  scale_fill_manual(values=c('pink','light blue')) +
   geom_col() +
-  labs(y='Number of Surveys')
+  labs(y='Number of Surveys') +
+  labs(title='Stacked Bar Chart (stacked by gender)') +
+  theme_bw()
 ```
 
-## Example 3
+Here I chose to encode the gender information using a somewhat obnoxious convention
+of males encoded as blue and females with pink. As a result, there is less confusion
+and double checking of the legend. This type of decision should be used whenever
+possible so that the color assignments make sense. However, we should be careful
+so that the color choices aren't offensive (e.g. making color choices encoding 
+ethnicity!)
+
+As another way to show these data, we could use side-by-side bar charts instead 
+of stacked bars.
+
+```{r}
+StudentSurvey %>%
+  ggplot( aes(x=Gender, fill=Gender, y=n)) +
+  geom_col(position='dodge') +
+  scale_fill_manual(values=c('pink','light blue')) +
+  facet_grid(.~Year) +
+  labs(y='Number of Surveys') +
+  labs(title='Side-by-Side Bar Chart') +
+  theme_bw()
+```
+
+
+### Example 3
 
 Often we need to graph some value and want to know how it varies among *two* 
 different categories. In these cases, we have to employ some sort of grouping strategy.
@@ -337,8 +388,8 @@ Conceptually graphing proportions is the same as graph raw values, but sum to 10
 This seemingly small difference means that our graphic can imply that our categories 
 contain ALL possible categories. 
 
-## Single Set 
-### Pie Charts
+### Single Set 
+#### Pie Charts
 
 ```{r, warning=FALSE, message=FALSE}
 MathStat_Faculty_Composition <- read_csv('data-raw/MathStat_Faculty_Composition.csv') %>%
@@ -378,7 +429,7 @@ ggplot(., aes(x='', y=Number, fill=Type) ) + geom_col( size=1) +
 
 
 
-### Stacked Bar
+#### Stacked Bar
 ```{r}
 MathStat_Faculty_Composition %>%
   mutate( Text.Location = cumsum(Number) - Number/2 ) %>%
@@ -393,7 +444,7 @@ ggplot(., aes(x='', y=Number/sum(Number), fill=Type) ) + geom_col( size=.5) +
 ```
 
 
-### Side-by-side Barchart
+#### Side-by-side Barchart
 ```{r}
 D <- MathStat_Faculty_Composition %>%
   mutate( Text.Location = cumsum(Number) - Number/2 )
@@ -502,10 +553,13 @@ workers %>%
   group_by(Age2) %>% mutate(Prop = n/ sum(n) ) %>% 
   ggplot(., aes(x=Age2, y=Prop, fill=Hours2) ) + 
   geom_col(alpha=.8) +
-  labs(title='Hours worked by age group', subtitle='(only employeed individuals).', y='', x='', fill='Hours') +
+  labs(title='Hours worked by age group', 
+       subtitle='(only employeed individuals).', 
+       y='', x='', fill='Hours') +
   cowplot::theme_minimal_hgrid() +
-  scale_y_continuous(breaks=c(.25,.5,.75), labels=c('25%', '50%','75%'), 
-                      expand = expand_scale(mult = c(0, 0)) )
+  scale_y_continuous(breaks=c(.25,.5,.75), 
+                     labels=c('25%', '50%','75%'), 
+                     expand = expansion(mult = c(0, 0)) )
 ```
 
 
@@ -522,14 +576,17 @@ Titanic <-
   data.frame(Titanic) %>%
   filter(Freq != 0) %>%
   group_by(Class, Sex, Age, Survived) %>%
-  do({ data.frame( Class = .$Class, Sex = .$Sex, Age=.$Age, Survived=.$Survived, rep=1:.$Freq) })
+  do({ data.frame( Class = .$Class, Sex = .$Sex, 
+                   Age=.$Age, Survived=.$Survived, 
+                   rep=1:.$Freq) })
 
 
 ggplot(Titanic) +
   geom_mosaic(aes(x=product(Sex, Class), fill=Survived), offset=.01) +
   labs(title='Mosaic Plot: Survival of Titanic Passengers and Crew') +
   scale_fill_manual(values=c('blue','deeppink')) +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+  theme_cowplot() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) 
 ```
 
 
@@ -540,8 +597,8 @@ workers <- EmployedACS %>%
   mutate( Gender = ifelse( Sex == 0, 'Female', 'Male') ) %>%
   mutate( Type = ifelse( HoursWk >= 35, 'Full Time', 'Part Time') ) %>%
   mutate( Age2 = cut(Age, breaks = seq(15,70, by=5)) ) %>%
-  mutate( Hours2 = cut( HoursWk, breaks = c(seq(0,50, by=10),100) ) ) %>%
-  mutate( Hours2 = fct_rev(Hours2) ) 
+  mutate( Hours2 = cut( HoursWk, breaks = c(seq(0,50, by=10),100) ) ) #%>%
+#  mutate( Hours2 = fct_rev(Hours2) ) 
 
 workers %>% 
   ggplot(.) +
@@ -549,8 +606,13 @@ workers %>%
   labs(title='Hours worked by age group', 
        subtitle='(only employeed individuals).', 
        y='Hours', x='Age', fill='Hours') +
-  scale_fill_discrete(guide = guide_legend(reverse = TRUE) )
-
+  scale_fill_discrete(guide = guide_legend(reverse = TRUE) ) +
+  theme_cowplot() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  scale_y_continuous(
+    breaks = c(.03, .2, .47, .7, .99, 1.15), 
+    labels=c('(0,10]','(10,20]','(20,30]','(30,40]','(40,50]','(50,60]')
+  )
 ```
 
 
@@ -624,9 +686,10 @@ gapminder_G7 %>%
 ggplot(., aes(label = country, area = pop, subgroup = continent, fill = lifeExp)) +
   geom_treemap(layout = "fixed") +
   geom_treemap_text(layout = "fixed", place = "centre", grow = TRUE, colour = "white") +
-  geom_treemap_subgroup_text(layout = "fixed", place = "centre") +
+  # geom_treemap_subgroup_text(layout = "fixed", place = "centre") +
   geom_treemap_subgroup_border(layout = "fixed") +
-  labs(title='Tree map: Population vs Life Expectancy in 2007')
+  labs(title='Tree map: Population vs Life Expectancy in 2007', 
+       caption = 'Area is proportional to Country Population Size')
 
 ```
 
@@ -662,10 +725,8 @@ gapminder %>%
   geom_treemap_text(layout='fixed', place = "centre", grow = TRUE, colour = "white") +
   # geom_treemap_subgroup_text(layout = "fixed", place = "centre") +
   # geom_treemap_subgroup_border(layout = "fixed") +
-  labs(title='Tree map: Population in 2007')
-
-  
-  
+  labs(title='Tree map: Population in 2007',
+       caption='Area is proportion to population size')
 ```
 
 ## Exercises

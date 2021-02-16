@@ -381,8 +381,35 @@ This is exactly the reverse function of the gather. Our example will be to undo
 the gather step from the previous. Again this is called pivoting, 
 but we'll make sure that we are turning rows into columns. In a reverse of the
 with the *pivot longer* action, you'll specify which two columns to pivot and
-distiguish which will become the column headers, and which will be the cell values.
+distinguish which will become the column headers, and which will be the cell values.
 
+#### Why chose long vs wide?
+
+A plant ecologist is collecting data at many different sites across
+Arizona. At each site she will record how many of each species she observes.
+Most species will only be observed in one or two sites. Should she store her
+data in a "wide" or "long" format? Justify your answer and what would the
+table structure look like?
+    
+*If she stored the data "wide", then each column would be a species and most of*
+*her table would be 0s because most species occur at one or two sites.*
+*A long format would have columns for `Site`, `Species`, and `Count`* 
+*and each row contains the count for each non-zero* 
+*Site/Species combination. The resulting table might look something like this:*
+    ```{r}
+    tribble(
+      ~Site, ~Species, ~Count,
+      'S101', 'Gila Monster', '1',
+      'S101', 'Desert Tortoise', '3',
+      'S200', 'Quail', '7',
+      '$\\vdots$',  '$\\vdots$',   '$\\vdots$') %>%
+      pander::pander()
+    ```
+
+However, if we had the same species at each site, then the wide format
+would actually make doing the data input substantially easier because she
+would have to repeatedly type (and potentially misspell) each species name
+repeatedly.
 
 ## Combining Actions
 

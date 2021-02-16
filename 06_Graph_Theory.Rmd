@@ -71,9 +71,17 @@ grouping methods produce a stronger grouping effect.
 
 1. Enclosures
 2. Connections
-3. Proximity
+3. Proximity (often this is the sort order on the x or y axis)
 4. Similarity (color is better than shape)
 
+The idea is that within an enclosure we can easily compare points, but between
+enclosures we will consider some aggregate aspect of the graph and compare that
+aspect between graphs in other enclosures. Therefore if you want to compare
+to points, dots, (generically marks) you want them in the same enclosure. 
+
+### Grouping Effects
+We stated that some grouping effects were stronger than others. We'll now demonstrate
+that fact.
 
 In the following example, find all the fives:
 ```{r, fig.height=4, fig.width=7}
@@ -105,6 +113,8 @@ ggplot(fives, aes(x=x, y=y, label=label, color=Group)) +
   labs(y=NULL, x=NULL)
 ```
 *This example was inspired by an example by Alberto Cairo.*
+
+This makes it clear that color is a stronger grouping mechanism than shape.
 
 ### Grouping Examples
 
@@ -230,21 +240,95 @@ ggplot( warpbreaks, aes(x=tension, y=breaks, shape=wool, color=wool)) +
 ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
   geom_point(aes(shape=wool)) +
   geom_line(data=means, aes(x=as.numeric(tension), y=breaks)) +
-  ggtitle( "Adding connections between means, the trend is clear")
+  ggtitle( "Adding connections between means, the trends are clear.")
 
 ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
   geom_point(aes(shape=wool)) +
   geom_line(data=means, aes(x=as.numeric(tension), y=breaks)) +
   facet_grid(. ~ wool) +
-  ggtitle( "Trend is clear, but magnitude is harder")
+  labs( title="Differences in trend shape are obvious.",
+        subtitle="(but magnitudes are harder!)")
 
 ggplot( warpbreaks, aes(x=tension, y=breaks, color=wool)) +
   geom_point(aes(shape=wool)) +
   geom_line(data=means, aes(x=as.numeric(tension), y=breaks)) +
   facet_grid(wool ~ .) +
-  ggtitle( "Non-Aligned y-axis is worse")
+  ggtitle( "Non-Aligned y-axis is worse.")
 
 ```
+
+### Example - Federal Spending over Time
+In the following figure, we've graphed the amount spent by the 
+US government on four different programs over four years (2012-2015). 
+    
+```{r, fig.height=3, message=FALSE, warning=FALSE, echo=FALSE}
+data <- 
+  readxl::read_excel('~/GitHub/444/data-raw/US_Gov_Budget_1962_2020.xls', skip=2) %>%
+  rename(Department = `Function and Subfunction`) %>%
+  filter( !str_detect(Department, fixed('Total') ) ) %>%
+  filter( !str_detect(Department, fixed('(On-budget)')) ) %>%
+  filter( !str_detect(Department, fixed('(Off-budget)')) ) %>%
+  slice(-2:-9) %>%
+  mutate(Subfunction = Department) %>% 
+  mutate(Function = ifelse( is.na(`2015`), Department, NA) ) %>%
+  select( Function, Subfunction, -Department, everything() ) %>%
+  fill( Function ) %>%
+  slice(-101, -102) %>%
+  gather('Year', 'Amount', `1962`:`2021 estimate`) %>%
+  mutate( Amount = ifelse( Amount == '..........', NA, Amount) ) %>%
+  mutate( Amount = as.numeric(Amount) ) %>%
+  mutate( Function =  str_sub(Function, 5, 100) ) %>%
+  mutate( Function = str_remove(Function, fixed(':')) )
+
+temp <- data %>%
+  filter( !str_detect(Year, fixed('estimate')) ) %>%
+  mutate( Year = as.numeric(Year) ) %>%
+  filter( Year >= 2012) %>%
+  filter( Function %in% c('National Defense', 'Medicare', 
+                          'Income Security', 'Social Security' ) ) %>%
+  group_by(Function, Year) %>% 
+  summarize(Amount = sum(Amount, na.rm=TRUE)) 
+
+P1 <- temp %>%
+  ggplot( aes(x=Function, y=Amount/1000)) +
+  geom_col() + 
+  coord_flip() +
+  facet_wrap( ~ Year) +
+  labs(y='Amount Spent (in Billions)', x=NULL) +
+  theme_bw()
+P2 <- temp %>%
+  ggplot( aes(x=Year, y=Amount/1000)) +
+  geom_col() + 
+  facet_wrap( ~ Function, scales = 'free') +
+  labs(y='Amount Spent (in Billions)', x=NULL) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5, hjust=.5))
+
+cowplot::plot_grid(P1, P2, labels=c('A','B'))
+```
+
+For these two graphs, the exact same data is used. 
+    
+During the creation of these graphs, we might have been primarily interested
+in different facts. For each fact, indicate which graph is better and 
+explain why using grouping and EPT principles.
+    
+    a)  The amount of money spent on Social Security has increased over
+        time (2012-2015).  
+        
+        *For this fact, graph B, with Social Security in its own enclosure,*
+        *is best because we want to compare the bars for 2012-2015 and the*
+        *closer those bars are to each other the easier the comparison is.*
+        
+    b)  The amount spent on Social Security has increased over time
+        (2012-2015) relative to other major spending categories.
+        
+        *Here the comparison is how much larger the Social Security*
+        *bar is relative to the others each year. So we want to notice the*
+        *difference in 2012 and then compare that difference to the other*
+        *years. This is exactly the use case for enclosures so graph A*
+        *is much better to demonstrate this fact.*
+
 
 
 ## "Color" Scales
@@ -279,9 +363,10 @@ users retaliated by leaving negative reviews on the Apple App store.
 ![](https://i.redd.it/6ihlb3uyxaf61.jpg)
 What EPTs are being used? What Grouping structure is being used?
 
-*There are actually two EPTs being used. First, we are comparing the number*
-*of reviews each day to a common axis. So it is very easy to see the peak*
-*number of reviews on Jan 7. We also have that same information encoded using*
+*There are actually two EPTs being used. First, as almost always, we have two*
+*axes (so common axis comparisons) which encodes time (along the x-axis) and*
+*the number of reviews. So it is very easy to see the January 7th peak positive*
+*number of reviews. We also have that same information encoded using*
 *the length of the bar. Bar charts are easy to read because the same information*
 *is encoded in the graph two different ways.*
 *There are two types of grouping going on. First, the color grouping is encoding*

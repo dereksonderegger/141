@@ -396,15 +396,16 @@ table structure look like?
 *A long format would have columns for `Site`, `Species`, and `Count`* 
 *and each row contains the count for each non-zero* 
 *Site/Species combination. The resulting table might look something like this:*
-    ```{r}
-    tribble(
-      ~Site, ~Species, ~Count,
-      'S101', 'Gila Monster', '1',
-      'S101', 'Desert Tortoise', '3',
-      'S200', 'Quail', '7',
-      '$\\vdots$',  '$\\vdots$',   '$\\vdots$') %>%
-      pander::pander()
-    ```
+
+```{r}
+tribble(
+  ~Site, ~Species, ~Count,
+  'S101', 'Gila Monster', '1',
+  'S101', 'Desert Tortoise', '3',
+  'S200', 'Quail', '7',
+  '$\\vdots$',  '$\\vdots$',   '$\\vdots$') %>%
+  pander::pander()
+```
 
 However, if we had the same species at each site, then the wide format
 would actually make doing the data input substantially easier because she

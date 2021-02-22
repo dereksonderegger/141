@@ -322,13 +322,18 @@ mtcars %>%
   GGally::ggpairs(upper=list(continuous='points')  )  
 ```
 
-**In Tableau, put all of the variables onto the shelf spaces**
-**(using the average of each).**
-**This gets the grid of graphs, each with one point. Assuming you have a column**
-**that is a unique identifier for each observation, if you put that in the detail**
-**card (which basically defines the scale at which the average is being taken),**
-**then the average is taken over each observation, and we end up with the scatter**
-**plot matrix.**
+To make this graph in Tableau, you'll follow do the following:
+1.  Make sure your data has a column that uniquely identifies each point. (You
+    might denote these as an ID column.)
+2.  Put all of the variables onto the shelf spaces (each variable on
+    both the x and y selves). Notice at this point it is aggregating all of 
+    the data into a single point on the graph.
+3.  Finally drag the ID column onto the *Detail Card* (in the *All* Marks tab) 
+    which essentially refines
+    the scale at which the aggregation happens. In this case, we want the 
+    aggregation to do nothing so we'll sum (or average) of the single data point
+    in each level of your ID variable. 
+    
 
 ### Correlation Plots
 #### Pearson's Correlation Coefficient
@@ -467,7 +472,10 @@ ggplot(flights, aes(x=time, y=dep_delay)) +
   labs( x='Time of Day', y='Departure Delay', title='2013 Airline Departure Delays')
 ```
 
-This graph leads me to think that MOST flights are quite late, when if fact, they aren't. This is due to the problem of "proportional pixels". There is so much space and color devoted to flights that are more than 30 minutes late that the viewer can't help but have that impression.
+This graph leads me to think that MOST flights are quite late, when if fact, 
+they aren't. This is due to the problem of "proportional pixels". There is so 
+much space and color devoted to flights that are more than 30 minutes late that 
+the viewer can't help but have that impression.
 
 ```{r, cache=TRUE}
 flights %>%
@@ -478,7 +486,11 @@ flights %>%
   pander::pander()
 ```
 
-Because we are interested in the time distribution of significant delays, and early departures are usually only by a couple of minutes, we'll we'll take a log$_{10}$ transformation of all the delays greater than 10 minutes. We'll also modify the color scale so that hexagons with a small count fade into the background and are white and hexagons with relatively large counts have a noticable color.
+Because we are interested in the time distribution of significant delays, and 
+early departures are usually only by a couple of minutes, we'll we'll take a 
+log$_{10}$ transformation of all the delays greater than 10 minutes. We'll also 
+modify the color scale so that hexagons with a small count fade into the background 
+and are white and hexagons with relatively large counts have a noticable color.
 
 ```{r, cache=TRUE}
 flights %>%
@@ -498,7 +510,11 @@ flights %>%
 
 #### Contour Plots
 
-Contour plots are similar to density plots, but for two-axis.  The lines mark out regions of similar probability and we read it similarly as a topological map that shows elevation.  In this case we can see that the most frequent delays are around 30 minutes long and occur near 5 pm.  There is also a local peak of 20 minute delays around 10 am. 
+Contour plots are similar to density plots, but for two-axis.  The lines mark 
+out regions of similar probability and we read it similarly as a topological map 
+that shows elevation.  In this case we can see that the most frequent delays are 
+around 30 minutes long and occur near 5 pm.  There is also a local peak of 20 
+minute delays around 10 am. 
 
 ```{r, cache=TRUE}
 flights %>%
@@ -517,27 +533,45 @@ flights %>%
 
 ### Regression Lines
 
-Often I want to add a trend line to a scatter plot. This line is the line that fits through the data "the best", where "the best" minimizes the sum of the *squared* vertical distances between the data points and the trend line.
+Often I want to add a trend line to a scatter plot. This line is the line that 
+fits through the data "the best", where "the best" minimizes the sum of the 
+*squared* vertical distances between the data points and the trend line.
 
-**In Tableau, click the analytics tab and drag the trend line icon onto the graph. You can then select the shape of the line you'd like to add.**
+In Tableau, click the analytics tab and drag the trend line icon onto the graph.
+You can then select the shape of the line you'd like to add.
 
 ## Plot building process
 
-Often I find myself making a bunch of graphs and none of them show something interesting. The following is my usual path of investigation in situations where I have several (3 or more) variables and I want to understand how they relate to each other. Below is a recommended analysis path, but shouldn't be taken as the *only* path towards finding an interesting visualization in a data set.
+Often I find myself making a bunch of graphs and none of them show something 
+interesting. The following is my usual path of investigation in situations 
+where I have several (3 or more) variables and I want to understand how they 
+relate to each other. Below is a recommended analysis path, but shouldn't be 
+taken as the *only* path towards finding an interesting visualization in a data set.
 
-1. Identify the strongest or most interesting relationships. If there is an obvious response variable, I will examine all the others as predictors to the response. I then approximately rank them as to which variable most strongly predicts the response.  If there isn't a obvious response, I'll look at the pairs plot and pick out the strongest relationship.
+1.  Identify the strongest or most interesting relationships. If there is an 
+    obvious response variable, I will examine all the others as predictors to the 
+    response. I then approximately rank them as to which variable most strongly 
+    predicts the response.  If there isn't a obvious response, I'll look at the 
+    pairs plot and pick out the strongest relationship.
 
-2. Start with the strongest relationship with those variables on the x and y axis. Preferentially, I'll use quantitative variables for these.  Next add other variables to the graph as attributes high on the EPT scale (size, color) or on the grouping scale (facets, shape).
+2.  Start with the strongest relationship with those variables on the x and y axis. 
+    Preferentially, I'll use quantitative variables for these.  Next add other 
+    variables to the graph as attributes high on the EPT scale (size, color) or
+    on the grouping scale (facets, shape).
 
-The critical aspect is that I want to select the most important relationship to be displayed via the x and y axis and then other relationships added on top via the other graph attributes.
+The critical aspect is that I want to select the most important relationship to 
+be displayed via the x and y axis and then other relationships added on top via 
+the other graph attributes.
 
 
 
 ## Exercises
 
-1. Read Chapters 12 and 18 from Wilke's book. Feel free to skip section 12.3.
+1.  Read Chapters 12 and 18 from Claus Wilke's 
+    [Fundamentals of Data Visualization](https://serialmentor.com/dataviz/). 
+    book. Feel free to skip section 12.3.
 
-2.  We will use a smaller version of the diamonds dataset that Wilke uses in 
+2.  We will use a smaller version of the diamonds data set that Wilke uses in 
     his Chapter 18. You can download it from my GitHub site in a 
     [.csv file](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Small_Diamonds.csv). 
     We will examine price, carats, cut (Fair, Good, Very Good, Premium, and Ideal), 

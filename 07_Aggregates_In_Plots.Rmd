@@ -552,16 +552,28 @@ taken as the *only* path towards finding an interesting visualization in a data 
     obvious response variable, I will examine all the others as predictors to the 
     response. I then approximately rank them as to which variable most strongly 
     predicts the response.  If there isn't a obvious response, I'll look at the 
-    pairs plot and pick out the strongest relationship.
+    pairs plot and pick out the strongest relationship. 
 
 2.  Start with the strongest relationship with those variables on the x and y axis. 
     Preferentially, I'll use quantitative variables for these.  Next add other 
     variables to the graph as attributes high on the EPT scale (size, color) or
-    on the grouping scale (facets, shape).
+    on the grouping scale (panels, shape). The critical aspect is 
+    that I want to select the most important relationship to be displayed via the
+    x and y axis and then other relationships added on top via the other graph 
+    attributes.
+    
+3.  Look at the graphs you've produced and ask yourself how they relate to the
+    question of interest. What about the graphs stands out and what is pertinent?
+    This step requires thinking very critically about the topic and identifying
+    why any trends you see could be happening. 
+    Often times, I see hints at something at this stage but it isn't very clear
+    because the graphical presentation isn't tuned to show it well. 
+    
+4.  Once you have a suggestion of something interesting, think about how you could
+    modify the graph to more clearly show it. Use your knowledge of Elementary Perception
+    Tasks to decide to, for example, add trend lines, 
+    changing the panel nesting order, and getting rid of extraneous complications.
 
-The critical aspect is that I want to select the most important relationship to 
-be displayed via the x and y axis and then other relationships added on top via 
-the other graph attributes.
 
 
 
@@ -593,7 +605,7 @@ the other graph attributes.
         clarity improve.
     
 3.  From the [Gapminder.com](www.gapminder.com/data) website, I've downloaded a
-    bunch of interesting covariates about countries. You can find my data set at\
+    bunch of interesting covariates about countries. You can find my data set at
     my GitHub site in a 
     [.csv file](https://raw.githubusercontent.com/dereksonderegger/141/master/data-raw/Gapminder.csv). 
     The variables I've included include the country region, year, population size,
@@ -613,3 +625,20 @@ the other graph attributes.
     d)  Investigate the relationship relationship between life expectancy, adult
         female labor force participation and fertility. Does this vary by region?
         Comment on your graphs and relationships that you observe.
+
+4.  Consider a research question you are interested in. The topic could be about
+    anything but you should consider accessibility of data to address the problem.
+    For this problem, you aren't expected to find data sources and do the
+    data wrangling and graphing, but rather develop a plan. 
+    a)  Propose a broad topic/question of interest. Identify broad trends that
+        have occurred and what data and graphics might support that.
+    b)  Consider the how the trend identified in part (a) might vary across
+        different sub-groups? Are there sub-groups where the general relationship 
+        doesn't hold or where the relationship is even stronger? What could be
+        driving those relationships and what data would you need to support your
+        ideas?
+    c)  Of the data you proposed using in parts (a) and (b), how accessible do
+        you think the data will be. Specify at least one solid lead one finding
+        the data even if you haven't gotten all the specifics figured out.
+
+

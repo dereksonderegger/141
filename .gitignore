@@ -38,7 +38,7 @@ rsconnect/
 .Rproj.user
 
 # Lecture resources taken from other instructors powerpoints, etc
-Resources
+# Resources
 Old_Chapters
 
 # The resulting website directories shouldn't be saved in Git

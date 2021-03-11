@@ -96,14 +96,52 @@ Wired Magazine called [5 Levels](https://www.wired.com/video/series/5-levels).
     with. It is important to realize that the audience won't remember or understand
     everything written/said so making sure the take-home message is clear is important.
 
+Scholarly articles tend to follow this outline extremely closely and generally
+have exactly these section headings. Articles intended for wide-spread consumption
+typically have these same sections but might re-arrange the sections so that the
+extreme details of the data source and methodology are moved to the end of the
+article (or in scientific journals, an appendix).  
+
+Scientific articles have such a defined structure that most readers tend to 
+read in a non-linear fashion. I typically do the following:
+
+*   Read the abstract, which is a one paragraph summary of the paper. 
+*   Read the Introduction/Background section.
+*   Skim the graphs in the Results section.
+*   Read the Discussion section.
+*   If I'm still interested, I'll go back to the Results section and read that
+    in more detail.
+*   Finally, if I'm really really interested, I'll read the Methods section in
+    detail.
+
 ## Figures
 
-1.  Make sure all axis labels are understandable without explanation.
-2.  Make sure each figure has a title that describes what the reader what 
+When creating figures for exploratory analysis, I typically don't spend too
+much time polishing the graph because the audience is just myself. However
+once I've picked the general form of the graphs I want to share, I begin the 
+process of polishing the graph for wide-spread presentation.
+
+1.  Make sure each figure has a title that describes what the reader what 
     relationship is being explored. 
-3.  Highlight important feature that you want readers to see.
+2.  Make sure all axis labels are understandable without further explanation. If
+    appropriate, include what measurement units are used.
+3.  Highlight important feature that you want readers to see with annotations
+    or figure captions.
+4.  With multiple graphs, try to add as much consistency in axes, color/shape
+    encoding, etc. This makes it easier for readers to connect the information
+    across graphs.
+4.  Consider color scales and typography for how well figures could be shared.
 
 ## Presentations
+
+Giving oral presentations are a bit different than creating a written document.
+In particular talks must follow the order the presenter chooses, but the audience
+can express confusion and allow the presenter to clarify a point. As a result,
+it is critical for the audience to provide feedback through questions or at least
+facial expression.
+
+There are a few issues that are often quite surprising for people who are 
+first giving a "live" presentation.
 
 1.  Projectors have much lower resolution and color contrast.
     a)  Color palettes in need to be reduced because we'll only be able to 
@@ -156,7 +194,7 @@ Wired Magazine called [5 Levels](https://www.wired.com/video/series/5-levels).
         The text will provide a narrative explanation to be read in conjunction
         with the graphics.
     For an example of an extremely well written article, see this 
-    [student example.](https://github.com/dereksonderegger/141/blob/3fbe56f7d3866fe3df843f73d52c39e454360237/Resources/Student_Examples/Project_1_Paper_Example.pdf)
+    [student example.](https://github.com/dereksonderegger/141/blob/master/Resources/Student_Examples/Project_1_Paper_Example.pdf)
 
 3.  Produce an approximately 8-10 minute presentation of your article. You will
     present this to the class. 

@@ -167,34 +167,39 @@ first giving a "live" presentation.
 
 ## Exercises
 
-1.  Utilizing the project question and data source you've previously identified
-    perform an exploratory analysis by producing several graphs that demonstrate
-    both the general trends and if that trend holds across sub-groups.
+1.  (20%) Identify a project question and data source(s).Be careful
+    in the scope and ambition of your project. If you just download a data set 
+    from Kaggle and thus have very little data wrangling, the visualization and
+    insightfulness needs to be amazing. Similarly, if you get one (or more) messy
+    data sets and have to spend substantial time and effort data wrangling,
+    then my expectation for the visualization is less. *Don't get lazy on a*
+    *project that is worth 25% of your total score in the class.*
 
 2.  Produce an article/essay that has a target audience of your fellow classmates.
     This article should include the following:
-    a)  (20%) Introduces your sufficient background information to understand 
+    a)  (10%) Introduces your sufficient background information to understand 
         why your question is interesting.
-    b)  (20% data wrangling) Give sufficient detail into how the data was 
+    b)  (15% data wrangling) Give sufficient detail into how the data was 
         collected and prepared and why particular variables were chosen. Be sure
         to describe the data source so that the audience trusts the data source 
         and could conceivable recreate the analysis.
         A formal "literature cited" section is fine, but a section that clearly
         links to the necessary information is also sufficient.
-    c)  (20%) Shows both a general trend and and addresses how the trend changes (if 
+    c)  (15%) Shows both a general trend and and addresses how the trend changes (if 
         at all) across appropriate sub-groups. Make sure to consider interesting
         follow-up questions. The primary grading aspect here is the insightfulness
         of the graphics.
-    d)  (20%) The article should have *at least* three different graphics prepared by
-        you. These graphs should be ready to be shared broadly and enough context
+    d)  (15%) The article should have *at least* three different graphics *prepared by*
+        *you.* These graphs should be ready to be shared broadly and enough context
         within the graph to stand on by themselves. The primary grading aspect
-        here is the professionalism of your graphics.
-    e)  (20%) The article shall be clearly written using correct grammar and 
+        here is the professionalism of your graphics. 
+    e)  (10%) The article shall be clearly written using correct grammar and 
         professional tone. The article should flow well and be clearly structured.
         The text will provide a narrative explanation to be read in conjunction
         with the graphics.
     For an example of an extremely well written article, see this 
     [student example.](https://github.com/dereksonderegger/141/blob/master/Resources/Student_Examples/Project_1_Paper_Example.pdf)
 
-3.  Produce an approximately 8-10 minute presentation of your article. You will
-    present this to the class. 
+3.  (15%) Produce an approximately 8-10 minute presentation of your article. You will
+    present this to the class. My grading criteria will be on how well you translate
+    your article to the presentation, 

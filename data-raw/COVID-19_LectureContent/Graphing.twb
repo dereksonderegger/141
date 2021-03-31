@@ -1,0 +1,814 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0217.1203                               -->
+<workbook original-version='18.1' source-build='2020.4.2 (20204.21.0217.1203)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Date Parameter' datatype='date' name='[Date Parameter]' param-domain-type='list' role='measure' type='quantitative' value='#2020-07-20#'>
+        <calculation class='tableau' formula='#2020-07-20#' />
+        <members>
+          <member value='#2020-01-23#' />
+          <member value='#2020-01-24#' />
+          <member value='#2020-01-25#' />
+          <member value='#2020-01-26#' />
+          <member value='#2020-01-27#' />
+          <member value='#2020-01-28#' />
+          <member value='#2020-01-29#' />
+          <member value='#2020-01-30#' />
+          <member value='#2020-01-31#' />
+          <member value='#2020-02-01#' />
+          <member value='#2020-02-02#' />
+          <member value='#2020-02-03#' />
+          <member value='#2020-02-04#' />
+          <member value='#2020-02-05#' />
+          <member value='#2020-02-06#' />
+          <member value='#2020-02-07#' />
+          <member value='#2020-02-08#' />
+          <member value='#2020-02-09#' />
+          <member value='#2020-02-10#' />
+          <member value='#2020-02-11#' />
+          <member value='#2020-02-12#' />
+          <member value='#2020-02-13#' />
+          <member value='#2020-02-14#' />
+          <member value='#2020-02-15#' />
+          <member value='#2020-02-16#' />
+          <member value='#2020-02-17#' />
+          <member value='#2020-02-18#' />
+          <member value='#2020-02-19#' />
+          <member value='#2020-02-20#' />
+          <member value='#2020-02-21#' />
+          <member value='#2020-02-22#' />
+          <member value='#2020-02-23#' />
+          <member value='#2020-02-24#' />
+          <member value='#2020-02-25#' />
+          <member value='#2020-02-26#' />
+          <member value='#2020-02-27#' />
+          <member value='#2020-02-28#' />
+          <member value='#2020-02-29#' />
+          <member value='#2020-03-01#' />
+          <member value='#2020-03-02#' />
+          <member value='#2020-03-03#' />
+          <member value='#2020-03-04#' />
+          <member value='#2020-03-05#' />
+          <member value='#2020-03-06#' />
+          <member value='#2020-03-07#' />
+          <member value='#2020-03-08#' />
+          <member value='#2020-03-09#' />
+          <member value='#2020-03-10#' />
+          <member value='#2020-03-11#' />
+          <member value='#2020-03-12#' />
+          <member value='#2020-03-13#' />
+          <member value='#2020-03-14#' />
+          <member value='#2020-03-15#' />
+          <member value='#2020-03-16#' />
+          <member value='#2020-03-17#' />
+          <member value='#2020-03-18#' />
+          <member value='#2020-03-19#' />
+          <member value='#2020-03-20#' />
+          <member value='#2020-03-21#' />
+          <member value='#2020-03-22#' />
+          <member value='#2020-03-23#' />
+          <member value='#2020-03-24#' />
+          <member value='#2020-03-25#' />
+          <member value='#2020-03-26#' />
+          <member value='#2020-03-27#' />
+          <member value='#2020-03-28#' />
+          <member value='#2020-03-29#' />
+          <member value='#2020-03-30#' />
+          <member value='#2020-03-31#' />
+          <member value='#2020-04-01#' />
+          <member value='#2020-04-02#' />
+          <member value='#2020-04-03#' />
+          <member value='#2020-04-04#' />
+          <member value='#2020-04-05#' />
+          <member value='#2020-04-06#' />
+          <member value='#2020-04-07#' />
+          <member value='#2020-04-08#' />
+          <member value='#2020-04-09#' />
+          <member value='#2020-04-10#' />
+          <member value='#2020-04-11#' />
+          <member value='#2020-04-12#' />
+          <member value='#2020-04-13#' />
+          <member value='#2020-04-14#' />
+          <member value='#2020-04-15#' />
+          <member value='#2020-04-16#' />
+          <member value='#2020-04-17#' />
+          <member value='#2020-04-18#' />
+          <member value='#2020-04-19#' />
+          <member value='#2020-04-20#' />
+          <member value='#2020-04-21#' />
+          <member value='#2020-04-22#' />
+          <member value='#2020-04-23#' />
+          <member value='#2020-04-24#' />
+          <member value='#2020-04-25#' />
+          <member value='#2020-04-26#' />
+          <member value='#2020-04-27#' />
+          <member value='#2020-04-28#' />
+          <member value='#2020-04-29#' />
+          <member value='#2020-04-30#' />
+          <member value='#2020-05-01#' />
+          <member value='#2020-05-02#' />
+          <member value='#2020-05-03#' />
+          <member value='#2020-05-04#' />
+          <member value='#2020-05-05#' />
+          <member value='#2020-05-06#' />
+          <member value='#2020-05-07#' />
+          <member value='#2020-05-08#' />
+          <member value='#2020-05-09#' />
+          <member value='#2020-05-10#' />
+          <member value='#2020-05-11#' />
+          <member value='#2020-05-12#' />
+          <member value='#2020-05-13#' />
+          <member value='#2020-05-14#' />
+          <member value='#2020-05-15#' />
+          <member value='#2020-05-16#' />
+          <member value='#2020-05-17#' />
+          <member value='#2020-05-18#' />
+          <member value='#2020-05-19#' />
+          <member value='#2020-05-20#' />
+          <member value='#2020-05-21#' />
+          <member value='#2020-05-22#' />
+          <member value='#2020-05-23#' />
+          <member value='#2020-05-24#' />
+          <member value='#2020-05-25#' />
+          <member value='#2020-05-26#' />
+          <member value='#2020-05-27#' />
+          <member value='#2020-05-28#' />
+          <member value='#2020-05-29#' />
+          <member value='#2020-05-30#' />
+          <member value='#2020-05-31#' />
+          <member value='#2020-06-01#' />
+          <member value='#2020-06-02#' />
+          <member value='#2020-06-03#' />
+          <member value='#2020-06-04#' />
+          <member value='#2020-06-05#' />
+          <member value='#2020-06-06#' />
+          <member value='#2020-06-07#' />
+          <member value='#2020-06-08#' />
+          <member value='#2020-06-09#' />
+          <member value='#2020-06-10#' />
+          <member value='#2020-06-11#' />
+          <member value='#2020-06-12#' />
+          <member value='#2020-06-13#' />
+          <member value='#2020-06-14#' />
+          <member value='#2020-06-15#' />
+          <member value='#2020-06-16#' />
+          <member value='#2020-06-17#' />
+          <member value='#2020-06-18#' />
+          <member value='#2020-06-19#' />
+          <member value='#2020-06-20#' />
+          <member value='#2020-06-21#' />
+          <member value='#2020-06-22#' />
+          <member value='#2020-06-23#' />
+          <member value='#2020-06-24#' />
+          <member value='#2020-06-25#' />
+          <member value='#2020-06-26#' />
+          <member value='#2020-06-27#' />
+          <member value='#2020-06-28#' />
+          <member value='#2020-06-29#' />
+          <member value='#2020-06-30#' />
+          <member value='#2020-07-01#' />
+          <member value='#2020-07-02#' />
+          <member value='#2020-07-03#' />
+          <member value='#2020-07-04#' />
+          <member value='#2020-07-05#' />
+          <member value='#2020-07-06#' />
+          <member value='#2020-07-07#' />
+          <member value='#2020-07-08#' />
+          <member value='#2020-07-09#' />
+          <member value='#2020-07-10#' />
+          <member value='#2020-07-11#' />
+          <member value='#2020-07-12#' />
+          <member value='#2020-07-13#' />
+          <member value='#2020-07-14#' />
+          <member value='#2020-07-15#' />
+          <member value='#2020-07-16#' />
+          <member value='#2020-07-17#' />
+          <member value='#2020-07-18#' />
+          <member value='#2020-07-19#' />
+          <member value='#2020-07-20#' />
+          <member value='#2020-07-21#' />
+          <member value='#2020-07-22#' />
+          <member value='#2020-07-23#' />
+          <member value='#2020-07-24#' />
+          <member value='#2020-07-25#' />
+          <member value='#2020-07-26#' />
+          <member value='#2020-07-27#' />
+          <member value='#2020-07-28#' />
+          <member value='#2020-07-29#' />
+          <member value='#2020-07-30#' />
+          <member value='#2020-07-31#' />
+          <member value='#2020-08-01#' />
+          <member value='#2020-08-02#' />
+          <member value='#2020-08-03#' />
+          <member value='#2020-08-04#' />
+          <member value='#2020-08-05#' />
+          <member value='#2020-08-06#' />
+          <member value='#2020-08-07#' />
+          <member value='#2020-08-08#' />
+          <member value='#2020-08-09#' />
+          <member value='#2020-08-10#' />
+          <member value='#2020-08-11#' />
+          <member value='#2020-08-12#' />
+          <member value='#2020-08-13#' />
+          <member value='#2020-08-14#' />
+          <member value='#2020-08-15#' />
+          <member value='#2020-08-16#' />
+          <member value='#2020-08-17#' />
+          <member value='#2020-08-18#' />
+          <member value='#2020-08-19#' />
+          <member value='#2020-08-20#' />
+          <member value='#2020-08-21#' />
+          <member value='#2020-08-22#' />
+          <member value='#2020-08-23#' />
+          <member value='#2020-08-24#' />
+          <member value='#2020-08-25#' />
+          <member value='#2020-08-26#' />
+          <member value='#2020-08-27#' />
+          <member value='#2020-08-28#' />
+          <member value='#2020-08-29#' />
+          <member value='#2020-08-30#' />
+          <member value='#2020-08-31#' />
+          <member value='#2020-09-01#' />
+          <member value='#2020-09-02#' />
+          <member value='#2020-09-03#' />
+          <member value='#2020-09-04#' />
+          <member value='#2020-09-05#' />
+          <member value='#2020-09-06#' />
+          <member value='#2020-09-07#' />
+          <member value='#2020-09-08#' />
+          <member value='#2020-09-09#' />
+          <member value='#2020-09-10#' />
+          <member value='#2020-09-11#' />
+          <member value='#2020-09-12#' />
+          <member value='#2020-09-13#' />
+          <member value='#2020-09-14#' />
+          <member value='#2020-09-15#' />
+          <member value='#2020-09-16#' />
+          <member value='#2020-09-17#' />
+          <member value='#2020-09-18#' />
+          <member value='#2020-09-19#' />
+          <member value='#2020-09-20#' />
+          <member value='#2020-09-21#' />
+          <member value='#2020-09-22#' />
+          <member value='#2020-09-23#' />
+          <member value='#2020-09-24#' />
+          <member value='#2020-09-25#' />
+          <member value='#2020-09-26#' />
+          <member value='#2020-09-27#' />
+          <member value='#2020-09-28#' />
+          <member value='#2020-09-29#' />
+          <member value='#2020-09-30#' />
+          <member value='#2020-10-01#' />
+          <member value='#2020-10-02#' />
+          <member value='#2020-10-03#' />
+          <member value='#2020-10-04#' />
+          <member value='#2020-10-05#' />
+          <member value='#2020-10-06#' />
+          <member value='#2020-10-07#' />
+          <member value='#2020-10-08#' />
+          <member value='#2020-10-09#' />
+          <member value='#2020-10-10#' />
+          <member value='#2020-10-11#' />
+          <member value='#2020-10-12#' />
+          <member value='#2020-10-13#' />
+          <member value='#2020-10-14#' />
+          <member value='#2020-10-15#' />
+          <member value='#2020-10-16#' />
+          <member value='#2020-10-17#' />
+          <member value='#2020-10-18#' />
+          <member value='#2020-10-19#' />
+          <member value='#2020-10-20#' />
+          <member value='#2020-10-21#' />
+          <member value='#2020-10-22#' />
+          <member value='#2020-10-23#' />
+          <member value='#2020-10-24#' />
+          <member value='#2020-10-25#' />
+          <member value='#2020-10-26#' />
+          <member value='#2020-10-27#' />
+          <member value='#2020-10-28#' />
+          <member value='#2020-10-29#' />
+          <member value='#2020-10-30#' />
+          <member value='#2020-10-31#' />
+          <member value='#2020-11-01#' />
+          <member value='#2020-11-02#' />
+          <member value='#2020-11-03#' />
+          <member value='#2020-11-04#' />
+          <member value='#2020-11-05#' />
+          <member value='#2020-11-06#' />
+          <member value='#2020-11-07#' />
+          <member value='#2020-11-08#' />
+          <member value='#2020-11-09#' />
+          <member value='#2020-11-10#' />
+          <member value='#2020-11-11#' />
+          <member value='#2020-11-12#' />
+          <member value='#2020-11-13#' />
+          <member value='#2020-11-14#' />
+          <member value='#2020-11-15#' />
+          <member value='#2020-11-16#' />
+          <member value='#2020-11-17#' />
+          <member value='#2020-11-18#' />
+          <member value='#2020-11-19#' />
+          <member value='#2020-11-20#' />
+          <member value='#2020-11-21#' />
+          <member value='#2020-11-22#' />
+          <member value='#2020-11-23#' />
+          <member value='#2020-11-24#' />
+          <member value='#2020-11-25#' />
+          <member value='#2020-11-26#' />
+          <member value='#2020-11-27#' />
+          <member value='#2020-11-28#' />
+          <member value='#2020-11-29#' />
+          <member value='#2020-11-30#' />
+          <member value='#2020-12-01#' />
+          <member value='#2020-12-02#' />
+          <member value='#2020-12-03#' />
+          <member value='#2020-12-04#' />
+          <member value='#2020-12-05#' />
+          <member value='#2020-12-06#' />
+          <member value='#2020-12-07#' />
+          <member value='#2020-12-08#' />
+          <member value='#2020-12-09#' />
+          <member value='#2020-12-10#' />
+          <member value='#2020-12-11#' />
+          <member value='#2020-12-12#' />
+          <member value='#2020-12-13#' />
+          <member value='#2020-12-14#' />
+          <member value='#2020-12-15#' />
+          <member value='#2020-12-16#' />
+          <member value='#2020-12-17#' />
+          <member value='#2020-12-18#' />
+          <member value='#2020-12-19#' />
+          <member value='#2020-12-20#' />
+          <member value='#2020-12-21#' />
+          <member value='#2020-12-22#' />
+          <member value='#2020-12-23#' />
+          <member value='#2020-12-24#' />
+          <member value='#2020-12-25#' />
+          <member value='#2020-12-26#' />
+          <member value='#2020-12-27#' />
+          <member value='#2020-12-28#' />
+          <member value='#2020-12-29#' />
+          <member value='#2020-12-30#' />
+          <member value='#2020-12-31#' />
+          <member value='#2021-01-01#' />
+          <member value='#2021-01-02#' />
+          <member value='#2021-01-03#' />
+          <member value='#2021-01-04#' />
+          <member value='#2021-01-05#' />
+          <member value='#2021-01-06#' />
+          <member value='#2021-01-07#' />
+          <member value='#2021-01-08#' />
+          <member value='#2021-01-09#' />
+          <member value='#2021-01-10#' />
+          <member value='#2021-01-11#' />
+          <member value='#2021-01-12#' />
+          <member value='#2021-01-13#' />
+          <member value='#2021-01-14#' />
+          <member value='#2021-01-15#' />
+          <member value='#2021-01-16#' />
+          <member value='#2021-01-17#' />
+          <member value='#2021-01-18#' />
+          <member value='#2021-01-19#' />
+          <member value='#2021-01-20#' />
+          <member value='#2021-01-21#' />
+          <member value='#2021-01-22#' />
+          <member value='#2021-01-23#' />
+          <member value='#2021-01-24#' />
+          <member value='#2021-01-25#' />
+          <member value='#2021-01-26#' />
+          <member value='#2021-01-27#' />
+          <member value='#2021-01-28#' />
+          <member value='#2021-01-29#' />
+          <member value='#2021-01-30#' />
+          <member value='#2021-01-31#' />
+          <member value='#2021-02-01#' />
+          <member value='#2021-02-02#' />
+          <member value='#2021-02-03#' />
+          <member value='#2021-02-04#' />
+          <member value='#2021-02-05#' />
+          <member value='#2021-02-06#' />
+          <member value='#2021-02-07#' />
+          <member value='#2021-02-08#' />
+          <member value='#2021-02-09#' />
+          <member value='#2021-02-10#' />
+          <member value='#2021-02-11#' />
+          <member value='#2021-02-12#' />
+          <member value='#2021-02-13#' />
+          <member value='#2021-02-14#' />
+          <member value='#2021-02-15#' />
+          <member value='#2021-02-16#' />
+          <member value='#2021-02-17#' />
+          <member value='#2021-02-18#' />
+          <member value='#2021-02-19#' />
+          <member value='#2021-02-20#' />
+          <member value='#2021-02-21#' />
+          <member value='#2021-02-22#' />
+          <member value='#2021-02-23#' />
+          <member value='#2021-02-24#' />
+          <member value='#2021-02-25#' />
+          <member value='#2021-02-26#' />
+          <member value='#2021-02-27#' />
+          <member value='#2021-02-28#' />
+          <member value='#2021-03-01#' />
+          <member value='#2021-03-02#' />
+          <member value='#2021-03-03#' />
+          <member value='#2021-03-04#' />
+          <member value='#2021-03-05#' />
+          <member value='#2021-03-06#' />
+          <member value='#2021-03-07#' />
+          <member value='#2021-03-08#' />
+          <member value='#2021-03-09#' />
+          <member value='#2021-03-10#' />
+          <member value='#2021-03-11#' />
+          <member value='#2021-03-12#' />
+          <member value='#2021-03-13#' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Data_d_Covid_Cases Extract' inline='true' name='federated.130qu6j1e2jn4e12s6aa905ztygr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Data_d_Covid_Cases' name='hyper.0sb677p1uhy6en1bqe61f0ap2w6i'>
+            <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/dls354/GitHub/141/data-raw/COVID-19/Data_d_Covid_Cases.hyper' default-settings='yes' port='0' server='' sslmode='' username='tableau_internal_user' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='hyper.0sb677p1uhy6en1bqe61f0ap2w6i' name='Extract' table='[Extract].[Extract]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='hyper.0sb677p1uhy6en1bqe61f0ap2w6i' name='Extract' table='[Extract].[Extract]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>7179</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>73</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Population</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>15657</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <approx-count>60</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Week</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Week]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Week</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>60</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cases]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Cases</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>12133</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NewCases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NewCases]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>NewCases</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>2287</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rate]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Rate</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>102927</approx-count>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='New Cases' datatype='integer' name='[NewCases]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Extract' datatype='table' name='[__tableau_internal_object_id__].[Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3]' role='measure' type='quantitative' />
+      <drill-paths>
+        <drill-path name='State, County'>
+          <field>[State]</field>
+          <field>[County]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='alphabetical-order' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Extract' id='Extract (Extract.Extract)_2A3D18F7DAC9457C83E9143E68E344F3'>
+            <properties context=''>
+              <relation connection='hyper.0sb677p1uhy6en1bqe61f0ap2w6i' name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data_d_Covid_Cases Extract' name='federated.130qu6j1e2jn4e12s6aa905ztygr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.130qu6j1e2jn4e12s6aa905ztygr'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Rate]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rate]' derivation='Sum' name='[sum:Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.130qu6j1e2jn4e12s6aa905ztygr].[sum:Rate:qk]</rows>
+        <cols>[federated.130qu6j1e2jn4e12s6aa905ztygr].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{37E5CF2E-58B1-49C6-955D-19C0FCC8BFFF}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.130qu6j1e2jn4e12s6aa905ztygr].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6BA748B8-2853-458D-A6BE-F7042839F040}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 2' width='384'>
+      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
+      xqp1BciCOuwAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

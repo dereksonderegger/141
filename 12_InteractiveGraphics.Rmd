@@ -154,43 +154,24 @@ To get the county population numbers, I went to the US
 [Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-counties-total.html) 
 Bureau.
 
-The only problem we have is that the county names from the US Census Bureau are
+Before we can join the Census data and the Covid-19 data, we need to align
+the county names. The issue is that the county names from the US Census Bureau are
 usually like "Gallatin County, Montana". However there are some weird alternatives
 to counties such as "Parish", "Borough", "Census Area", "Municipality", and
 "city". So to handle that, we'll split the counties on the comma and then
-remove the "County", "Parish", etc.
-
-```{r, eval=FALSE}
-library(tidyverse)
-library(readxl)
-data <- read_excel('data-raw/COVID-19/US_County_Population_Estimates.xlsx', skip=3) %>%
-  slice(-1) %>% rename(County = 1, Population = `2019`) %>%
-  select(County, Population) %>%
-  tidyr::separate(County, c('County', 'State'), ',', remove=TRUE) %>%
-  mutate(County = str_remove(County, 'County'),
-         County = str_remove(County, 'Borough'),
-         County = str_remove(County, 'Census Area'),
-         County = str_remove(County, 'Municipality'),
-         County = str_remove(County, 'city')) %>%
-  mutate(County = str_remove(County, '\\.'))
-```
-
-Once the county names are aligned, we can join the corona virus data with the
-population sizes.
+remove the "County", "Parish", etc. Finally we can calculate the rate of 
+infections as the number of infections per 100,000 people.
 
 ### Tableau
 
 We need to first make two graphs. A chlrolopleth map for the number of cases and
-a line chart with date and number of cases.
-
-Some considerations are that chloropleth map with fill color based on the number
-of cases doesn't work too well because the color gradient is dominated by
-New York City, which geographically pretty small. So instead of the fill color
-being based on the cases, we could base it on the $log_{10}(cases)$.  
+a line chart with date and number of cases. For the map, we'll create a parameter
+which controls a filter action that selects which date to show. We also need to
+force that parameter to be shown and able to be manipulated.
 
 Next we can create a dashboard and place the the map and line chart. The final
-thing to add is an `Action` that takes the selected date on the line chart and
-uses that as the filter on the chloropleth.
+thing to add is an `Action` that takes a selected region on the map and
+uses that as the filter on the line graph.
 
 ## Exercises
 

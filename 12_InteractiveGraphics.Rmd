@@ -32,7 +32,7 @@ but they made it possible for me to dig into the question that I care about.
 
 ## Examples
 
-### Covid-19 Example
+#### Covid-19 Example{-}
 
 This New York Times 
 [opinion article](https://www.nytimes.com/interactive/2020/03/25/opinion/coronavirus-trump-reopen-america.html?smid=fb-share&fbclid=IwAR0FAbOYaDwLx1cm9mHNgz3VWo6T5jy77IWR_k9f-x6bv8LHd5DE3aK-438) 
@@ -44,7 +44,7 @@ different aspects of the model they built and then gives a similar interactive
 graphic but now have a ton of different control dials. Finally, the authors give
 extreme detail to their modeling process and where their data came from.
 
-### A history of World Civilizations
+#### A history of World Civilizations{-}
 [History of World Civilizations](https://public.tableau.com/en-us/gallery/history-world?tab=featured&topic=greatest-hits)
 gives its readers a nice clickable interface to really think about the time-line
 of different civilizations. History of Civilization courses typically focus on
@@ -52,18 +52,31 @@ individual civilizations and don't give context to what was happening
 contemporaneously in, say, Chinese vs European history. This dashboard tries to
 address that need.
 
-### Rainforest Biodiversity
+#### Rainforest Biodiversity{-}
 The [Rainforest Biodiversity](https://public.tableau.com/en-us/gallery/tale-rainforest?tab=featured&topic=greatest-hits)
 dashboard tries to give readers an insight into just how much biodiversity exists
-in various 
+in various. Ultimately this graphic feels there is not a deliberate story the 
+author is trying to tell, but rather an invitation for the reader to look around.
 
-### Oil Rigs in Texas
-[Oil Rigs in Texas 2011-2016](https://public.tableau.com/en-us/gallery/texan-oil-rigs?tab=featured&topic=greatest-hits)
 
-### Women in Politics
+<!-- #### Oil Rigs in Texas{-} -->
+<!-- [Oil Rigs in Texas 2011-2016](https://public.tableau.com/en-us/gallery/texan-oil-rigs?tab=featured&topic=greatest-hits) -->
+
+#### Women in Politics{-}
 [Women In Politics Around the World](https://public.tableau.com/en-us/gallery/women-politics-0?tab=featured&topic=greatest-hits)
 
-### Taxi Rides in NYC
+
+#### Taxi Rides in NYC{-}
+In this graphic, we see the number of taxi rides in New York City broken up across
+time points and across the days of the week. The graphic invites the reader to
+first consider how the time of day (the top bar chart) and then secondarily how
+that changes across the days of the week.
+
+In particular I like that this graphic finally addresses the question, "Is Thursday
+night a party night?" Judging by the taxi ride data, there are fewer people riding
+late at night compared to Friday or Saturday, but the ride numbers are different
+than midweek.
+
 [Taxi Rides in NYC](https://public.tableau.com/en-us/gallery/new-york-taxis?tab=featured&topic=greatest-hits)
 
 
@@ -115,8 +128,18 @@ different levels of detail. Similarly to the maps, want to keep the amount of
 information given at each zoom level understandable. 
 
 [Bruce Springstein's History](http://duelingdatalarge.blogspot.com)
+In this graphic we can look at the album level or using hover text over individual
+songs. Similarly the reader can investigate which band members played on which
+album and the band size. The hover text goes into a great deal of detail, while
+the grouping structure makes it easy to see trends.
 
-[Game of Throne's Character Interactions](http://beta.wind-and-words.com)
+[The Beatles](https://public.tableau.com/profile/adam.e.mccann#!/vizhome/BeatlesAnalysis/BeatlesAnalysis)
+In a similar graphic, we can see the song-writing attribution of the top 100 songs
+by the Beatles. In this graphic it is interesting to see how John Lennon and Paul
+McCartney initially worked together and before primarily writing separately.
+
+<!-- [Game of Throne's Character Interactions](http://beta.wind-and-words.com) -->
+<!-- This example is no longer on-line.  :( -->
 
 
 ### The "Me" Layer
@@ -134,6 +157,10 @@ Examples:
 
 
 ## Tableau Example
+
+Below is a YouTube video walking through the steps of making the dashboard.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ug8dVD2lrnA" frameborder="0" allowfullscreen></iframe>
 
 For our example, we are going to create a graph that shows the spatial expansion
 of the coranoa Virus across the United States as well as the exponential growth
@@ -178,16 +205,25 @@ uses that as the filter on the line graph.
 1. From the `data-raw` directory of the note github, I have a sub-directory for the
 [Covid-19](https://github.com/dereksonderegger/141/tree/master/data-raw/COVID-19) 
 information. 
-    a)  Download the cleaned-up data `Covid-19_Cases_Population.csv` and the 
-        Tableau Desktop file `Interactive_Covid_V1.twb`. While your there, also
-        download the Tableau Prep File `Tidy_JohnHopkins_TimeSeries.tfl`.
-    b)  Open the Tableau file and make sure the data connection is to the file
-        you downloaded.
+    a)  Download the files:
+        `Data_a_Data_a_time_series_covid19_confirmed_US_2021_3_14.csv`,
+        `Data_b_US_County_Population_Estimates.xlsx`,
+        which give the cumulative confirmed Covid 19 cases in each county by
+        date and the population sizes of each county respectively. The Tableau
+        Prep file
+        `Data_c_Cleaning.tfl`
+        combines these and calculates the number of new Covid-19 cases per
+        week. This combinded data is saved into the `Data_d_****` files that we
+        can work with. Finally
+        you are given a Tableau Desktop file `Interactive_Covid.twb` which creates
+        a dashboard of the number of new cases.
+    b)  Open the Tableau Desktop file and make sure the data connection is to
+        the file you downloaded.
     c)  In the data, create a calculated column for the number of cases per
         100,000 residents. Name this new column `Rate`.
     d)  Using the `Map` and `TotalCases` graphs as templates, create similar
         graphs using the `Rate` column as the response.
-    e)  Using the CasesDashboard as a template, create a `RateDashboard` that
+    e)  Using the `CasesDashboard` as a template, create a `RateDashboard` that
         allows the same date and county/state selection.
     f)  Add a `Navigation Object` to each dashboard that, on selection, changes
         the view to the other dashboard.  *Note: in the creation mode you have*

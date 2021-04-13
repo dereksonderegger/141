@@ -1,9 +1,9 @@
-# Dashboards
+<!-- # Dashboards -->
 
-This will introduce dashboards and emphasize
+<!-- This will introduce dashboards and emphasize -->
 
-1. They allow the user to look at different resolutions of the data.
-2. They allow the user to do their own exploration.
+<!-- 1. They allow the user to look at different resolutions of the data. -->
+<!-- 2. They allow the user to do their own exploration. -->
 
-This allows for an "unguided" tour.
+<!-- This allows for an "unguided" tour. -->
 

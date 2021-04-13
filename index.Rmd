@@ -111,6 +111,13 @@ This course draws information from several websites and books.
     from a data visualization course that she teaches. She is also pretty fun 
     to follow on twitter.
 
+## Social Media Sources for Graphics
+*   The website [Flowing Data](https://flowingdata.com) is a great source of
+    graphics and discussion.
+*   Alberto Cairo has a [blog](http://www.thefunctionalart.com) in which he
+    discusses topical graphs. He seems to be sporatic in his blogging and some
+    semesters the blog is great and other semesters it is quite.
+
 
 ## Data Sources
 

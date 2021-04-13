@@ -1,13 +1,13 @@
-# Reasoning Across Scales
+<!-- # Reasoning Across Scales -->
 
-*  Map Zooming
+<!-- *  Map Zooming -->
 
-*  Conditionally thinking
+<!-- *  Conditionally thinking -->
 
-*  Does the trend hold at small scale vs large
+<!-- *  Does the trend hold at small scale vs large -->
 
-*  Connect this back to anecdotal evidence as well as the "What about XXX"
-   supposed contradiction.
-   
-*  Reasoning across data sets
+<!-- *  Connect this back to anecdotal evidence as well as the "What about XXX" -->
+<!--    supposed contradiction. -->
+
+<!-- *  Reasoning across data sets -->
 

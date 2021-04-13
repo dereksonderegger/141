@@ -1,6 +1,6 @@
-# Graphs Influence Our Thoughts
+<!-- # Graphs Influence Our Thoughts -->
 
-Give examples about how a graph influences how people think about a problem.
+<!-- Give examples about how a graph influences how people think about a problem. -->
 
-The Hurricane warning maps
+<!-- The Hurricane warning maps -->
 

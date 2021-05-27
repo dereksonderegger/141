@@ -18,7 +18,7 @@ The history of advertisement is full of examples of
 [false advertisement](https://en.wikipedia.org/wiki/False_advertising). 
 In the United States, the Federal Trade Commission regulates advertisement and
 can level fines for deceptive or misleading ads. As a result, the ads typically
-say true, but misleading facts.
+say true, but misleading facts. 
 
 The shift to people getting information from social media sources has exacerbated
 the problem. With hundreds of automated accounts on a media site, a disinformation
@@ -160,4 +160,51 @@ This course draws information from several websites and books.
 * I feel compelled to show a bad [3-d Excel graphic](https://consultantjournal.com/blog/use-3d-charts-at-your-own-risk) as well.
 
 * Reuter's infamous [gun deaths in Florida](https://callingbullshit.org/tools/img/stand_your_ground.png) chart.
+
+
+
+
+
+
+0.  Preface - Why use graphs and what relevance to do they have.
+1.  Data organization
+    a) Long vs wide
+    b) pivots
+    c) Unions
+    d) Joins
+    e) Do this in Tableau Prep
+2.  Data Sources
+2.  Aggregations
+    a) Sums and Means tables.
+    b) Calculation Percentages or Proportions
+    c) Within Tableau, do proportions across rows or columns or cell.
+3.  Basic bar charts in Tableau
+    a) Sums and Means in Bar Charts
+    b) Calculation of percentages or proportions
+    c) Within Tableau, do proportions across rows or columns or cell
+4.  Graphing Theory
+5.  Additional graphs
+    a) Scatter plots
+    b) Pie Charts 
+    c) Sankey Diagrams
+    d) Mosaic/Tree plots
+    e) Radar plots
+    f) Chloropleths
+6.  Solving Problems 
+    a) over-plotting with transparency and heat maps and contour plots
+    b) Excessive clumping and white-space - Log transformation
+7.  Showing variability
+    a) Histograms, Density plots, and boxplots
+    b) Showing CIs - Regression Ribbons
+    c) Cairo's chapter on not showing variability
+    d) exampel of most searched for phrase by State 
+    e) Showing high variability time series with small trend where adding
+       the trend line shows the relationship.
+8.  Maliciousness
+    a)  Cherry Picking
+    b)  Innappropriate y-variables or encoding - Trumps Red Map.
+    
+    
+    
+
 

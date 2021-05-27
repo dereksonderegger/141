@@ -1,0 +1,42 @@
+# Next Steps
+
+
+## What you've seen
+1) What data do you want?
+    a) What would you like to measure?
+    b) What data is actually available?
+2) Where to get data?
+    a) Public Sources
+    b) Generate it Yourself (how?)
+3) Data Wrangling
+    a) How to get it into a usable format
+4) Visualization
+    a) Explore the data to gain insight
+    b) How do you want to tell the story.
+    c) Actually getting your technology to do it
+
+## What your missing
+1)  How should I collect data so that it represents the desired population? For
+    example, how should I survey residents of Flagstaff to ask them about 
+    their housing burden?
+2)  How to design an experiment to demonstrate if a potential Covid-19 vaccine
+    is effective? If it is safe? For example, suppose you have 10 volunteers and you
+    vaccinate 5 and give a placebo shot to the other 5. Suppose in the 
+    subsequent 3 months 1 of your placebo group gets Covid-19 and none of the
+    vaccinated. Ultimately this could just be dumb luck and a trial with 10 people
+    didn't provide convincing evidence. But if we had 100,000 people and
+    0 cases among the vaccinated and 10,000 in the un-vaccinated, then that seems 
+    like it would be convincing evidence. The introductory statistics classes 
+    STA 270 or 275 will answer these questions.
+3)  The modeling prediction component is completely missing so far. Taking data
+    and predicting results is an important component. For example, how does Google
+    guess what you are about to type? How do weather models make predictions? How
+    does YouTube pick which ads and videos you are most likely to find interesting?
+    That will be introduced in STA 270/275 and 371 and strongly emphasized in 478.
+4)  Programming is important because those tools are MUCH more powerful and flexible
+    than what we've done in Tableau. Most data science is done in either Python or
+    R. Your CS classes will introduce you to Python and you'll get exposed to 
+    R in your statistics classes and through STA 444/5. On the visual front, there
+    is a lot of programming (primarily D3) to make the interactive graphics and
+    scrolly-telling we've seen on professional websites.
+    
